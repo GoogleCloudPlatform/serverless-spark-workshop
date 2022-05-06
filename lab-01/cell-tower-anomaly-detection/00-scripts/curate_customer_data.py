@@ -31,7 +31,7 @@ serviceThresholdReferenceDataDir="gs://"+sourceBucketNm+"/cell-tower-anomaly-det
 outputGCSURI="gs://"+sourceBucketNm+"/cell-tower-anomaly-detection/output_data"
 
 # Get or create a Spark session
-spark =SparkSession.builder.appName("cell_tower_performance_dataset-exploration").getOrCreate()
+spark =SparkSession.builder.appName("Curate-Customer-Data").getOrCreate()
 
 # Read the customer master data from GCS
 customerMasterDataDF = spark.read.format("parquet").option("header", True).option("inferschema",True).load(customerMasterDataDir)
