@@ -1,4 +1,4 @@
-# Cell Tower Anomaly Detection with Serverless Spark Batch powered by Cloud Dataproc
+# Cell Tower Anomaly Detection 
 
 This lab involves rules based processing on cellular network and customer data to detect anomalies in cell towers and flag them for maintenance so that quality of service can be improved and customer churn can be reduced.
 
