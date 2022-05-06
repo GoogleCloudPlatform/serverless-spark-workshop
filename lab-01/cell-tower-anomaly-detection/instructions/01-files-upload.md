@@ -21,7 +21,7 @@ GCS_BUCKET=s8s_data_and_code_bucket-$PROJECT_NBR
 
 ## 2. Upload the lab code & data to the lab GCS bucket
 
-To upload the code repository, please follow the below steps:
+Run the commands below to load the files in cloud shell to the GCS bucket-
 ```
 cd ~/s8s-spark-ce-workshop/lab-01/
 gsutil cp -r cell-tower-anomaly-detection/00-scripts gs://$GCS_BUCKET
