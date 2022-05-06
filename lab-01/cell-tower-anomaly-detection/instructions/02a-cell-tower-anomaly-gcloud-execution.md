@@ -4,12 +4,12 @@
 
 Following are the lab modules:
 
-[1. Understanding Data](06a-cell-tower-anomaly-gcloud-execution.md#1-understanding-the-data)<br>
-[2. Solution Architecture](06a-cell-tower-anomaly-gcloud-execution.md#2-solution-architecture)<br>
-[3. Declaring Variables](06a-cell-tower-anomaly-gcloud-execution.md#3-declaring-variables)<br>
-[4. Running the job as a serverless batch on Dataproc](06a-cell-tower-anomaly-gcloud-execution.md#4-running-the-job-as-a-serverless-batch-on-dataproc)<br>
-[5. BQ output tables](06a-cell-tower-anomaly-gcloud-execution.md#5-bq-output-tables)<br>
-[6. Logging](06a-cell-tower-anomaly-gcloud-execution.md#6-logging)<br>
+[1. Understanding Data](062-cell-tower-anomaly-gcloud-execution.md#1-understanding-the-data)<br>
+[2. Solution Architecture](02a-cell-tower-anomaly-gcloud-execution.md#2-solution-architecture)<br>
+[3. Declaring Variables](02a-cell-tower-anomaly-gcloud-execution.md#3-declaring-variables)<br>
+[4. Running the job as a serverless batch on Dataproc](02a-cell-tower-anomaly-gcloud-execution.md#4-running-the-job-as-a-serverless-batch-on-dataproc)<br>
+[5. BQ output tables](02a-cell-tower-anomaly-gcloud-execution.md#5-bq-output-tables)<br>
+[6. Logging](02a-cell-tower-anomaly-gcloud-execution.md#6-logging)<br>
 
 ## 1. Understanding the data
 
