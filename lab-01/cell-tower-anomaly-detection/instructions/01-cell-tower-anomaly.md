@@ -1,6 +1,6 @@
-# CellTower Anomaly Detection with Serverless Spark Batch
+# Cell Tower Anomaly Detection with Serverless Spark Batch powered by Cloud Dataproc
 
-**Goal** - Detecting anomalous cell towers using network and customer data through serverless.
+This lab involves rules based processing on cellular network and customer data to detect anomalies in cell towers and flag them for maintenance so that quality of service can be improved and customer churn can be reduced.
 
 Following are the lab modules:
 
@@ -11,18 +11,15 @@ Following are the lab modules:
 [5. BQ output tables](02a-cell-tower-anomaly-gcloud-execution.md#5-bq-output-tables)<br>
 [6. Logging](02a-cell-tower-anomaly-gcloud-execution.md#6-logging)<br>
 
-## 1. Understanding the data
+## 1. The data
 
-The datasets used for this project are
+There are three sets of data-
 
-1.[telecom_customer_churn_data.csv](01-datasets/telecom_customer_churn_data.csv) <br>
-2.[service_threshold_data.csv](01-datasets/service_threshold_data.csv) <br>
-3.[customer_data](01-datasets/customer_data) <br>
-
-- Telecom Customer Churn Data   - This dataset contains information of services provided to the customers by the celltowers.
-- Service Threshold Data -  This dataset contains the performance metrics thresold information of the celltowers.
-- Cust Raw Data - This is a folder which contains the files which are in parquet format and holds the information of the customer data.
-
+| # | Dataset | About | 
+| -- | :--- | :--- |
+| 1 | [Customer Data](01-datasets/customer_data) | Master Data in Parquet format |
+| 2 | [Service Thresholds](01-datasets/service_threshold_data.csv) | Metrics for service performance in CSV format |
+| 3 | [Cellular Network Data with Customer Churn Data](01-datasets/telecom_customer_churn_data.csv) | Transactional Data in CSV format |
 
 ## 2. Solution Diagram
 
