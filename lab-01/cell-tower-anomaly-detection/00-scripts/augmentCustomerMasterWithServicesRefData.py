@@ -42,7 +42,7 @@ customerMasterDataInitialSubsetDF=customerMasterDataInitialSubsetDF.withColumn('
 customerMasterDataFinalSubsetDF=customerMasterDataInitialSubsetDF.drop(customerMasterDataInitialSubsetDF.Index)
 customerMasterDataFinalSubsetDF.show(10,truncate=False)
 
-# Subset the service threshold reference data for relevant attributes
+# Subset the service threshold reference data for relevant attributes, with some renaming
 serviceThresholdReferenceDataInitialDF=serviceThresholdReferenceDataDF.drop(serviceThresholdReferenceDataDF.Time)
 serviceThresholdReferenceDataInitialDF.createOrReplaceTempView("Services")
 serviceThresholdReferenceDataInitialDF2 = spark.sql('''select * from (SELECT  *,  ROW_NUMBER()  OVER(PARTITION BY CellName ORDER BY CellName) AS Rank FROM Services) as Service_Rank where Rank=1  ''')
