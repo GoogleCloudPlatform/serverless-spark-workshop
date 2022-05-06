@@ -2,8 +2,7 @@
 
 This module includes all the steps for uploading the code files and datasets for the lab to precreated GCS bucket-<br>
 [1. Declare variables](01-files-upload.md#1-declare-variables)<br>
-[2. GCS Bucket creation](01-files-upload.md#2-gcs-bucket-creation)<br>
-[3. Uploading the repository to GCS Bucket](02-files-upload.md#3-uploading-the-repository-to-gcs-bucket)<br>
+[2. Upload code files and lab data to a GCS Bucket](02-files-upload.md#3-uploading-the-repository-to-gcs-bucket)<br>
 
 
 
