@@ -49,8 +49,8 @@ curatedTelcoPerformanceAggrDF= spark.sql('''select customerID,CellName,tenure,Ph
 # Augment with customer grain performance metrics
 slice1DF1=curatedTelcoPerformanceAggrDF.withColumn('incomplete_voice_calls',curatedTelcoPerformanceAggrDF.avg_plcd_vce_Mean - curatedTelcoPerformanceAggrDF.avg_comp_vce_Mean )
 slice1DF2=slice1DF1.withColumn('incomplete_data_calls',curatedTelcoPerformanceAggrDF.avg_plcd_dat_Mean - curatedTelcoPerformanceAggrDF.avg_comp_dat_Mean )
-slice1DF3=slice1DF2.withColumn('service_stability_of_voice_calls',curatedTelcoPerformanceAggrDF.avg_peak_vce_Mean/curatedTelcoPerformanceAggrDF.avg_opk_vce_Mean   )
-slice1DF4=slice1DF3.withColumn('service_stability_of_data_calls',curatedTelcoPerformanceAggrDF.avg_peak_dat_Mean/curatedTelcoPerformanceAggrDF.avg_opk_dat_Mean   )
+slice1DF3=slice1DF2.withColumn('service_stability_voice_calls',curatedTelcoPerformanceAggrDF.avg_peak_vce_Mean/curatedTelcoPerformanceAggrDF.avg_opk_vce_Mean   )
+slice1DF4=slice1DF3.withColumn('service_stability_data_calls',curatedTelcoPerformanceAggrDF.avg_peak_dat_Mean/curatedTelcoPerformanceAggrDF.avg_opk_dat_Mean   )
 
 # Replace nulls with 0 across columns
 slice1DF5=slice1DF4.fillna(value =0)
@@ -99,7 +99,7 @@ CREATE OR REPLACE EXTERNAL TABLE """+bqDatasetName+""".customer_grain_perf_metri
 format = 'PARQUET', uris = ['"""+outputGCSURI+"""/customer_grain_perf_metrics/*.parquet'] );
 """
 
-# Execute the BigQuery external table definition 
+# Execute the BigQuery external table definition
 bq_client = bigquery.Client(project=projectID)
 job = bq_client.query(query)
 job.result()
