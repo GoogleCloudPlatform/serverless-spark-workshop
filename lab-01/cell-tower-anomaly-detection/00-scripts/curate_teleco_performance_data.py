@@ -46,9 +46,9 @@ telecomCustomerChurnSubsetDF = telecomCustomerChurnRawDataDF.selectExpr("roam_Me
 # ... Create a column called customer_ID_Short that is a substring of the original Customer_ID
 telecomCustomerChurnFinalDF=telecomCustomerChurnSubsetDF.withColumn('customer_ID_Short', substring('Customer_ID', 4,7))
 # ... Rename the Customer_ID column, customer_ID_original
-telecomCustomerChurnFinalDF.withColumnRenamed('Customer_ID', 'customer_ID_original')
+telecomCustomerChurnFinalDF=telecomCustomerChurnFinalDF.withColumnRenamed('Customer_ID', 'customer_ID_original')
 # ... Rename the newly added customer_ID_Short column, customer_ID
-telecomCustomerChurnFinalDF.withColumnRenamed('customer_ID_Short', 'customer_ID')
+telecomCustomerChurnFinalDF=telecomCustomerChurnFinalDF.withColumnRenamed('customer_ID_Short', 'customer_ID')
 # ... Quick visual
 telecomCustomerChurnFinalDF.show(10,truncate=False)
 
