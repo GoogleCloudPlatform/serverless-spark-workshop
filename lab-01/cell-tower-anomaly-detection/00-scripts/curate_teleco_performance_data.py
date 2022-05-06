@@ -31,7 +31,7 @@ telcoCustomerChurnDataDir="gs://"+sourceBucketNm+"/cell-tower-anomaly-detection/
 outputGCSURI="gs://"+sourceBucketNm+"/cell-tower-anomaly-detection/output_data"
 
 # Get or create a Spark session
-spark =SparkSession.builder.appName("cell_tower_performance_dataset-exploration").getOrCreate()
+spark =SparkSession.builder.appName("Curate-Cell_Tower-Performance-Data").getOrCreate()
 
 # Read the curated customer data (blended with services threshold data) from GCS
 curatedCustomerDataDF = spark.read.format("parquet").option("header", True).option("inferschema",True).load(customerCuratedDataDir)
