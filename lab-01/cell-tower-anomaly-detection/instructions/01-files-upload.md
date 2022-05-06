@@ -2,7 +2,7 @@
 
 This module includes all the steps for uploading the code files and datasets for the lab to precreated GCS bucket-<br>
 [1. Declare variables](01-files-upload.md#1-declare-variables)<br>
-[2. Upload code files and lab data to a GCS Bucket](01-files-upload.md#2-upload-the-spark-data-engineering-batch-job-code-files-and-datasets-for-the-lab-to-gcs-bucket)<br>
+[2. Upload code files and lab data to a GCS Bucket](01-files-upload.md#2-upload-the-lab-code--data-to-the-lab-gcs-bucket)<br>
 
 
 
