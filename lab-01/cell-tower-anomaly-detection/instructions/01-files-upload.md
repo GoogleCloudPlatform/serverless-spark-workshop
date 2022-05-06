@@ -19,7 +19,14 @@ GCS_BUCKET=s8s_data_and_code_bucket-$PROJECT_NBR
 ```
 <br>
 
-## 2. Upload the lab code & data to the lab GCS bucket
+## 2. Clone the git repo in cloud shell
+
+```
+cd ~
+git clone git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
+```
+
+## 3. Upload the lab code & data to the lab GCS bucket
 
 Run the commands below to load the files in cloud shell to the GCS bucket-
 ```
