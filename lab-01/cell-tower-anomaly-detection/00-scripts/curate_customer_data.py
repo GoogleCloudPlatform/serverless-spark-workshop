@@ -1,3 +1,9 @@
+# ======================================================================================
+# ABOUT
+# In this PySpark script, we augment relevant attributes within customer master data with 
+# services threshold data and persist to GCS
+# ======================================================================================
+
 import configparser
 from datetime import datetime
 import os
