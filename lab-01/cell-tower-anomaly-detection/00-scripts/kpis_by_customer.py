@@ -47,10 +47,10 @@ curatedTelcoPerformanceDataAugDF1.createOrReplaceTempView("telco_perf_by_custome
 curatedTelcoPerformanceAggrDF= spark.sql('''select customerID,CellName,tenure,PhoneService,MultipleLines,InternetService,avg(PRBUsageUL) as avg_PRBUsageUL,avg(PRBUsageDL) as avg_PRBUsageDL,avg(meanThr_DL) as avg_meanThr_DL,avg(meanThr_UL) as avg_meanThr_UL,avg(maxThr_DL) as avg_maxThr_DL,avg(maxThr_UL) as 	avg_maxThr_UL,avg(meanUE_DL) as avg_meanUE_DL,avg(meanUE_UL) as avg_meanUE_UL,avg(maxUE_DL) as avg_maxUE_DL,avg(maxUE_UL) as avg_maxUE_UL,avg(maxUE_UL_DL) as avg_maxUE_UL_DL,avg(Unusual) as avg_Unusual,avg(roam_Mean) as avg_roam_Mean,avg(change_mou) as avg_change_mou,avg(drop_vce_Mean) as avg_drop_vce_Mean,avg(drop_dat_Mean) as avg_drop_dat_Mean,avg(blck_vce_Mean) as avg_blck_vce_Mean,avg(blck_dat_Mean) as avg_blck_dat_Mean,avg(plcd_vce_Mean) as avg_plcd_vce_Mean,avg(plcd_dat_Mean) as avg_plcd_dat_Mean,avg(comp_vce_Mean) as avg_comp_vce_Mean,avg(comp_dat_Mean) as avg_comp_dat_Mean,avg(peak_vce_Mean) as avg_peak_vce_Mean,avg(peak_dat_Mean) as avg_peak_dat_Mean,avg(mou_peav_Mean) as avg_mou_peav_Mean,avg(mou_pead_Mean) as avg_mou_pead_Mean,avg(opk_vce_Mean) as avg_opk_vce_Mean,avg(opk_dat_Mean) as avg_opk_dat_Mean,avg(mou_opkv_Mean) as avg_mou_opkv_Mean,avg(mou_opkd_Mean) as avg_mou_opkd_Mean,avg(drop_blk_Mean) as avg_drop_blk_Mean,avg(callfwdv_Mean) as avg_callfwdv_Mean,avg(callwait_Mean) as avg_callwait_Mean  from telco_perf_by_customer_unaggregated_with_month where PhoneService = 'Yes'  group by customerID,CellName,tenure,PhoneService,MultipleLines,InternetService  ''')
 
 # Augment with customer grain performance metrics
-slice1DF1=curatedTelcoPerformanceAggrDF.withColumn('incomplete_voice_calls',custDF3.avg_plcd_vce_Mean - custDF3.avg_comp_vce_Mean )
-slice1DF2=slice1DF1.withColumn('incomplete_data_calls',custDF3.avg_plcd_dat_Mean - custDF3.avg_comp_dat_Mean )
-slice1DF3=slice1DF2.withColumn('service_stability_of_voice_calls',custDF3.avg_peak_vce_Mean/custDF3.avg_opk_vce_Mean   )
-slice1DF4=slice1DF3.withColumn('service_stability_of_data_calls',custDF3.avg_peak_dat_Mean/custDF3.avg_opk_dat_Mean   )
+slice1DF1=curatedTelcoPerformanceAggrDF.withColumn('incomplete_voice_calls',curatedTelcoPerformanceAggrDF.avg_plcd_vce_Mean - curatedTelcoPerformanceAggrDF.avg_comp_vce_Mean )
+slice1DF2=slice1DF1.withColumn('incomplete_data_calls',curatedTelcoPerformanceAggrDF.avg_plcd_dat_Mean - curatedTelcoPerformanceAggrDF.avg_comp_dat_Mean )
+slice1DF3=slice1DF2.withColumn('service_stability_of_voice_calls',curatedTelcoPerformanceAggrDF.avg_peak_vce_Mean/curatedTelcoPerformanceAggrDF.avg_opk_vce_Mean   )
+slice1DF4=slice1DF3.withColumn('service_stability_of_data_calls',curatedTelcoPerformanceAggrDF.avg_peak_dat_Mean/curatedTelcoPerformanceAggrDF.avg_opk_dat_Mean   )
 
 # Replace nulls with 0 across columns
 slice1DF5=slice1DF4.fillna(value =0)
