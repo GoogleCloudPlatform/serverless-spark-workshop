@@ -1,0 +1,10 @@
+{
+    "code_bucket": "s8s_composer_code_bucket-YOUR_PROJECT_NBR",
+    "phs": "s8s-sphs-YOUR_PROJECT_NBR",
+    "project_id": "YOUR_PROJECT_ID",
+    "region": "us-central1",
+    "subnet": "spark-snet",
+    "bq_dataset": "cell_tower_mart_ds",
+    "umsa": "s8s-lab-sa",
+    "name": "YOUR_LDAP_WITHOUT_GOOGLE_DOT_COM"
+}
