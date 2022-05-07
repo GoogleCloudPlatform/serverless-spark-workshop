@@ -2,19 +2,17 @@
 
 This lab is data engineering centric and uses rules based processing to detect defective cell towers needing maintenance. It is self-contained and fully scripted to follow along at your own pace.
 
-## Prerequisites
+## 1. Prerequisites
 
 Successful environment creation per instructions in go/scw-tf
 
-## About the lab
+## 2. About the lab
 
-## The data
+## 3. About the data
 
-## The individual Spark applications & what they do
+## 4. The individual Spark applications & what they do
 
-## The pipeline
-
-## 1. Declare variables
+## 5. Declare variables
 
 In cloud shell, declare the following variables after substituting with yours. Its useful to persist the variables in a textpad of some kind or http://gist.github.com for ease.
 
@@ -30,14 +28,14 @@ CODE_AND_DATA_BUCKET=s8s_data_and_code_bucket-${PROJECT_NBR}
 COMPOSER_ENV=pavarotti-cc2
 ```
 
-## 2. Clone this repo
+## 6. Clone this repo
 
 ```
 cd ~
 git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
 ```
 
-## 3. Upload the code and data to the designated GCS bucket
+## 7. Upload the code and data to the designated GCS bucket
 Navigate to the cloned repo and upload the files (code and data) as shown below-
 ```
 cd ~/s8s-spark-ce-workshop/lab-01/
@@ -45,12 +43,12 @@ gsutil cp -r cell-tower-anomaly-detection/00-scripts gs://$CODE_AND_DATA_BUCKET/
 gsutil cp -r cell-tower-anomaly-detection/01-datasets gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/01-datasets
 ```
 
-## 4. Curate cutsomer master data
+## 8. Curate cutsomer master data
 In this section, from PySpark, we transform customer master data (parquet) and service threshold data (CSV) and join them, and persist to GCS.<br>
 
 Review the [code](cell-tower-anomaly-detection/00-scripts/curate_customer_data.py) first.<br>
 
-### 4.1. Abstract of the Pyspark script
+### 8.1. Abstract of the Pyspark script
 This script -<br>
 (a) Reads the customer master data<br>
 (b) Reads the service threshold data<br>
@@ -58,7 +56,7 @@ This script -<br>
 (d) Then joins them both based on cell tower name and<br> 
 (e) Persists to GCS
 
-### 4.2. Execute the command below
+### 8.2. Execute the command below
 ```
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
@@ -73,7 +71,7 @@ gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts/curate_custom
 Here is intermediate console output from the application-
 ```
 
-1. Customer data schema:
+8.2.1. Customer data schema:
 
 root
  |-- Index: long (nullable = true)
@@ -100,7 +98,7 @@ root
  |-- Churn: long (nullable = true)
  |-- CellTower: string (nullable = true)
 
-2. Service threshold data schema:
+8.2.2. Service threshold data schema:
 
 root
  |-- Time: string (nullable = true)
@@ -118,7 +116,7 @@ root
  |-- maxUE_UL+DL: integer (nullable = true)
  |-- Unusual: integer (nullable = true)
 
-3. Subsetted customer data:
+8.2.3. Subsetted customer data:
 +------+------------+-------------+---------------+-----+---------+----------+
 |tenure|PhoneService|MultipleLines|InternetService|Churn|CellTower|customerID|
 +------+------------+-------------+---------------+-----+---------+----------+
@@ -135,7 +133,7 @@ root
 +------+------------+-------------+---------------+-----+---------+----------+
 only showing top 10 rows
 
-4. Schema of the above-
+8.2.4. Schema of the above-
 root
  |-- tenure: long (nullable = true)
  |-- PhoneService: string (nullable = true)
@@ -145,7 +143,7 @@ root
  |-- CellTower: string (nullable = true)
  |-- customerID: long (nullable = true)
 
-5. Service threshold data-
+8.2.5. Service threshold data-
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 |CellName|PRBUsageUL|PRBUsageDL|meanThr_DL|meanThr_UL|maxThr_DL|maxThr_UL|meanUE_DL|meanUE_UL|maxUE_DL|maxUE_UL|maxUE_UL_DL|Unusual|
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
@@ -162,7 +160,7 @@ root
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 only showing top 10 rows
 
-6. Schema of the above
+8.2.6. Schema of the above
 root
  |-- CellName: string (nullable = true)
  |-- PRBUsageUL: double (nullable = true)
@@ -178,7 +176,7 @@ root
  |-- maxUE_UL_DL: integer (nullable = true)
  |-- Unusual: integer (nullable = true)
 
-7. Dataset from joining the customer data and service threshold-
+8.2.7. Dataset from joining the customer data and service threshold-
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 |tenure|PhoneService|MultipleLines   |InternetService|Churn|CellTower|customerID|CellName|PRBUsageUL|PRBUsageDL|meanThr_DL|meanThr_UL|maxThr_DL|maxThr_UL|meanUE_DL|meanUE_UL|maxUE_DL|maxUE_UL|maxUE_UL_DL|Unusual|
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
@@ -195,7 +193,7 @@ root
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 only showing top 10 rows
 
-8. Schema of the above-
+8.2.8. Schema of the above-
 root
  |-- tenure: long (nullable = true)
  |-- PhoneService: string (nullable = true)
@@ -220,8 +218,7 @@ root
 
 ```
 
-
-List the results in the GCS bucket-
+8.2.9. List the results in the GCS bucket-
 ```
 gsutil ls -r gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/output_data/customer_augmented
 ```
