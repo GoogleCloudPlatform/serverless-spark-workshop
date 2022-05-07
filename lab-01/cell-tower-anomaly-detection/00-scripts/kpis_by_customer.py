@@ -28,7 +28,7 @@ outputGCSURI="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data
 
 
 # Get or create a Spark session
-spark =SparkSession.builder.appName("KPIs-By-Customer-6Months").config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar').getOrCreate()
+spark =SparkSession.builder.appName("KPIs-By-Customer").config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar').getOrCreate()
 
 # Read the source data into a dataframe
 curatedTelcoPerformanceDataDF = spark.read.format("parquet").option("header", True).option("inferSchema",True).load(curatedTelcoPerformanceDataDir)
@@ -96,6 +96,17 @@ finalDF.count()
 
 # Persist to GCS
 finalDF.write.parquet(outputGCSURI, mode = "overwrite")
+
+# Construct a BigQuery external table definition on the data persisted to GCS
+query = f"""
+CREATE OR REPLACE EXTERNAL TABLE """+bqDatasetName+""".customer_grain_perf_metrics OPTIONS (
+format = 'PARQUET', uris = ['"""+outputGCSURI+"""/*.parquet'] );
+"""
+
+# Execute the BigQuery external table definition
+bq_client = bigquery.Client(project=projectID)
+job = bq_client.query(query)
+job.result()
 
 
 
