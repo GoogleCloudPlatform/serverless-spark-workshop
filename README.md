@@ -19,7 +19,8 @@ Run the setup in Argolis per instructions in [go/scw-tf](go/scw-tf)
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Dont forget to 
-Shut down/delete resources as needed.
+Shut down/delete resources when done
 
+### Contributions welcome
 
-
+Community contribution to improve the labs or new labs are very much appreciated.
