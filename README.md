@@ -1,6 +1,6 @@
 # Serverless Spark CE Workshop - May 2022
 
-This repo contains hands-on-labs with multiple modules and covers serverless Spark on GCP powered by Cloud Dataproc, as part of the [Serverless Spark Workshop](go/spark-ce-workshop).
+This repo contains hands-on-labs that cover serverless Spark on GCP powered by Cloud Dataproc, as part of the [Serverless Spark Workshop](go/spark-ce-workshop).
 
 ### Audience
 The intended audience is Google Customer Engineers but anyone with access to GCP can try the lab modules just as well.
