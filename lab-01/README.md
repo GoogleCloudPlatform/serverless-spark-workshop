@@ -22,7 +22,7 @@ PROJECT_NBR=YOUR_PROJECT_NUMBER
 LOCATION=us-central1
 VPC_NM=VPC=s8s-vpc-$PROJECT_NBR
 SPARK_SERVERLESS_SUBNET=spark-snet
-PERSISTENT_HISTORY_SERVER_NM=s8s-sphs-$PROJECT_NBR
+PERSISTENT_HISTORY_SERVER_NM=s8s-sphs-${PROJECT_NBR}
 UMSA_FQN=s8s-lab-sa@$PROJECT_ID.iam.gserviceaccount.com
 CODE_AND_DATA_BUCKET=s8s_data_and_code_bucket-${PROJECT_NBR}
 COMPOSER_ENV=$YOUR_PROJECT_ID-cc2
@@ -728,3 +728,5 @@ gcloud composer environments update \
   --location ${LOCATION} \
   --update-env-variables=code_bucket=$CODE_AND_DATA_BUCKET,phs=$PERSISTENT_HISTORY_SERVER_NM,project_id=$PROJECT_ID,region=$LOCATION,subnet=${SPARK_SERVERLESS_SUBNET},bq_dataset=cell_tower_reporting_mart,umsa=s8s-lab-sa
 ```
+
+### 12.3. Copy the DAG script (pipeline) to the Cloud Composer environemnt DAG bucket
