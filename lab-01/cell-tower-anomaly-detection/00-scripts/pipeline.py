@@ -1,3 +1,9 @@
+# ======================================================================================
+# ABOUT
+# This script orchestrates the execution of the cell tower anomany detection jobs
+# as a pipeline/workflow with dependencies managed
+# ======================================================================================
+
 import os
 from airflow.models import Variable
 from datetime import datetime
@@ -6,10 +12,9 @@ from airflow.providers.google.cloud.operators.dataproc import (DataprocCreateBat
 from datetime import datetime
 from airflow.utils.dates import days_ago
 import string
-import random # define the random module
-S = 10  # number of characters in the string.
-# call random.choices() string module to find the string in Uppercase + numeric data.
-ran = ''.join(random.choices(string.digits, k = S))
+import random 
+
+# Read environment variables into local variables
 project_id = models.Variable.get("project_id")
 region = models.Variable.get("region")
 subnet=models.Variable.get("subnet")
@@ -17,21 +22,30 @@ phs_server=Variable.get("phs")
 code_bucket=Variable.get("code_bucket")
 bq_dataset=Variable.get("bq_dataset")
 umsa=Variable.get("umsa")
-name=Variable.get("name")
 
-dag_name= name+"_Cell_Tower_Anomaly_Detection"
+# Define DAG name
+dag_name= "Cell_Tower_Anomaly_Detection"
+
+# User Managed Service Account FQN
 service_account_id= umsa+"@"+project_id+".iam.gserviceaccount.com"
 
-cust_threshold_join_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/customer_threshold_join.py"
-cust_threshold_services_join_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/customer_threshold_services_join.py"
-cust_service_indicator_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/customer_service_indicator.py"
-cell_tower_performance_indicator_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/cell_tower_performance_indicator.py"
+# PySpark script files in GCS, of the individual Spark applications in the pipeline
+curate_customer_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/curate_customer_data.py"
+curate_teleco_performance_metrics_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/curate_teleco_performance_data.py"
+kpis_by_customer_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py"
+kpis_by_cell_tower_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/kpis_by_cell_tower.py"
+
+# This is to add a random suffix to the serverless Spark batch ID that needs to be unique each run 
+# ...Define the random module
+S = 10  # number of characters in the string.
+# call random.choices() string module to find the string in Uppercase + numeric data.
+ran = ''.join(random.choices(string.digits, k = S))
 
 BATCH_ID = "cell-tower-anomaly-detection-"+str(ran)
 
 BATCH_CONFIG1 = {
     "pyspark_batch": {
-        "main_python_file_uri": cust_threshold_join_script,
+        "main_python_file_uri": curate_customer_script,
         "args": [
           project_id,
           bq_dataset,
@@ -56,7 +70,7 @@ BATCH_CONFIG1 = {
 }
 BATCH_CONFIG2 = {
     "pyspark_batch": {
-        "main_python_file_uri": cust_threshold_services_join_script,
+        "main_python_file_uri": curate_teleco_performance_metrics_script,
         "args": [
         project_id,
         bq_dataset,
@@ -81,7 +95,7 @@ BATCH_CONFIG2 = {
 }
 BATCH_CONFIG3 = {
     "pyspark_batch": {
-        "main_python_file_uri": cust_service_indicator_script,
+        "main_python_file_uri": kpis_by_customer_script,
         "args": [
         project_id,
         bq_dataset,
@@ -106,7 +120,7 @@ BATCH_CONFIG3 = {
 }
 BATCH_CONFIG4 = {
     "pyspark_batch": {
-        "main_python_file_uri": cell_tower_performance_indicator_script,
+        "main_python_file_uri": kpis_by_cell_tower_script,
         "args": [
         project_id,
         bq_dataset,
@@ -137,37 +151,35 @@ with models.DAG(
     start_date = days_ago(2),
     catchup=False,
 ) as dag_serverless_batch:
-    # [START how_to_cloud_dataproc_create_batch_operator]
-    create_serverless_batch1 = DataprocCreateBatchOperator(
-        task_id="Cleaning_Joining_Customer-Services",
+    curate_customer_master = DataprocCreateBatchOperator(
+        task_id="cc2_Curate_Customer_Master_Data",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG1,
         batch_id=BATCH_ID,
     )
-    create_serverless_batch2 = DataprocCreateBatchOperator(
-        task_id="Cleaning_Joining_Customer-Services-Telecom",
+    curate_telco_performance_metrics = DataprocCreateBatchOperator(
+        task_id="cc2_Curate_Telco_Performance_Metrics",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG2,
         batch_id=BATCH_ID,
     )
-    create_serverless_batch3 = DataprocCreateBatchOperator(
-        task_id="Customer_Aggregation_Workflow",
+    kpis_by_customer = DataprocCreateBatchOperator(
+        task_id="cc2_KPIs_By_Customer",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG3,
         batch_id=BATCH_ID,
     )
-    create_serverless_batch4 = DataprocCreateBatchOperator(
-        task_id="Celltower_Aggregation_Workflow",
+    kpis_by_cell_tower = DataprocCreateBatchOperator(
+        task_id="cc2_KPIs_By_Cell_Tower",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG4,
         batch_id=BATCH_ID,
     )
-    # [END how_to_cloud_dataproc_create_batch_operator]
 
-    create_serverless_batch1 >> create_serverless_batch2
-    create_serverless_batch2 >> create_serverless_batch3
-    create_serverless_batch2 >> create_serverless_batch4
+    curate_customer_master >> curate_telco_performance_metrics
+    curate_telco_performance_metrics >> kpis_by_customer
+    curate_telco_performance_metrics >> kpis_by_cell_tower
