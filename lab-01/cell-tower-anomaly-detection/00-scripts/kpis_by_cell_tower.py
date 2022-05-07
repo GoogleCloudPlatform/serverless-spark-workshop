@@ -90,7 +90,7 @@ slice2DF26=slice2DF25.withColumn('drop_blk_Mean_Thrsld',  when(col("avg_drop_blk
 slice2DF27=slice2DF26.withColumn('callfwdv_Mean_Thrsld', when(col("avg_callfwdv_Mean") < str(slice2DF4.select(avg("avg_callfwdv_Mean")).collect()[0][0]), 1)              .when(col("avg_callfwdv_Mean") > str(slice2DF4.select(avg("avg_callfwdv_Mean")).collect()[0][0]), 0))
 slice2DF28=slice2DF27.withColumn('service_stability_voice_calls_Thrsld', when(col("service_stability_voice_calls")> str(slice2DF4.select(avg("service_stability_voice_calls")).collect()[0][0]) , 0)              .when(col("service_stability_voice_calls")< str(slice2DF4.select(avg("service_stability_voice_calls")).collect()[0][0]), 1))
 slice2DF29=slice2DF28.withColumn('service_stability_data_calls_Thrsld', when(col("service_stability_data_calls")> str(slice2DF4.select(avg("service_stability_data_calls")).collect()[0][0]), 0)              .when(col("service_stability_data_calls")< str(slice2DF4.select(avg("service_stability_data_calls")).collect()[0][0]), 1))
-slice2DF29.show(truncate=False)
+slice2DF29.show(3,truncate=False)
 
 # Based on the performance check verifying whether the Maintainence for the cell tower required or not
 # ...Replace nulls
@@ -121,4 +121,4 @@ job.result()
 
 # Print the cell tower name, defect count and maintenance required flag 
 finalSubsetDF=finalDF.select(col("CellName"),col("defect_count"),col("Maintainence_Required"))
-finalSubsetDF.show(truncate= False)
+finalSubsetDF.show(3,truncate= False)
