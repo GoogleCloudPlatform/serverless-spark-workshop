@@ -785,6 +785,7 @@ gcloud composer environments storage dags import \
 You should see the DAG in the Cloud Composer 2 environment DAG bucket.<br>
 It will automatically execute. Review its execution in the Airflow UI and the Serverless Spark batches UI.
 
-## =====================================================================================================
-## THIS CONCLUDES THE LAB - CELL TOWER ANOMALY DETECTION
-## =====================================================================================================
+##### =====================================================================================================
+##### THIS CONCLUDES THE LAB - CELL TOWER ANOMALY DETECTION
+##### DONT FORGET TO DELETE THE RESOURCES YOU PROVISIONED
+##### =====================================================================================================
