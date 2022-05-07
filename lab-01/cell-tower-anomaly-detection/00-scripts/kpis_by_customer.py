@@ -1,3 +1,10 @@
+# ======================================================================================
+# ABOUT
+# In this PySpark script, perform analytics on the augmented telco customer churn data
+# to arrive at KPI metrics and persist to GCS and create an external table in BigQuery
+# on the data in GCS
+# ======================================================================================
+
 import configparser
 from datetime import datetime
 import os
