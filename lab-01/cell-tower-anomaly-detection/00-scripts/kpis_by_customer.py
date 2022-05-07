@@ -24,7 +24,8 @@ sourceBucketName=sys.argv[3]
 curatedTelcoPerformanceDataDir="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data/telco_performance_augmented/part*"
 
 # Output directory declaration
-outputGCSURI="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data"
+outputGCSURI="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data/kpis_by_customer"
+
 
 # Get or create a Spark session
 spark =SparkSession.builder.appName("KPIs-By-Customer-6Months").config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-latest_2.12.jar').getOrCreate()
@@ -90,7 +91,11 @@ slice1DF30=slice1DF30.fillna(value =0)
 finalDF = slice1DF30.withColumn("defect_count",col("PRBUsageUL_Thrsld")+col("PRBUsageDL_Thrsld")+col("meanThr_DL_Thrsld")+col("meanThr_UL_Thrsld")+col("maxThr_DL_Thrsld")+col("maxThr_UL_Thrsld")+col("meanUE_DL_Thrsld")+col("meanUE_UL_Thrsld")+col("maxUE_DL_Thrsld")+col("maxUE_UL_Thrsld")+col("maxUE_UL_DL_Thrsld")+col("roam_Mean_Thrsld")+col("change_mouL_Thrsld")+col("drop_vce_Mean_Thrsld")+col("drop_dat_Mean_Thrsld")+col("blck_vce_Mean_Thrsld")+col("blck_dat_Mean_Thrsld")+col("peak_vce_Mean_Thrsld")+col("peak_dat_Mean_Thrsld")+col("opk_vce_Mean_Thrsld")+col("opk_dat_Mean_Thrsld")+col("drop_blk_Mean_Thrsld")+col("callfwdv_Mean_Thrsld")+col("service_stability_voice_calls_Thrsld")+col("service_stability_data_calls_Thrsld"))
 finalDF.show(3,truncate = False)
 
+# Record count
+finalDF.count()
+
 # Persist to GCS
-finalDF.write.parquet(os.path.join(outputGCSURI, "/customer_grain_perf_metrics"), mode = "overwrite")
+finalDF.write.parquet(outputGCSURI, mode = "overwrite")
+
 
 
