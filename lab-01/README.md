@@ -27,6 +27,7 @@ UMSA_FQN=s8s-lab-sa@$PROJECT_ID.iam.gserviceaccount.com
 CODE_AND_DATA_BUCKET=s8s_data_and_code_bucket-${PROJECT_NBR}
 COMPOSER_ENV=${PROJECT_ID}-cc2
 YOUR_IP_CIDR="YOUR_PUBLIC_IP/32"
+SPARK_SUBNET_CIDR="10.0.0.0/16"
 ```
 
 ## 6. Clone this repo
@@ -715,7 +716,8 @@ gcloud composer environments create ${COMPOSER_ENV} \
 --subnetwork ${SPARK_SERVERLESS_SUBNET} \
 --image-version "composer-2.0.11-airflow-2.2.3" \
 --service-account ${UMSA_FQN} \
---web-server-allow-ip ip_range=$YOUR_IP_CIDR
+--web-server-allow-ip ip_range=$YOUR_IP_CIDR \
+--web-server-allow-ip ip_range=$SPARK_SUBNET_CIDR
 ```
 Takes about 25 minutes
 
