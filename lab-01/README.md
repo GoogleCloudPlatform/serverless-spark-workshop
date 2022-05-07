@@ -722,14 +722,57 @@ Takes about 25 minutes
 
 ### 12.2. Configure environment variables
 
+1) Edit the variables.json with your values download it locally, then to Cloud Composer, via the Airflow UI.
+
 ```
-gcloud composer environments update \
-  ${COMPOSER_ENV} \
-  --location ${LOCATION} \
-  --update-env-variables=code_bucket=$CODE_AND_DATA_BUCKET,phs=$PERSISTENT_HISTORY_SERVER_NM,project_id=$PROJECT_ID,region=$LOCATION,subnet=${SPARK_SERVERLESS_SUBNET},bq_dataset=cell_tower_reporting_mart,umsa=s8s-lab-sa
+~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/02-config
+cat variables.json
 ```
 
-### 12.3. Copy the DAG script (pipeline) to the Cloud Composer environemnt DAG bucket
+Author's output-
+```
+{
+    "code_bucket": "s8s_composer_code_bucket-YOUR_PROJECT_NBR",
+    "phs": "s8s-sphs-YOUR_PROJECT_NBR",
+    "project_id": "YOUR_PROJECT_ID",
+    "region": "us-central1",
+    "subnet": "spark-snet",
+    "bq_dataset": "cell_tower_mart_ds",
+    "umsa": "s8s-lab-sa"
+}
+```
+
+2) Lets update this file with your configuration
+
+```
+sed -i "s|YOUR_PROJECT_NBR|$PROJECT_NBR|g" variables.json
+sed -i "s|YOUR_PROJECT_ID|$PROJECT_ID|g" variables.json
+```
+
+3) Validate the update
+
+```
+cat variables.json
+```
+
+Author's output-
+```
+{
+    "code_bucket": "s8s_composer_code_bucket-15xx045",
+    "phs": "s8s-sphs-15xx45",
+    "project_id": "charaka-3xx15",
+    "region": "us-central1",
+    "subnet": "spark-snet",
+    "bq_dataset": "cell_tower_mart_ds",
+    "umsa": "s8s-lab-sa"
+}
+```
+
+4) Download the file locally
+5) Navigate to your composer environment's variables UI under admin and import the json file
+6) Wait till the variables are reflected in the UI
+
+### 12.3. Import the DAG script (pipeline) into the Cloud Composer environment 
 
 ```
 cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
