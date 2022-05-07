@@ -41,7 +41,7 @@ S = 10  # number of characters in the string.
 # call random.choices() string module to find the string in Uppercase + numeric data.
 ran = ''.join(random.choices(string.digits, k = S))
 
-BATCH_ID = "cell-tower-anomaly-detection-"+str(ran)
+BATCH_ID = "lab-01-"+str(ran)
 
 BATCH_CONFIG1 = {
     "pyspark_batch": {
