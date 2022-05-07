@@ -722,4 +722,9 @@ Takes about 25 minutes
 
 ### 12.2. Configure environment variables
 
-
+```
+gcloud composer environments update \
+  ${COMPOSER_ENV} \
+  --location ${LOCATION} \
+  --update-env-variables=code_bucket=$CODE_AND_DATA_BUCKET,phs=$PERSISTENT_HISTORY_SERVER_NM,project_id=$PROJECT_ID,region=$LOCATION,subnet=${SPARK_SERVERLESS_SUBNET},bq_dataset=cell_tower_reporting_mart,umsa=s8s-lab-sa
+```
