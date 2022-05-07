@@ -148,28 +148,28 @@ with models.DAG(
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG1,
-        batch_id=BATCH_ID,
+        batch_id=BATCH_ID + "-curate-customer",
     )
     curate_telco_performance_metrics = DataprocCreateBatchOperator(
         task_id="Curate_Telco_Performance_Metrics",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG2,
-        batch_id=BATCH_ID,
+        batch_id=BATCH_ID + "-curate-tecom-perf-metrics",
     )
     calc_kpis_by_customer = DataprocCreateBatchOperator(
         task_id="Calc_KPIs_By_Customer",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG3,
-        batch_id=BATCH_ID,
+        batch_id=BATCH_ID + "-calc-kpis-by-cust",
     )
     calc_kpis_by_cell_tower = DataprocCreateBatchOperator(
         task_id="Calc_KPIs_By_Cell_Tower",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG4,
-        batch_id=BATCH_ID,
+        batch_id=BATCH_ID + "-calc-kpis-by-cell-tower",
     )
 
     curate_customer_master >> curate_telco_performance_metrics
