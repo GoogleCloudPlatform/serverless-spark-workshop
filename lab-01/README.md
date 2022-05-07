@@ -218,7 +218,7 @@ root
 
 ```
 
-8.2.9. List the results in the GCS bucket-
+### 8.3. List the results in the GCS bucket-
 ```
 gsutil ls -r gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/output_data/customer_augmented
 ```
@@ -408,7 +408,7 @@ only showing top 20 rows
 
 ```
 
-9.2.3. List the results in the GCS bucket-
+### 9.3. List the results in the GCS bucket
 ```
 gsutil ls -r gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/output_data/telco_performance_augmented
 ```
@@ -519,7 +519,7 @@ only showing top 3 rows
 Note the defect count which is a netric derived that indicates issues with the cell tower.<br>
 
 
-List the results in the GCS bucket-
+### 10.3. List the results in the GCS bucket-
 ```
 gsutil ls -r gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/output_data/kpis_by_customer
 ```
