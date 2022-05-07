@@ -719,7 +719,9 @@ gcloud composer environments create ${COMPOSER_ENV} \
 --web-server-allow-ip ip_range=$YOUR_IP_CIDR \
 --web-server-allow-ip ip_range=$SPARK_SUBNET_CIDR
 ```
-Takes about 25 minutes
+Takes about 25 minutes<br>
+
+**If this fails**, create from the Cloud Console Composer UI, ensure you pick Composer 2, the user managed service account (s8s-lab-sa*), your VPC and subnet and allow your public IP/32 and 10.0.0.0/16 that is the serverless Spark subnet.
 
 ### 12.2. Configure environment variables
 
