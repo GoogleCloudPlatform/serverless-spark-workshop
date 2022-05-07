@@ -99,7 +99,7 @@ finalDF.write.parquet(outputGCSURI, mode = "overwrite")
 
 # Construct a BigQuery external table definition on the data persisted to GCS
 query = f"""
-CREATE OR REPLACE EXTERNAL TABLE """+bqDatasetName+""".customer_grain_perf_metrics OPTIONS (
+CREATE OR REPLACE EXTERNAL TABLE """+bqDatasetName+""".kpis_by_customer OPTIONS (
 format = 'PARQUET', uris = ['"""+outputGCSURI+"""/*.parquet'] );
 """
 
