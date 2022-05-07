@@ -4,7 +4,7 @@ This lab is data engineering centric and uses rules based processing to detect d
 
 ## Prerequisites
 
-Successful environment creation per instructions in go/scw-tf
+Successful environment creation per instructions in [go/scw-tf](go/scw-tf)
 
 ## About the lab
 
