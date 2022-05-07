@@ -25,7 +25,8 @@ SPARK_SERVERLESS_SUBNET=spark-snet
 PERSISTENT_HISTORY_SERVER_NM=s8s-sphs-$PROJECT_NBR
 UMSA_FQN=s8s-lab-sa@$PROJECT_ID.iam.gserviceaccount.com
 CODE_AND_DATA_BUCKET=s8s_data_and_code_bucket-${PROJECT_NBR}
-COMPOSER_ENV=pavarotti-cc2
+COMPOSER_ENV=$YOUR_PROJECT_ID-cc2
+YOUR_IP_CIDR="YOUR_PUBLIC_IP/32"
 ```
 
 ## 6. Clone this repo
@@ -362,7 +363,7 @@ root
  |-- eqpdays: integer (nullable = true)
  |-- Customer_ID: integer (nullable = true)
 
-9.2.2. The telco customer churn data - schema
+9.2.2. The telco customer churn data - sample
 +---------+----------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-----+------+--------+--------+-----------------------------+--------+--------+--------------------+-----------+
 |roam_Mean|change_mou|drop_vce_Mean|drop_dat_Mean|blck_vce_Mean|blck_dat_Mean|plcd_vce_Mean|plcd_dat_Mean|comp_vce_Mean|comp_dat_Mean|peak_vce_Mean|peak_dat_Mean|mou_peav_Mean|mou_pead_Mean|opk_vce_Mean|opk_dat_Mean|mou_opkv_Mean|mou_opkd_Mean|drop_blk_Mean|callfwdv_Mean|callwait_Mean|churn|months|uniqsubs|actvsubs|area                         |dualband|forgntvl|customer_ID_original|customer_ID|
 +---------+----------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+------------+------------+-------------+-------------+-------------+-------------+-------------+-----+------+--------+--------+-----------------------------+--------+--------+--------------------+-----------+
@@ -647,7 +648,7 @@ root
 only showing top 20 rows
 
 
-Sample of cell towers needing maintenance-
+Sample of cell towers needing maintenance or not -
 +--------+------------+---------------------+
 |CellName|defect_count|Maintainence_Required|
 +--------+------------+---------------------+
@@ -697,4 +698,28 @@ Run the query below-
 ```
 select CellName, Maintainence_Required from `charaka-349315.cell_tower_reporting_mart.kpis_by_cell_tower` limit 3
 ```
+
+## 12. Automate with Apache Airflow pwered by Cloud Composer 2
+
+### 12.1. Prerequisites
+We have already -
+1. Activated the composer API
+2. Completed the IAM permissions granting for Cloud Composer 2 (CC2)
+
+### 12.2. Create a Cloud Composer 2 environment 
+
+From Cloud shell, scope to your project, run the below-
+```
+gcloud composer environments create ${COMPOSER_ENV} \
+--location ${LOCATION} \
+--network ${VPC_NM} \
+--subnetwork ${SPARK_SERVERLESS_SUBNET} \
+--image-version "composer-2.0.11-airflow-2.2.3" \
+--service-account ${UMSA_FQN} \
+--web-server-allow-ip ip_range=$YOUR_IP_CIDR
+```
+Takes about 25 minutes
+
+### 12.2. Configure environment variables
+
 
