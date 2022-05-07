@@ -72,6 +72,9 @@ gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts/curate_custom
 ```
 Here is intermediate console output from the application-
 ```
+
+1. Customer data schema:
+
 root
  |-- Index: long (nullable = true)
  |-- customerID: string (nullable = true)
@@ -97,6 +100,8 @@ root
  |-- Churn: long (nullable = true)
  |-- CellTower: string (nullable = true)
 
+2. Service threshold data schema:
+
 root
  |-- Time: string (nullable = true)
  |-- CellName: string (nullable = true)
@@ -113,6 +118,7 @@ root
  |-- maxUE_UL+DL: integer (nullable = true)
  |-- Unusual: integer (nullable = true)
 
+3. Subsetted customer data:
 +------+------------+-------------+---------------+-----+---------+----------+
 |tenure|PhoneService|MultipleLines|InternetService|Churn|CellTower|customerID|
 +------+------------+-------------+---------------+-----+---------+----------+
@@ -129,6 +135,7 @@ root
 +------+------------+-------------+---------------+-----+---------+----------+
 only showing top 10 rows
 
+4. Schema of the above-
 root
  |-- tenure: long (nullable = true)
  |-- PhoneService: string (nullable = true)
@@ -138,6 +145,7 @@ root
  |-- CellTower: string (nullable = true)
  |-- customerID: long (nullable = true)
 
+5. Service threshold data-
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 |CellName|PRBUsageUL|PRBUsageDL|meanThr_DL|meanThr_UL|maxThr_DL|maxThr_UL|meanUE_DL|meanUE_UL|maxUE_DL|maxUE_UL|maxUE_UL_DL|Unusual|
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
@@ -154,6 +162,7 @@ root
 +--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 only showing top 10 rows
 
+6. Schema of the above
 root
  |-- CellName: string (nullable = true)
  |-- PRBUsageUL: double (nullable = true)
@@ -169,6 +178,7 @@ root
  |-- maxUE_UL_DL: integer (nullable = true)
  |-- Unusual: integer (nullable = true)
 
+7. Dataset from joining the customer data and service threshold-
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 |tenure|PhoneService|MultipleLines   |InternetService|Churn|CellTower|customerID|CellName|PRBUsageUL|PRBUsageDL|meanThr_DL|meanThr_UL|maxThr_DL|maxThr_UL|meanUE_DL|meanUE_UL|maxUE_DL|maxUE_UL|maxUE_UL_DL|Unusual|
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
@@ -185,6 +195,7 @@ root
 +------+------------+----------------+---------------+-----+---------+----------+--------+----------+----------+----------+----------+---------+---------+---------+---------+--------+--------+-----------+-------+
 only showing top 10 rows
 
+8. Schema of the above-
 root
  |-- tenure: long (nullable = true)
  |-- PhoneService: string (nullable = true)
@@ -206,7 +217,6 @@ root
  |-- maxUE_UL: integer (nullable = true)
  |-- maxUE_UL_DL: integer (nullable = true)
  |-- Unusual: integer (nullable = true)
-
 
 ```
 
