@@ -4,7 +4,7 @@ This lab is data engineering centric and uses rules based processing to detect d
 
 ## 1. Prerequisites
 
-Successful environment creation per instructions in [go/scw-tf](go/scw-tf)
+Successful environment creation per instructions in go/scw-tf
 
 ## 2. About the lab
 
@@ -30,7 +30,6 @@ YOUR_IP_CIDR="YOUR_PUBLIC_IP/32"
 ```
 
 ## 6. Clone this repo
-
 ```
 cd ~
 git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
