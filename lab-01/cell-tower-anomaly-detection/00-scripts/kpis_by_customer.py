@@ -32,7 +32,7 @@ spark =SparkSession.builder.appName("KPIs-By-Customer-6Months").config('spark.ja
 # Read the source data into a dataframe
 curatedTelcoPerformanceDataDF = spark.read.format("parquet").option("header", True).option("inferSchema",True).load(curatedTelcoPerformanceDataDir)
 curatedTelcoPerformanceDataDF.printSchema()
-curatedTelcoPerformanceDataDF.show(3,truncate=False)
+#curatedTelcoPerformanceDataDF.show(3,truncate=False)
 
 # Layer 1 slicing - Avg of 6 months of performance metrics at customer granularity level
 curatedTelcoPerformanceDataDF=curatedTelcoPerformanceDataDF.drop(curatedTelcoPerformanceDataDF.months)
@@ -53,7 +53,7 @@ slice1DF3=slice1DF2.withColumn('service_stability_voice_calls',curatedTelcoPerfo
 slice1DF4=slice1DF3.withColumn('service_stability_data_calls',curatedTelcoPerformanceAggrDF.avg_peak_dat_Mean/curatedTelcoPerformanceAggrDF.avg_opk_dat_Mean   )
 
 # Replace nulls with 0 across columns
-slice1DF5=slice1DF4.fillna(value =0)
+#slice1DF5=slice1DF4.fillna(value =0)
 
 # Add derived columns that are customer grain performance metrics of 0's and 1s
 slice1DF6=slice1DF5.withColumn('PRBUsageUL_Thrsld',when(col("avg_PRBUsageUL") < str(slice1DF5.select(avg("avg_PRBUsageUL")).collect()[0][0]), 0).when(col("avg_PRBUsageUL") >str(slice1DF5.select(avg("avg_PRBUsageUL")).collect()[0][0]),1) )
@@ -84,7 +84,7 @@ slice1DF30=slice1DF29.withColumn('service_stability_data_calls_Thrsld', when(col
 
 # Replace nulls with 0 across columns
 slice1DF30=slice1DF30.fillna(value =0)
-slice1DF30.show(3,truncate=False)
+#slice1DF30.show(3,truncate=False)
 
 # Add a defect count column which sums up the various metrics that are either 0 or 1
 finalDF = slice1DF30.withColumn("defect_count",col("PRBUsageUL_Thrsld")+col("PRBUsageDL_Thrsld")+col("meanThr_DL_Thrsld")+col("meanThr_UL_Thrsld")+col("maxThr_DL_Thrsld")+col("maxThr_UL_Thrsld")+col("meanUE_DL_Thrsld")+col("meanUE_UL_Thrsld")+col("maxUE_DL_Thrsld")+col("maxUE_UL_Thrsld")+col("maxUE_UL_DL_Thrsld")+col("roam_Mean_Thrsld")+col("change_mouL_Thrsld")+col("drop_vce_Mean_Thrsld")+col("drop_dat_Mean_Thrsld")+col("blck_vce_Mean_Thrsld")+col("blck_dat_Mean_Thrsld")+col("peak_vce_Mean_Thrsld")+col("peak_dat_Mean_Thrsld")+col("opk_vce_Mean_Thrsld")+col("opk_dat_Mean_Thrsld")+col("drop_blk_Mean_Thrsld")+col("callfwdv_Mean_Thrsld")+col("service_stability_voice_calls_Thrsld")+col("service_stability_data_calls_Thrsld"))
@@ -93,14 +93,4 @@ finalDF.show(3,truncate = False)
 # Persist to GCS
 finalDF.write.parquet(os.path.join(outputGCSURI, "/customer_grain_perf_metrics"), mode = "overwrite")
 
-# Construct a BigQuery external table definition on the data persisted to GCS
-query = f"""
-CREATE OR REPLACE EXTERNAL TABLE """+bqDatasetName+""".customer_grain_perf_metrics OPTIONS (
-format = 'PARQUET', uris = ['"""+outputGCSURI+"""/customer_grain_perf_metrics/*.parquet'] );
-"""
 
-# Execute the BigQuery external table definition
-bq_client = bigquery.Client(project=projectID)
-job = bq_client.query(query)
-job.result()
-spark.stop()
