@@ -31,7 +31,7 @@ service_account_id= umsa+"@"+project_id+".iam.gserviceaccount.com"
 
 # PySpark script files in GCS, of the individual Spark applications in the pipeline
 curate_customer_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/curate_customer_data.py"
-curate_teleco_performance_metrics_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/curate_teleco_performance_data.py"
+curate_telco_performance_metrics_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/curate_telco_performance_data.py"
 kpis_by_customer_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py"
 kpis_by_cell_tower_script= "gs://"+code_bucket+"/cell-tower-anomaly-detection/00-scripts/kpis_by_cell_tower.py"
 
@@ -70,7 +70,7 @@ BATCH_CONFIG1 = {
 }
 BATCH_CONFIG2 = {
     "pyspark_batch": {
-        "main_python_file_uri": curate_teleco_performance_metrics_script,
+        "main_python_file_uri": curate_telco_performance_metrics_script,
         "args": [
         project_id,
         bq_dataset,
