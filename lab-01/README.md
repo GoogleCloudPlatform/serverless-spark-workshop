@@ -428,4 +428,112 @@ gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_d
 ```
 This output will be used in subsequent steps.
 
+## 10. Curate telecom performance data
+In this section, from PySpark, we analyze the curated telecom data, and calculate the KPIs by customer.<br>
+
+Review the [code](cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py) first.<br>
+
+### 10.1. Abstract of the Pyspark script
+This script -<br>
+(a) Reads the curated telecom data <br>
+(b) Add a number of derived metrics <br>
+(c) that constitute performance indicators and <br>
+(d) persists to GCS as parquet and <br>
+(e) also creates an external table in BigQuery on the same dataset
+
+### 10.2. Execute the command below
+```
+gcloud dataproc batches submit \
+--project $PROJECT_ID \
+--region $LOCATION pyspark \
+--batch s8s-lab1-kpis-by-customer-$RANDOM \
+gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py \
+--subnet projects/$PROJECT_ID/regions/$LOCATION/subnetworks/$SPARK_SERVERLESS_SUBNET \
+--history-server-cluster=projects/$PROJECT_ID/regions/$LOCATION/clusters/$PERSISTENT_HISTORY_SERVER_NM \
+--service-account $UMSA_FQN \
+-- $PROJECT_ID "cell_tower_reporting_mart" $CODE_AND_DATA_BUCKET
+```
+Here is intermediate console output from the application-
+```
+root
+ |-- tenure: long (nullable = true)
+ |-- PhoneService: string (nullable = true)
+ |-- MultipleLines: string (nullable = true)
+ |-- InternetService: string (nullable = true)
+ |-- Churn: long (nullable = true)
+ |-- CellTower: string (nullable = true)
+ |-- customerID: long (nullable = true)
+ |-- CellName: string (nullable = true)
+ |-- PRBUsageUL: double (nullable = true)
+ |-- PRBUsageDL: double (nullable = true)
+ |-- meanThr_DL: double (nullable = true)
+ |-- meanThr_UL: double (nullable = true)
+ |-- maxThr_DL: double (nullable = true)
+ |-- maxThr_UL: double (nullable = true)
+ |-- meanUE_DL: double (nullable = true)
+ |-- meanUE_UL: double (nullable = true)
+ |-- maxUE_DL: integer (nullable = true)
+ |-- maxUE_UL: integer (nullable = true)
+ |-- maxUE_UL_DL: integer (nullable = true)
+ |-- Unusual: integer (nullable = true)
+ |-- roam_Mean: double (nullable = true)
+ |-- change_mou: double (nullable = true)
+ |-- drop_vce_Mean: double (nullable = true)
+ |-- drop_dat_Mean: double (nullable = true)
+ |-- blck_vce_Mean: double (nullable = true)
+ |-- blck_dat_Mean: double (nullable = true)
+ |-- plcd_vce_Mean: double (nullable = true)
+ |-- plcd_dat_Mean: double (nullable = true)
+ |-- comp_vce_Mean: double (nullable = true)
+ |-- comp_dat_Mean: double (nullable = true)
+ |-- peak_vce_Mean: double (nullable = true)
+ |-- peak_dat_Mean: double (nullable = true)
+ |-- mou_peav_Mean: double (nullable = true)
+ |-- mou_pead_Mean: double (nullable = true)
+ |-- opk_vce_Mean: double (nullable = true)
+ |-- opk_dat_Mean: double (nullable = true)
+ |-- mou_opkv_Mean: double (nullable = true)
+ |-- mou_opkd_Mean: double (nullable = true)
+ |-- drop_blk_Mean: double (nullable = true)
+ |-- callfwdv_Mean: double (nullable = true)
+ |-- callwait_Mean: double (nullable = true)
+ |-- months: integer (nullable = true)
+ |-- uniqsubs: integer (nullable = true)
+ |-- actvsubs: integer (nullable = true)
+ |-- area: string (nullable = true)
+ |-- dualband: string (nullable = true)
+ |-- forgntvl: integer (nullable = true)
+ |-- customer_ID_original: integer (nullable = true)
+
+22/05/07 02:38:56 WARN package: Truncated the string representation of a plan since it was too large. This behavior can be adjusted by setting 'spark.sql.debug.maxToStringFields'.
++----------+--------+------+------------+-------------+---------------+--------------+------------------+--------------------+--------------------+-------------+-------------------+------------------+--------------------+------------+------------+---------------+-----------+-------------------+--------------+------------------+-----------------+------------------+-----------------+-----------------+-------------------+------------------+-----------------+-----------------+-------------------+-----------------+-----------------+-----------------+--------------------+------------------+--------------------+------------------+-----------------+------------------+----------------------+---------------------+-----------------------------+----------------------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+---------------+---------------+------------------+----------------+------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+------------------------------------+-----------------------------------+------------+
+|customerID|CellName|tenure|PhoneService|MultipleLines|InternetService|avg_PRBUsageUL|avg_PRBUsageDL    |avg_meanThr_DL      |avg_meanThr_UL      |avg_maxThr_DL|avg_maxThr_UL      |avg_meanUE_DL     |avg_meanUE_UL       |avg_maxUE_DL|avg_maxUE_UL|avg_maxUE_UL_DL|avg_Unusual|avg_roam_Mean      |avg_change_mou|avg_drop_vce_Mean |avg_drop_dat_Mean|avg_blck_vce_Mean |avg_blck_dat_Mean|avg_plcd_vce_Mean|avg_plcd_dat_Mean  |avg_comp_vce_Mean |avg_comp_dat_Mean|avg_peak_vce_Mean|avg_peak_dat_Mean  |avg_mou_peav_Mean|avg_mou_pead_Mean|avg_opk_vce_Mean |avg_opk_dat_Mean    |avg_mou_opkv_Mean |avg_mou_opkd_Mean   |avg_drop_blk_Mean |avg_callfwdv_Mean|avg_callwait_Mean |incomplete_voice_calls|incomplete_data_calls|service_stability_voice_calls|service_stability_data_calls|PRBUsageUL_Thrsld|PRBUsageDL_Thrsld|meanThr_DL_Thrsld|meanThr_UL_Thrsld|maxThr_DL_Thrsld|maxThr_UL_Thrsld|meanUE_DL_Thrsld|meanUE_UL_Thrsld|maxUE_DL_Thrsld|maxUE_UL_Thrsld|maxUE_UL_DL_Thrsld|roam_Mean_Thrsld|change_mouL_Thrsld|drop_vce_Mean_Thrsld|drop_dat_Mean_Thrsld|blck_vce_Mean_Thrsld|blck_dat_Mean_Thrsld|peak_vce_Mean_Thrsld|peak_dat_Mean_Thrsld|opk_vce_Mean_Thrsld|opk_dat_Mean_Thrsld|drop_blk_Mean_Thrsld|callfwdv_Mean_Thrsld|service_stability_voice_calls_Thrsld|service_stability_data_calls_Thrsld|defect_count|
++----------+--------+------+------------+-------------+---------------+--------------+------------------+--------------------+--------------------+-------------+-------------------+------------------+--------------------+------------+------------+---------------+-----------+-------------------+--------------+------------------+-----------------+------------------+-----------------+-----------------+-------------------+------------------+-----------------+-----------------+-------------------+-----------------+-----------------+-----------------+--------------------+------------------+--------------------+------------------+-----------------+------------------+----------------------+---------------------+-----------------------------+----------------------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+---------------+---------------+------------------+----------------+------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+------------------------------------+-----------------------------------+------------+
+|2388      |6ULTE   |1     |Yes         |No           |DSL            |0.202         |1.112             |0.217               |0.013000000000000001|4.345        |0.10300000000000001|1.0210000000000001|0.009999999999999998|3.0         |2.0         |5.0            |0.0        |1.47225            |10.325        |8.633333334       |0.0              |5.4333333334      |0.0              |164.1666666633   |0.3                |114.73333333299999|0.3              |86.566666667     |0.16666666670000002|177.279666656    |1.548666667      |67.13333333329999|0.1333333333        |201.83666666899998|0.43                |14.066666666999998|0.0              |0.9               |49.4333333303         |0.0                  |1.289473684216132            |1.2500000005625003          |0                |0                |1                |1                |0               |0               |0               |0               |0              |0              |0                 |0               |0                 |1                   |0                   |1                   |0                   |1                   |1                   |0                  |1                  |0                   |1                   |1                                   |0                                  |9           |
+|2774      |9ALTE   |6     |Yes         |No           |DSL            |15.966        |1.8189999999999997|0.4149999999999999  |0.07099999999999998 |10.116       |0.7059999999999998 |1.3640000000000003|1.314               |6.0         |5.0         |11.0           |0.0        |0.40650000000000003|-5.525        |9.566666667       |0.1333333333     |1.7000000001000004|0.0              |172.0999999957   |1.8                |119.46666667030001|1.666666667      |71.0333333333    |1.0                |138.8203333397   |1.002666667      |82.83333333099998|0.6666666667000001  |212.205333297     |0.5093333333000001  |11.4000000003     |0.0              |0.0666666667      |52.633333325399974    |0.13333333299999994  |0.8575452716535328           |1.4999999999249998          |1                |0                |1                |0                |0               |0               |1               |1               |1              |1              |1                 |1               |0                 |1                   |1                   |0                   |0                   |1                   |0                   |0                  |0                  |0                   |1                   |1                                   |0                                  |13          |
+|3364      |10BLTE  |21    |Yes         |Yes          |Fiber optic    |0.303         |0.404             |0.016000000000000004|0.013000000000000001|0.348        |0.16799999999999998|1.0109999999999997|1.0109999999999997  |2.0         |1.0         |3.0            |0.0        |0.126              |-2.05         |2.4000000000999995|0.0              |1.3333333335      |0.0              |72.66666666030001|0.16666666670000002|49.033333334      |0.1333333333     |38.833333327     |0.1                |80.57633333229998|0.0053333333     |28.5333333337    |0.033333333300000004|95.73066666700001 |0.019333333299999998|3.7333333331999996|0.0              |0.4999999998999999|23.63333332630001     |0.033333333400000026 |1.360981308171763            |3.000000003                 |0                |0                |1                |1                |0               |0               |0               |1               |0              |0              |0                 |1               |0                 |0                   |0                   |0                   |0                   |1                   |1                   |1                  |1                  |1                   |1                   |1                                   |0                                  |11          |
++----------+--------+------+------------+-------------+---------------+--------------+------------------+--------------------+--------------------+-------------+-------------------+------------------+--------------------+------------+------------+---------------+-----------+-------------------+--------------+------------------+-----------------+------------------+-----------------+-----------------+-------------------+------------------+-----------------+-----------------+-------------------+-----------------+-----------------+-----------------+--------------------+------------------+--------------------+------------------+-----------------+------------------+----------------------+---------------------+-----------------------------+----------------------------+-----------------+-----------------+-----------------+-----------------+----------------+----------------+----------------+----------------+---------------+---------------+------------------+----------------+------------------+--------------------+--------------------+--------------------+--------------------+--------------------+--------------------+-------------------+-------------------+--------------------+--------------------+------------------------------------+-----------------------------------+------------+
+only showing top 3 rows
+```
+
+Note the defect count which is a netric derived that indicates issues with the cell tower.<br>
+
+
+List the results in the GCS bucket-
+```
+gsutil ls -r gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/output_data/kpis_by_customer
+```
+The author's output-
+```
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/:
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/_SUCCESS
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/part-00000-41caca8e-43f5-4509-9569-96dff7b7fb2c-c000.snappy.parquet
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/part-00001-41caca8e-43f5-4509-9569-96dff7b7fb2c-c000.snappy.parquet
+gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_data/kpis_by_customer/part-00002-41caca8e-43f5-4509-9569-96dff7b7fb2c-c000.snappy.parquet
+```
+This output will be used in subsequent steps.
+
+
+
 
