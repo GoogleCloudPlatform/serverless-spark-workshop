@@ -732,12 +732,12 @@ cat variables.json
 Author's output-
 ```
 {
-    "code_bucket": "s8s_composer_code_bucket-YOUR_PROJECT_NBR",
+    "code_bucket": "s8s_data_and_code_bucket-YOUR_PROJECT_NBR",
     "phs": "s8s-sphs-YOUR_PROJECT_NBR",
     "project_id": "YOUR_PROJECT_ID",
     "region": "us-central1",
     "subnet": "spark-snet",
-    "bq_dataset": "cell_tower_mart_ds",
+    "bq_dataset": "cell_tower_reporting_mart",
     "umsa": "s8s-lab-sa"
 }
 ```
@@ -758,12 +758,12 @@ cat variables.json
 Author's output-
 ```
 {
-    "code_bucket": "s8s_composer_code_bucket-15xx045",
-    "phs": "s8s-sphs-15xx45",
-    "project_id": "charaka-3xx15",
+    "code_bucket": "s8s_data_and_code_bucket-xxx6045",
+    "phs": "s8s-sphs-xxx6045",
+    "project_id": "charaka-349315",
     "region": "us-central1",
     "subnet": "spark-snet",
-    "bq_dataset": "cell_tower_mart_ds",
+    "bq_dataset": "cell_tower_reporting_mart",
     "umsa": "s8s-lab-sa"
 }
 ```
