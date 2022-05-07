@@ -821,7 +821,11 @@ gcloud composer environments storage dags import \
 ```
 
 You should see the DAG in the Cloud Composer 2 environment DAG bucket.<br>
-It will automatically execute. Review its execution in the Airflow UI and the Serverless Spark batches UI.
+
+### 12.4. Execute the DAG - cell_tower_anomaly_detection 
+It will not automatically execute. <br>
+Review its execution in the Airflow UI and the Serverless Spark batches UI.<br>
+The serverless Spark batch jobs from Cloud Composer will have a "lab-01" prefix, whereas the ones you ran individually have a "s8s" prefix.
 
 ##### =====================================================================================================
 ##### THIS CONCLUDES THE LAB - CELL TOWER ANOMALY DETECTION
