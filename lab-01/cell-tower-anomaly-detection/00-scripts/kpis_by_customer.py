@@ -91,7 +91,7 @@ finalDF = slice1DF30.withColumn("defect_count",col("PRBUsageUL_Thrsld")+col("PRB
 finalDF.show(3,truncate = False)
 
 # Persist to GCS
-finalDF.write.parquet(os.path.join(sourceBucketName, "customer_grain_perf_metrics"), mode = "overwrite")
+finalDF.write.parquet(os.path.join(sourceBucketName, "/customer_grain_perf_metrics"), mode = "overwrite")
 
 # Construct a BigQuery external table definition on the data persisted to GCS
 query = f"""
