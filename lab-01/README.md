@@ -730,3 +730,15 @@ gcloud composer environments update \
 ```
 
 ### 12.3. Copy the DAG script (pipeline) to the Cloud Composer environemnt DAG bucket
+
+```
+cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
+
+gcloud composer environments storage dags import \
+--environment $COMPOSER_ENV  --location $LOCATION \
+--source pipeline.py  \
+--impersonate-service-account $UMSA_FQN
+```
+
+You should see the DAG in the Cloud Composer 2 environment DAG bucket.<br>
+It will automatically execute. Review its execution in the Airflow UI and the Serverless Spark batches UI.
