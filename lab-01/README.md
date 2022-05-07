@@ -699,7 +699,7 @@ Run the query below-
 select CellName, Maintainence_Required from `charaka-349315.cell_tower_reporting_mart.kpis_by_cell_tower` limit 3
 ```
 
-## 12. Automate with Apache Airflow pwered by Cloud Composer 2
+## 12. Automate orchestration with Apache Airflow powered by Cloud Composer 2
 
 ### 12.1. Prerequisites
 We have already -
