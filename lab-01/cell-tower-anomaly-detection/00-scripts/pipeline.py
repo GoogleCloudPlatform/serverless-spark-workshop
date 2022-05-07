@@ -24,7 +24,7 @@ bq_dataset=Variable.get("bq_dataset")
 umsa=Variable.get("umsa")
 
 # Define DAG name
-dag_name= "Cell_Tower_Anomaly_Detection"
+dag_name= "cell_tower_anomaly_detection"
 
 # User Managed Service Account FQN
 service_account_id= umsa+"@"+project_id+".iam.gserviceaccount.com"
@@ -152,28 +152,28 @@ with models.DAG(
     catchup=False,
 ) as dag_serverless_batch:
     curate_customer_master = DataprocCreateBatchOperator(
-        task_id="cc2_Curate_Customer_Master_Data",
+        task_id="Curate_Customer_Master_Data",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG1,
         batch_id=BATCH_ID,
     )
     curate_telco_performance_metrics = DataprocCreateBatchOperator(
-        task_id="cc2_Curate_Telco_Performance_Metrics",
+        task_id="Curate_Telco_Performance_Metrics",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG2,
         batch_id=BATCH_ID,
     )
-    kpis_by_customer = DataprocCreateBatchOperator(
-        task_id="cc2_KPIs_By_Customer",
+    calc_kpis_by_customer = DataprocCreateBatchOperator(
+        task_id="Calc_KPIs_By_Customer",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG3,
         batch_id=BATCH_ID,
     )
-    kpis_by_cell_tower = DataprocCreateBatchOperator(
-        task_id="cc2_KPIs_By_Cell_Tower",
+    calc_kpis_by_cell_tower = DataprocCreateBatchOperator(
+        task_id="Calc_KPIs_By_Cell_Tower",
         project_id=project_id,
         region=region,
         batch=BATCH_CONFIG4,
@@ -181,5 +181,5 @@ with models.DAG(
     )
 
     curate_customer_master >> curate_telco_performance_metrics
-    curate_telco_performance_metrics >> kpis_by_customer
-    curate_telco_performance_metrics >> kpis_by_cell_tower
+    curate_telco_performance_metrics >> calc_kpis_by_customer
+    curate_telco_performance_metrics >> calc_kpis_by_cell_tower
