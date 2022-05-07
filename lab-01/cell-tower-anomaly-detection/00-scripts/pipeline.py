@@ -47,10 +47,7 @@ BATCH_CONFIG1 = {
     "pyspark_batch": {
         "main_python_file_uri": curate_customer_script,
         "args": [
-          project_id,
-          bq_dataset,
-          code_bucket,
-          name
+          code_bucket
         ],
         "jar_file_uris": [
       "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
@@ -72,10 +69,7 @@ BATCH_CONFIG2 = {
     "pyspark_batch": {
         "main_python_file_uri": curate_telco_performance_metrics_script,
         "args": [
-        project_id,
-        bq_dataset,
-        code_bucket,
-        name
+        code_bucket
         ],
         "jar_file_uris": [
       "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
@@ -99,8 +93,7 @@ BATCH_CONFIG3 = {
         "args": [
         project_id,
         bq_dataset,
-        code_bucket,
-        name
+        code_bucket
         ],
         "jar_file_uris": [
       "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
@@ -124,8 +117,7 @@ BATCH_CONFIG4 = {
         "args": [
         project_id,
         bq_dataset,
-        code_bucket,
-        name
+        code_bucket
         ],
         "jar_file_uris": [
       "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
