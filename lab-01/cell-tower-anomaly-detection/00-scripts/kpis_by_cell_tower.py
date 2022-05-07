@@ -28,7 +28,7 @@ bqDatasetName=sys.argv[2]
 sourceBucketName=sys.argv[3]
 
 # Source data definition
-augmentedTelcoPerformanceDataDir="gs://"+BUCKET_NAME+"/cell-tower-anomaly-detection/output_data/telco_performance_augmented/part*"
+augmentedTelcoPerformanceDataDir="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data/telco_performance_augmented/part*"
 
 # Output directory declaration
 outputGCSURI="gs://"+sourceBucketName+"/cell-tower-anomaly-detection/output_data/kpis_by_cell_tower"
