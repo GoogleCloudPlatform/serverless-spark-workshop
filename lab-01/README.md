@@ -762,7 +762,7 @@ Takes about 25 minutes<br>
 1) Edit the variables.json with your values download it locally, then to Cloud Composer, via the Airflow UI.
 
 ```
-~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/02-config
+cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/02-config
 cat variables.json
 ```
 
