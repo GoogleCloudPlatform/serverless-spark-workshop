@@ -6,7 +6,22 @@ This lab is data engineering centric and uses rules based processing to detect d
 
 Successful environment creation per instructions in go/scw-tf
 
-## 2. About the lab
+## 2. Lab overview
+
+The lab includes studying and running a series of data engineering jobs, exploring results -<br>
+1. Curate Customer Master Data<br>
+2. Curate Telco Customer Churn Data <br>
+3. Calculate Cell Tower KPIs by Customer<br>
+4. Calculate KPIs by cell tower<br>
+
+It then covers orchestrating execution of the jobs with Cloud Composer 2 and exploring the results/cell towers needing maintenance in BigQuery.
+
+## 3. About the data used in the lab
+
+
+
+## 4. The individual code/scripts in PySaprk and Python & what they do
+
 The lab includes -<br>
 1. Spark Application: Curate Customer Master Data:<br>
 In this Pyspark script, we will augment customer master data with service threshold reference data and persist to GCS<br>
@@ -19,11 +34,6 @@ In this Pyspark script, we will calculate KPIs by customer off of the curated te
 6. Explore the results in BigQuery
 7. Provision Cloud Composer 2
 8. Orchestrate applications 1-4 above as a DAG in Cloud Composer
-
-
-## 3. About the data
-
-## 4. The individual Spark applications & what they do
 
 ## 5. Declare variables
 
@@ -721,6 +731,18 @@ We have already -
 
 ### 12.2. Create a Cloud Composer 2 environment 
 
+**The command below sporadically fails**, we recommend that you create from the Cloud Console Composer UI.
+<br> 
+Its very important that you-
+1. ensure you pick Cloud Composer 2, 
+2. choose the user managed service account (s8s-lab-sa*), 
+3. your VPC and 
+4. subnet and 
+5. allow your public IP/32 and 
+6. 10.0.0.0/16 that is the serverless Spark subnet.
+7. Take a power nap - you are looking at 30 minutes 
+
+Note: The below command sporadically fails..<br>
 From Cloud shell, scope to your project, run the below-
 ```
 gcloud composer environments create ${COMPOSER_ENV} \
@@ -734,7 +756,6 @@ gcloud composer environments create ${COMPOSER_ENV} \
 ```
 Takes about 25 minutes<br>
 
-**If this fails**, create from the Cloud Console Composer UI, ensure you pick Composer 2, the user managed service account (s8s-lab-sa*), your VPC and subnet and allow your public IP/32 and 10.0.0.0/16 that is the serverless Spark subnet.
 
 ### 12.2. Configure environment variables
 
