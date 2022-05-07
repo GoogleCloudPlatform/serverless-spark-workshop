@@ -7,6 +7,19 @@ This lab is data engineering centric and uses rules based processing to detect d
 Successful environment creation per instructions in go/scw-tf
 
 ## 2. About the lab
+The lab includes -<br>
+1. Spark Application: Curate Customer Master Data:<br>
+In this Pyspark script, we will augment customer master data with service threshold reference data and persist to GCS<br>
+2. Spark Application: Curate Telco Customer Churn Data: <br>
+In this Pyspark script, we will augment Telco customer churn data with augmented customer data from the previous application and persist to GCS<br>
+3. Spark Application: Calculate Cell Tower KPIs by Customer: <br>
+In this Pyspark script, we will calculate KPIs by customer off of the curated telco customer data and persist to GCS, and also create a BigQuery external table on top of it<br>
+5. Spark Application: Calculate KPIs by cell tower: <br>
+In this Pyspark script, we will calculate KPIs by customer off of the curated telco customer data, then by cell tower, including flagging cell towers needing maintenance and persist to GCS, and also create a BigQuery external table on top of it<br>
+6. Explore the results in BigQuery
+7. Provision Cloud Composer 2
+8. Orchestrate applications 1-4 above as a DAG in Cloud Composer
+
 
 ## 3. About the data
 
