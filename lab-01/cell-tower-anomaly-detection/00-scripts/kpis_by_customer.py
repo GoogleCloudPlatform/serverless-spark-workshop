@@ -53,7 +53,7 @@ slice1DF3=slice1DF2.withColumn('service_stability_voice_calls',curatedTelcoPerfo
 slice1DF4=slice1DF3.withColumn('service_stability_data_calls',curatedTelcoPerformanceAggrDF.avg_peak_dat_Mean/curatedTelcoPerformanceAggrDF.avg_opk_dat_Mean   )
 
 # Replace nulls with 0 across columns
-#slice1DF5=slice1DF4.fillna(value =0)
+slice1DF5=slice1DF4.fillna(value =0)
 
 # Add derived columns that are customer grain performance metrics of 0's and 1s
 slice1DF6=slice1DF5.withColumn('PRBUsageUL_Thrsld',when(col("avg_PRBUsageUL") < str(slice1DF5.select(avg("avg_PRBUsageUL")).collect()[0][0]), 0).when(col("avg_PRBUsageUL") >str(slice1DF5.select(avg("avg_PRBUsageUL")).collect()[0][0]),1) )
