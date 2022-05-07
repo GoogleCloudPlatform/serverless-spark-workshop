@@ -48,7 +48,7 @@ gsutil cp -r cell-tower-anomaly-detection/01-datasets gs://$CODE_AND_DATA_BUCKET
 ## 4. Curate cutsomer master data
 In this section, from PySpark, we transform customer master data (parquet) and service threshold data (CSV) and join them, and persist to GCS.<br>
 
-Review the [code](../cell-tower-anomaly-detection/00-scripts/curate_customer_data.py) first.
+Review the [code](../lab-01/cell-tower-anomaly-detection/00-scripts/curate_customer_data.py) first.
 
 ```
 gcloud dataproc batches submit \
