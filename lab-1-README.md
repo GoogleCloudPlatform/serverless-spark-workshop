@@ -27,7 +27,7 @@ SPARK_SERVERLESS_SUBNET=spark-snet
 PERSISTENT_HISTORY_SERVER_NM=s8s-sphs-$PROJECT_NBR
 UMSA_FQN=s8s-lab-sa@$PROJECT_ID.iam.gserviceaccount.com
 CODE_AND_DATA_BUCKET=s8s_data_and_code_bucket-${PROJECT_NBR}
-COMPOSER_ENV=pavarotti-cc2
+COMPOSER_ENV=charaka-cc2
 ```
 
 ## 2. Clone this repo
