@@ -806,7 +806,7 @@ Author's output-
 ```
 
 4) Download the file locally
-5) Navigate to your composer environment's variables UI under admin and import the json file
+5) Navigate to your Cloud Composer Airflow UI, then under admin, click on variables, and import the json file
 6) Wait till the variables are reflected in the UI
 
 ### 12.3. Import the DAG script (pipeline) into the Cloud Composer environment 
