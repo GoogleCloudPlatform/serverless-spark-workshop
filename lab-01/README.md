@@ -452,7 +452,7 @@ gs://s8s_data_and_code_bucket-159504796045/cell-tower-anomaly-detection/output_d
 ```
 This output will be used in subsequent steps.
 
-## 10. Curate telecom performance data
+## 10. Calculate Cell Tower performance metrics by customer
 In this section, from PySpark, we analyze the curated telecom data, and calculate the KPIs by customer.<br>
 
 Review the [code](cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py) first.<br>
@@ -566,7 +566,7 @@ select customerID,CellName, defect_count from `charaka-349315.cell_tower_reporti
 ```
 
 
-## 11. Curate telecom performance data
+## 11. Calculate performance metrics by Cell Tower and flag towers needing maintenance
 In this section, from PySpark, we analyze the curated telecom data, and calculate the KPIs by customer and cell tower to flag cell towers needing maintenance.<br>
 
 Review the [code](cell-tower-anomaly-detection/00-scripts/kpis_by_customer.py) first.<br>
