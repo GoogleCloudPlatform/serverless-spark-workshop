@@ -562,7 +562,7 @@ This output will be used in subsequent steps.
 
 Run the query below-
 ```
-select customerID,CellName, defect_count from `charaka-349315.cell_tower_reporting_mart.kpis_by_customer` limit 3
+select customerID,CellName, defect_count from `cell_tower_reporting_mart.kpis_by_customer` limit 3
 ```
 
 
