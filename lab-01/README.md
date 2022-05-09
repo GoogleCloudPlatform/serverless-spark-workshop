@@ -811,6 +811,8 @@ Author's output-
 
 ### 12.3. Import the DAG script (pipeline) into the Cloud Composer environment 
 
+Make sure you have the correct value for $COMPOSER_ENV...
+
 ```
 cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
 
