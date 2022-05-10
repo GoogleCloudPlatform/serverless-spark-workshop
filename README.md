@@ -14,7 +14,7 @@ Run the setup in Argolis per instructions in [go/scw-tf](go/scw-tf)
 ### What is covered?
 | # | Sub-Modules | 
 | -- | :--- |
-| 1 | [Environment Setup Instructions - Terraform](go/scw-tf) | 
+| 1 | Environment Setup Instructions - Terraform - go/scw-tf | 
 | 2 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) |
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
