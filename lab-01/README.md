@@ -738,9 +738,7 @@ Its very important that you-
 2. choose the user managed service account (s8s-lab-sa*), 
 3. your VPC and 
 4. subnet and 
-5. allow your public IP/32 and 
-6. 10.0.0.0/16 that is the serverless Spark subnet.
-7. Take a power nap - you are looking at 30 minutes 
+5. Take a power nap - you are looking at 30 minutes 
 
 Note: The below command sporadically fails..<br>
 From Cloud shell, scope to your project, run the below-
@@ -750,9 +748,7 @@ gcloud composer environments create ${COMPOSER_ENV} \
 --network ${VPC_NM} \
 --subnetwork ${SPARK_SERVERLESS_SUBNET} \
 --image-version "composer-2.0.11-airflow-2.2.3" \
---service-account ${UMSA_FQN} \
---web-server-allow-ip ip_range=$YOUR_IP_CIDR \
---web-server-allow-ip ip_range=$SPARK_SUBNET_CIDR
+--service-account ${UMSA_FQN} 
 ```
 Takes about 25 minutes<br>
 
