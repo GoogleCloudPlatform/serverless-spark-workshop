@@ -72,22 +72,45 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ### 6.1. Navigate to the BQ UI from Cloud Console
 
-![bq-1](../images/00-bq-01.png)  
+![bq-1](../images/00-bq-01.png) 
+<br>
 
 ### 6.2. Click on create
 
 ![bq-2](../images/00-bq-02.png)  
+<br>
 
 ### 6.3. Click on "Compose new PySpark"
-![bq-3](../images/00-bq-03.png) 
 
-### 6.4. Click on "Compose new PySpark"
-![bq-4](../images/00-bq-04.png)  
+![bq-3](../images/00-bq-03.png) 
+<br>
+
+### 6.4. Click on "More -> PySpark Options"
+
+![bq-4](../images/00-bq-04.png) 
+<br>
+
+### 6.5. Click on "Browse and select staging folder"
+
 ![bq-5](../images/00-bq-05.png)  
+<br>
+
+### 6.6. Click on "s8s bigSpark bucket"
+
 ![bq-6](../images/00-bq-06.png)  
+<br>
+
 ![bq-7](../images/00-bq-07.png)  
+<br>
+
+### 6.7. Select your network and subnet
+
 ![bq-8](../images/00-bq-08.png)  
 ![bq-9](../images/00-bq-09.png)  
+
+### 6.8. Select your network and subnet
+
+
 ![bq-10](../images/00-bq-10.png)  
 ![bq-11](../images/00-bq-11.png)  
 ![bq-12](../images/00-bq-12.png)  
