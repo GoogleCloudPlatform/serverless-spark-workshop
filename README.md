@@ -9,7 +9,7 @@ The intended audience is Google Customer Engineers but anyone with access to GCP
 Run the setup in Argolis per instructions in [go/scw-tf]
 
 ### Goal
-(a) Just enough knowledge of serverless Spark on GCP powered by Cloud Dataproc to field customer conversations & questions, <br>(b) completed setup in Argolis for serverless Spark,<br> (c) demos and knowledge of how to run them and <br>(d) knowledge of resources for serverless Spark on GCP.
+(a) Just enough knowledge of serverless Spark on GCP powered by Cloud Dataproc to field customer conversations & questions, <br>(b) completed setup in Argolis for serverless Spark,<br> (c) demos and knowledge of how to run them and <br>(d) awareness of resources available for serverless Spark on GCP.
 
 ### What is covered?
 | # | Modules | Focus | Feature |
