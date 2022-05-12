@@ -24,7 +24,8 @@ gsutil mb -p $PROJECT_ID -c STANDARD -l $LOCATION -b on $BQ_UI_BUCKET_NM
 
 ## 4. Needed in the UI
 
-Just the storage bucket created above
+Just the storage bucket created above.
+Note: You will run the lab as your own identity.
 
 ## 5. Wikipedia Page Views Analysis - code
 
