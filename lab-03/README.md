@@ -11,6 +11,18 @@ From the Cloud Console, enable the following APIs-
 1. Notebook API
 2. Vertex AI API
 
+![api-1](../images/03-enable-apis-01.png)  
+<br>
+
+![api-2](../images/03-enable-apis-02.png)  
+<br>
+
+![api-3](../images/03-enable-apis-03.png)  
+<br>
+
+![api-4](../images/03-enable-apis-04.png)  
+<br>
+
 ## 3. IAM permissions
 
 ### 3.1. Permissions for the User Managed Service Account
@@ -19,12 +31,47 @@ From the Cloud Console, navigate to IAM and grant the UMSA the following permiss
 2. Notebook Runner
 3. BigQuery Admin
 
+![iam-1](../images/03-iam-01.png)  
+<br>
+
 ### 3.2. Permissions for yourself
 From the Cloud Console, navigate to IAM and grant yourself the following permissions-
 1. Notebook Runner
 
+![iam-2](../images/03-iam-02.png)  
+<br>
+
 ## 4. In Vertex AI, create a managed notebook environment
 
+![vai-1](../images/03-vai-01.png)  
+<br>
+
+![vai-2](../images/03-vai-02.png)  
+<br>
+
+![vai-3](../images/03-vai-03.png)  
+<br>
+
+![vai-4](../images/03-vai-04.png)  
+<br>
+
+![vai-5](../images/03-vai-05.png)  
+<br>
+
+![vai-6](../images/03-vai-06.png)  
+<br>
+
+![vai-7](../images/03-vai-07.png)  
+<br>
+
+![vai-8](../images/03-vai-08.png)  
+<br>
+
+![vai-9](../images/03-vai-09.png)  
+<br>
+
+![vai-10](../images/03-vai-10.png)  
+<br>
 
 
 ## 5. Clone this git repo
