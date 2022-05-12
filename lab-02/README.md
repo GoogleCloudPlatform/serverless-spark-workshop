@@ -105,13 +105,18 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ### 6.7. Select your network and subnet
 
-![bq-8](../images/00-bq-08.png)  
+![bq-8](../images/00-bq-08.png)
+<br>
+
+### 6.8. Click "Save"
 ![bq-9](../images/00-bq-09.png)  
+<br>
 
-### 6.8. Select your network and subnet
+### 6.9. Paste the code snippet above, into the UI text area
+![bq-10](../images/00-bq-10.png)
+<br>
 
 
-![bq-10](../images/00-bq-10.png)  
 ![bq-11](../images/00-bq-11.png)  
 ![bq-12](../images/00-bq-12.png)  
 ![bq-13](../images/00-bq-13.png)  
