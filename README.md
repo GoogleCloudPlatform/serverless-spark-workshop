@@ -16,7 +16,7 @@ Run the setup in Argolis per instructions in [go/scw-tf](go/scw-tf)
 | -- | :--- | :-- | :-- |
 | 1 | Environment Setup Instructions - Terraform - go/scw-tf | Environment Automation | N/A |
 | 2 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch |
-| 3 | [Lab 2 - Wikipedia Page View from BigQuery UI]() | Data Analysis | Serverless Spark Batch |
+| 3 | [Lab 2 - Wikipedia Page View from BigQuery UI](lab-02/README.md) | Data Analysis | Serverless Spark Batch |
 | 4 | [Lab 3 - Cell Tower Anomaly Detection]() | Data Engineering | Serverless Spark Interactive Notebooks  |
 | 5 | [Lab 4 - Retail Forecasting]() | Machine Learning | Serverless Spark Interactive Notebooks  |
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
