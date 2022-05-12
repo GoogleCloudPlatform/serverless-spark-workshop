@@ -112,11 +112,18 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 ![bq-9](../images/00-bq-09.png)  
 <br>
 
-### 6.9. Paste the code snippet above, into the UI text area
+### 6.9. Paste the code snippet above, into the UI text area and click "Run"
 ![bq-10](../images/00-bq-10.png)
 <br>
 
+### 6.10. Switch to Dataproc UI -> Batches
 
-![bq-11](../images/00-bq-11.png)  
-![bq-12](../images/00-bq-12.png)  
+You should see a new batch job-
+![bq-11](../images/00-bq-11.png) 
+<br>
+
+### 6.11. Switch back to the BQ UI to view the results
+![bq-12](../images/00-bq-12.png)
+
+
 ![bq-13](../images/00-bq-13.png)  
