@@ -20,7 +20,7 @@ It then covers orchestrating execution of the jobs with Cloud Composer 2 and exp
 
 
 
-## 4. The individual code/scripts in PySaprk and Python & what they do
+## 4. The individual code/scripts in PySpark and Python & what they do
 
 The lab includes -<br>
 1. Spark Application: Curate Customer Master Data:<br>
