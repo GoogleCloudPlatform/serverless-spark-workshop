@@ -14,7 +14,7 @@ Run the setup in Argolis per instructions in [go/scw-tf]
 ### What is covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
-| 1 | Environment Setup Instructions - Terraform - go/scw-tf | Environment Automation | N/A |
+| 1 | Environment provisioning (go/scw-tf) | Environment Automation With Terraform | N/A |
 | 2 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch from CLI & with Cloud Composer orchestration|
 | 3 | [Lab 2 - Wikipedia Page View Analysis](lab-02/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
 | 4 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook|
