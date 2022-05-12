@@ -75,7 +75,12 @@ From the Cloud Console, navigate to IAM and grant yourself the following permiss
 
 ![vai-9](../images/03-vai-09.png)  
 <br>
-
+<br>
+Be sure to include the BigQuery connector jar-
+```
+spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
+```
+<br>
 ![vai-10](../images/03-vai-10.png)  
 <br>
 
