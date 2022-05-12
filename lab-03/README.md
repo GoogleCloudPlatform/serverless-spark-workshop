@@ -31,26 +31,30 @@ From the Cloud Console, navigate to IAM and grant the UMSA the following permiss
 2. Notebook Runner
 3. BigQuery Admin
 
-![iam-1](../images/03-iam-01.png)  
+![iam-2](../images/03-iam-02.png)  
 <br>
+
 
 ### 3.2. Permissions for yourself
 From the Cloud Console, navigate to IAM and grant yourself the following permissions-
 1. Notebook Runner
 
-![iam-2](../images/03-iam-02.png)  
+![iam-1](../images/03-iam-01.png)  
 <br>
 
 ## 4. In Vertex AI, create a managed notebook environment
 
+### 4.1. Navigate to Vertex AI workbench
+
 ![vai-1](../images/03-vai-01.png)  
 <br>
 
-![vai-2](../images/03-vai-02.png)  
-<br>
+### 4.2. Click on "Managed Notebook.."
 
 ![vai-3](../images/03-vai-03.png)  
 <br>
+
+### 4.3. Create a mannaged notebook environment as shown below
 
 ![vai-4](../images/03-vai-04.png)  
 <br>
@@ -60,6 +64,8 @@ From the Cloud Console, navigate to IAM and grant yourself the following permiss
 
 ![vai-6](../images/03-vai-06.png)  
 <br>
+
+### 4.4. Launch a serverless Spark interactive session as shown below and click submit
 
 ![vai-7](../images/03-vai-07.png)  
 <br>
@@ -73,6 +79,17 @@ From the Cloud Console, navigate to IAM and grant yourself the following permiss
 ![vai-10](../images/03-vai-10.png)  
 <br>
 
+### 4.5. Once the session is available, a notebook opens up
+![vai-11](../images/03-vai-11.png)  
+<br>
+
+![vai-12](../images/03-vai-12.png)  
+<br>
+
+### 4.6. Shut down the kernel of the untitled notebook, we will use a precreated notebook
+
+![vai-13](../images/03-vai-13.png)  
+<br>
 
 ## 5. Clone this git repo
 
@@ -84,6 +101,12 @@ git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
 
 ## 6. Download the Chicago Crimes Analytics notebook from the Cloud Shell
 
+Click on the ellipsis (3 dots) and click on download, and select the location of the notebook.
+<br>
+```
+Its here-
+~/s8s-spark-ce-workshop/lab-03/
+ 
 
 ## 7. Upload the same into the Managed Notebook environment
 
