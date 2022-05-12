@@ -1,8 +1,32 @@
-# About
+# Lab 2: Wikipedia Page Views Analysis from the BigQuery UI powered by Dataproc Serverless Spark
 
-This lab demonstrates how to use the BigQuery UI for running Dataproc Serverless Spark jobs
+This lab demonstrates how to use the BigQuery UI for running Dataproc Serverless Spark jobs for data analytics.
 
-## Code snippet
+## 1. Prerequisite
+The setup detailed in the environment provisioning instructions in go/scw-tf
+
+## 2. Variables
+
+Paste this into gcloud CLI in CLoud Shell after replacing with your values-
+```
+PROJECT_ID=YOUR_PROJECT_ID
+PROJECT_NBR=YOUR_PROJECT_NBR
+BQ_UI_BUCKET_NM=gs://s8s-bigspark-$PROJECT_NBR
+LOCATION=us-central1
+```
+
+## 3. Storage Bucket
+
+A storage bucket is needed, for Serverless Spark. Lets create one-
+```
+gsutil mb -p $PROJECT_ID -c STANDARD -l $LOCATION -b on $BQ_UI_BUCKET_NM
+```
+
+## 4. Needed in the UI
+
+Just the storage bucket created above
+
+## 5. Wikipedia Page Views Analysis - code
 
 ```
 from pyspark.sql import SparkSession
@@ -43,3 +67,7 @@ pageViewsSubsetEnglishByTitleDF = pageViewsSubsetEnglishDF \
 # Order by and print
 pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20) 
 ```
+
+## 6. Lets get started
+
+
