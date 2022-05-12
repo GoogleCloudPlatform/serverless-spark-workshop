@@ -128,19 +128,36 @@ Its here-
 <br>
 
 
-## 8. Click on "Launcher"
+
+## 8. Now open the Chicago Crimes Notebook
+
+![vai-14](../images/03-vai-14.png)  
+<br>
+
+## 9. Select the interactive session created in the kernel picker
 
 
+![vai-15](../images/03-vai-15.png)  
+<br>
 
-## 9. Launch an interactive session
+![vai-16](../images/03-vai-16.png)  
+<br>
 
-## 10.Shut down the kernel of the Untitled.ipynb and close it
+![vai-17](../images/03-vai-17.png)  
+<br>
 
-Ensure that it is fully shutdown
+## 10. Now run your analysis on the data
 
-## 11. Now open the Chicago Crimes Notebook
+![vai-21](../images/03-vai-21.png)  
+<br>
 
-## 12. Select the interactive session created in the kernel picker
+![vai-22](../images/03-vai-22.png)  
+<br>
 
-## 13. Now run your analysis on the data
+![vai-23](../images/03-vai-23.png)  
+<br>
 
+##### =====================================================================================================
+##### THIS CONCLUDES THIS LAB 
+##### PROGRESS TO ANOTHER LAB, OR SHUT DOWN RESOURCES
+##### =====================================================================================================
