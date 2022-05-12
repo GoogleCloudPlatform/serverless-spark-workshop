@@ -73,8 +73,15 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 ### 6.1. Navigate to the BQ UI from Cloud Console
 
 ![bq-1](../images/00-bq-01.png)  
+
+### 6.2. Click on create
+
 ![bq-2](../images/00-bq-02.png)  
-![bq-3](../images/00-bq-03.png)  
+
+### 6.3. Click on "Compose new PySpark"
+![bq-3](../images/00-bq-03.png) 
+
+### 6.4. Click on "Compose new PySpark"
 ![bq-4](../images/00-bq-04.png)  
 ![bq-5](../images/00-bq-05.png)  
 ![bq-6](../images/00-bq-06.png)  
