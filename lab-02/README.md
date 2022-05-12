@@ -70,4 +70,6 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ## 6. Lets get started
 
+### 6.1. Navigate to the BQ UI from Cloud Console
+
 
