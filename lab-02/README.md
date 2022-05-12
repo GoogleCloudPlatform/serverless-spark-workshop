@@ -126,6 +126,18 @@ You should see a new batch job-
 ### 6.11. Switch back to the BQ UI to view the results
 
 ![bq-12](../images/00-bq-12.png)
-
-
+<br>
+<br>
 ![bq-13](../images/00-bq-13.png)  
+
+### 6.12. Switch to Dataproc UI "Batches" view to look at the monitoring tile
+You should see the autoscale kick in after 2 minutes
+<br>
+![bq-13](../images/00-bq-14.png)  
+<br>
+
+=====================================================================================================
+THIS CONCLUDES THE LAB - CELL TOWER ANOMALY DETECTION
+DONT FORGET TO DELETE THE RESOURCES YOU PROVISIONED
+=====================================================================================================
+
