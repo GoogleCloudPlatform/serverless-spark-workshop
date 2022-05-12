@@ -114,12 +114,23 @@ Click on the ellipsis (3 dots) and click on download, and select the location of
 ```
 Its here-
 ~/s8s-spark-ce-workshop/lab-03/
- 
+```
 
 ## 7. Upload the same into the Managed Notebook environment
 
+![vai-18](../images/03-vai-18.png)  
+<br>
+
+![vai-19](../images/03-vai-19.png)  
+<br>
+
+![vai-20](../images/03-vai-20.png)  
+<br>
+
 
 ## 8. Click on "Launcher"
+
+
 
 ## 9. Launch an interactive session
 
