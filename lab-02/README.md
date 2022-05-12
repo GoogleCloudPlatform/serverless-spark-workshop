@@ -116,13 +116,15 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 ![bq-10](../images/00-bq-10.png)
 <br>
 
-### 6.10. Switch to Dataproc UI -> Batches
+### 6.10. Switch to Dataproc UI "Batches" view
 
 You should see a new batch job-
+
 ![bq-11](../images/00-bq-11.png) 
 <br>
 
 ### 6.11. Switch back to the BQ UI to view the results
+
 ![bq-12](../images/00-bq-12.png)
 
 
