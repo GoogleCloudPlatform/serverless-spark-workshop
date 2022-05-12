@@ -72,4 +72,4 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ### 6.1. Navigate to the BQ UI from Cloud Console
 
-![bq-1](images/00-bq-01.png)  
+![bq-1](../images/00-bq-01.png)  
