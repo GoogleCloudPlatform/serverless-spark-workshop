@@ -24,7 +24,7 @@ Run the setup in Argolis per instructions in [go/scw-tf]
 Shut down/delete resources when done
 
 ### Labs developed by
-Some of the labs are developed by Tek Systems for Google, of are contributions by Googlers.
+Some of the labs are developed by partners, for Google, or are contributions from Googlers.
 
 ### Contributions welcome
 
