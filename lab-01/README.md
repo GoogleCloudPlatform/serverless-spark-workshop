@@ -1,6 +1,8 @@
 # Lab 1: Cell Tower Anomaly Detection
 
-This lab is data engineering centric and uses rules based processing to detect defective cell towers needing maintenance. It is self-contained and fully scripted to follow along at your own pace.
+This lab is data engineering centric and uses rules based processing to detect defective cell towers needing maintenance. It is self-contained and fully scripted to follow along at your own pace.<br>
+
+Credits: TekSystems
 
 ## 1. Prerequisites
 
