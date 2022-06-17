@@ -25,8 +25,8 @@ Shut down/delete resources when done
 
 ### Credits
 Some of the labs are contributed by partners, to Google Cloud, or are contributions from Googlers.<br>
-Lab 1 - TekSystems
-Lab 2 - TekSystems
+Lab 1 - TekSystems<br>
+Lab 2 - TekSystems<br>
 
 
 ### Contributions welcome
