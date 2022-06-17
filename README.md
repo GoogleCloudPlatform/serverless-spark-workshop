@@ -23,8 +23,11 @@ Run the setup in Argolis per instructions in [go/scw-tf]
 ### Dont forget to 
 Shut down/delete resources when done
 
-### Labs developed by
-Some of the labs are developed by partners, for Google, or are contributions from Googlers.
+### Credits
+Some of the labs are contributed by partners, to Google Cloud, or are contributions from Googlers.<br>
+Lab 1 - TekSystems
+Lab 2 - TekSystems
+
 
 ### Contributions welcome
 
