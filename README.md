@@ -1,4 +1,4 @@
-# Serverless Spark HackFest
+# Serverless Spark Hands-On Workshop
 
 Apache Spark is often used for interactive queries, machine learning, and real-time workloads.<br>
 
@@ -13,7 +13,7 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 ~ Director of Data Science at business management corporation<br><br>
 - "Anytime we can go the serverless route we will.  Just so much simpler and eliminates the management of the infrastructure."<br>
 ~ Director of Data Engineering at business management corporation<br><br>
-- “Serverless Spark enables us to only use the compute resources we need when we need them and all with a single click.  The Spark HackFest is a great way to get hands on experience with the tools.”<br> 
+- “Serverless Spark enables us to only use the compute resources we need when we need them and all with a single click.  The Spark Workshop is a great way to get hands on experience with the tools.”<br> 
 ~ Principal Data Scientist at multinational retail corporation<br><br>
 - “We ran a compute-intensive Serverless Spark query in 19 mins.  That same Spark query took 90 mins on a traditional cluster based product.  It's ~80% faster on Serverless Spark.”<br> 
 ~ Principal Architect at multinational retail corporation
