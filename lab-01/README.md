@@ -2,11 +2,11 @@
 
 This lab is data engineering centric and uses rules based processing to detect defective cell towers needing maintenance. It is self-contained and fully scripted to follow along at your own pace.<br>
 
-Lab contributed by: TekSystems
+Lab contributed by: TEKsystems
 
 ## 1. Prerequisites
 
-Successful environment creation per instructions in go/scw-tf
+Successful environment creation
 
 ## 2. Lab overview
 
@@ -58,7 +58,7 @@ SPARK_SUBNET_CIDR="10.0.0.0/16"
 ## 6. Clone this repo
 ```
 cd ~
-git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
+git clone https://github.com/googlecloudplatform/spark-hackfest/s8s-spark-ce-workshop.git
 ```
 
 ## 7. Upload the code and data to the designated GCS bucket
