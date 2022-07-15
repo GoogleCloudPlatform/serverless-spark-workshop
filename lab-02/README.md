@@ -3,11 +3,11 @@
 This lab demonstrates how to use the BigQuery UI for running Dataproc Serverless Spark jobs for data analytics.
 
 ## 1. Prerequisite
-The setup detailed in the environment provisioning instructions in go/scw-tf
+The setup detailed in the environment provisioning instructions
 
 ## 2. Variables
 
-Paste this into gcloud CLI in CLoud Shell after replacing with your values-
+Paste this into Google Cloud CLI in Cloud Shell after replacing with your values -
 ```
 PROJECT_ID=YOUR_PROJECT_ID
 PROJECT_NBR=YOUR_PROJECT_NBR
