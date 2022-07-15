@@ -30,6 +30,9 @@ Note: You will run the lab as your own identity.
 ## 5. Wikipedia Page Views Analysis - code
 
 ```
+# Copyright 2022 Google LLC.
+# SPDX-License-Identifier: Apache-2.0
+
 from pyspark.sql import SparkSession
 from pyspark.ml.feature import StopWordsRemover
 from pyspark.sql import functions as F
