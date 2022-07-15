@@ -1,17 +1,24 @@
-# Serverless Spark CE Workshop - May 2022
+# Serverless Spark HackFest
 
-This repo contains hands-on-labs that cover serverless Spark on GCP powered by Cloud Dataproc, as part of the [Serverless Spark Workshop](go/spark-ce-workshop).
+Apache Spark is often used for interactive queries, machine learning, and real-time workloads.<br>
 
-### Audience
-The intended audience is Google Customer Engineers but anyone with access to GCP can try the lab modules just as well.
+Spark developers are typically spending only 40% of time writing code while spending 60% tuning infrastructure and managing clusters.<br>
 
-### Prerequisites
-Run the setup in Argolis per instructions in [go/scw-tf]
+Google Cloud customers have used our auto-scaling, serverless Spark to boost productivity and reduce infrastructure costs.<br>
 
-### Goal
-(a) Just enough knowledge of serverless Spark on GCP powered by Cloud Dataproc to field customer conversations & questions, <br>(b) completed setup in Argolis for serverless Spark,<br> (c) demos and knowledge of how to run them and <br>(d) awareness of resources available for serverless Spark on GCP.
+This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.
 
-### What is covered?
+### Quotes From Serverless Spark Users
+- "Serverless Spark is so much easier than traditional cluster based products."<br> 
+~ Director of Data Science at business management corporation<br><br>
+- "Anytime we can go the serverless route we will.  Just so much simpler and eliminates the management of the infrastructure."<br>
+~ Director of Data Engineering at business management corporation<br><br>
+- “Serverless Spark enables us to only use the compute resources we need when we need them and all with a single click.  The Spark HackFest is a great way to get hands on experience with the tools.”<br> 
+~ Principal Data Scientist at multinational retail corporation<br><br>
+- “We ran a compute-intensive Serverless Spark query in 19 mins.  That same Spark query took 90 mins on a traditional cluster based product.  It's ~80% faster on Serverless Spark.”<br> 
+~ Principal Architect at multinational retail corporation
+
+### What Is Covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
 | 1 | Environment provisioning (go/scw-tf) | Environment Automation With Terraform | N/A |
@@ -20,15 +27,7 @@ Run the setup in Argolis per instructions in [go/scw-tf]
 | 4 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook|
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
-### Dont forget to 
-Shut down/delete resources when done
-
 ### Credits
-Some of the labs are contributed by partners, to Google Cloud, or are contributions from Googlers.<br>
-Lab 1 - TekSystems<br>
-Lab 2 - TekSystems<br>
-
-
-### Contributions welcome
-
-Community contribution to improve the labs or new labs are very much appreciated.
+Some of the labs are contributed by partners to Google Cloud or are contributions from Googlers.<br>
+Lab 1 - TEKsystems<br>
+Lab 2 - TEKsystems<br>
