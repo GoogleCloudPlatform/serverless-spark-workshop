@@ -8,7 +8,7 @@ Google Cloud customers have used our auto-scaling, serverless Spark to boost pro
 
 This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.
 
-### Quotes From Serverless Spark Users
+### Feedback From Serverless Spark Users
 - "Serverless Spark is so much easier than traditional cluster based products."<br> 
 ~ Director of Data Science at business management corporation<br><br>
 - "Anytime we can go the serverless route we will.  Just so much simpler and eliminates the management of the infrastructure."<br>
