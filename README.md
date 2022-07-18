@@ -21,12 +21,14 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 ### What Is Covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
-| 1 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch from CLI & with Cloud Composer orchestration|
+| 1 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration|
 | 2 | [Lab 2 - Wikipedia Page View Analysis](lab-02/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
 | 3 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook|
+| 4 | [Lab 4 - Retail Store Analytics Metastore](lab-04/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore|
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Credits
 Some of the labs are contributed by partners to Google Cloud or are contributions from Googlers.<br>
 Lab 1 - TEKsystems<br>
 Lab 2 - TEKsystems<br>
+Lab 4 - TEKsystems<br>
