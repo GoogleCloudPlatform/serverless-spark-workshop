@@ -26,6 +26,7 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 | 3 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
 | 4 | [Lab 4 - Retail Store Analytics Metastore](lab-04/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
 | 5 | [Lab 5 - Serverless Spark Streaming](lab-05/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
+| 6 | [Lab 6 - Timeseries Forecasting](lab-06/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Credits
@@ -34,3 +35,4 @@ Lab 1 - TEKsystems<br>
 Lab 2 - TEKsystems<br>
 Lab 4 - TEKsystems<br>
 Lab 5 - TEKsystems<br>
+Lab 6 - TEKsystems<br>
