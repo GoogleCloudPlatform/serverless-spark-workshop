@@ -64,7 +64,7 @@ git clone https://github.com/googlecloudplatform/serverless-spark-workshop/lab-0
 ## 7. Upload the code and data to the designated GCS bucket
 Navigate to the cloned repo and upload the files (code and data) as shown below-
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/
+cd ~/serverless-spark-workshop/lab-01/
 gsutil cp -r cell-tower-anomaly-detection/00-scripts gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts
 gsutil cp -r cell-tower-anomaly-detection/01-datasets gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/01-datasets
 ```
