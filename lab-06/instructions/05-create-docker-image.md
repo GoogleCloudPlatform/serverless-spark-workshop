@@ -78,7 +78,7 @@ docker push "${CONTAINER_IMAGE}"
 The docker container will be built and pushed to Google Container Registry.
 
 <kbd>
-<img src=/images/di_2.png />
+<img src=../images/di_2.png />
 </kbd>
 
 <br>
