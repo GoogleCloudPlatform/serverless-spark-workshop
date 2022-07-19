@@ -58,13 +58,13 @@ SPARK_SUBNET_CIDR="10.0.0.0/16"
 ## 6. Clone this repo
 ```
 cd ~
-git clone https://github.com/googlecloudplatform/spark-hackfest/s8s-spark-ce-workshop.git
+git clone https://github.com/googlecloudplatform/serverless-spark-workshop/lab-01.git
 ```
 
 ## 7. Upload the code and data to the designated GCS bucket
 Navigate to the cloned repo and upload the files (code and data) as shown below-
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/
+cd ~/serverless-spark-workshop/lab-01/
 gsutil cp -r cell-tower-anomaly-detection/00-scripts gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts
 gsutil cp -r cell-tower-anomaly-detection/01-datasets gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/01-datasets
 ```
@@ -760,7 +760,7 @@ Takes about 25 minutes<br>
 1) Edit the variables.json with your values download it locally, then to Cloud Composer, via the Airflow UI.
 
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/02-config
+cd ~/serverless-spark-workshop/lab-01/cell-tower-anomaly-detection/02-config
 cat variables.json
 ```
 
@@ -812,7 +812,7 @@ Author's output-
 Make sure you have the correct value for $COMPOSER_ENV...
 
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
+cd ~/serverless-spark-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
 
 gcloud composer environments storage dags import \
 --environment $COMPOSER_ENV  --location $LOCATION \
