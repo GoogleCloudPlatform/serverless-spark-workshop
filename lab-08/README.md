@@ -1,5 +1,7 @@
 # Malware Detection using  Serverless Spark
 
+Lab contributed by: TEKsystems
+
 ## Overview
 
 With the advent of cloud environments, the concept of huge capital investments in infrastructure in terms of capital and maintenance is a thing of the past. Even when it comes to provisioning infrastructure on cloud services, it can get tedious and cumbersome.
@@ -13,7 +15,7 @@ This usecase is to perform Machine learning using serverless spark.
 
 * Google Cloud Storage
 * Google Cloud Dataproc
-* Google Cloud Bigquery
+* Google Cloud BigQuery
 * Google Cloud Composer
 * Airflow DAG
 
