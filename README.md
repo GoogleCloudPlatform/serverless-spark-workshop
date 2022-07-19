@@ -24,15 +24,22 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 | 1 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration |
 | 2 | [Lab 2 - Wikipedia Page View Analysis](lab-02/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
 | 3 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
-| 4 | [Lab 4 - Retail Store Analytics Metastore](lab-04/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
+| 4 | [Lab 4 - Retail Store Analytics](lab-04/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
 | 5 | [Lab 5 - Serverless Spark Streaming](lab-05/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
 | 6 | [Lab 6 - Timeseries Forecasting](lab-06/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 7 | [Lab 7 - COVID-19 Economic Impact](lab-07/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 8 | [Lab 8 - Malware Detection](lab-08/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
+| 9 | [Lab 9 - Social Media Data Analytics](lab-09/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Credits
-Some of the labs are contributed by partners to Google Cloud or are contributions from Googlers.<br>
+Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
 Lab 1 - TEKsystems<br>
 Lab 2 - TEKsystems<br>
+Lab 3 - Anagha Khanolkar (@anagha-google)<br>
 Lab 4 - TEKsystems<br>
 Lab 5 - TEKsystems<br>
 Lab 6 - TEKsystems<br>
+Lab 7 - TEKsystems<br>
+Lab 8 - TEKsystems<br>
+Lab 9 - TEKsystems<br>
