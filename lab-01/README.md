@@ -58,7 +58,7 @@ SPARK_SUBNET_CIDR="10.0.0.0/16"
 ## 6. Clone this repo
 ```
 cd ~
-git clone https://github.com/googlecloudplatform/spark-hackfest/s8s-spark-ce-workshop.git
+git clone https://github.com/googlecloudplatform/serverless-spark-workshop/lab-01.git
 ```
 
 ## 7. Upload the code and data to the designated GCS bucket
