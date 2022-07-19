@@ -760,7 +760,7 @@ Takes about 25 minutes<br>
 1) Edit the variables.json with your values download it locally, then to Cloud Composer, via the Airflow UI.
 
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/02-config
+cd ~/serverless-spark-workshop/lab-01/cell-tower-anomaly-detection/02-config
 cat variables.json
 ```
 
@@ -812,7 +812,7 @@ Author's output-
 Make sure you have the correct value for $COMPOSER_ENV...
 
 ```
-cd ~/s8s-spark-ce-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
+cd ~/serverless-spark-workshop/lab-01/cell-tower-anomaly-detection/00-scripts/
 
 gcloud composer environments storage dags import \
 --environment $COMPOSER_ENV  --location $LOCATION \
