@@ -83,7 +83,7 @@ Select the sessions created as part of this lab and click on **Delete**
 <br>
 
 <kbd>
-<img src=/images/sessions6.png />
+<img src=../images/sessions6.png />
 </kbd>
 
 <br>
@@ -95,7 +95,7 @@ Select the sessions created as part of this lab and click on **Delete**
  <br>
 
 <kbd>
-<img src=/images/sessions7.png />
+<img src=../images/sessions7.png />
 </kbd>
 
 <br>

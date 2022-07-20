@@ -61,7 +61,7 @@ Batch id: **aj-batch-558**
 <br>
 
 <kbd>
-<img src=images/spark-stream-batch.PNG />
+<img src=../images/spark-stream-batch.PNG />
 </kbd>
 
 <br>
@@ -85,7 +85,7 @@ Note :
 <br>
 
 <kbd>
-<img src=images/spark-stream-copy.PNG />
+<img src=../images/spark-stream-copy.PNG />
 </kbd>
 
 <br>
@@ -119,7 +119,7 @@ To query the data and view all the data, run the following query -
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=images/table1.PNG />
+<img src=../images/table1.PNG />
 </kbd>
 
 <br>
@@ -136,7 +136,7 @@ To query the data to find the count of data, run the following query -
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/table2.PNG />
+<img src=../images/table2.PNG />
 </kbd>
 
 <br>
@@ -176,7 +176,7 @@ Run PySpark Serverless Batch for Data Preparation
 - **History Server Cluster** - <your_phs_cluster_name>
 
 <kbd>
-<img src=/images/creation1.PNG />
+<img src=../images/creation1.PNG />
 </kbd>
 
 <hr>
@@ -184,17 +184,17 @@ Run PySpark Serverless Batch for Data Preparation
 <br> 
 
 <kbd>
-<img src=/images/creation2.PNG />
+<img src=../images/creation2.PNG />
 </kbd>
 
   <kbd>
-  <img src=/images/creation3.PNG />
+  <img src=../images/creation3.PNG />
   </kbd>
 
 <br>
 
 <kbd>
-<img src=/images/creation4.PNG />
+<img src=../images/creation4.PNG />
 </kbd>
 
 <hr>
@@ -249,7 +249,7 @@ To query the data and view all the data, run the following query -
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/table1.PNG />
+<img src=../images/table1.PNG />
 </kbd>
 
 <br>
@@ -264,7 +264,7 @@ To query the data to find the count of data, run the following query -
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/table2.PNG />
+<img src=../images/table2.PNG />
 </kbd>
 
 <br>
@@ -280,7 +280,7 @@ We can check the output of the batch in dataproc console.
 Batch id: batch-aj-spark-stream
 
 <kbd>
-<img src=/images/console1.PNG />
+<img src=../images/console1.PNG />
 </kbd>
 
 <br>

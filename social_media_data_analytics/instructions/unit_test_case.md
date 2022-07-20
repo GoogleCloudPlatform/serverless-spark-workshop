@@ -35,7 +35,7 @@ The docker container will be built and pushed to Google Container Registry.
 <br>
 
 <kbd>
-<img src=images/gcr_sctest.png />
+<img src=../images/gcr_sctest.png />
 </kbd>
 
 <br>
@@ -46,7 +46,7 @@ Next, fill in the following values in the session creation window as shown in th
 <br>
 
 <kbd>
-<img src=images/session_creation_01.png />
+<img src=../images/session_creation_01.png />
 </kbd>
 
 <br>
@@ -54,7 +54,7 @@ Next, fill in the following values in the session creation window as shown in th
 <br>
 
 <kbd>
-<img src=images/session_creation_02.png />
+<img src=../images/session_creation_02.png />
 </kbd>
 
 <br>
@@ -68,7 +68,7 @@ Once the Session is created select 'No Kernel' from the kernel dropdown list and
 <br>
 
 <kbd>
-<img src=images/kernel_selection.png />
+<img src=../images/kernel_selection.png />
 </kbd>
 
 <br>
@@ -81,13 +81,13 @@ Once the Session is created select 'No Kernel' from the kernel dropdown list and
  
 **Most popular trending #tags** 
  <kbd>
-<img src=/images/o1.png />
+<img src=../images/o1.png />
 </kbd>
 
 <br>
 
  <kbd>
-<img src=/images/o2.png />
+<img src=../images/o2.png />
 </kbd>
 
 <br>
@@ -96,7 +96,7 @@ Once the Session is created select 'No Kernel' from the kernel dropdown list and
 
 **The types of tweets and their followers count**
  <kbd>
-<img src=/images/o3.png />
+<img src=../images/o3.png />
 </kbd>
 
 <br>
@@ -104,7 +104,7 @@ Once the Session is created select 'No Kernel' from the kernel dropdown list and
 
 **The origin of the tweets**
  <kbd>
-<img src=/images/o4.png />
+<img src=../images/o4.png />
 </kbd>
 
 <br>

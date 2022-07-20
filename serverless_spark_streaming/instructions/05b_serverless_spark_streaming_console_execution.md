@@ -39,7 +39,7 @@ The data used for this project are:
 
 ## 2. Solution Architecture
  
-![this is a screenshot of the solution diagram](/images/Flow_of_Resources.png)
+![this is a screenshot of the solution diagram](../images/Flow_of_Resources.png)
 
 <br>
 
@@ -69,7 +69,7 @@ NAME=                                               #Your unique identifier
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 #### 4.1.1. Provide the details for the batch
@@ -98,7 +98,7 @@ Run PySpark Serverless Batch for Data Preparation
 - **History Server Cluster** - <your_phs_cluster_name>
 
 <kbd>
-<img src=/images/b1.png />
+<img src=../images/b1.png />
 </kbd>
 
 <hr>
@@ -106,11 +106,11 @@ Run PySpark Serverless Batch for Data Preparation
 <br> 
 
 <kbd>
-<img src=/images/image25.png />
+<img src=../images/image25.png />
 </kbd>
 
   <kbd>
-  <img src=/images/image26.png />
+  <img src=../images/image26.png />
   </kbd>
 
 <br>
@@ -172,7 +172,7 @@ To query the data and view all the data, run the following query -
 **Note:** Edit the occurrence of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/bq1.png />
+<img src=../images/bq1.png />
 </kbd>
 
 <br>
@@ -187,7 +187,7 @@ To find the count of data, run the following query -
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/bq2.png />
+<img src=../images/bq2.png />
 </kbd>
 
 <br>
@@ -228,11 +228,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/image10.PNG />
+<img src=../images/image10.PNG />
 </kbd>
 
 <kbd>
-<img src=/images/image11.png />
+<img src=../images/image11.png />
 </kbd>
 
 <br>
@@ -244,11 +244,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/image12.PNG />
+<img src=../images/image12.PNG />
 </kbd>
 
 <kbd>
-<img src=/images/image13.PNG />
+<img src=../images/image13.PNG />
 </kbd>
 
 <br>
