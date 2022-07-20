@@ -21,15 +21,15 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 ### What Is Covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
-| 1 | [Lab 1 - Cell Tower Anomaly Detection](lab-01/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration |
-| 2 | [Lab 2 - Wikipedia Page View Analysis](lab-02/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
-| 3 | [Lab 3 - Chicago Crimes Analysis](lab-03/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
-| 4 | [Lab 4 - Retail Store Analytics](lab-04/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
-| 5 | [Lab 5 - Serverless Spark Streaming](lab-05/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
-| 6 | [Lab 6 - Timeseries Forecasting](lab-06/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 7 | [Lab 7 - COVID-19 Economic Impact](lab-07/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 8 | [Lab 8 - Malware Detection](lab-08/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
-| 9 | [Lab 9 - Social Media Data Analytics](lab-09/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration |
+| 2 | [Lab 2 - Wikipedia Page View Analysis](wikipedia-page-view-analysis/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
+| 3 | [Lab 3 - Chicago Crimes Analysis](chicago-crimes-analysis/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
+| 4 | [Lab 4 - Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
+| 5 | [Lab 5 - Serverless Spark Streaming](serverless_spark_streaming/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
+| 6 | [Lab 6 - Timeseries Forecasting](timeseries_forecasting/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 7 | [Lab 7 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 8 | [Lab 8 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
+| 9 | [Lab 9 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Credits
