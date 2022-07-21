@@ -6,7 +6,9 @@ Spark developers are typically spending only 40% of time writing code while spen
 
 Google Cloud customers have used our auto-scaling, serverless Spark to boost productivity and reduce infrastructure costs.<br>
 
-This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.
+This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.<br>
+
+This [repo](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) contains Dataproc Serverless ready-to-use, config driven Spark templates.
 
 # Feedback From Serverless Spark Users
 - "Serverless Spark is so much easier than traditional cluster based products."<br> 
