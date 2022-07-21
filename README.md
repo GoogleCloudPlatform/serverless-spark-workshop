@@ -45,14 +45,14 @@ Lab 8 - TEKsystems<br>
 Lab 9 - TEKsystems<br>
 
 # Contributing
-See the [contributing instructions](CONTRIBUTING.md) to get started contributing.
+See the [contributing instructions](CONTRIBUTING.md) to start contributing.
 
 # License
-All solutions within this repository are provided under the Apache 2.0 license. Please see the [LICENSE file](LICENSE) for more detailed terms and conditions.
+All solutions within this repository are provided under the Apache 2.0 license.  Please see the [LICENSE file](LICENSE) for more detailed terms and conditions.
 
 # Disclaimer
 This repository and its contents are not an official Google Product.
 
 # Contact
-Interested in doing a Spark Workshop?  Please fill out this [form.](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng)
+Interested in doing a guided, hands-on Spark Workshop?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
 
