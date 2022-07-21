@@ -8,7 +8,7 @@ Google Cloud customers have used our auto-scaling, serverless Spark to boost pro
 
 This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.
 
-### Feedback From Serverless Spark Users
+# Feedback From Serverless Spark Users
 - "Serverless Spark is so much easier than traditional cluster based products."<br> 
 ~ Director of Data Science at business management corporation<br><br>
 - "Anytime we can go the serverless route we will.  Just so much simpler and eliminates the management of the infrastructure."<br>
@@ -18,7 +18,7 @@ This repo contains hands-on labs for [Serverless Spark on GCP use cases](https:/
 - “We ran a compute-intensive Serverless Spark query in 19 mins.  That same Spark query took 90 mins on a traditional cluster based product.  It's ~80% faster on Serverless Spark.”<br> 
 ~ Principal Architect at multinational retail corporation
 
-### What Is Covered?
+# What's Covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
 | 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration |
@@ -43,3 +43,16 @@ Lab 6 - TEKsystems<br>
 Lab 7 - TEKsystems<br>
 Lab 8 - TEKsystems<br>
 Lab 9 - TEKsystems<br>
+
+# Contributing
+See the [contributing instructions](CONTRIBUTING.md) to get started contributing.
+
+# License
+All solutions within this repository are provided under the Apache 2.0 license. Please see the [LICENSE file](LICENSE.md) for more detailed terms and conditions.
+
+# Disclaimer
+This repository and its contents are not an official Google Product.
+
+# Contact
+Interested in doing a Spark Workshop?  Please fill out this [form.](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng)
+
