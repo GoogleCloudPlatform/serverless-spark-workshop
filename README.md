@@ -48,7 +48,7 @@ Lab 9 - TEKsystems<br>
 See the [contributing instructions](CONTRIBUTING.md) to get started contributing.
 
 # License
-All solutions within this repository are provided under the Apache 2.0 license. Please see the [LICENSE file](LICENSE.md) for more detailed terms and conditions.
+All solutions within this repository are provided under the Apache 2.0 license. Please see the [LICENSE file](LICENSE) for more detailed terms and conditions.
 
 # Disclaimer
 This repository and its contents are not an official Google Product.
