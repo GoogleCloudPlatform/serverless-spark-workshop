@@ -67,7 +67,7 @@ Output
 <br>
 
 <kbd>
-<img src=images/one.PNG />
+<img src=../images/one.PNG />
 </kbd>
 
 <br>
@@ -98,7 +98,7 @@ Output
 <br>
 
 <kbd>
-<img src=images/Two.PNG />
+<img src=../images/Two.PNG />
 </kbd>
 
 <br>
@@ -124,13 +124,13 @@ Output
 <br>
 
 <kbd>
-<img src=images/Th1.PNG />
+<img src=../images/Th1.PNG />
 </kbd>
 
 <br>
 
 <kbd>
-<img src=images/Th2.PNG />
+<img src=../images/Th2.PNG />
 </kbd>
 
 <br>
@@ -156,13 +156,13 @@ Output
 <br>
 
 <kbd>
-<img src=images/Four-1.PNG />
+<img src=../images/Four-1.PNG />
 </kbd>
 
 <br>
 
 <kbd>
-<img src=images/Four-2.PNG />
+<img src=../images/Four-2.PNG />
 </kbd>
 
 <br>
@@ -175,7 +175,7 @@ Once the Serverless batches execution is completed, three new table '<your_name_
 <br>
 
 <kbd>
-<img src=images/bigqueryretail.png />
+<img src=../images/bigqueryretail.png />
 </kbd>
 
 <br>
@@ -188,7 +188,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_preview.png />
+<img src=../images/bq_preview.png />
 </kbd>
 
 <br>
@@ -204,7 +204,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/Five.PNG />
+<img src=../images/Five.PNG />
 </kbd>
 
 <br>
@@ -213,7 +213,7 @@ To view the data in these tables -
 
 
 <kbd>
-<img src=images/Six.PNG />
+<img src=../images/Six.PNG />
 </kbd>
 
 <br>
@@ -242,7 +242,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M1.PNG />
+<img src=../images/M1.PNG />
 </kbd>
 
 <br>
@@ -264,7 +264,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M2.2.PNG />
+<img src=../images/M2.2.PNG />
 </kbd>
 
 <br>
@@ -275,7 +275,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M3.PNG />
+<img src=../images/M3.PNG />
 </kbd>
 
 <br>
@@ -283,7 +283,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M4.PNG />
+<img src=../images/M4.PNG />
 </kbd>
 
 <br>
@@ -307,7 +307,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/Msales.PNG />
+<img src=../images/Msales.PNG />
 </kbd>
 
 <br>
@@ -330,7 +330,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M2.2.PNG />
+<img src=../images/M2.2.PNG />
 </kbd>
 
 <br>
@@ -341,7 +341,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M3.PNG />
+<img src=../images/M3.PNG />
 </kbd>
 
 <br>
@@ -349,7 +349,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M4.PNG />
+<img src=../images/M4.PNG />
 </kbd>
 
 <br>
@@ -373,7 +373,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/Minventory.PNG />
+<img src=../images/Minventory.PNG />
 </kbd>
 
 <br>
@@ -395,7 +395,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M2.2.PNG />
+<img src=../images/M2.2.PNG />
 </kbd>
 
 <br>
@@ -406,7 +406,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M3.PNG />
+<img src=../images/M3.PNG />
 </kbd>
 
 <br>
@@ -414,7 +414,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M4.PNG />
+<img src=../images/M4.PNG />
 </kbd>
 
 <br>
@@ -438,7 +438,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/Maisle.PNG />
+<img src=../images/Maisle.PNG />
 </kbd>
 
 <br>
@@ -460,7 +460,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M2.2.PNG />
+<img src=../images/M2.2.PNG />
 </kbd>
 
 <br>
@@ -471,7 +471,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M3.PNG />
+<img src=../images/M3.PNG />
 </kbd>
 
 <br>
@@ -479,7 +479,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=images/M4.PNG />
+<img src=../images/M4.PNG />
 </kbd>
 
 <br>
@@ -496,7 +496,7 @@ Once the Serverless batches execution is completed, three new table '<your_name_
 <br>
 
 <kbd>
-<img src=images/bigqueryretail.png />
+<img src=../images/bigqueryretail.png />
 </kbd>
 
 <br>
@@ -509,7 +509,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_preview.png />
+<img src=../images/bq_preview.png />
 </kbd>
 
 <br>
@@ -525,7 +525,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/Five.PNG />
+<img src=../images/Five.PNG />
 </kbd>
 
 <br>
@@ -534,7 +534,7 @@ To view the data in these tables -
 
 
 <kbd>
-<img src=images/Six.PNG />
+<img src=../images/Six.PNG />
 </kbd>
 
 <br>
@@ -557,7 +557,7 @@ To view the data in these tables -
 * Next, upload the DAG file to the GCS bucket corresponding to the **DAGs folder URI**
 
 <kbd>
-<img src=/images/composer_2.png />
+<img src=../images/composer_2.png />
 </kbd>
 
 <br>
@@ -565,7 +565,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=/images/composer_3.png />
+<img src=../images/composer_3.png />
 </kbd>
 
 <br>
@@ -578,7 +578,7 @@ To view the data in these tables -
 * Navigate to **Composer**>**<your_environment>**>**Open Airflow UI**
 
 <kbd>
-<img src=/images/composer_5.png />
+<img src=../images/composer_5.png />
 </kbd>
 
 <br>
@@ -587,7 +587,7 @@ To view the data in these tables -
 * Next, trigger your DAG by clicking on the **Trigger DAG** button
 
 <kbd>
-<img src=/images/composer_6.png />
+<img src=../images/composer_6.png />
 </kbd>
 
 <br>
@@ -595,7 +595,7 @@ To view the data in these tables -
 DAGS folder
 
 <kbd>
-<img src=/images/Airflow-2.PNG />
+<img src=../images/Airflow-2.PNG />
 </kbd>
 
 <br>
@@ -603,7 +603,7 @@ DAGS folder
 Variables 
 
 <kbd>
-<img src=/images/Airflow-var.PNG />
+<img src=../images/Airflow-var.PNG />
 </kbd>
 
 <br>
@@ -612,7 +612,7 @@ Variables
 * Once the DAG is triggered, the DAG can be monitored directly through the Airflow UI as well as the Dataproc>Serverless>Batches window
 
 <kbd>
-<img src=/images/Airflow-final.PNG />
+<img src=../images/Airflow-final.PNG />
 </kbd>
 
 <br>
