@@ -13,12 +13,12 @@ Following are the lab modules:
 The datasets used for this project are 
 
 
-1. [Aisles data](01-datasets/aisles/aisles.csv). <br>
-2. [Departments data](01-datasets/departments/departments.csv) . <br>
-3. [Orders data](01-datasets/orders/orders.csv). <br>
-4. [Products data](01-datasets/products/products.csv). <br>
-5. [Order_products__prior](01-datasets/order_products/order_products__prior.csv). <br>
-6. [Order_products__train](01-datasets/order_products/order_products__train.csv). <br>
+1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
+2. [Departments data](../01-datasets/departments/departments.csv) . <br>
+3. [Orders data](../01-datasets/orders/orders.csv). <br>
+4. [Products data](../01-datasets/products/products.csv). <br>
+5. [Order_products__prior](../01-datasets/order_products/order_products__prior.csv). <br>
+6. [Order_products__train](../01-datasets/order_products/order_products__train.csv). <br>
 
 
 - Aisles: This table includes all aisles. It has a single primary key (aisle_id)
