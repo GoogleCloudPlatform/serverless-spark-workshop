@@ -61,7 +61,7 @@ To upload the code repository, please follow the below steps:
 <br>
 
 <kbd>
-<img src=/images/files_upload.png />
+<img src=../images/files_upload.png />
 </kbd>
 
 <br>
