@@ -75,17 +75,17 @@ Navigate to the Dataproc Service in your GCP project and click on Metastore
 Click **+CREATE**>**Composer 2**
 
 <kbd>
-<img src=/images/meta.png />
+<img src=../images/meta.png />
 </kbd>
 
 <br>
 <kbd>
-<img src=/images/meta01.png />
+<img src=../images/meta01.png />
 </kbd>
 
 <br>
 <kbd>
-<img src=/images/meta02.png />
+<img src=../images/meta02.png />
 </kbd>
 
 <br>
@@ -115,11 +115,11 @@ To view the metastore logs, click the 'View Logs' button on the metastore page a
 <br>
 
 <kbd>
-<img src=/images/meta_logs01.png />
+<img src=../images/meta_logs01.png />
 </kbd>
 
 <kbd>
-<img src=/images/meta_logs02.png />
+<img src=../images/meta_logs02.png />
 </kbd>
 
 <br>
