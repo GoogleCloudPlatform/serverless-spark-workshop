@@ -34,7 +34,7 @@ The datasets used for this project are
 ## 2. Solution Diagram
 
 <kbd>
-<img src=images/Flow_of_Resources.jpeg />
+<img src=../images/Flow_of_Resources.jpeg />
 </kbd>
 
 <br>
@@ -63,7 +63,7 @@ The data pipeline involves the following steps: <br>
 * Next, upload the DAG file to the GCS bucket corresponding to the **DAGs folder URI**
 
 <kbd>
-<img src=/images/composer_2.png />
+<img src=../images/composer_2.png />
 </kbd>
 
 <br>
@@ -71,7 +71,7 @@ The data pipeline involves the following steps: <br>
 <br>
 
 <kbd>
-<img src=/images/composer_3.png />
+<img src=../images/composer_3.png />
 </kbd>
 
 <br>
@@ -84,7 +84,7 @@ The data pipeline involves the following steps: <br>
 * Navigate to **Composer**>**<your_environment>**>**Open Airflow UI**
 
 <kbd>
-<img src=/images/composer_5.png />
+<img src=../images/composer_5.png />
 </kbd>
 
 <br>
@@ -93,7 +93,7 @@ The data pipeline involves the following steps: <br>
 * Next, trigger your DAG by clicking on the **Trigger DAG** button
 
 <kbd>
-<img src=/images/composer_6.png />
+<img src=../images/composer_6.png />
 </kbd>
 
 <br>
@@ -101,7 +101,7 @@ The data pipeline involves the following steps: <br>
 * Once the DAG is triggered, the DAG can be monitored directly through the Airflow UI as well as the Dataproc>Serverless>Batches window
 
 <kbd>
-<img src=/images/Airflow-final.PNG />
+<img src=../images/Airflow-final.PNG />
 </kbd>
 
 <br>
@@ -115,7 +115,7 @@ Once the Serverless batches execution is completed, three new table '<your_name_
 <br>
 
 <kbd>
-<img src=images/bigqueryretail.png />
+<img src=../images/bigqueryretail.png />
 </kbd>
 
 <br>
@@ -128,7 +128,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_preview.png />
+<img src=../images/bq_preview.png />
 </kbd>
 
 <br>
@@ -144,7 +144,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_3.PNG />
+<img src=../images/bq_3.PNG />
 </kbd>
 
 <br>
@@ -153,7 +153,7 @@ To view the data in these tables -
 
 
 <kbd>
-<img src=images/bq_2.png />
+<img src=../images/bq_2.png />
 </kbd>
 
 <br>
@@ -169,7 +169,7 @@ To view the data in these tables -
 * To view the logs of any step of the DAG execution, click on the **<DAG step>**>**Log** button <br>
 
 <kbd>
-<img src=/images/composer_8.png />
+<img src=../images/composer_8.png />
 </kbd>
 
 <br>
@@ -181,11 +181,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/image10.png />
+<img src=../images/image10.png />
 </kbd>
 
 <kbd>
-<img src=/images/image11.png />
+<img src=../images/image11.png />
 </kbd>
 
 <br>
@@ -198,11 +198,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/image12.png />
+<img src=../images/image12.png />
 </kbd>
 
 <kbd>
-<img src=/images/image13.png />
+<img src=../images/image13.png />
 </kbd>
 
 <br>
@@ -214,11 +214,11 @@ To view the metastore logs, click the 'View Logs' button on the metastore page a
 <br>
 
 <kbd>
-<img src=/images/meta_logs01.png />
+<img src=../images/meta_logs01.png />
 </kbd>
 
 <kbd>
-<img src=/images/meta_logs02.png />
+<img src=../images/meta_logs02.png />
 </kbd>
 
 <br>
