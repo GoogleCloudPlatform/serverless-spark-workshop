@@ -3,7 +3,7 @@
 In this lab, you will create a Vertex AI managed notebook environment, launch JupyterLab, create a Dataproc Serverless Spark Interactive Session and  authoring and run Spark code for interactive, exploratory analytics with Spark.
 
 ## 1. Prerequisite
-The setup detailed in the environment provisioning instructions in go/scw-tf
+Serverless Spark environment set up
 
 ## 2. Enable APIs
 
@@ -79,7 +79,7 @@ From the Cloud Console, navigate to IAM and grant yourself the following permiss
 Be sure to include the BigQuery connector jar-
 
 ```
-spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
+spark.jars.packages=com.google.cloud.spark:spark-bigquery-with-dependencies_2.12:0.25.2
 ```
 
 <br>
@@ -103,8 +103,8 @@ spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.
 
 ```
 cd ~
-rm -rf s8s-spark-ce-workshop
-git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
+rm -rf serverless-spark-workshop
+git clone https://googlecloudplatform/serverless-spark-workshop.git
 ```
 
 ## 6. Download the Chicago Crimes Analytics notebook from the Cloud Shell
@@ -112,8 +112,8 @@ git clone https://github.com/anagha-google/s8s-spark-ce-workshop.git
 Click on the ellipsis (3 dots) and click on download, and select the location of the notebook.
 <br>
 ```
-Its here-
-~/s8s-spark-ce-workshop/lab-03/
+It's here-
+~/serverless-spark-workshop/chicago-crimes-analysis/
 ```
 
 ## 7. Upload the same into the Managed Notebook environment
