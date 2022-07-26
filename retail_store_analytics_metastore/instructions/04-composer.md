@@ -99,7 +99,7 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 Navigate to the Composer Service in your GCP project and click on **+CREATE**>**Composer 2**
 
 <kbd>
-<img src=/images/composer_1.png />
+<img src=../images/composer_1.png />
 </kbd>
 
 <br>
@@ -155,7 +155,7 @@ gcloud composer environments create $COMPOSER_ENV \
 * Once the Airflow UI opens, navigate to **Admin**>**Variables**<br>
 
 <kbd>
-<img src=/images/composer_4.png />
+<img src=../images/composer_4.png />
 </kbd>
 
 <br>
