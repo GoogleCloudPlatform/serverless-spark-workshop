@@ -1,5 +1,7 @@
 # Lab 2: Wikipedia Page Views Analysis from the BigQuery UI powered by Dataproc Serverless Spark
 
+Lab contributed by TEKsystems and Google.
+
 This lab demonstrates how to use the BigQuery UI for running Dataproc Serverless Spark jobs for data analytics.
 
 ## 1. Prerequisite
