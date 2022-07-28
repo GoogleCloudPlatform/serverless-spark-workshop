@@ -6,9 +6,9 @@ Spark developers are typically spending only 40% of time writing code while spen
 
 Google Cloud customers have used our auto-scaling, serverless Spark to boost productivity and reduce infrastructure costs.<br>
 
-This repo contains hands-on labs for [Serverless Spark on GCP use cases](https://cloud.google.com/solutions/spark) for data engineers and data scientists.<br>
+This repository contains Serverless Spark on GCP hands-on labs built around common use cases.  By doing these labs, data engineers and data scientists with Apache Spark experience will ramp up faster on [Serverless Spark on GCP](https://cloud.google.com/dataproc-serverless/docs).<br>
 
-This [repo](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) contains Dataproc Serverless ready-to-use, config driven Spark templates.
+Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) for Dataproc Serverless ready-to-use, config driven Spark templates for solving simple, but large, in-Cloud data tasks, including data import/export/backup/restore and bulk API operations.
 
 # Feedback From Serverless Spark Users
 - "Serverless Spark is so much easier than traditional cluster based products."<br> 
@@ -32,7 +32,6 @@ This [repo](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/
 | 7 | [Lab 7 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | 8 | [Lab 8 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
 | 9 | [Lab 9 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| N | [Resources for Serverless Spark](https://spark.apache.org/docs/latest/) |
 
 ### Credits
 Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
