@@ -1,6 +1,6 @@
 # Social Media Data Analysis using Vertex AI and Serverless Spark
 
-Lab contributed by: TEKsystems
+Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
 
