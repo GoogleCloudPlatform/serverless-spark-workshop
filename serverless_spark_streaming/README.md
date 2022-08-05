@@ -1,6 +1,6 @@
 # Serverless Spark Streaming
  
-Lab contributed by: TEKsystems
+Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
 
