@@ -1,5 +1,5 @@
 # Retail store analytics using Serverless Spark
-Lab contributed by: TEKsystems
+Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
 
