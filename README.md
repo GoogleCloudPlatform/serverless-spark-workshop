@@ -35,15 +35,15 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 
 ### Credits
 Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
-Lab 1 - TEKsystems<br>
-Lab 2 - TEKsystems<br>
-Lab 3 - Anagha Khanolkar (@anagha-google)<br>
-Lab 4 - TEKsystems<br>
-Lab 5 - TEKsystems<br>
-Lab 6 - TEKsystems<br>
-Lab 7 - TEKsystems<br>
-Lab 8 - TEKsystems<br>
-Lab 9 - TEKsystems<br>
+Lab 1 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 2 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 3 - [Anagha Khanolkar](https://github.com/anagha-google)<br>
+Lab 4 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 5 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 6 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 7 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 8 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 9 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
