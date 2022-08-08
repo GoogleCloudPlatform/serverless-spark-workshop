@@ -15,9 +15,9 @@ Following are the lab modules:
 
 The datasets used for this project are
 
-1.[telecom_customer_churn_data.csv](01-datasets/telecom_customer_churn_data.csv) <br>
-2.[service_threshold_data.csv](01-datasets/service_threshold_data.csv) <br>
-3.[customer_data](01-datasets/cust_raw_data/L1_Customer_details_raw_part-00000-fc7d6e20-dbda-4143-91b5-d9414310dfd1-c000.snappy.parquet) <br>
+1.[telecom_customer_churn_data.csv](../01-datasets/telecom_customer_churn_data.csv) <br>
+2.[service_threshold_data.csv](../01-datasets/service_threshold_data.csv) <br>
+3.[customer_data](../01-datasets/cust_raw_data/L1_Customer_details_raw_part-00000-fc7d6e20-dbda-4143-91b5-d9414310dfd1-c000.snappy.parquet) <br>
 
 - Telecom Customer Churn Data   - This dataset contains information of services provided to the customers by the celltowers.
 - Service Threshold Data -  This dataset contains the performance metrics thresold information of the celltowers.
@@ -27,7 +27,7 @@ The datasets used for this project are
 ## 2. Solution Diagram
 
 <kbd>
-<img src=images/Flow_of_Resources.jpeg />
+<img src=../images/Flow_of_Resources.jpeg />
 </kbd>
 
 <br>
@@ -156,7 +156,7 @@ Once the Airflow DAG execution is completed, two new tables '<your_name_here>_ce
 <br>
 
 <kbd>
-<img src=images/bq_1.png />
+<img src=../images/bq_1.png />
 </kbd>
 
 <br>
@@ -169,7 +169,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_preview.png />
+<img src=../images/bq_preview.png />
 </kbd>
 
 <br>
@@ -186,7 +186,7 @@ To view the data in these tables -
 <br>
 
 <kbd>
-<img src=images/bq_2.png />
+<img src=../images/bq_2.png />
 </kbd>
 
 <br>
@@ -200,11 +200,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/image10.png />
+<img src=../images/image10.png />
 </kbd>
 
 <kbd>
-<img src=/images/image11.png />
+<img src=../images/image11.png />
 </kbd>
 
 <br>
@@ -216,11 +216,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/image12.png />
+<img src=../images/image12.png />
 </kbd>
 
 <kbd>
-<img src=/images/image13.png />
+<img src=../images/image13.png />
 </kbd>
 
 <br>
