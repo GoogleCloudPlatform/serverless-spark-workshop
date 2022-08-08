@@ -1,0 +1,9 @@
+{
+    "code_bucket": "<your_code_bucket_here>",
+    "phs": "<your_phs_here>",
+    "project_id": "<your_project_id>",
+    "region": "<your_region>",
+    "subnet": "<your_subnet_name>",
+    "bq_dataset": "<your_bq_dataset>",
+    "umsa": "<your_umsa_name>"
+}
