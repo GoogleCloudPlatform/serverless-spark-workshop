@@ -1,4 +1,6 @@
-# Cell Tower Anomaly Detection using Serverless Spark
+# Cell Tower Anomaly Detection using Serverless Spark (with Dataproc UI Instructions)
+
+Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
 
@@ -32,11 +34,11 @@ Following permissions / roles are required to execute the serverless batch
 
 To perform the lab, below are the list of activities to perform. <br>
 
-[1. GCP Prerequisites](/instructions/01-gcp-prerequisites.md)<br>
-[2. Spark History Server Setup](/instructions/02-persistent-history-server.md)<br>
-[3. Uploading scripts and datasets to GCP](/instructions/03-files-upload.md)<br>
-[4. Creating cloud composer environment](/instructions/04-composer.md)<br>
-[5. Creating a BigQuery Dataset](/instructions/05-bigquery-dataset.md)<br>
+[1. GCP Prerequisites](./instructions/01-gcp-prerequisites.md)<br>
+[2. Spark History Server Setup](./instructions/02-persistent-history-server.md)<br>
+[3. Uploading scripts and datasets to GCP](./instructions/03-files-upload.md)<br>
+[4. Creating cloud composer environment](./instructions/04-composer.md)<br>
+[5. Creating a BigQuery Dataset](./instructions/05-bigquery-dataset.md)<br>
 
 Note down the values for below variables to get started with the lab:
 
@@ -68,10 +70,10 @@ The lab consists of the following modules.
 5. Examine the logs
 6. Explore the output
 
-There are 3 ways of perforing the lab.
-- Using [Google Cloud Shell](/instructions/06a-cell-tower-anomaly-gcloud-execution.md)
-- Using [GCP console](/instructions/06b-cell-tower-anomaly-console-execution.md )
-- Using [Cloud Composer](/instructions/06c-cell-tower-anomaly-airflow-execution.md )
+There are 3 ways of performing the lab.
+- Using [Google Cloud Shell](./instructions/06a-cell-tower-anomaly-gcloud-execution.md)
+- Using [GCP console](./instructions/06b-cell-tower-anomaly-console-execution.md )
+- Using [Cloud Composer](./instructions/06c-cell-tower-anomaly-airflow-execution.md )
 
 Please chose one of the methods to execute the lab. 
 
@@ -80,7 +82,7 @@ Please chose one of the methods to execute the lab.
 ## 6. CleanUp
 
 Delete the resources after finishing the lab. <br>
-Refer - [Cleanup](/instructions/07-cleanup.md )
+Refer - [Cleanup](./instructions/07-cleanup.md )
 
 <br>
 
