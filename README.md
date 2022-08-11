@@ -33,6 +33,7 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 | 8 | [Lab 8 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
 | 9 | [Lab 9 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | 10 | [Lab 10 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration (and from Dataproc UI) |
+| 11 | [Lab 11 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
 
 
 ### Credits
@@ -47,6 +48,7 @@ Lab 7 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-
 Lab 8 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 9 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 10 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 11 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
