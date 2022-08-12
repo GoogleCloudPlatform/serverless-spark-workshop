@@ -103,12 +103,19 @@ if [ ! $? -eq 0 ];then
     LOG_DATE=`date`
     echo "#################################################################"
     echo "${LOG_DATE} Installing dbt .."
-    pip3 install dbt
+    pip3 install dbt-bigquery==1.3.0b1
+    #As per [CT-255] [Bug] ImportError: cannot import name soft_unicode from markupsafe (https://github.com/dbt-labs/dbt-core/issues/4745)
+    pip3 install --force-reinstall MarkupSafe==2.0.1
     LOG_DATE=`date`
     echo "#################################################################"
     echo "${LOG_DATE} dbt deployed OK"
 fi
 
+LOG_DATE=`date`
+echo "#################################################################"
+echo "${LOG_DATE} Installing extra packages.."
+pip3 install google-cloud-dataproc
+pip3 install google-cloud-storage
 
 CONFIG_FILE=${1}
 if [ ! -f "${CONFIG_FILE}" ]; then

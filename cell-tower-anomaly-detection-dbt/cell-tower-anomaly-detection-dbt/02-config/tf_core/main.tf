@@ -16,7 +16,15 @@ resource "google_dataproc_cluster" "spark-cluster" {
   name     = var.dataproc_cluster_name
   region   = var.region
   cluster_config {
+    initialization_action {
+
+        script      = format("gs://goog-dataproc-initialization-actions-%s/connectors/connectors.sh",var.region)
+    }
       gce_cluster_config {
+        metadata = {
+            bigquery-connector-version = "1.2.0"
+            spark-bigquery-connector-version = "0.21.0"
+        }
       service_account_scopes = [
         "cloud-platform"
       ]
@@ -41,7 +49,4 @@ resource "google_bigquery_dataset" "dataset" {
   provider                    = google-beta
   dataset_id                  = var.bq_dataset_name
   location                    = var.region
-
 }
-
-
