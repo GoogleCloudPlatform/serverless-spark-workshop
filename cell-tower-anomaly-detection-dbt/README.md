@@ -25,14 +25,15 @@ Pre-requistes : A working Google Cloud Project
 1) Open a Cloud Terminal and clone the repository
 
 ```bash 
-git clone https://github.com/GoogleCloudPlatform/serverless-spark-workshop.git 
+git clone https://github.com/GoogleCloudPlatform/serverless-spark-workshop.git
+cd serverless-spark-workshop/cell-tower-anomaly-detection-dbt/cell-tower-anomaly-detection-dbt/
 ```
 
 
-2) Edit the `variables.json` file with your own values:
+2) Edit the`variables.json` file with your own values:
 ```bash 
-cd
-open  
+cd 02-config
+vi variables.json  
 ```
 
 For instance:
@@ -50,7 +51,6 @@ For instance:
 
 3) Launch the infrastructure bootstrap script:
 ```bash 
-cd
 ./setup_infra.sh variables.json  
 ```
 

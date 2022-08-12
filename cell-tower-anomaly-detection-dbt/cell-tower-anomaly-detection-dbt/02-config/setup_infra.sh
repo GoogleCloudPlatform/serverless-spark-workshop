@@ -103,7 +103,7 @@ if [ ! $? -eq 0 ];then
     LOG_DATE=`date`
     echo "#################################################################"
     echo "${LOG_DATE} Installing dbt .."
-    pip install dbt
+    pip3 install dbt
     LOG_DATE=`date`
     echo "#################################################################"
     echo "${LOG_DATE} dbt deployed OK"
@@ -317,7 +317,7 @@ export PLAN_NAME_DATA="spark-workshop-dbt-infra-data.plan"
 ${TERRAFORM_BIN} init -reconfigure
 ${TERRAFORM_BIN} plan -out=${PLAN_NAME_DATA}
 ${TERRAFORM_BIN} apply ${PLAN_NAME_DATA}
-
+mkdir -p ${SCRIPTS_DIR}/dbt_bq_spark/profiles
 DBT_PROFILE_FILENAME=${SCRIPTS_DIR}/dbt_bq_spark/profiles/profiles.yml
 echo "#################################################################"
 echo "${LOG_DATE} Generating dbt profiles file: ${DBT_PROFILE_FILENAME} ..."
