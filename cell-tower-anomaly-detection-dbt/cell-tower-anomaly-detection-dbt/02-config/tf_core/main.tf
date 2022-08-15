@@ -52,4 +52,5 @@ resource "google_bigquery_dataset" "dataset" {
   provider                    = google-beta
   dataset_id                  = var.bq_dataset_name
   location                    = var.region
+  delete_contents_on_destroy = true
 }
