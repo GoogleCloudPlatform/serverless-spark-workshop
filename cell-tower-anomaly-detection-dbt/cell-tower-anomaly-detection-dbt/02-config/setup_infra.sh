@@ -98,6 +98,13 @@ if [ ! $? -eq 0 ];then
 fi
 
 
+PIP_BIN=`which pip3`
+if [ ! $? -eq 0 ];then
+    LOG_DATE=`date`
+    echo "pip3 not found! Please install first"
+    exit 1
+fi
+
 DBT_BIN=`which dbt`
 if [ ! $? -eq 0 ];then
     LOG_DATE=`date`
@@ -114,8 +121,21 @@ fi
 LOG_DATE=`date`
 echo "#################################################################"
 echo "${LOG_DATE} Installing extra packages.."
-pip3 install google-cloud-dataproc
-pip3 install google-cloud-storage
+
+
+
+PIP_PACKAGES="google-cloud-dataproc google-cloud-storage"
+for PIP_PACKAGE in ${PIP_PACKAGES}
+do
+  LOG_DATE=`date`
+  echo "${LOG_DATE} Deploying PIP package ..  ${PIP_PACKAGE}"
+  ${PIP_BIN} install ${PIP_PACKAGE}
+  if [ ! $? -eq 0 ];then
+    LOG_DATE=`date`
+    echo "Unable to run  ${PIP_BIN} install ${PIP_PACKAGE}"
+    exit 1
+  fi
+done
 
 CONFIG_FILE=${1}
 if [ ! -f "${CONFIG_FILE}" ]; then
