@@ -148,16 +148,6 @@ else
     echo "TERRAFORM_KEY_LOCATION : ${CONFIG_DIR}/${TERRAFORM_KEY_LOCATION}"
 fi
 
-echo "${LOG_DATE} Deleting SA  ..."
-"${GCLOUD_BIN}" iam service-accounts delete --quiet "${TERRAFORM_SA_NAME}"@"${PROJECT_ID}".iam.gserviceaccount.com
-
-echo "${LOG_DATE} Deleting  SA key  ..."
-if [ -f "${TERRAFORM_KEY_LOCATION}" ]; then
-    LOG_DATE=`date`
-    echo "${LOG_DATE} ${TERRAFORM_KEY_LOCATION} exists."
-    rm "${TERRAFORM_KEY_LOCATION}"
-fi
-
 export TF_VAR_project_id="${PROJECT_ID}"
 export TF_VAR_region="${REGION}"
 export TF_VAR_terraform_key_location="${CONFIG_DIR}"/"${TERRAFORM_KEY_LOCATION}"
@@ -197,6 +187,17 @@ echo "${LOG_DATE} Destroying Terraform data ..."
 cd "${TF_DATA_DIR}"
 export PLAN_NAME_DATA="spark-workshop-dbt-infra-data.plan"
 "${TERRAFORM_BIN}" destroy
+
+echo "${LOG_DATE} Deleting SA  ..."
+"${GCLOUD_BIN}" iam service-accounts delete --quiet "${TERRAFORM_SA_NAME}"@"${PROJECT_ID}".iam.gserviceaccount.com
+
+echo "${LOG_DATE} Deleting  SA key  ..."
+if [ -f "${TERRAFORM_KEY_LOCATION}" ]; then
+    LOG_DATE=`date`
+    echo "${LOG_DATE} ${TERRAFORM_KEY_LOCATION} exists."
+    rm "${TERRAFORM_KEY_LOCATION}"
+fi
+
 
 
 LOG_DATE=`date`

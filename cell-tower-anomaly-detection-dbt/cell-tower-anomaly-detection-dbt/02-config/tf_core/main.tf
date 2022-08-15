@@ -4,6 +4,7 @@ variable "terraform_key_location" {}
 variable "dataproc_cluster_name" {}
 variable "bucket_name" {}
 variable "bq_dataset_name" {}
+variable "serverless_spark" {}
 
 provider "google-beta" {
   project     = var.project_id
@@ -12,6 +13,8 @@ provider "google-beta" {
 }
 
 resource "google_dataproc_cluster" "spark-cluster" {
+  #If serverless spark = true, do not create cluster
+  count = var.serverless_spark ? 0 : 1
   provider = google-beta
   name     = var.dataproc_cluster_name
   region   = var.region

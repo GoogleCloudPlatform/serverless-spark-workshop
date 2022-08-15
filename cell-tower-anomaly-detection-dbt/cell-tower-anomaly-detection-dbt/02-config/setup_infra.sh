@@ -349,6 +349,7 @@ export TF_VAR_terraform_key_location="${CONFIG_DIR}"/"${TERRAFORM_KEY_LOCATION}"
 export TF_VAR_dataproc_cluster_name="${DATAPROC_CLUSTER_NAME}"
 export TF_VAR_bucket_name="${BUCKET_NAME}"
 export TF_VAR_bq_dataset_name="${BQ_DATASET_NAME}"
+export TF_VAR_serverless_spark="${SERVERLESS_SPARK}"
 
 echo "TF var project_id : ${PROJECT_ID}"
 echo "TF var region : ${REGION}"
@@ -356,6 +357,7 @@ echo "TF var terraform_key_location : ${CONFIG_DIR}/${TERRAFORM_KEY_LOCATION}"
 echo "TF var dataproc_cluster_name : ${DATAPROC_CLUSTER_NAME}"
 echo "TF var bucket_name : ${BUCKET_NAME}"
 echo "TF var bq_dataset_name : ${BQ_DATASET_NAME}"
+echo "TF var serverless_spark : ${SERVERLESS_SPARK}"
 
 
 LOG_DATE=`date`
