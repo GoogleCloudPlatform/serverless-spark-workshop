@@ -8,7 +8,7 @@ It includes/changes:
 - Adds a bootstrap script to deploy required cloud infrastructure (GCS bucket, BQ datasets, Service Accounts .)
 It is self-contained and fully scripted to follow along at your own pace.<br>
 
-Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
+
 
 ## 2. Lab overview and architecure
 
