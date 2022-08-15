@@ -49,10 +49,22 @@ For instance:
 }
 ```
 
+
+
 3) Launch the infrastructure bootstrap script:
 ```bash 
 ./setup_infra.sh variables.json  
 ```
+
+This script reads the config file and :
+* Checks and install binaries/packages if needed
+* Enables GCP APIs
+* Creates Service Account (SA) and key for deployment
+* Grants roles to the SA
+* Terraforms core infrastructure, including a single node dataproc cluster, a GCS bucket and a BigQuery dataset
+* Stages data in GCS
+* Terraforms data infrastructure, inlcuding a BQ external connection, a couple of BigLake tables
+* Generates DBT config files (profile and config)
 
 4) Launch dbt:
 ```bash 

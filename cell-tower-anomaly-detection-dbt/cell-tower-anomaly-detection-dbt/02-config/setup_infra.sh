@@ -101,7 +101,7 @@ fi
 PIP_BIN=`which pip3`
 if [ ! $? -eq 0 ];then
     LOG_DATE=`date`
-    echo "pip3 not found! Please install first"
+    echo "pip not found! Please install first"
     exit 1
 fi
 
