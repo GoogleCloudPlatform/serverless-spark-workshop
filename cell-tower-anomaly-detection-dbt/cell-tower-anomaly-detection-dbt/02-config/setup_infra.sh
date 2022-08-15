@@ -238,7 +238,7 @@ export BUG_APIS="googleapis.com www.googleapis.com storage.googleapis.com iam.go
 for NAME in ${BUG_APIS}
 do
   ipv4=$(getent ahostsv4 "${NAME}" | head -n 1 | awk '{ print $1 }')
-  grep -q "$name" /etc/hosts || ([ -n "$ipv4" ] && sudo sh -c "echo '$ipv4 $name' >> /etc/hosts")
+  grep -q "${NAME}" /etc/hosts || ([ -n "$ipv4" ] && sudo sh -c "echo '$ipv4 ${NAME}' >> /etc/hosts")
 done
 # Workaround end
 
