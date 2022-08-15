@@ -18,7 +18,7 @@
 
 LOG_DATE=`date`
 echo "#################################################################"
-echo "${LOG_DATE} cell-tower-anomly-detection-dbt infrastructure deployment - Starting  .."
+echo "${LOG_DATE} cell-tower-anomaly-detection-dbt infrastructure deployment - Starting  .."
 
 if [ "${#}" -ne 1 ]; then
     echo "Illegal number of parameters"
@@ -62,7 +62,7 @@ if [ ! "${?}" -eq 0 ];then
     echo "#################################################################"
     echo "${LOG_DATE} Installing terraform .."
     sudo apt-get update && sudo apt-get install -y gnupg software-properties-common curl
-    curl -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
+    ${CURL_BIN} -fsSL https://apt.releases.hashicorp.com/gpg | sudo apt-key add -
     sudo apt-add-repository "deb [arch=amd64] https://apt.releases.hashicorp.com $(lsb_release -cs) main"
     sudo apt-get update && sudo apt-get install terraform
 
@@ -105,18 +105,16 @@ if [ ! "${?}" -eq 0 ];then
     exit 1
 fi
 
-DBT_BIN=`which dbt`
-if [ ! "${?}" -eq 0 ];then
-    LOG_DATE=`date`
-    echo "##################################################################"
-    echo "${LOG_DATE} Installing dbt .."
-    "${PIP_BIN}" install dbt-bigquery==1.3.0b1
-    #As per [CT-255] [Bug] ImportError: cannot import name soft_unicode from markupsafe (https://github.com/dbt-labs/dbt-core/issues/4745)
-    "${PIP_BIN}" install --force-reinstall MarkupSafe==2.0.1
-    LOG_DATE=`date`
-    echo "#################################################################"
-    echo "${LOG_DATE} dbt deployed OK"
-fi
+
+LOG_DATE=`date`
+echo "##################################################################"
+echo "${LOG_DATE} Installing dbt .."
+"${PIP_BIN}" install dbt-bigquery==1.3.0b1
+#As per [CT-255] [Bug] ImportError: cannot import name soft_unicode from markupsafe (https://github.com/dbt-labs/dbt-core/issues/4745)
+"${PIP_BIN}" install --force-reinstall MarkupSafe==2.0.1
+LOG_DATE=`date`
+echo "#################################################################"
+echo "${LOG_DATE} dbt deployed OK"
 
 LOG_DATE=`date`
 echo "#################################################################"
@@ -125,7 +123,7 @@ echo "${LOG_DATE} Installing extra packages.."
 
 
 PIP_PACKAGES="google-cloud-dataproc google-cloud-storage"
-for PIP_PACKAGE in "${PIP_PACKAGES}"
+for PIP_PACKAGE in ${PIP_PACKAGES}
 do
   LOG_DATE=`date`
   echo "${LOG_DATE} Deploying PIP package ..  ${PIP_PACKAGE}"
@@ -364,7 +362,7 @@ LOG_DATE=`date`
 echo "${LOG_DATE} Deploying infra  ..."
 TF_CORE_DIR="${CONFIG_DIR}"/tf_core
 TF_DATA_DIR="${CONFIG_DIR}"/tf_data
-cd ${TF_CORE_DIR}
+cd "${TF_CORE_DIR}" || exit 1
 export PLAN_NAME_CORE="spark-workshop-dbt-infra-core.plan"
 "${TERRAFORM_BIN}" init -reconfigure
 "${TERRAFORM_BIN}" plan -out="${PLAN_NAME_CORE}"
@@ -384,7 +382,7 @@ TARGET=gs://"${BUCKET_NAME}"/data/
 LOG_DATE=`date`
 echo "#################################################################"
 echo "${LOG_DATE} Launching Terraform data ..."
-cd "${TF_DATA_DIR}"
+cd "${TF_DATA_DIR}" || exit 1
 export TF_VAR_customer_data_gcs_uri="${TARGET}"*.parquet
 export TF_VAR_service_data_gcs_uri="${TARGET}"service_threshold_data.csv
 export TF_VAR_telecom_data_gcs_uri="${TARGET}"telecom_customer_churn_data.csv

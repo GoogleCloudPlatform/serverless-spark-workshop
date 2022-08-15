@@ -12,11 +12,11 @@ It is self-contained and fully scripted to follow along at your own pace.<br>
 
 ## 2. Lab overview and architecure
 
-The lab includes studying and running a series of data engineering jobs, exploring results:
-1. Curate Customer Master Data<br>
-2. Curate Telco Customer Churn Data <br>
-3. Calculate Cell Tower KPIs by Customer<br>
-4. Calculate KPIs by cell tower<br>
+The lab includes studying and running a series of data engineering jobs via dbt:
+1. Curate Customer Master Data (BQ SQL)
+2. Curate Telco Customer Churn Data (BQ SQL)
+3. Calculate Cell Tower KPIs by Customer (pySpark)
+4. Calculate KPIs by cell tower (pySpark)
 
 
 Lab architecture:
@@ -54,8 +54,8 @@ For instance:
     "terraform_key_location" : "terraform-sa.json"
 }
 ```
-**_NOTE:_**  : Serverless spark support in dbt is experimental, please see this [issue](https://github.com/dbt-labs/dbt-bigquery/pull/259 ) 
-
+**_NOTE:_** Serverless spark support in dbt is experimental, please see this [issue](https://github.com/dbt-labs/dbt-bigquery/pull/259 ) 
+.The current adapter implementation uses the default network as the VPC subnetwork that executes Serverless Spark workloads. Do configure the network as indicated in [here](https://cloud.google.com/dataproc-serverless/docs/concepts/network)
 
 **3) Launch the infrastructure bootstrap script:**
 ```bash 
@@ -72,15 +72,28 @@ This script reads the config file and :
 * Terraforms data infrastructure, inlcuding a BQ external connection, a couple of BigLake tables
 * Generates DBT config files (profile and config)
 
-**4) Launch dbt:**
+**4) Launch `dbt`:**
 ```bash 
 cd serverless-spark-workshop/cell-tower-anomaly-detection-dbt/cell-tower-anomaly-detection-dbt/00-scripts
 $> ./run_dbt.sh
 ```
-Depending in the spark_serverless flag, the pySpark will be submitted via API using either `create_batch` (serverless) or `submit_job_as_operation (classic)
+Depending on the spark_serverless flag, the pySpark will be submitted via API using either `create_batch` (serverless) or `submit_job_as_operation (classic)
 
 
-**4) Destroy all resources created:**
+**5) Generate and browse `dbt`docs:**
+```bash 
+cd serverless-spark-workshop/cell-tower-anomaly-detection-dbt/cell-tower-anomaly-detection-dbt/00-scripts
+$> ./gen_docs.sh
+```
+Preview on default port 8080:
+
+![browse](assets/browse.png)
+
+Brose documentation:
+
+![lineage](assets/lineage.png)
+
+**6) Destroy all resources created:**
 ```bash 
 cd serverless-spark-workshop/cell-tower-anomaly-detection-dbt/cell-tower-anomaly-detection-dbt/02-config
 $>  ./destroy_infra.sh variables.json

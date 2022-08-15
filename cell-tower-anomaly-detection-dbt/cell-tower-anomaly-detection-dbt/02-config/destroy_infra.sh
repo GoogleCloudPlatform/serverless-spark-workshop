@@ -148,12 +148,22 @@ else
     echo "TERRAFORM_KEY_LOCATION : ${CONFIG_DIR}/${TERRAFORM_KEY_LOCATION}"
 fi
 
+export SERVERLESS_SPARK=`cat "${CONFIG_FILE}" | "${JQ_BIN}" -r '.spark_serverless'`
+if [ -z "${SERVERLESS_SPARK}" ]
+then
+      echo "Error reading SERVERLESS_SPARK"
+      exit 1
+else
+    echo "SERVERLESS_SPARK :  ${SERVERLESS_SPARK}"
+fi
+
 export TF_VAR_project_id="${PROJECT_ID}"
 export TF_VAR_region="${REGION}"
 export TF_VAR_terraform_key_location="${CONFIG_DIR}"/"${TERRAFORM_KEY_LOCATION}"
 export TF_VAR_dataproc_cluster_name="${DATAPROC_CLUSTER_NAME}"
 export TF_VAR_bucket_name="${BUCKET_NAME}"
 export TF_VAR_bq_dataset_name="${BQ_DATASET_NAME}"
+export TF_VAR_serverless_spark="${SERVERLESS_SPARK}"
 
 TARGET=gs://"${BUCKET_NAME}"/data/
 
@@ -168,6 +178,7 @@ echo "TF var terraform_key_location : ${CONFIG_DIR}/${TERRAFORM_KEY_LOCATION}"
 echo "TF var dataproc_cluster_name : ${DATAPROC_CLUSTER_NAME}"
 echo "TF var bucket_name : ${BUCKET_NAME}"
 echo "TF var bq_dataset_name : ${BQ_DATASET_NAME}"
+echo "TF var serverless_spark : ${SERVERLESS_SPARK}"
 
 
 
@@ -195,7 +206,7 @@ echo "${LOG_DATE} Deleting  SA key  ..."
 if [ -f "${TERRAFORM_KEY_LOCATION}" ]; then
     LOG_DATE=`date`
     echo "${LOG_DATE} ${TERRAFORM_KEY_LOCATION} exists."
-    rm "${TERRAFORM_KEY_LOCATION}"
+    rm "${CONFIG_DIR}"/"${TERRAFORM_KEY_LOCATION}"
 fi
 
 
