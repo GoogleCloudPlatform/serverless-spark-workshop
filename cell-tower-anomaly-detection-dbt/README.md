@@ -45,31 +45,32 @@ For instance:
 ```json 
 {
     "project_id": "velascoluis-dev-sandbox",
-    "spark_serverless" : "true",
+    "spark_serverless" : "false",
     "dataproc_cluster_name" : "spark-dataproc",
     "region": "us-central1",
     "bucket_name": "spark-dataproc-velascoluis-dev-sandbox",
     "bq_dataset_name": "spark_dataproc",
-    "terraform_sa_name": "terraform-sa",
-    "terraform_key_location" : "terraform-sa.json"
+    "dbt_sa_name": "dbt-sa-account",
+    "dbt_sa_key_location" : "dbt-sa.json"
 }
+
 ```
 **_NOTE:_** Serverless spark support in dbt is experimental, please see this [issue](https://github.com/dbt-labs/dbt-bigquery/pull/259 ) 
 .The current adapter implementation uses the default network as the VPC subnetwork that executes Serverless Spark workloads. Do configure the network as indicated in [here](https://cloud.google.com/dataproc-serverless/docs/concepts/network)
 
 **3) Launch the infrastructure bootstrap script:**
 ```bash 
-$> ./setup_infra.sh variables.json  
+$> ./setup_infra.sh variables.json deploy  
 ```
 
 This script reads the config file and :
 * Checks and install binaries/packages if needed
-* Enables GCP APIs
-* Creates Service Account (SA) and key for deployment
-* Grants roles to the SA
-* Terraforms core infrastructure, including a single node dataproc cluster, a GCS bucket and a BigQuery dataset
+* Use Terraform to enables GCP APIs
+* Use Terraform to create Service Account (SA) and key for DBT
+* Use Terraform to grant roles to the DBT SA
+* Use Terraform to deploy infrastructure, including a single node dataproc cluster, a GCS bucket and a BigQuery dataset
 * Stages data in GCS
-* Terraforms data infrastructure, inlcuding a BQ external connection, a couple of BigLake tables
+* Use Terraform to deploy data infrastructure, inlcuding a BQ external connection, a couple of BigLake tables
 * Generates DBT config files (profile and config)
 
 **4) Launch `dbt`:**
@@ -96,6 +97,6 @@ Brose documentation:
 **6) Destroy all resources created:**
 ```bash 
 cd serverless-spark-workshop/cell-tower-anomaly-detection-dbt/cell-tower-anomaly-detection-dbt/02-config
-$>  ./destroy_infra.sh variables.json
+$>  ./setup_infra.sh variables.json destroy
 ```
 

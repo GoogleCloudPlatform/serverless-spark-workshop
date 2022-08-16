@@ -5,6 +5,7 @@
     "region": "<TO_DO_DEVELOPER>",
     "bucket_name": "<TO_DO_DEVELOPER>",
     "bq_dataset_name": "<TO_DO_DEVELOPER>",
-    "terraform_sa_name":"<TO_DO_DEVELOPER>",
-    "terraform_key_location" : "<TO_DO_DEVELOPER>"
+    "dbt_sa_name":"<TO_DO_DEVELOPER>",
+    "dbt_sa_key_location" : "<TO_DO_DEVELOPER>"
 }
+
