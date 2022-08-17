@@ -20,6 +20,7 @@ PIP_BIN=`which pip3`
 TERRAFORM_BIN=`which terraform`
 GCLOUD_BIN=`which gcloud`
 JQ_BIN=`which jq`
+GIT_BIN=`which git`
 
 LOG_DATE=`date`
 echo "###########################################################################################"
@@ -115,13 +116,13 @@ else
     echo "DBT_SA_KEY_LOCATION : ${CONFIG_DIR}/${DBT_SA_KEY_LOCATION}"
 fi
 
-export SERVERLESS_SPARK=`cat "${CONFIG_FILE}" | "${JQ_BIN}" -r '.spark_serverless'`
-if [ -z "${SERVERLESS_SPARK}" ]
+export SPARK_SERVERLESS=`cat "${CONFIG_FILE}" | "${JQ_BIN}" -r '.spark_serverless'`
+if [ -z "${SPARK_SERVERLESS}" ]
 then
-      echo "Error reading SERVERLESS_SPARK"
+      echo "Error reading SPARK_SERVERLESS"
       exit 1
 else
-    echo "SERVERLESS_SPARK :  ${SERVERLESS_SPARK}"
+    echo "SPARK_SERVERLESS :  ${SPARK_SERVERLESS}"
 fi
 
 
@@ -141,6 +142,8 @@ TF_CORE_DIR="${CONFIG_DIR}"/terraform
 
 PROJECT_APIS_LIST='["compute.googleapis.com" , "dataproc.googleapis.com" , "bigquery.googleapis.com" , "storage.googleapis.com" , "iam.googleapis.com" , "iamcredentials.googleapis.com" ,"orgpolicy.googleapis.com"]'
 DBT_SA_ROLES_LIST='["roles/bigquery.admin","roles/dataproc.admin","roles/compute.admin","roles/resourcemanager.projectIamAdmin","roles/iam.securityAdmin","roles/iam.serviceAccountAdmin","roles/iam.serviceAccountUser","roles/servicenetworking.networksAdmin","roles/storage.admin","roles/iam.serviceAccountTokenCreator"]'
+
+
 
 CUSTOMER_DATA_FILES="customers_raw_data/*.parquet"
 SERVICE_DATA_FILES="service_raw_data/service_threshold_data.csv"
@@ -185,7 +188,7 @@ export TF_VAR_dbt_sa_roles_list="${DBT_SA_ROLES_LIST}"
 export TF_VAR_dataproc_cluster_name="${DATAPROC_CLUSTER_NAME}"
 export TF_VAR_bucket_name="${BUCKET_NAME}"
 export TF_VAR_bq_dataset_name="${BQ_DATASET_NAME}"
-export TF_VAR_serverless_spark="${SERVERLESS_SPARK}"
+export TF_VAR_spark_serverless="${SPARK_SERVERLESS}"
 
 
 export TF_VAR_src_customer_data="${SRC_CUSTOMER_DATA}"
@@ -209,7 +212,7 @@ echo "TF var dbt_sa_roles_list : ${DBT_SA_ROLES_LIST}"
 echo "TF var dataproc_cluster_name : ${DATAPROC_CLUSTER_NAME}"
 echo "TF var bucket_name : ${BUCKET_NAME}"
 echo "TF var bq_dataset_name : ${BQ_DATASET_NAME}"
-echo "TF var serverless_spark : ${SERVERLESS_SPARK}"
+echo "TF var spark_serverless : ${SPARK_SERVERLESS}"
 echo "TF var src_customer_data : ${SRC_CUSTOMER_DATA}"
 echo "TF var src_service_data  : ${SRC_SERVICE_DATA}"
 echo "TF var src_telecom_data  : ${SRC_TELECOM_DATA}"
@@ -231,8 +234,9 @@ if [ "${COMMAND}" = "deploy" ] ; then
     fi
     LOG_DATE=`date`
     echo "###########################################################################################"
-    echo "${LOG_DATE} Installing dbt on Cloud Shell  .."
-    "${PIP_BIN}" install dbt-bigquery==1.3.0b1
+    echo "${LOG_DATE} Installing dbt-bigquery on Cloud Shell  .."
+    BETA_RELEASE_PYPIP="1.3.0b1"
+    "${PIP_BIN}" install dbt-bigquery=="${BETA_RELEASE_PYPIP}"
     #As per [CT-255] [Bug] ImportError: cannot import name soft_unicode from markupsafe (https://github.com/dbt-labs/dbt-core/issues/4745)
     "${PIP_BIN}" install --force-reinstall MarkupSafe==2.0.1
     LOG_DATE=`date`
@@ -255,9 +259,9 @@ if [ "${COMMAND}" = "deploy" ] ; then
         exit 1
     fi
     done
-    if [ "${SERVERLESS_SPARK}" = true ] ; then
+    if [ "${SPARK_SERVERLESS}" = true ] ; then
         echo "Enabling experimental support for spark serverless .."
-        GIT_BIN=`which git`
+        echo "WARNING: This is a experimental release!"
         #Clone repo with experimental suport
         DBT_GIT_REPO="https://github.com/dbt-labs/dbt-bigquery.git"
         SERVERLESS_SPARK_EXPERIMENTAL_DEV_BRANCH="jerco/dataproc-serverless-experiment"

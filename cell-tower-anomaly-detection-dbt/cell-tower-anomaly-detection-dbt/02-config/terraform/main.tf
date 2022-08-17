@@ -5,7 +5,7 @@ variable "dbt_sa_key_location" { type = string}
 variable "dataproc_cluster_name" { type = string}
 variable "bucket_name" { type = string}
 variable "bq_dataset_name" { type = string}
-variable "serverless_spark" { type = string}
+variable "spark_serverless" { type = string}
 variable "project_apis_list" {type    = list(string)}
 variable "dbt_sa_roles_list" {type    = list(string)}
 
@@ -71,8 +71,8 @@ resource "local_file" "json_local_sa" {
 
 #3.Create Spark cluster
 resource "google_dataproc_cluster" "spark-cluster" {
-  #If serverless spark = true, do not create cluster
-  count = var.serverless_spark ? 0 : 1
+  #If spark serverless = true, do not create cluster
+  count = var.spark_serverless ? 0 : 1
   depends_on = [
     time_sleep.wait_3_min_after_activate_service_apis
   ]
