@@ -141,7 +141,7 @@ CONFIG_DIR="${BASE_DIR}"/02-config
 TF_CORE_DIR="${CONFIG_DIR}"/terraform
 
 PROJECT_APIS_LIST='["compute.googleapis.com" , "dataproc.googleapis.com" , "bigquery.googleapis.com" , "storage.googleapis.com" , "iam.googleapis.com" , "iamcredentials.googleapis.com" ,"orgpolicy.googleapis.com"]'
-DBT_SA_ROLES_LIST='["roles/bigquery.admin","roles/dataproc.admin","roles/iam.serviceAccountUser"]'
+DBT_SA_ROLES_LIST='["roles/bigquery.admin","roles/dataproc.admin","roles/iam.serviceAccountUser","roles/storage.admin"]'
 
 
 
