@@ -69,7 +69,7 @@ $> ./setup_infra.sh variables.json deploy
 
 This script reads the config file and :
 * Checks and install binaries/packages if needed
-* Use Terraform to enables GCP APIs
+* Use Terraform to enable GCP APIs
 * Use Terraform to create Service Account (SA) and key for dbt
 * Use Terraform to grant roles to the dbt SA
 * Use Terraform to deploy infrastructure, including a single node dataproc cluster, a GCS bucket and a BigQuery dataset
