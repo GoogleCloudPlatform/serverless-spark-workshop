@@ -55,6 +55,9 @@ For instance:
 }
 
 ```
+
+If there are timeouts errors, re-execute the script.
+
 **_NOTE 1:_** dbt Core v1.3, currently in beta, adds Python models to dbt. For more information check [this](https://docs.getdbt.com/docs/building-a-dbt-project/building-models/python-models) 
 
 **_NOTE 2:_** Serverless spark support in dbt is experimental, please see this [issue](https://github.com/dbt-labs/dbt-bigquery/pull/259 ) 
