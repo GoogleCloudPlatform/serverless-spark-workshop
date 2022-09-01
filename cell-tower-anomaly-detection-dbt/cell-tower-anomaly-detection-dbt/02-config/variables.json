@@ -1,0 +1,11 @@
+{
+    "project_id": "<TO_DO_DEVELOPER>",
+    "spark_serverless": "<TO_DO_DEVELOPER>",
+    "dataproc_cluster_name" : "<TO_DO_DEVELOPER>",
+    "region": "<TO_DO_DEVELOPER>",
+    "bucket_name": "<TO_DO_DEVELOPER>",
+    "bq_dataset_name": "<TO_DO_DEVELOPER>",
+    "dbt_sa_name":"<TO_DO_DEVELOPER>",
+    "dbt_sa_key_location" : "<TO_DO_DEVELOPER>"
+}
+
