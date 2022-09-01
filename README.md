@@ -24,23 +24,21 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
 | 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection-dbt/README.md) | Data Engineering | Serverless Spark Batch + BigLake to create GCS external tables in PARQUET and CSV + dbt to implement a data pipeline + Terraform to deploy required cloud infrastructure |
-| 2 | [Lab 2 - Wikipedia Page View Analysis](wikipedia-page-view-analysis/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
-| 3 | [Lab 3 - Chicago Crimes Analysis](chicago-crimes-analysis/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
-| 4 | [Lab 4 - Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
-| 5 | [Lab 5 - Serverless Spark Streaming](serverless_spark_streaming/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
-| 6 | [Lab 6 - Timeseries Forecasting](timeseries_forecasting/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 7 | [Lab 7 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 8 | [Lab 8 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
-| 9 | [Lab 9 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 10 | [Lab 10 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration (and from Dataproc UI) |
-| 11 | [Lab 11 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
-| 12 | [Lab 12 - Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore |
+| 2 | [Lab 2 - Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
+| 3 | [Lab 3 - Serverless Spark Streaming](serverless_spark_streaming/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
+| 4 | [Lab 4 - Timeseries Forecasting](timeseries_forecasting/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 5 | [Lab 5 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 6 | [Lab 6 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
+| 7 | [Lab 7 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
+| 8 | [Lab 8 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration (and from Dataproc UI) |
+| 9 | [Lab 9 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
+| 10 | [Lab 10 - Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore |
 
 ### Credits
 Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
 Lab 1 - contributed by [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google) then refactored by [Luis Velasco](https://github.com/velascoluis) to include BigLake, dbt, and Terraform<br>
 Lab 2 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 3 - [Anagha Khanolkar](https://github.com/anagha-google)<br>
+Lab 3 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 4 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 5 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 6 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
@@ -48,8 +46,6 @@ Lab 7 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-
 Lab 8 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 9 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 10 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 11 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 12 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
