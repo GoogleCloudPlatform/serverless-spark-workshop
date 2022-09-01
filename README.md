@@ -23,7 +23,7 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 # What's Covered?
 | # | Modules | Focus | Feature |
 | -- | :--- | :-- | :-- |
-| 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration |
+| 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection-dbt/README.md) | Data Engineering | Serverless Spark Batch + BigLake to create GCS external tables in PARQUET and CSV + dbt to implement a data pipeline + Terraform to deploy required cloud infrastructure |
 | 2 | [Lab 2 - Wikipedia Page View Analysis](wikipedia-page-view-analysis/README.md) | Data Analysis | Serverless Spark Batch from BigQuery UI |
 | 3 | [Lab 3 - Chicago Crimes Analysis](chicago-crimes-analysis/README.md) | Data Analysis | Serverless Spark Interactive from Vertex AI managed notebook |
 | 4 | [Lab 4 - Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
@@ -38,7 +38,7 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 
 ### Credits
 Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
-Lab 1 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 1 - contributed by [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google) then refactored by [Luis Velasco](https://github.com/velascoluis) to include BigLake, dbt, and Terraform<br>
 Lab 2 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 3 - [Anagha Khanolkar](https://github.com/anagha-google)<br>
 Lab 4 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
