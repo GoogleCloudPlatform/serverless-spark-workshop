@@ -45,7 +45,7 @@ In cloud shell, declare the following variables after substituting with yours. I
 PROJECT_ID=YOUR_PROJECT_ID
 PROJECT_NBR=YOUR_PROJECT_NUMBER
 LOCATION=us-central1
-VPC_NM=VPC=s8s-vpc-$PROJECT_NBR
+VPC_NM=s8s-vpc-$PROJECT_NBR
 SPARK_SERVERLESS_SUBNET=spark-snet
 PERSISTENT_HISTORY_SERVER_NM=s8s-sphs-${PROJECT_NBR}
 UMSA_FQN=s8s-lab-sa@$PROJECT_ID.iam.gserviceaccount.com
