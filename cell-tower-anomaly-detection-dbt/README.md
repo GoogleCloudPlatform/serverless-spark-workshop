@@ -1,6 +1,6 @@
 # Lab 1: Cell Tower Anomaly Detection with dbt
 
-This lab is an adaptation of [Lab 1: Cell Tower Anomaly Detection.](https://github.com/velascoluis/serverless-spark-workshop/tree/main/cell-tower-anomaly-detection)
+This lab is an adaptation of [Lab 1: Cell Tower Anomaly Detection.](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/tree/main/cell-tower-anomaly-detection)
 It includes/changes:
 - Use [BigLake](https://cloud.google.com/biglake) to create GCS external tables in PARQUET and CSV files formats.
 - Refactor pySpark scripts into SQL (initial data cleaning scripts)
