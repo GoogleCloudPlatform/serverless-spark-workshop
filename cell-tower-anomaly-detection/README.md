@@ -64,12 +64,12 @@ git clone https://github.com/googlecloudplatform/serverless-spark-workshop.git
 ## 7. Upload the code and data to the designated GCS bucket
 Navigate to the cloned repo and upload the files (code and data) as shown below-
 ```
-cd ~/serverless-spark-workshop/lab-01/
+cd ~/serverless-spark-workshop/cell-tower-anomaly-detection/
 gsutil cp -r cell-tower-anomaly-detection/00-scripts gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/00-scripts
 gsutil cp -r cell-tower-anomaly-detection/01-datasets gs://$CODE_AND_DATA_BUCKET/cell-tower-anomaly-detection/01-datasets
 ```
 
-## 8. Curate cutsomer master data
+## 8. Curate customer master data
 In this section, from PySpark, we transform customer master data (parquet) and service threshold data (CSV) and join them, and persist to GCS.<br>
 
 Review the [code](cell-tower-anomaly-detection/00-scripts/curate_customer_data.py) first.<br>
