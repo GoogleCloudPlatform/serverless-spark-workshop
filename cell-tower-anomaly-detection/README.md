@@ -6,7 +6,7 @@ Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partners
 
 ## 1. Prerequisites
 
-Successful environment creation
+See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-batches/instructions/01-gcp-prerequisites.md).
 
 ## 2. Lab overview
 
