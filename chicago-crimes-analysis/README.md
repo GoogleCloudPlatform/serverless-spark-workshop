@@ -1,9 +1,11 @@
-# Lab 3: Chicago Crimes Analysis with Dataproc Serverless Spark Interactive Sessions on Vertex AI Managed Notebooks
+# Chicago Crimes Analysis with Dataproc Serverless Spark Interactive Sessions on Vertex AI Managed Notebooks
+
+Lab contributed by: [Anagha Khanolkar](https://github.com/anagha-google)
 
 In this lab, you will create a Vertex AI managed notebook environment, launch JupyterLab, create a Dataproc Serverless Spark Interactive Session and  authoring and run Spark code for interactive, exploratory analytics with Spark.
 
 ## 1. Prerequisite
-Serverless Spark environment set up
+See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-vertex-ai/instructions/01-gcp-prerequisites.md).
 
 ## 2. Enable APIs
 
