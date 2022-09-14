@@ -30,7 +30,7 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 | 5 | [Lab 5 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
 | 6 | [Lab 6 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
 | 7 | [Lab 7 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 8 | [Lab 8 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration (and from Dataproc UI) |
+| 8 | [Lab 8 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration, Dataproc UI instructions, and the Persistent History Server (for viewing completed and running Spark jobs) |
 | 9 | [Lab 9 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
 | 10 | [Lab 10 - Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore |
 
