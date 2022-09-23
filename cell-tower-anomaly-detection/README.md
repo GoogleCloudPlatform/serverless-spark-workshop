@@ -2,7 +2,7 @@
 
 This lab is data engineering centric and uses rules based processing to detect defective cell towers needing maintenance. It is self-contained and fully scripted to follow along at your own pace.<br>
 
-Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
+Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google)
 
 ## 1. Prerequisites
 
