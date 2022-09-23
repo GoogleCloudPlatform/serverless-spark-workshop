@@ -1,57 +1,37 @@
-# Serverless Spark Hands-On Workshop
+# Serverless Spark Solution Accelerators
 
 Apache Spark is often used for interactive queries, machine learning, and real-time workloads.<br>
 
-Spark developers are typically spending only 40% of time writing code while spending 60% tuning infrastructure and managing clusters.<br>
+Spark developers are typically spending only 40% of time writing code while spending 60% tuning infrastructure and managing clusters.  There's a better way.<br>
 
 Google Cloud customers have used our auto-scaling, serverless Spark to boost productivity and reduce infrastructure costs.<br>
 
-This repository contains Serverless Spark on GCP hands-on labs built around common use cases.  By doing these labs, data engineers and data scientists with Apache Spark experience will ramp up faster on [Serverless Spark on GCP](https://cloud.google.com/dataproc-serverless/docs).<br>
+This repository contains Serverless Spark on GCP solution accelerators built around common use cases - helping data engineers and data scientists with Apache Spark experience ramp up faster on [Serverless Spark on GCP](https://cloud.google.com/dataproc-serverless/docs).<br>
 
 Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) for Dataproc Serverless ready-to-use, config driven Spark templates for solving simple, but large, in-Cloud data tasks, including data import/export/backup/restore and bulk API operations.
 
 # Feedback From Serverless Spark Users
-- "Serverless Spark is so much easier than traditional cluster based products."<br> 
-~ Director of Data Science at business management corporation<br><br>
-- "Anytime we can go the serverless route we will.  Just so much simpler and eliminates the management of the infrastructure."<br>
-~ Director of Data Engineering at business management corporation<br><br>
-- “Serverless Spark enables us to only use the compute resources we need when we need them and all with a single click.  The Spark Workshop is a great way to get hands on experience with the tools.”<br> 
-~ Principal Data Scientist at multinational retail corporation<br><br>
-- “We ran a compute-intensive Serverless Spark query in 19 mins.  That same Spark query took 90 mins on a traditional cluster based product.  It's ~80% faster on Serverless Spark.”<br> 
+- "Our use case is to optimize retail assortment from 500M+ items.  Serverless Spark enables us to only use the compute resources when we need them and all with a single click."<br>
+~ Dataproc customer who set up these production pipelines in one week<br><br>
+
+- “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.”<br> 
 ~ Principal Architect at multinational retail corporation
 
 # What's Covered?
-| # | Modules | Focus | Feature |
-| -- | :--- | :-- | :-- |
-| 1 | [Lab 1 - Cell Tower Anomaly Detection](cell-tower-anomaly-detection-dbt/README.md) | Data Engineering | Serverless Spark Batch + BigLake to create GCS external tables in PARQUET and CSV + dbt to implement a data pipeline + Terraform to deploy required cloud infrastructure |
-| 2 | [Lab 2 - Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore |
-| 3 | [Lab 3 - Serverless Spark Streaming](serverless_spark_streaming/README.md) | Data Analysis | Serverless Spark Dataproc Batches |
-| 4 | [Lab 4 - Timeseries Forecasting](timeseries_forecasting/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 5 | [Lab 5 - COVID-19 Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 6 | [Lab 6 - Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration |
-| 7 | [Lab 7 - Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session |
-| 8 | [Lab 8 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration, Dataproc UI instructions, and the Persistent History Server (for viewing completed and running Spark jobs) |
-| 9 | [Lab 9 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
-| 10 | [Lab 10 - Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore |
-| 11 | [Lab 11 - ML Ops](https://github.com/anagha-google/s8s-spark-mlops) | Machine Learning | Powered by Dataproc Serverless, showcasing integration with Vertex AI Workbench |
-| 12 | [Lab 12 - Streaming Application](https://github.com/anagha-google/spark-on-gcp-with-confluent-kafka) | Streaming Analytics | Streaming from Kafka into BigQuery, with Apache Spark Structured Streaming powered by Dataproc Serverless |
-
-
-
-### Credits
-Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
-Lab 1 - contributed by [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google) then refactored by [Luis Velasco](https://github.com/velascoluis) to include BigLake, dbt, and Terraform<br>
-Lab 2 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 3 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 4 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 5 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 6 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 7 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 8 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 9 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 10 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
-Lab 11 - contributed by [Anagha Khanolkar](https://github.com/anagha-google)<br>
-Lab 12 - contributed by [Anagha Khanolkar](https://github.com/anagha-google)<br>
+| # | Solution Accelerators | Focus | Feature | Contributed By |
+| -- | :--- | :-- | :-- | :-- |
+| 1 | [Anomaly Detection](cell-tower-anomaly-detection-dbt/README.md) | Data Engineering | Rules based processing to detect defective cell towers requiring maintenance via Serverless Spark Batch + BigLake to create GCS external tables in PARQUET and CSV + dbt to implement a data pipeline + Terraform to deploy required cloud infrastructure | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google) then refactored by [Luis Velasco](https://github.com/velascoluis) to include BigLake, dbt, and Terraform |
+| 2 | [Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Analysis of retail data to identify product sales, and recommend product aisles and inventory via Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 3 | [Pandemic Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 4 | [Time Series Forecasting of Sales](timeseries_forecasting/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 4 | [Real-Time Streaming of Customer Invoices](serverless_spark_streaming/README.md) | Spark Streaming | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 6 | [Malware Detection](malware_detection/README.md) | Data Analysis | Serverless Spark Batch from CLI with Cloud Composer orchestration | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 7 | [Social Media Data Analytics](social_media_data_analytics/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 8 | [Anomaly Detection (with Dataproc UI Instructions)](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration, Dataproc UI instructions, and the Persistent History Server (for viewing completed and running Spark jobs) | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 9 | [Pandemic Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 10 | [Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 11 | [Telco Customer Churn Prediction](https://github.com/anagha-google/s8s-spark-mlops) | ML Ops | Powered by Dataproc Serverless, showcasing integration with Vertex AI Workbench | [Anagha Khanolkar](https://github.com/anagha-google) |
+| 12 | [Sales and Marketing Campaign and Promotion Streaming Application](https://github.com/anagha-google/spark-on-gcp-with-confluent-kafka) | Streaming Analytics | Streaming from Kafka into BigQuery, with Apache Spark Structured Streaming powered by Dataproc Serverless | [Anagha Khanolkar](https://github.com/anagha-google) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
@@ -63,5 +43,5 @@ All solutions within this repository are provided under the Apache 2.0 license. 
 This repository and its contents are not an official Google Product.
 
 # Contact
-Interested in a free, guided, and hands-on Spark Workshop?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
+Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
 
