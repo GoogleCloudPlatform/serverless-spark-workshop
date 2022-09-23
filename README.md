@@ -33,6 +33,10 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 | 8 | [Lab 8 - Cell Tower Anomaly Detection with Dataproc UI Instructions](cell-tower-anomaly-detection-dataproc-ui/README.md) | Data Engineering | Serverless Spark Batch from CLI with Cloud Composer orchestration, Dataproc UI instructions, and the Persistent History Server (for viewing completed and running Spark jobs) |
 | 9 | [Lab 9 - COVID-19 Economic Impact (Batches)](covid-economic-impact-batches/README.md) | Data Engineering | Serverless Spark Dataproc Batches |
 | 10 | [Lab 10 - Retail Store Analytics - Spark SQL](retail_store_analytics_metastore_sparksql/README.md) | SQL Data Analysis | Spark SQL run on Serverless Spark Batch with Dataproc Metastore |
+| 11 | [Lab 11 - ML Ops](https://github.com/anagha-google/s8s-spark-mlops) | Machine Learning | Powered by Dataproc Serverless, showcasing integration with Vertex AI Workbench |
+| 12 | [Lab 12 - Streaming Application](https://github.com/anagha-google/spark-on-gcp-with-confluent-kafka) | Streaming Analytics | Streaming from Kafka into BigQuery, with Apache Spark Structured Streaming powered by Dataproc Serverless |
+
+
 
 ### Credits
 Some of the labs are contributed by Google Cloud partners or by Googlers.<br>
@@ -46,6 +50,8 @@ Lab 7 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-
 Lab 8 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 9 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
 Lab 10 - [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)<br>
+Lab 11 - contributed by [Anagha Khanolkar](https://github.com/anagha-google)<br>
+Lab 12 - contributed by [Anagha Khanolkar](https://github.com/anagha-google)<br>
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
@@ -57,5 +63,5 @@ All solutions within this repository are provided under the Apache 2.0 license. 
 This repository and its contents are not an official Google Product.
 
 # Contact
-Interested in doing a guided, hands-on Spark Workshop?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
+Interested in a free, guided, and hands-on Spark Workshop?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
 
