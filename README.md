@@ -8,7 +8,6 @@ Google Cloud customers have used our auto-scaling, serverless Spark to boost pro
 
 This repository contains Serverless Spark on GCP solution accelerators built around common use cases - helping data engineers and data scientists with Apache Spark experience ramp up faster on [Serverless Spark on GCP](https://cloud.google.com/dataproc-serverless/docs).<br>
 
-Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) for Dataproc Serverless ready-to-use, config driven Spark templates for solving simple, but large, in-Cloud data tasks, including data import/export/backup/restore and bulk API operations.
 
 # Feedback From Serverless Spark Users
 - "Our use case is to optimize retail assortment from 500M+ items.  Serverless Spark enables us to only use the compute resources when we need them and all with a single click."<br>
@@ -16,6 +15,8 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 
 - “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.”<br> 
 ~ Principal Architect at multinational retail corporation
+
+
 
 # What's Covered?
 | # | Solution Accelerators | Focus | Feature | Contributed By |
@@ -41,6 +42,9 @@ All solutions within this repository are provided under the Apache 2.0 license. 
 
 # Disclaimer
 This repository and its contents are not an official Google Product.
+
+# Serverless Spark Templates
+Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) for Dataproc Serverless ready-to-use, config driven Spark templates for solving simple, but large, in-Cloud data tasks, including data import/export/backup/restore and bulk API operations.
 
 # Contact
 Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
