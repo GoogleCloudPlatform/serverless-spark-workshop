@@ -57,7 +57,7 @@ The lab consists of the following modules.
 
 1. Understand the Data
 2. Solution Architecture
-3.Running the serverless batch
+3. Running the serverless batch
 4. Examine the logs
 5. Explore the output
 
