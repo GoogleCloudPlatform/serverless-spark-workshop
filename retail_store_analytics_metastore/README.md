@@ -16,6 +16,7 @@ This usecase deals with the analysis of retail store data.
 * Google Cloud Bigquery
 * Google Cloud Composer
 * Airflow DAG
+* Dataproc Metastore
 
 
 ## 3. Permissions / IAM Roles required to run the lab
