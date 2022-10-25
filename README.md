@@ -1,3 +1,5 @@
+# Join us on Nov 3 to learn how to deliver data-driven outcomes faster, cheaper, and easier with Serverless Spark (register [here](https://inthecloud.withgoogle.com/scaled-study-jam-serverless-spark-22/register.html)).
+#
 # Serverless Spark Solution Accelerators
 
 Apache Spark is often used for interactive queries, machine learning, and real-time workloads.<br>
