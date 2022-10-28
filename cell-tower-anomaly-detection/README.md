@@ -6,7 +6,7 @@ Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partners
 
 ## 1. Prerequisites
 
-See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-batches/instructions/01-gcp-prerequisites.md).
+See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-batches/instructions/01-gcp-prerequisites.md) or [these Terraform modules to provision and configure a Serverless Spark environment](https://github.com/anagha-google/ts22-just-enough-terraform-for-da).
 
 ## 2. Lab overview
 
