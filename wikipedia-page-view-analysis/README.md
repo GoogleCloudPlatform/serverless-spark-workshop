@@ -5,7 +5,7 @@ Lab contributed by [TEKsystems](https://www.teksystems.com/en/about-us/partnersh
 This lab demonstrates how to use the BigQuery UI for running Dataproc Serverless Spark jobs for data analytics.
 
 ## 1. Prerequisite
-See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/malware_detection/instructions/01-gcp-prerequisites.md).
+See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/malware_detection/instructions/01-gcp-prerequisites.md) or [these Terraform modules to provision and configure a Serverless Spark environment](https://github.com/anagha-google/ts22-just-enough-terraform-for-da).
 
 ## 2. Variables
 
