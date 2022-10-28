@@ -49,6 +49,9 @@ This repository and its contents are not an official Google Product.
 # Serverless Spark Templates
 Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-templates/blob/main/README.md) for Dataproc Serverless ready-to-use, config driven Spark templates for solving simple, but large, in-Cloud data tasks, including data import/export/backup/restore and bulk API operations.
 
+# Serverless Spark Environment Provisioning, Configuring, and Automation
+Check out this [repository](https://github.com/anagha-google/ts22-just-enough-terraform-for-da) for how to use Terraform to provision, configure, and automate Data Analytics services on GCP.
+
 # Contact
 Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
 
