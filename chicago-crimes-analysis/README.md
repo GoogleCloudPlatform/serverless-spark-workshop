@@ -5,7 +5,7 @@ Lab contributed by: [Anagha Khanolkar](https://github.com/anagha-google)
 In this lab, you will create a Vertex AI managed notebook environment, launch JupyterLab, create a Dataproc Serverless Spark Interactive Session and  authoring and run Spark code for interactive, exploratory analytics with Spark.
 
 ## 1. Prerequisite
-See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-vertex-ai/instructions/01-gcp-prerequisites.md).
+See [this lab for an example prerequisite set up](https://github.com/GoogleCloudPlatform/serverless-spark-workshop/blob/main/covid-economic-impact-vertex-ai/instructions/01-gcp-prerequisites.md) or [these Terraform modules to provision and configure a Serverless Spark environment](https://github.com/anagha-google/ts22-just-enough-terraform-for-da).
 
 ## 2. Enable APIs
 
