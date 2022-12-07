@@ -1,0 +1,1100 @@
+{
+  "pipelineSpec": {
+    "components": {
+      "comp-condition-aupr-threshold-exceeded-1": {
+        "dag": {
+          "tasks": {
+            "dataproc-create-pyspark-batch-3": {
+              "cachingOptions": {},
+              "componentRef": {
+                "name": "comp-dataproc-create-pyspark-batch-3"
+              },
+              "inputs": {
+                "parameters": {
+                  "archive_uris": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "[]"
+                      }
+                    }
+                  },
+                  "args": {
+                    "componentInputParameter": "pipelineparam--hyperparameter_tuning_args"
+                  },
+                  "batch_id": {
+                    "componentInputParameter": "pipelineparam--hyperparameter_tuning_pyspark_batch_id"
+                  },
+                  "container_image": {
+                    "componentInputParameter": "pipelineparam--container_image"
+                  },
+                  "file_uris": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "[]"
+                      }
+                    }
+                  },
+                  "jar_file_uris": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "[]"
+                      }
+                    }
+                  },
+                  "kms_key": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": ""
+                      }
+                    }
+                  },
+                  "labels": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "{}"
+                      }
+                    }
+                  },
+                  "location": {
+                    "componentInputParameter": "pipelineparam--location"
+                  },
+                  "main_python_file_uri": {
+                    "componentInputParameter": "pipelineparam--hyperparameter_tuning_main_py_fqn"
+                  },
+                  "metastore_service": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": ""
+                      }
+                    }
+                  },
+                  "network_tags": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "[]"
+                      }
+                    }
+                  },
+                  "network_uri": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": ""
+                      }
+                    }
+                  },
+                  "project": {
+                    "componentInputParameter": "pipelineparam--project_id"
+                  },
+                  "python_file_uris": {
+                    "componentInputParameter": "pipelineparam--common_utils_py_fqn"
+                  },
+                  "runtime_config_properties": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": "{}"
+                      }
+                    }
+                  },
+                  "runtime_config_version": {
+                    "runtimeValue": {
+                      "constantValue": {
+                        "stringValue": ""
+                      }
+                    }
+                  },
+                  "service_account": {
+                    "componentInputParameter": "pipelineparam--service_account"
+                  },
+                  "spark_history_dataproc_cluster": {
+                    "componentInputParameter": "pipelineparam--spark_phs_nm"
+                  },
+                  "subnetwork_uri": {
+                    "componentInputParameter": "pipelineparam--subnetwork_uri"
+                  }
+                }
+              },
+              "taskInfo": {
+                "name": "Hyperparameter tuning"
+              }
+            }
+          }
+        },
+        "inputDefinitions": {
+          "parameters": {
+            "pipelineparam--common_utils_py_fqn": {
+              "type": "STRING"
+            },
+            "pipelineparam--container_image": {
+              "type": "STRING"
+            },
+            "pipelineparam--fnevaluatemodel-threshold_metric": {
+              "type": "DOUBLE"
+            },
+            "pipelineparam--hyperparameter_tuning_args": {
+              "type": "STRING"
+            },
+            "pipelineparam--hyperparameter_tuning_main_py_fqn": {
+              "type": "STRING"
+            },
+            "pipelineparam--hyperparameter_tuning_pyspark_batch_id": {
+              "type": "STRING"
+            },
+            "pipelineparam--location": {
+              "type": "STRING"
+            },
+            "pipelineparam--project_id": {
+              "type": "STRING"
+            },
+            "pipelineparam--service_account": {
+              "type": "STRING"
+            },
+            "pipelineparam--spark_phs_nm": {
+              "type": "STRING"
+            },
+            "pipelineparam--subnetwork_uri": {
+              "type": "STRING"
+            },
+            "pipelineparam--threshold": {
+              "type": "DOUBLE"
+            }
+          }
+        }
+      },
+      "comp-dataproc-create-pyspark-batch": {
+        "executorLabel": "exec-dataproc-create-pyspark-batch",
+        "inputDefinitions": {
+          "parameters": {
+            "archive_uris": {
+              "type": "STRING"
+            },
+            "args": {
+              "type": "STRING"
+            },
+            "batch_id": {
+              "type": "STRING"
+            },
+            "container_image": {
+              "type": "STRING"
+            },
+            "file_uris": {
+              "type": "STRING"
+            },
+            "jar_file_uris": {
+              "type": "STRING"
+            },
+            "kms_key": {
+              "type": "STRING"
+            },
+            "labels": {
+              "type": "STRING"
+            },
+            "location": {
+              "type": "STRING"
+            },
+            "main_python_file_uri": {
+              "type": "STRING"
+            },
+            "metastore_service": {
+              "type": "STRING"
+            },
+            "network_tags": {
+              "type": "STRING"
+            },
+            "network_uri": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            },
+            "python_file_uris": {
+              "type": "STRING"
+            },
+            "runtime_config_properties": {
+              "type": "STRING"
+            },
+            "runtime_config_version": {
+              "type": "STRING"
+            },
+            "service_account": {
+              "type": "STRING"
+            },
+            "spark_history_dataproc_cluster": {
+              "type": "STRING"
+            },
+            "subnetwork_uri": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "parameters": {
+            "gcp_resources": {
+              "type": "STRING"
+            }
+          }
+        }
+      },
+      "comp-dataproc-create-pyspark-batch-2": {
+        "executorLabel": "exec-dataproc-create-pyspark-batch-2",
+        "inputDefinitions": {
+          "parameters": {
+            "archive_uris": {
+              "type": "STRING"
+            },
+            "args": {
+              "type": "STRING"
+            },
+            "batch_id": {
+              "type": "STRING"
+            },
+            "container_image": {
+              "type": "STRING"
+            },
+            "file_uris": {
+              "type": "STRING"
+            },
+            "jar_file_uris": {
+              "type": "STRING"
+            },
+            "kms_key": {
+              "type": "STRING"
+            },
+            "labels": {
+              "type": "STRING"
+            },
+            "location": {
+              "type": "STRING"
+            },
+            "main_python_file_uri": {
+              "type": "STRING"
+            },
+            "metastore_service": {
+              "type": "STRING"
+            },
+            "network_tags": {
+              "type": "STRING"
+            },
+            "network_uri": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            },
+            "python_file_uris": {
+              "type": "STRING"
+            },
+            "runtime_config_properties": {
+              "type": "STRING"
+            },
+            "runtime_config_version": {
+              "type": "STRING"
+            },
+            "service_account": {
+              "type": "STRING"
+            },
+            "spark_history_dataproc_cluster": {
+              "type": "STRING"
+            },
+            "subnetwork_uri": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "parameters": {
+            "gcp_resources": {
+              "type": "STRING"
+            }
+          }
+        }
+      },
+      "comp-dataproc-create-pyspark-batch-3": {
+        "executorLabel": "exec-dataproc-create-pyspark-batch-3",
+        "inputDefinitions": {
+          "parameters": {
+            "archive_uris": {
+              "type": "STRING"
+            },
+            "args": {
+              "type": "STRING"
+            },
+            "batch_id": {
+              "type": "STRING"
+            },
+            "container_image": {
+              "type": "STRING"
+            },
+            "file_uris": {
+              "type": "STRING"
+            },
+            "jar_file_uris": {
+              "type": "STRING"
+            },
+            "kms_key": {
+              "type": "STRING"
+            },
+            "labels": {
+              "type": "STRING"
+            },
+            "location": {
+              "type": "STRING"
+            },
+            "main_python_file_uri": {
+              "type": "STRING"
+            },
+            "metastore_service": {
+              "type": "STRING"
+            },
+            "network_tags": {
+              "type": "STRING"
+            },
+            "network_uri": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            },
+            "python_file_uris": {
+              "type": "STRING"
+            },
+            "runtime_config_properties": {
+              "type": "STRING"
+            },
+            "runtime_config_version": {
+              "type": "STRING"
+            },
+            "service_account": {
+              "type": "STRING"
+            },
+            "spark_history_dataproc_cluster": {
+              "type": "STRING"
+            },
+            "subnetwork_uri": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "parameters": {
+            "gcp_resources": {
+              "type": "STRING"
+            }
+          }
+        }
+      },
+      "comp-fnevaluatemodel": {
+        "executorLabel": "exec-fnevaluatemodel",
+        "inputDefinitions": {
+          "parameters": {
+            "metricsUri": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "metrics": {
+              "artifactType": {
+                "schemaTitle": "system.Metrics",
+                "schemaVersion": "0.0.1"
+              }
+            },
+            "plots": {
+              "artifactType": {
+                "schemaTitle": "system.ClassificationMetrics",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          },
+          "parameters": {
+            "threshold_metric": {
+              "type": "DOUBLE"
+            }
+          }
+        }
+      },
+      "comp-tabular-dataset-create": {
+        "executorLabel": "exec-tabular-dataset-create",
+        "inputDefinitions": {
+          "parameters": {
+            "bq_source": {
+              "type": "STRING"
+            },
+            "display_name": {
+              "type": "STRING"
+            },
+            "labels": {
+              "type": "STRING"
+            },
+            "location": {
+              "type": "STRING"
+            },
+            "project": {
+              "type": "STRING"
+            }
+          }
+        },
+        "outputDefinitions": {
+          "artifacts": {
+            "dataset": {
+              "artifactType": {
+                "schemaTitle": "google.VertexDataset",
+                "schemaVersion": "0.0.1"
+              }
+            }
+          }
+        }
+      }
+    },
+    "deploymentSpec": {
+      "executors": {
+        "exec-dataproc-create-pyspark-batch": {
+          "container": {
+            "args": [
+              "--type",
+              "DataprocPySparkBatch",
+              "--payload",
+              "{\"labels\": {{$.inputs.parameters['labels']}}, \"runtime_config\": {\"version\": \"{{$.inputs.parameters['runtime_config_version']}}\", \"container_image\": \"{{$.inputs.parameters['container_image']}}\", \"properties\": {{$.inputs.parameters['runtime_config_properties']}}}, \"environment_config\": {\"execution_config\": {\"service_account\": \"{{$.inputs.parameters['service_account']}}\", \"network_tags\": {{$.inputs.parameters['network_tags']}}, \"kms_key\": \"{{$.inputs.parameters['kms_key']}}\", \"network_uri\": \"{{$.inputs.parameters['network_uri']}}\", \"subnetwork_uri\": \"{{$.inputs.parameters['subnetwork_uri']}}\"}, \"peripherals_config\": {\"metastore_service\": \"{{$.inputs.parameters['metastore_service']}}\", \"spark_history_server_config\": { \"dataproc_cluster\": \"{{$.inputs.parameters['spark_history_dataproc_cluster']}}\"}}}, \"pyspark_batch\": {\"main_python_file_uri\": \"{{$.inputs.parameters['main_python_file_uri']}}\", \"python_file_uris\": {{$.inputs.parameters['python_file_uris']}}, \"jar_file_uris\": {{$.inputs.parameters['jar_file_uris']}}, \"file_uris\": {{$.inputs.parameters['file_uris']}}, \"archive_uris\": {{$.inputs.parameters['archive_uris']}}, \"args\": {{$.inputs.parameters['args']}}}}",
+              "--project",
+              "{{$.inputs.parameters['project']}}",
+              "--location",
+              "{{$.inputs.parameters['location']}}",
+              "--batch_id",
+              "{{$.inputs.parameters['batch_id']}}",
+              "--gcp_resources",
+              "{{$.outputs.parameters['gcp_resources'].output_file}}"
+            ],
+            "command": [
+              "python3",
+              "-u",
+              "-m",
+              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.1"
+          }
+        },
+        "exec-dataproc-create-pyspark-batch-2": {
+          "container": {
+            "args": [
+              "--type",
+              "DataprocPySparkBatch",
+              "--payload",
+              "{\"labels\": {{$.inputs.parameters['labels']}}, \"runtime_config\": {\"version\": \"{{$.inputs.parameters['runtime_config_version']}}\", \"container_image\": \"{{$.inputs.parameters['container_image']}}\", \"properties\": {{$.inputs.parameters['runtime_config_properties']}}}, \"environment_config\": {\"execution_config\": {\"service_account\": \"{{$.inputs.parameters['service_account']}}\", \"network_tags\": {{$.inputs.parameters['network_tags']}}, \"kms_key\": \"{{$.inputs.parameters['kms_key']}}\", \"network_uri\": \"{{$.inputs.parameters['network_uri']}}\", \"subnetwork_uri\": \"{{$.inputs.parameters['subnetwork_uri']}}\"}, \"peripherals_config\": {\"metastore_service\": \"{{$.inputs.parameters['metastore_service']}}\", \"spark_history_server_config\": { \"dataproc_cluster\": \"{{$.inputs.parameters['spark_history_dataproc_cluster']}}\"}}}, \"pyspark_batch\": {\"main_python_file_uri\": \"{{$.inputs.parameters['main_python_file_uri']}}\", \"python_file_uris\": {{$.inputs.parameters['python_file_uris']}}, \"jar_file_uris\": {{$.inputs.parameters['jar_file_uris']}}, \"file_uris\": {{$.inputs.parameters['file_uris']}}, \"archive_uris\": {{$.inputs.parameters['archive_uris']}}, \"args\": {{$.inputs.parameters['args']}}}}",
+              "--project",
+              "{{$.inputs.parameters['project']}}",
+              "--location",
+              "{{$.inputs.parameters['location']}}",
+              "--batch_id",
+              "{{$.inputs.parameters['batch_id']}}",
+              "--gcp_resources",
+              "{{$.outputs.parameters['gcp_resources'].output_file}}"
+            ],
+            "command": [
+              "python3",
+              "-u",
+              "-m",
+              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.1"
+          }
+        },
+        "exec-dataproc-create-pyspark-batch-3": {
+          "container": {
+            "args": [
+              "--type",
+              "DataprocPySparkBatch",
+              "--payload",
+              "{\"labels\": {{$.inputs.parameters['labels']}}, \"runtime_config\": {\"version\": \"{{$.inputs.parameters['runtime_config_version']}}\", \"container_image\": \"{{$.inputs.parameters['container_image']}}\", \"properties\": {{$.inputs.parameters['runtime_config_properties']}}}, \"environment_config\": {\"execution_config\": {\"service_account\": \"{{$.inputs.parameters['service_account']}}\", \"network_tags\": {{$.inputs.parameters['network_tags']}}, \"kms_key\": \"{{$.inputs.parameters['kms_key']}}\", \"network_uri\": \"{{$.inputs.parameters['network_uri']}}\", \"subnetwork_uri\": \"{{$.inputs.parameters['subnetwork_uri']}}\"}, \"peripherals_config\": {\"metastore_service\": \"{{$.inputs.parameters['metastore_service']}}\", \"spark_history_server_config\": { \"dataproc_cluster\": \"{{$.inputs.parameters['spark_history_dataproc_cluster']}}\"}}}, \"pyspark_batch\": {\"main_python_file_uri\": \"{{$.inputs.parameters['main_python_file_uri']}}\", \"python_file_uris\": {{$.inputs.parameters['python_file_uris']}}, \"jar_file_uris\": {{$.inputs.parameters['jar_file_uris']}}, \"file_uris\": {{$.inputs.parameters['file_uris']}}, \"archive_uris\": {{$.inputs.parameters['archive_uris']}}, \"args\": {{$.inputs.parameters['args']}}}}",
+              "--project",
+              "{{$.inputs.parameters['project']}}",
+              "--location",
+              "{{$.inputs.parameters['location']}}",
+              "--batch_id",
+              "{{$.inputs.parameters['batch_id']}}",
+              "--gcp_resources",
+              "{{$.outputs.parameters['gcp_resources'].output_file}}"
+            ],
+            "command": [
+              "python3",
+              "-u",
+              "-m",
+              "google_cloud_pipeline_components.container.v1.gcp_launcher.launcher"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.1"
+          }
+        },
+        "exec-fnevaluatemodel": {
+          "container": {
+            "args": [
+              "--executor_input",
+              "{{$}}",
+              "--function_to_execute",
+              "fnEvaluateModel"
+            ],
+            "command": [
+              "sh",
+              "-c",
+              "\nif ! [ -x \"$(command -v pip)\" ]; then\n    python3 -m ensurepip || python3 -m ensurepip --user || apt-get install python3-pip\nfi\n\nPIP_DISABLE_PIP_VERSION_CHECK=1 python3 -m pip install --quiet     --no-warn-script-location 'numpy==1.21.2' 'pandas==1.3.3' 'scikit-learn==0.24.2' 'kfp==1.8.11' && \"$0\" \"$@\"\n",
+              "sh",
+              "-ec",
+              "program_path=$(mktemp -d)\nprintf \"%s\" \"$0\" > \"$program_path/ephemeral_component.py\"\npython3 -m kfp.v2.components.executor_main                         --component_module_path                         \"$program_path/ephemeral_component.py\"                         \"$@\"\n",
+              "\nimport kfp\nfrom kfp.v2 import dsl\nfrom kfp.v2.dsl import *\nfrom typing import *\n\ndef fnEvaluateModel(\n    metricsUri: str,\n    metrics: Output[Metrics],\n    plots: Output[ClassificationMetrics],\n) -> NamedTuple(\"Outputs\", [(\"threshold_metric\", float)]):\n\n    import json\n    import numpy as np\n    from sklearn.metrics import confusion_matrix, roc_curve\n\n    # Variables\n    metricsGCSMountPath = metricsUri.replace(\"gs://\", \"/gcs/\")\n    labels = [\"yes\", \"no\"]\n\n    # Helpers\n    def fnCalculateROC(metrics, true, score):\n        y_true_np = np.array(metrics[true])\n        y_score_np = np.array(metrics[score])\n        fpr, tpr, thresholds = roc_curve(\n            y_true=y_true_np, y_score=y_score_np, pos_label=True\n        )\n        return fpr, tpr, thresholds\n\n    def fnCalculateConfusionMatrix(metrics, true, prediction):\n        y_true_np = np.array(metrics[true])\n        y_pred_np = np.array(metrics[prediction])\n        c_matrix = confusion_matrix(y_true_np, y_pred_np)\n        return c_matrix\n\n    # Main\n    with open(metricsGCSMountPath, mode=\"r\") as json_file:\n        metricsDictionary = json.load(json_file)\n\n    area_roc = metricsDictionary[\"test_area_roc\"]\n    area_prc = metricsDictionary[\"test_area_prc\"]\n    acc = metricsDictionary[\"test_accuracy\"]\n    f1 = metricsDictionary[\"test_f1\"]\n    prec = metricsDictionary[\"test_precision\"]\n    rec = metricsDictionary[\"test_recall\"]\n\n    metrics.log_metric(\"Test_areaUnderROC\", area_roc)\n    metrics.log_metric(\"Test_areaUnderPRC\", area_prc)\n    metrics.log_metric(\"Test_Accuracy\", acc)\n    metrics.log_metric(\"Test_f1-score\", f1)\n    metrics.log_metric(\"Test_Precision\", prec)\n    metrics.log_metric(\"Test_Recall\", rec)\n\n    fpr, tpr, thresholds = fnCalculateROC(metricsDictionary, \"true\", \"score\")\n    c_matrix = fnCalculateConfusionMatrix(metricsDictionary, \"true\", \"prediction\")\n    plots.log_roc_curve(fpr.tolist(), tpr.tolist(), thresholds.tolist())\n    plots.log_confusion_matrix(labels, c_matrix.tolist())\n\n    componentOutputsTuple = NamedTuple(\n        \"Outputs\",\n        [\n            (\"threshold_metric\", float),\n        ],\n    )\n    return componentOutputsTuple(area_prc)\n\n"
+            ],
+            "image": "python:3.8"
+          }
+        },
+        "exec-tabular-dataset-create": {
+          "container": {
+            "args": [
+              "--method.project",
+              "{{$.inputs.parameters['project']}}",
+              "--method.location",
+              "{{$.inputs.parameters['location']}}",
+              "--method.display_name",
+              "{{$.inputs.parameters['display_name']}}",
+              "--method.bq_source",
+              "{{$.inputs.parameters['bq_source']}}",
+              "--method.labels",
+              "{{$.inputs.parameters['labels']}}",
+              "--executor_input",
+              "{{$}}",
+              "--resource_name_output_artifact_uri",
+              "{{$.outputs.artifacts['dataset'].uri}}"
+            ],
+            "command": [
+              "python3",
+              "-m",
+              "google_cloud_pipeline_components.container.aiplatform.remote_runner",
+              "--cls_name",
+              "TabularDataset",
+              "--method_name",
+              "create"
+            ],
+            "image": "gcr.io/ml-pipeline/google-cloud-pipeline-components:1.0.1"
+          }
+        }
+      }
+    },
+    "pipelineInfo": {
+      "name": "USER_ID-customer-churn-model-pipeline"
+    },
+    "root": {
+      "dag": {
+        "outputs": {
+          "artifacts": {
+            "fnevaluatemodel-metrics": {
+              "artifactSelectors": [
+                {
+                  "outputArtifactKey": "metrics",
+                  "producerSubtask": "fnevaluatemodel"
+                }
+              ]
+            },
+            "fnevaluatemodel-plots": {
+              "artifactSelectors": [
+                {
+                  "outputArtifactKey": "plots",
+                  "producerSubtask": "fnevaluatemodel"
+                }
+              ]
+            }
+          }
+        },
+        "tasks": {
+          "condition-AUPR Threshold Exceeded-1": {
+            "componentRef": {
+              "name": "comp-condition-aupr-threshold-exceeded-1"
+            },
+            "dependentTasks": [
+              "fnevaluatemodel"
+            ],
+            "inputs": {
+              "parameters": {
+                "pipelineparam--common_utils_py_fqn": {
+                  "componentInputParameter": "common_utils_py_fqn"
+                },
+                "pipelineparam--container_image": {
+                  "componentInputParameter": "container_image"
+                },
+                "pipelineparam--fnevaluatemodel-threshold_metric": {
+                  "taskOutputParameter": {
+                    "outputParameterKey": "threshold_metric",
+                    "producerTask": "fnevaluatemodel"
+                  }
+                },
+                "pipelineparam--hyperparameter_tuning_args": {
+                  "componentInputParameter": "hyperparameter_tuning_args"
+                },
+                "pipelineparam--hyperparameter_tuning_main_py_fqn": {
+                  "componentInputParameter": "hyperparameter_tuning_main_py_fqn"
+                },
+                "pipelineparam--hyperparameter_tuning_pyspark_batch_id": {
+                  "componentInputParameter": "hyperparameter_tuning_pyspark_batch_id"
+                },
+                "pipelineparam--location": {
+                  "componentInputParameter": "location"
+                },
+                "pipelineparam--project_id": {
+                  "componentInputParameter": "project_id"
+                },
+                "pipelineparam--service_account": {
+                  "componentInputParameter": "service_account"
+                },
+                "pipelineparam--spark_phs_nm": {
+                  "componentInputParameter": "spark_phs_nm"
+                },
+                "pipelineparam--subnetwork_uri": {
+                  "componentInputParameter": "subnetwork_uri"
+                },
+                "pipelineparam--threshold": {
+                  "componentInputParameter": "threshold"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "condition-AUPR Threshold Exceeded-1"
+            },
+            "triggerPolicy": {
+              "condition": "inputs.parameters['pipelineparam--fnevaluatemodel-threshold_metric'].double_value >= inputs.parameters['pipelineparam--threshold'].double_value"
+            }
+          },
+          "dataproc-create-pyspark-batch": {
+            "cachingOptions": {},
+            "componentRef": {
+              "name": "comp-dataproc-create-pyspark-batch"
+            },
+            "inputs": {
+              "parameters": {
+                "archive_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "args": {
+                  "componentInputParameter": "data_preprocessing_args"
+                },
+                "batch_id": {
+                  "componentInputParameter": "data_preprocessing_pyspark_batch_id"
+                },
+                "container_image": {
+                  "componentInputParameter": "container_image"
+                },
+                "file_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "jar_file_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "kms_key": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "labels": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "{}"
+                    }
+                  }
+                },
+                "location": {
+                  "componentInputParameter": "location"
+                },
+                "main_python_file_uri": {
+                  "componentInputParameter": "data_preprocessing_main_py_fqn"
+                },
+                "metastore_service": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "network_tags": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "network_uri": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "project": {
+                  "componentInputParameter": "project_id"
+                },
+                "python_file_uris": {
+                  "componentInputParameter": "common_utils_py_fqn"
+                },
+                "runtime_config_properties": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "{}"
+                    }
+                  }
+                },
+                "runtime_config_version": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "service_account": {
+                  "componentInputParameter": "service_account"
+                },
+                "spark_history_dataproc_cluster": {
+                  "componentInputParameter": "spark_phs_nm"
+                },
+                "subnetwork_uri": {
+                  "componentInputParameter": "subnetwork_uri"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "Preprocessing"
+            }
+          },
+          "dataproc-create-pyspark-batch-2": {
+            "cachingOptions": {},
+            "componentRef": {
+              "name": "comp-dataproc-create-pyspark-batch-2"
+            },
+            "dependentTasks": [
+              "dataproc-create-pyspark-batch"
+            ],
+            "inputs": {
+              "parameters": {
+                "archive_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "args": {
+                  "componentInputParameter": "model_training_args"
+                },
+                "batch_id": {
+                  "componentInputParameter": "model_training_pyspark_batch_id"
+                },
+                "container_image": {
+                  "componentInputParameter": "container_image"
+                },
+                "file_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "jar_file_uris": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "kms_key": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "labels": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "{}"
+                    }
+                  }
+                },
+                "location": {
+                  "componentInputParameter": "location"
+                },
+                "main_python_file_uri": {
+                  "componentInputParameter": "model_training_main_py_fqn"
+                },
+                "metastore_service": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "network_tags": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "[]"
+                    }
+                  }
+                },
+                "network_uri": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "project": {
+                  "componentInputParameter": "project_id"
+                },
+                "python_file_uris": {
+                  "componentInputParameter": "common_utils_py_fqn"
+                },
+                "runtime_config_properties": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "{}"
+                    }
+                  }
+                },
+                "runtime_config_version": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": ""
+                    }
+                  }
+                },
+                "service_account": {
+                  "componentInputParameter": "service_account"
+                },
+                "spark_history_dataproc_cluster": {
+                  "componentInputParameter": "spark_phs_nm"
+                },
+                "subnetwork_uri": {
+                  "componentInputParameter": "subnetwork_uri"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "Model training"
+            }
+          },
+          "fnevaluatemodel": {
+            "cachingOptions": {},
+            "componentRef": {
+              "name": "comp-fnevaluatemodel"
+            },
+            "dependentTasks": [
+              "dataproc-create-pyspark-batch-2"
+            ],
+            "inputs": {
+              "parameters": {
+                "metricsUri": {
+                  "componentInputParameter": "model_training_metrics_fqp"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "Evaluate model"
+            }
+          },
+          "tabular-dataset-create": {
+            "cachingOptions": {},
+            "componentRef": {
+              "name": "comp-tabular-dataset-create"
+            },
+            "dependentTasks": [
+              "dataproc-create-pyspark-batch"
+            ],
+            "inputs": {
+              "parameters": {
+                "bq_source": {
+                  "componentInputParameter": "managed_dataset_src_uri"
+                },
+                "display_name": {
+                  "componentInputParameter": "managed_dataset_display_nm"
+                },
+                "labels": {
+                  "runtimeValue": {
+                    "constantValue": {
+                      "stringValue": "{}"
+                    }
+                  }
+                },
+                "location": {
+                  "componentInputParameter": "location"
+                },
+                "project": {
+                  "componentInputParameter": "project_id"
+                }
+              }
+            },
+            "taskInfo": {
+              "name": "Dataset registration"
+            }
+          }
+        }
+      },
+      "inputDefinitions": {
+        "parameters": {
+          "common_utils_py_fqn": {
+            "type": "STRING"
+          },
+          "container_image": {
+            "type": "STRING"
+          },
+          "data_preprocessing_args": {
+            "type": "STRING"
+          },
+          "data_preprocessing_main_py_fqn": {
+            "type": "STRING"
+          },
+          "data_preprocessing_pyspark_batch_id": {
+            "type": "STRING"
+          },
+          "hyperparameter_tuning_args": {
+            "type": "STRING"
+          },
+          "hyperparameter_tuning_main_py_fqn": {
+            "type": "STRING"
+          },
+          "hyperparameter_tuning_metrics_fqp": {
+            "type": "STRING"
+          },
+          "hyperparameter_tuning_pyspark_batch_id": {
+            "type": "STRING"
+          },
+          "location": {
+            "type": "STRING"
+          },
+          "managed_dataset_display_nm": {
+            "type": "STRING"
+          },
+          "managed_dataset_src_uri": {
+            "type": "STRING"
+          },
+          "model_training_args": {
+            "type": "STRING"
+          },
+          "model_training_main_py_fqn": {
+            "type": "STRING"
+          },
+          "model_training_metrics_fqp": {
+            "type": "STRING"
+          },
+          "model_training_pyspark_batch_id": {
+            "type": "STRING"
+          },
+          "project_id": {
+            "type": "STRING"
+          },
+          "service_account": {
+            "type": "STRING"
+          },
+          "spark_phs_nm": {
+            "type": "STRING"
+          },
+          "subnetwork_uri": {
+            "type": "STRING"
+          },
+          "threshold": {
+            "type": "DOUBLE"
+          }
+        }
+      },
+      "outputDefinitions": {
+        "artifacts": {
+          "fnevaluatemodel-metrics": {
+            "artifactType": {
+              "schemaTitle": "system.Metrics",
+              "schemaVersion": "0.0.1"
+            }
+          },
+          "fnevaluatemodel-plots": {
+            "artifactType": {
+              "schemaTitle": "system.ClassificationMetrics",
+              "schemaVersion": "0.0.1"
+            }
+          }
+        }
+      }
+    },
+    "schemaVersion": "2.0.0",
+    "sdkVersion": "kfp-1.8.11"
+  },
+  "runtimeConfig": {
+    "parameters": {
+      "common_utils_py_fqn": {
+        "stringValue": "[\"gs://USER_ID-s8s_code_bucket-YOUR_PROJECT_NBR/pyspark/common_utils.py\"]"
+      },
+      "container_image": {
+        "stringValue": "gcr.io/YOUR_PROJECT_ID/customer_churn_image:1.0.0"
+      },
+      "data_preprocessing_args": {
+        "stringValue": "[\"--pipelineID=YOUR_USER_DEFINED_EXECUTION_ID\", \"--projectID=YOUR_PROJECT_ID\", \"--projectNbr=YOUR_PROJECT_NBR\", \"--displayPrintStatements=True\"]"
+      },
+      "data_preprocessing_main_py_fqn": {
+        "stringValue": "gs://USER_ID-s8s_code_bucket-YOUR_PROJECT_NBR/pyspark/preprocessing.py"
+      },
+      "data_preprocessing_pyspark_batch_id": {
+        "stringValue": "USER_ID-customer-churn-model-preprocessing-YOUR_USER_DEFINED_EXECUTION_ID"
+      },
+      "hyperparameter_tuning_args": {
+        "stringValue": "[\"--pipelineID=YOUR_USER_DEFINED_EXECUTION_ID\", \"--projectID=YOUR_PROJECT_ID\", \"--projectNbr=YOUR_PROJECT_NBR\", \"--displayPrintStatements=True\"]"
+      },
+      "hyperparameter_tuning_main_py_fqn": {
+        "stringValue": "gs://USER_ID-s8s_code_bucket-YOUR_PROJECT_NBR/pyspark/hyperparameter_tuning.py"
+      },
+      "hyperparameter_tuning_metrics_fqp": {
+        "stringValue": "gs://USER_ID-s8s_metrics_bucket-YOUR_PROJECT_NBR/customer-churn-model/training/YOUR_USER_DEFINED_EXECUTION_ID/full/metrics.json"
+      },
+      "hyperparameter_tuning_pyspark_batch_id": {
+        "stringValue": "USER_ID-customer-churn-model-hyperparameter-tuning-YOUR_USER_DEFINED_EXECUTION_ID"
+      },
+      "location": {
+        "stringValue": "YOUR_GCP_LOCATION"
+      },
+      "managed_dataset_display_nm": {
+        "stringValue": "USER_ID-customer-churn-model-YOUR_USER_DEFINED_EXECUTION_ID"
+      },
+      "managed_dataset_src_uri": {
+        "stringValue": "bq://YOUR_PROJECT_ID.USER_ID_customer_churn_ds.training_data"
+      },
+      "model_training_args": {
+        "stringValue": "[\"--pipelineID=YOUR_USER_DEFINED_EXECUTION_ID\", \"--projectID=YOUR_PROJECT_ID\", \"--projectNbr=YOUR_PROJECT_NBR\", \"--displayPrintStatements=True\"]"
+      },
+      "model_training_main_py_fqn": {
+        "stringValue": "gs://USER_ID-s8s_code_bucket-YOUR_PROJECT_NBR/pyspark/model_training.py"
+      },
+      "model_training_metrics_fqp": {
+        "stringValue": "gs://USER_ID-s8s_metrics_bucket-YOUR_PROJECT_NBR/customer-churn-model/training/YOUR_USER_DEFINED_EXECUTION_ID/full/metrics.json"
+      },
+      "model_training_pyspark_batch_id": {
+        "stringValue": "USER_ID-customer-churn-model-training-YOUR_USER_DEFINED_EXECUTION_ID"
+      },
+      "project_id": {
+        "stringValue": "YOUR_PROJECT_ID"
+      },
+      "service_account": {
+        "stringValue": "s8s-lab-sa@YOUR_PROJECT_ID.iam.gserviceaccount.com"
+      },
+      "spark_phs_nm": {
+        "stringValue": "projects/YOUR_PROJECT_ID/regions/YOUR_GCP_LOCATION/clusters/s8s-sphs-YOUR_PROJECT_NBR"
+      },
+      "subnetwork_uri": {
+        "stringValue": "projects/YOUR_PROJECT_ID/regions/YOUR_GCP_LOCATION/subnetworks/spark-snet"
+      },
+      "threshold": {
+        "doubleValue": 0.5
+      }
+    }
+  }
+}
