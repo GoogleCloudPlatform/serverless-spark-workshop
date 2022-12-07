@@ -1,0 +1,7 @@
+{
+    "code_bucket": "<your_gcs_code_bucket>",
+    "project_id": "<your_gcp_project_id>",
+    "region": "<your_gcp_region>",
+    "subnet": "<your_subnet_name>",
+    "umsa": "<your_umsa_name_here>"
+}

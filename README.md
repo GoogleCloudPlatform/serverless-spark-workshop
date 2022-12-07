@@ -15,7 +15,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 - "Our use case is to optimize retail assortment from 500M+ items.  Serverless Spark enables us to only use the compute resources when we need them and all with a single click."<br>
 ~ Dataproc customer who set up these production pipelines in one week<br><br>
 
-- “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.”<br> 
+- “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.”<br>
 ~ Principal Architect at multinational retail corporation
 
 
@@ -36,6 +36,8 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 11 | [Telco Customer Churn Prediction](https://github.com/anagha-google/s8s-spark-mlops-lab) | ML Ops | Powered by Dataproc Serverless, showcasing integration with Vertex AI Workbench | [Anagha Khanolkar](https://github.com/anagha-google) |
 | 12 | [Sales and Marketing Campaign and Promotion Streaming Application](https://github.com/anagha-google/spark-on-gcp-with-confluent-kafka) | Streaming Analytics | Streaming from Kafka into BigQuery, with Apache Spark Structured Streaming powered by Dataproc Serverless | [Anagha Khanolkar](https://github.com/anagha-google) |
 | 13 | [Telco Anomaly Detection (with row level security)](https://github.com/velascoluis/telco-demo) | Data Engineering | Identifying defective cell towers for maintenance: using Terraform to deploy GCP components, using BigLake to create GCS external tables in PARQUET and CSV files formats and to unify row access policies from BigQuery and Serverless Spark, and doing ELT, ML, data governance, and orchestration with BigQuery integrations (Dataform, BQML, BI Engine, Dataplex) | [Luis Velasco](https://github.com/velascoluis) |
+| 14 | [Spark MLOps Pipeline](s8s-spark-mlops/README.md) | Data Scientist | Spark MLlib based scalable machine learning on Google Cloud, powered by Dataproc Serverless Spark and showcases integration with Vertex AI AIML platform (Dataporc, BigQuery, Vertex AI, Google Cloud Storage, Cloud Composer, Cloud Functions, Cloud Scheduler) | TEKsystems |
+| 13 | [Daily Covid Data Analysis](daily-covid-data-analysis/README.md) | Data Engineering | Serverless Spark Dataproc Batches | TEKsystems |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
@@ -54,4 +56,3 @@ Check out this [repository](https://github.com/anagha-google/ts22-just-enough-te
 
 # Contact
 Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
-
