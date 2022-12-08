@@ -40,7 +40,7 @@ The datasets used for this project are
 ## 2. Solution Architecture
 
 <kbd>
-<img src=images/Flow_of_Resources.jpeg />
+<img src=../images/Flow_of_Resources.jpeg />
 </kbd>
 
 <br>
@@ -128,11 +128,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/image10.png />
+<img src=../images/image10.png />
 </kbd>
 
 <kbd>
-<img src=/images/image11.png />
+<img src=../images/image11.png />
 </kbd>
 
 <br>
@@ -144,11 +144,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/image12.png />
+<img src=../images/image12.png />
 </kbd>
 
 <kbd>
-<img src=/images/image13.png />
+<img src=../images/image13.png />
 </kbd>
 
 <br>
