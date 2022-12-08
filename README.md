@@ -1,5 +1,3 @@
-# Join us on Nov 3 to learn how to deliver data-driven outcomes faster, cheaper, and easier with Serverless Spark (register [here](https://inthecloud.withgoogle.com/scaled-study-jam-serverless-spark-22/register.html)).
-#
 # Serverless Spark Solution Accelerators
 
 Apache Spark is often used for interactive queries, machine learning, and real-time workloads.<br>
@@ -39,6 +37,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 14 | [Spark MLOps Pipeline](s8s-spark-mlops/README.md) | Data Scientist | Spark MLlib based scalable machine learning on Google Cloud, powered by Dataproc Serverless Spark and showcases integration with Vertex AI AIML platform (Dataporc, BigQuery, Vertex AI, Google Cloud Storage, Cloud Composer, Cloud Functions, Cloud Scheduler) | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 15 | [Daily Covid Data Analysis](daily-covid-data-analysis/README.md) | Data Engineering | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 16 | [Customer Churn Prediction using Vertex AI](customer-churn-prediction-vertex-ai/README.md) | Data Engineering & Data Scientist | Serverless Spark Interactive Sessions through Vertex AI | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 17 | [Loan Data Analysis](https://github.com/anagha-google/table-format-lab-delta) | Data Engineering | Using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks | [Anagha Khanolkar](https://github.com/anagha-google) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
