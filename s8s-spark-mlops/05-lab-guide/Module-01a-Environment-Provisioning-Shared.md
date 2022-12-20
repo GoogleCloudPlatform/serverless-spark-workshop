@@ -50,7 +50,9 @@ mkdir gcp-spark-mllib-workshop
 ### 2.2. Clone the workshop git repo
 ```
 cd ~/gcp-spark-mllib-workshop
-git clone https://github.com/anagha-google/s8s-spark-mlops.git
+git clone https://github.com/GoogleCloudPlatform/serverless-spark-workshop
+cd serverless-spark-workshop/
+mv s8s-spark-mlops/ ~/gcp-spark-mllib-workshop/
 ```
 
 ### 2.3. Navigate to the Cloud Shell provisioning directory
