@@ -38,6 +38,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 15 | [Daily Covid Data Analysis](daily-covid-data-analysis/README.md) | Data Engineering | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 16 | [Customer Churn Prediction using Vertex AI](customer-churn-prediction-vertex-ai/README.md) | Data Engineering & Data Scientist | Serverless Spark Interactive Sessions through Vertex AI | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 17 | [Loan Data Analysis](https://github.com/anagha-google/table-format-lab-delta) | Data Engineering | Using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks | [Anagha Khanolkar](https://github.com/anagha-google) |
+| 18 | [Pandemic Economic Impact (Scala)](covid-economic-impact-scala/README.md) | Data Engineering | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
