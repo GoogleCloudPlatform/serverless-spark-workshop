@@ -19,7 +19,7 @@ The datasets used for this project are:
 - stringency.csv: This file contains the Stringency Index of each country regarding the measures taken to fight covid-19.
 - stock.csv: This file comtains the stock market values of various companies from different countries.
 
-![this is a screenshot of the source tables](/images/Source_tables.png)
+![this is a screenshot of the source tables](../images/Source_tables.png)
 
 The ETL flow processes the source data to generate multiple fact and dim tables:
 
@@ -38,13 +38,13 @@ The ETL flow processes the source data to generate multiple fact and dim tables:
 
 The data warehouse star schema would look like below:
 
-![this is a screenshot of the data model](/images/Data_model.PNG)
+![this is a screenshot of the data model](../images/Data_model.PNG)
 
 <br>
 
 ## 2. Solution Architecture
 
-![this is a screenshot of the solution diagram](/images/Flow_of_Resources.png)
+![this is a screenshot of the solution diagram](../images/Flow_of_Resources.png)
 
 <br>
 
@@ -74,7 +74,7 @@ NAME=                                               #Your unique identifier
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 ### 4.2. Provide the details for the batch
@@ -105,7 +105,7 @@ Run Spark Serverless Batch for Data Preparation
 - **History Server Cluster** - <your_phs_cluster_name>
 
 <kbd>
-<img src=/images/image24.png />
+<img src=../images/image24.png />
 </kbd>
 
 <hr>
@@ -113,13 +113,13 @@ Run Spark Serverless Batch for Data Preparation
 <br>
 
 <kbd>
-<img src=/images/image25.png />
+<img src=../images/image25.png />
 </kbd>
 
 <br>
 
   <kbd>
-  <img src=/images/image26.png />
+  <img src=../images/image26.png />
   </kbd>
 
 <br>
@@ -141,7 +141,7 @@ To query the data to find the list of stocks with highest stringency Index, run 
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/bigquery.PNG />
+<img src=../images/bigquery.PNG />
 </kbd>
 
 <br>
@@ -159,11 +159,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/image10.PNG />
+<img src=../images/image10.PNG />
 </kbd>
 
 <kbd>
-<img src=/images/image11.png />
+<img src=../images/image11.png />
 </kbd>
 
 <br>
@@ -175,11 +175,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/image12.PNG />
+<img src=../images/image12.PNG />
 </kbd>
 
 <kbd>
-<img src=/images/image13.PNG />
+<img src=../images/image13.PNG />
 </kbd>
 
 <br>
