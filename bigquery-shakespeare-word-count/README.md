@@ -25,7 +25,7 @@ Following permissions / roles are required to execute the serverless batch
 
 To perform the lab, below are the list of activities to perform.-<br>
 
-[1. GCP Prerequisites ](/instructions/01-gcp-prerequisites.md) <BR>
+[1. GCP Prerequisites ](instructions/01-gcp-prerequisites.md) <BR>
 [2. Creating and calling store procedure](instructions/02-creating-and-calling-store-procedure.md) <BR>
 
 ***Note: The region to create dataset, spark connection and store procedure should be same.***
