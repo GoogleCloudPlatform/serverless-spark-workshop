@@ -1,10 +1,10 @@
 ## 1. Create the Store Procedure
 
 * Go to the [BigQuery console](https://console.cloud.google.com/bigquery)
-![bigquery](./images/bigquery.png) 
+![bigquery](../images/bigquery.png) 
 * Open the external connection that has been created and then click on 'Create Store Procedure'
 * Edit the query that appears in the Editor as follows:
-* ![store procedure](./images/store_procedure.png)
+* ![store procedure](../images/store_procedure.png)
 ```
 CREATE PROCEDURE `<Insert_Project_ID>.<insert_bq_dataset_name>.<insert_user_name>_shakespeare_proc`()
 WITH CONNECTION `<Insert_Project_ID>.<insert_location_used_in_dataset>.shakespeare-connection`
@@ -32,4 +32,4 @@ CALL `<insert_PROJECT_ID>`.<insert_bq_dataset_name>.<insert_user_name>_shakespea
 ### 3. Results
 
 * Results can be viewed by clicking on 'View Results' > 'Execution Details'
-![results](./images/results.png) 
+![results](../images/results.png) 
