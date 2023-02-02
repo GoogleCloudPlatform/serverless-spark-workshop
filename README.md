@@ -40,6 +40,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 17 | [Loan Data Analysis](https://github.com/anagha-google/table-format-lab-delta) | Data Engineering | Using Delta Lake with Dataproc Serverless Spark on GCP via Jupyter notebooks on Vertex AI Workbench managed notebooks | [Anagha Khanolkar](https://github.com/anagha-google) |
 | 18 | [Pandemic Economic Impact (Scala)](covid-economic-impact-scala/README.md) | Data Engineering | Serverless Spark Dataproc Batches | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 19 | [BigQuery Shakespeare Word Count](bigquery-shakespeare-word-count/README.md) | Data Engineering | Apache Spark Stored Procedures in BigQuery | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+|20 | [Wikipedia Page Views Analysis demonstrating auto-scaling](wikipedia-page-view-analysis/README.md) | Data Analytics | Serverless Spark Dataproc Batches, BigQuery | [Anagha Khanolkar](https://github.com/anagha-google) and [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
