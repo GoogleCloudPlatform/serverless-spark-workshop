@@ -58,4 +58,4 @@ Check out this [repository](https://github.com/GoogleCloudPlatform/dataproc-temp
 Check out this [repository](https://github.com/anagha-google/ts22-just-enough-terraform-for-da) for how to use Terraform to provision, configure, and automate Data Analytics services on GCP.
 
 # Contact
-Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://docs.google.com/forms/d/e/1FAIpQLSeNB5IK6Fk0Tz1kBuLbCPIOBmG64KCxduY-JUi1-nGJAiOFbQ/viewform?resourcekey=0-7zyKJwrk3goAImmNjeV2ng).
+Interested in a free, guided, and hands-on Spark Workshop to run these solution accelerators in your GCP environment?  Please fill out this [form](https://cloud.google.com/contact/).
