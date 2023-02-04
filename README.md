@@ -13,7 +13,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 - "Our use case is to optimize retail assortment from 500M+ items.  Serverless Spark enables us to only use the compute resources when we need them and all with a single click."<br>
 ~ Dataproc customer who set up these production pipelines in one week<br><br>
 
-- “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.”<br>
+- “Job that took 90 minutes on a manually tuned cluster took 19 minutes to finish with Serverless Spark.  Every new data pipeline will start on Serverless Spark.”<br>
 ~ Principal Architect at multinational retail corporation
 
 
