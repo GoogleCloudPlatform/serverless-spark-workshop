@@ -1,9 +1,0 @@
-{
-    "code_bucket": "s8s_data_and_code_bucket-YOUR_PROJECT_NBR",
-    "phs": "s8s-sphs-YOUR_PROJECT_NBR",
-    "project_id": "YOUR_PROJECT_ID",
-    "region": "us-central1",
-    "subnet": "spark-snet",
-    "bq_dataset": "cell_tower_reporting_mart",
-    "umsa": "s8s-lab-sa"
-}
