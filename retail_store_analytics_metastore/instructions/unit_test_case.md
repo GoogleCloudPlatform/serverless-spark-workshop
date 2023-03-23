@@ -50,6 +50,7 @@ NAME=aj
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_table_creation.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -81,6 +82,7 @@ Once the job starts executing and the job is in running state , copy the data fi
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -109,6 +111,7 @@ Output
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_inventory.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -141,6 +144,7 @@ Output
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_suggestionofaisle_id.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -236,6 +240,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics/00-scripts/retail_analytics_table_creation.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -301,6 +306,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -367,6 +373,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics/00-scripts/retail_analytics_inventory.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -432,6 +439,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics/00-scripts/retail_analytics_suggestionofaisle_id.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 

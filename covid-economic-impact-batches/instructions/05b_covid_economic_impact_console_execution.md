@@ -84,6 +84,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version**  - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/covid-economic-impact/00-scripts/covid_economic_impact_etl.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 - **Arguments** - <br>

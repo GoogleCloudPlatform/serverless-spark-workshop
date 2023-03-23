@@ -34,7 +34,7 @@ database_name=Variable.get("database_name")
 bq_dataset=Variable.get("bq_dataset")
 umsa=Variable.get("umsa")
 
-name=<your_name_here>
+name="<your_name_here>"
 
 dag_name= name+"_retail_data_analytics"
 service_account= umsa+"@"+PROJECT_ID+".iam.gserviceaccount.com"
@@ -77,7 +77,12 @@ BATCH_CONFIG1 = {
                 }
             },
         },
+        "runtime_config":{
+            "version": "1.1",
+        },
 }
+
+
 
 BATCH_CONFIG2 = {
     "pyspark_batch": {
@@ -104,6 +109,9 @@ BATCH_CONFIG2 = {
                 "dataproc_cluster": f"projects/{PROJECT_ID}/regions/{REGION}/clusters/{phs_server}"
                 }
             },
+        },
+        "runtime_config":{
+            "version": "1.1",
         },
 }
 
@@ -132,6 +140,9 @@ BATCH_CONFIG3 = {
                 }
             },
         },
+        "runtime_config":{
+            "version": "1.1",
+        },
 }
 
 BATCH_CONFIG4 = {
@@ -158,6 +169,9 @@ BATCH_CONFIG4 = {
                 "dataproc_cluster": f"projects/{PROJECT_ID}/regions/{REGION}/clusters/{phs_server}"
                 }
             },
+        },
+        "runtime_config":{
+            "version": "1.1",
         },
 }
 

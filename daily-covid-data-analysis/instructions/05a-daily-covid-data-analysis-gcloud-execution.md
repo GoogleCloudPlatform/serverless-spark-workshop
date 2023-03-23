@@ -29,10 +29,10 @@ Following are the lab modules:
 The datasets used for this project are 
 
 
-1. [Confirmed data](01-datasets/confirmed_df.csv) <br>
-2. [Death data](01-datasets/death_df.csv)<br>
-3. [Latest data](01-datasets/latest_data.csv)<br>
-4. [US Medical data](01-datasets/us_medical_data.csv)<br>
+1. [Confirmed data](../01-datasets/confirmed_df.csv) <br>
+2. [Death data](../01-datasets/death_df.csv)<br>
+3. [Latest data](../01-datasets/latest_data.csv)<br>
+4. [US Medical data](../01-datasets/us_medical_data.csv)<br>
 
 
 <br>
@@ -110,6 +110,7 @@ gcloud components update
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version 1.1 \
 --batch $NAME-daily-covid-data-analysis-$RANDOM \
 gs://$BUCKET_CODE/daily-covid-data-analysis/00-scripts/covid.py \
 --subnet $SUBNET \

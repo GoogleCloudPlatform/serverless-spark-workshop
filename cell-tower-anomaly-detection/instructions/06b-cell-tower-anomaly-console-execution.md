@@ -54,6 +54,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/cell-tower-anomaly-detection/00-scripts/customer_threshold_join.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -109,6 +110,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/cell-tower-anomaly-detection/00-scripts/customer_threshold_services_join.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -164,6 +166,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/cell-tower-anomaly-detection/00-scripts/customer_service_indicator.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -220,6 +223,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/cell-tower-anomaly-detection/00-scripts/cell_tower_performance_indicator.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 

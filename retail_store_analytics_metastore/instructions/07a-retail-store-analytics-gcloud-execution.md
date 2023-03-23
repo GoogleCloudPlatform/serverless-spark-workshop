@@ -14,12 +14,12 @@ Following are the lab modules:
 The datasets used for this project are 
 
 
-1. [Aisles data](01-datasets/aisles/aisles.csv). <br>
-2. [Departments data](01-datasets/departments/departments.csv) . <br>
-3. [Orders data](01-datasets/orders/orders.csv). <br>
-4. [Products data](01-datasets/products/products.csv). <br>
-5. [Order_products__prior](01-datasets/order_products/order_products__prior.csv). <br>
-6. [Order_products__train](01-datasets/order_products/order_products__train.csv). <br>
+1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
+2. [Departments data](../01-datasets/departments/departments.csv) . <br>
+3. [Orders data](../01-datasets/orders/orders.csv). <br>
+4. [Products data](../01-datasets/products/products.csv). <br>
+5. [Order_products__prior](../01-datasets/order_products/order_products__prior.csv). <br>
+6. [Order_products__train](../01-datasets/order_products/order_products__train.csv). <br>
 
 
 - Aisles: This table includes all aisles. It has a single primary key (aisle_id)
@@ -89,7 +89,7 @@ HISTORY_SERVER_NAME=                                #name of the history server 
 BQ_DATASET_NAME=                                    #BigQuery dataset where all the tables will be stored
 UMSA=serverless-spark                               #name of the user managed service account required for the PySpark job executions
 SERVICE_ACCOUNT=$UMSA@$PROJECT_ID.iam.gserviceaccount.com
-METASTORE_NAME                                      #name of the metastore which will store our schema
+METASTORE_NAME=                                     #name of the metastore which will store our schema
 NAME=                                               #your name
 ```
 
@@ -111,6 +111,7 @@ gcloud components update
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_table_creation.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -127,6 +128,7 @@ gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_t
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -144,6 +146,7 @@ gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_s
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_inventory.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
@@ -161,6 +164,7 @@ gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_i
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_suggestionofaisle_id.py \
 --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \

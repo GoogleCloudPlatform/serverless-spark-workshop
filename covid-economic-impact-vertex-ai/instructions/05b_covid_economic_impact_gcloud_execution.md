@@ -121,11 +121,11 @@ Run the below on cloud shell to create session. -
   gcloud beta dataproc sessions create spark $SESSION_NAME  \
 --project=${PROJECT_ID} \
 --location=${REGION} \
+--version=1.1 \
+--service-account $SERVICE_ACCOUNT \
 --property=spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --history-server-cluster=projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
---subnet=$SUBNET \
---property=dataproc:jupyter.notebook.gcs.dir=$BUCKET_CODE
-
+--subnet=$SUBNET
 ```
 <br>
 

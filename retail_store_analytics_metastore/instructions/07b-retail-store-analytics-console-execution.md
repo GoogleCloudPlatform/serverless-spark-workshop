@@ -13,12 +13,12 @@ Following are the lab modules:
 The datasets used for this project are 
 
 
-1. [Aisles data](01-datasets/aisles/aisles.csv). <br>
-2. [Departments data](01-datasets/departments/departments.csv) . <br>
-3. [Orders data](01-datasets/orders/orders.csv). <br>
-4. [Products data](01-datasets/products/products.csv). <br>
-5. [Order_products__prior](01-datasets/order_products/order_products__prior.csv). <br>
-6. [Order_products__train](01-datasets/order_products/order_products__train.csv). <br>
+1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
+2. [Departments data](../01-datasets/departments/departments.csv) . <br>
+3. [Orders data](../01-datasets/orders/orders.csv). <br>
+4. [Products data](../01-datasets/products/products.csv). <br>
+5. [Order_products__prior](../01-datasets/order_products/order_products__prior.csv). <br>
+6. [Order_products__train](../01-datasets/order_products/order_products__train.csv). <br>
 
 
 - Aisles: This table includes all aisles. It has a single primary key (aisle_id)
@@ -65,6 +65,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_table_creation.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -123,13 +124,14 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 <br>
 
 <kbd>
-<img src=../images/batches_4.png />
+<img src=../images/batches_4b.png />
 </kbd>
 
 <br>
@@ -181,6 +183,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_inventory.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
@@ -238,6 +241,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_suggestionofaisle_id.py
 - **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 

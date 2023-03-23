@@ -11,7 +11,8 @@
 ```
 CREATE PROCEDURE `<Insert_Project_ID>.<insert_bq_dataset_name>.<insert_user_name>_shakespeare_proc`()
 WITH CONNECTION `<Insert_Project_ID>.<insert_location_used_in_dataset>.shakespeare-connection`
-OPTIONS(engine="SPARK")
+OPTIONS(engine="SPARK",
+runtime_version="1.1")
 LANGUAGE PYTHON AS R"""
 <insert Spark Code Here>
 """

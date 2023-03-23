@@ -40,8 +40,9 @@ Running the job as a serverless batch on Dataproc:
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION spark-sql \
+--version 1.1 \
 --batch $NAME-retail-analytics-schema-$RANDOM \
-gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_schema_defination_Sparksql.sql \
+gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_schema_definition_sparksql.sql \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
@@ -68,8 +69,9 @@ Batch id: **sc-retail-analytics-schema-6469**
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION spark-sql \
+--version 1.1 \
 --batch $NAME-retail-analytics-inventory-$RANDOM \
-gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_inventory_Sparksql.sql \
+gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_inventory_sparksql.sql \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
@@ -102,7 +104,8 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - SparkSql
-- **Query File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_schema_defination_Sparksql.sql
+- **Runtime version** - 1.1
+- **Query File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_schema_definition_sparksql.sql
 
 
 <br>
@@ -163,7 +166,8 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - SparkSql
-- **Query File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_inventory_Sparksql.sql
+- **Runtime version** - 1.1
+- **Query File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore_sparksql/00-scripts/retail_analytics_inventory_sparksql.sql
 
 
 <br>

@@ -38,7 +38,7 @@ Run the below in cloud shells coped to the project you selected-
 PROJECT_ID= #Project ID
 REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
-
+SUBNET= #subnet of the network
 ```
 
 <br>
@@ -61,6 +61,7 @@ A single node dataproc cluster will be created with component gateways enabled.
 gcloud dataproc clusters create spark-phs \
   --project=${PROJECT_ID} \
   --region=${REGION} \
+  --subnet=${SUBNET} \
   --single-node \
   --image-version=2.0 \
   --enable-component-gateway \

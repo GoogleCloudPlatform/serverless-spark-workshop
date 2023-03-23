@@ -100,6 +100,7 @@ gcloud components update
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version 1.1 \
 --batch $NAME-cell-tower-$RANDOM \
 gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_threshold_join.py \
 --subnet $SUBNET \
@@ -113,6 +114,7 @@ gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_threshold_joi
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version 1.1 \
 --batch $NAME-cell-tower-$RANDOM \
 gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_threshold_services_join.py \
 --subnet $SUBNET \
@@ -127,6 +129,8 @@ gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_threshold_ser
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version 1.1 \
+--service-account $SERVICE_ACCOUNT \
 --batch $NAME-cell-tower-$RANDOM \
 gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_service_indicator.py \
 --subnet $SUBNET \
@@ -141,6 +145,8 @@ gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/customer_service_indic
 gcloud dataproc batches submit \
 --project $PROJECT_ID \
 --region $REGION pyspark \
+--version 1.1 \
+--service-account $SERVICE_ACCOUNT \
 --batch $NAME-cell-tower-$RANDOM \
 gs://$BUCKET_CODE/cell-tower-anomaly-detection/00-scripts/cell_tower_performance_indicator.py \
 --subnet $SUBNET \

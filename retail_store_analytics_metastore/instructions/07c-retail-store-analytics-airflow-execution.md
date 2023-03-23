@@ -57,7 +57,7 @@ The data pipeline involves the following steps: <br>
 
 * From the code repository, download the file located at: **retail_store_analytics_metastore**>**00-scripts**>**retail-analytics-airflow.py**
 * Rename file to <your_name_here>-retail-analytics-airflow.py
-* Open the file and replace your name on row 23
+* Open the file and replace your name on row 37
 * Navigate to **Composer**>**<composer_environment>**
 * Next, navigate to **Environment Configuration**>**DAGs folder URI**
 * Next, upload the DAG file to the GCS bucket corresponding to the **DAGs folder URI**
