@@ -68,6 +68,9 @@ BATCH_CONFIG1 = {
                 }
             },
         },
+        "runtime_config":{
+            "version": "1.1",
+        },
 }
 BATCH_CONFIG2 = {
     "pyspark_batch": {
@@ -92,6 +95,9 @@ BATCH_CONFIG2 = {
                 "dataproc_cluster": f"projects/{project_id}/regions/{region}/clusters/{phs_server}"
                 }
             },
+        },
+        "runtime_config":{
+            "version": "1.1",
         },
 }
 BATCH_CONFIG3 = {
@@ -118,6 +124,9 @@ BATCH_CONFIG3 = {
                 }
             },
         },
+        "runtime_config":{
+            "version": "1.1",
+        },
 }
 BATCH_CONFIG4 = {
     "pyspark_batch": {
@@ -142,6 +151,9 @@ BATCH_CONFIG4 = {
                 "dataproc_cluster": f"projects/{project_id}/regions/{region}/clusters/{phs_server}"
                 }
             },
+        },
+        "runtime_config":{
+            "version": "1.1",
         },
 }
 

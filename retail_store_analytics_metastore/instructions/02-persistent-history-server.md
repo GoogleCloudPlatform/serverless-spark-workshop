@@ -23,7 +23,7 @@ Grant the following permissions
 Open Cloud shell or navigate to [shell.cloud.google.com](https://shell.cloud.google.com) <br>
 Run the below command to set the project in the cloud shell terminal:
 ```
-gcloud config set project $PROJECT ID
+gcloud config set project $PROJECT_ID
 
 ```
 
@@ -38,6 +38,7 @@ Run the below in cloud shells coped to the project you selected-
 PROJECT_ID= #Project ID
 REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
+SUBNET= #subnet
 
 ```
 
@@ -61,6 +62,7 @@ A single node dataproc cluster will be created with component gateways enabled.
 gcloud dataproc clusters create spark-phs \
   --project=${PROJECT_ID} \
   --region=${REGION} \
+  --subnet=${SUBNET} \
   --single-node \
   --image-version=2.0 \
   --enable-component-gateway \

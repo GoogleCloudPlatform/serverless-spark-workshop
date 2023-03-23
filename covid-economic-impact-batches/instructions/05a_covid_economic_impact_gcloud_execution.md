@@ -119,6 +119,7 @@ gcloud dataproc batches submit \
   --project $PROJECT_ID \
   --region $REGION \
   pyspark --batch $NAME-batch-${RANDOM} \
+  --version 1.1 \
   gs://$BUCKET_CODE/covid-economic-impact/00-scripts/covid_economic_impact_etl.py \
   --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
   --subnet $SUBNET \

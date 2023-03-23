@@ -28,10 +28,10 @@ Following are the lab modules:
 The datasets used for this project are 
 
 
-1. [Confirmed data](01-datasets/confirmed_df .csv). <br>
-2. [Death data](01-datasets/death_df.csv) . <br>
-3. [Latest data](01-datasets/latest_data.csv). <br>
-4. [US Medical data](01-datasets/us_medical_data.csv). <br>
+1. [Confirmed data](../01-datasets/confirmed_df .csv). <br>
+2. [Death data](../01-datasets/death_df.csv) . <br>
+3. [Latest data](../01-datasets/latest_data.csv). <br>
+4. [US Medical data](../01-datasets/us_medical_data.csv). <br>
 
 
 <br>
@@ -65,6 +65,7 @@ Next, fill in the following values in the batch creation window :
 - **Batch ID**   - A unique identifier for your batch
 - **Region**     - The region name provided by the Admin team
 - **Batch Type**    - PySpark
+- **Runtime version** - 1.1
 - **Main Python File** - gs://<your_code_bucket_name>/daily-covid-data-analysis/00-scripts/covid.py
 
 <br>

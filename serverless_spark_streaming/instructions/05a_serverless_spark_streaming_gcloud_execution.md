@@ -102,6 +102,7 @@ Run the below on cloud shell -
 gcloud dataproc batches submit \
   --project $PROJECT_ID \
   --region $REGION \
+  --version 1.1 \
   pyspark --batch $NAME-batch-${RANDOM} \
   gs://$BUCKET_CODE/serverless_spark_streaming/00-scripts/spark_streaming_invoice.py  \
   --jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \

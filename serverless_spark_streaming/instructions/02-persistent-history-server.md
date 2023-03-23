@@ -61,6 +61,7 @@ A single node dataproc cluster will be created with component gateways enabled.
 gcloud dataproc clusters create $PHS_NAME \
   --project=${PROJECT_ID} \
   --region=${REGION} \
+  --subnet $SUBNET \
   --single-node \
   --image-version=2.0 \
   --enable-component-gateway \

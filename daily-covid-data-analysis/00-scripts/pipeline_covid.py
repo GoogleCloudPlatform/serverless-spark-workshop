@@ -56,6 +56,10 @@ BATCH_CONFIG1 = {
             },
        
         },
+        "runtime_config":{
+            "version": "1.1",
+        },
+
 }
 
 with models.DAG(

@@ -126,6 +126,7 @@ Next, fill in the following values in the session creation window as shown in th
 - **Session Name**   - A unique identifier for your session
 - **Region**     - The region name provided by the Admin team
 - **Language**    - Pyspark
+- **Version**     - 1.1
 - **Autoshutdown** - 24 hours
 - **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
