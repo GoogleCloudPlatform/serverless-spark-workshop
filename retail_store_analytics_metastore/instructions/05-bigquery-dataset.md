@@ -30,8 +30,8 @@ We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the project you selected-
 
 ```
-BQ_DATASET_NAME= #BigQuery dataset to be created
-
+BQ_DATASET_NAME=<BigQuery dataset to be created>
+REGION=<your_gcp_region>
 ```
 
 <br>
@@ -43,6 +43,6 @@ In Cloud Shell, use the bq mk command to create a dataset under the current proj
 
 
 ```
-bq mk $BQ_DATASET_NAME
+bq mk --location $REGION $BQ_DATASET_NAME
 ```
 <br>

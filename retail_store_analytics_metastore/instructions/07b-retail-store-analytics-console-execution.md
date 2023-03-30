@@ -10,7 +10,7 @@ Following are the lab modules:
 
 ## 1. Understanding the data
 
-The datasets used for this project are 
+The datasets used for this project are
 
 
 1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
@@ -67,7 +67,6 @@ Next, fill in the following values in the batch creation window :
 - **Batch Type**    - PySpark
 - **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_table_creation.py
-- **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 <br>
 
@@ -126,7 +125,6 @@ Next, fill in the following values in the batch creation window :
 - **Batch Type**    - PySpark
 - **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py
-- **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 <br>
 
@@ -185,7 +183,6 @@ Next, fill in the following values in the batch creation window :
 - **Batch Type**    - PySpark
 - **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_inventory.py
-- **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 <br>
 
@@ -243,7 +240,6 @@ Next, fill in the following values in the batch creation window :
 - **Batch Type**    - PySpark
 - **Runtime version** - 1.1 (Spark 3.3, Java 11, Scala 2.12)
 - **Main Python File** - gs://<your_code_bucket_name>/retail_store_analytics_metastore/00-scripts/retail_analytics_suggestionofaisle_id.py
-- **JAR Files** - gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 <br>
 
@@ -269,7 +265,7 @@ Next, fill in the following values in the batch creation window :
 <br>
 
 <kbd>
-<img src=../images/batch_4_21.png /> 
+<img src=../images/batch_4_21.png />
 </kbd>
 
 <br>
@@ -281,24 +277,6 @@ Next, fill in the following values in the batch creation window :
 
 <kbd>
 <img src=../images/batch_3.png />
-</kbd>
-
-<br>
-
-Once all the details are in, you can submit the batch. As the batch starts, you can see the execution details and logs on the console.
-
-<br>
-
-<br>
-
-Once all the details are in, you can submit the batch. As the batch starts, you can see the execution details and logs on the console.
-
-<br>
-
-<br>
-
-<kbd>
-<img src=../images/batch_4_3.png />
 </kbd>
 
 <br>

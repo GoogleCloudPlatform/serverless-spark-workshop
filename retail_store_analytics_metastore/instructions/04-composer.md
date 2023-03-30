@@ -48,7 +48,7 @@ COMPOSER_ENV=   #<your_composer_environment_name>
 REGION=         #Region to be used
 VPC=            #VPC Network Name
 SUBNET=         #Subnet with Private Google Access enabled
-
+PROJECT_NBR=$(gcloud projects list --filter="$(gcloud config get-value project)" --format="value(PROJECT_NUMBER)")
 ```
 
 <br>
@@ -88,6 +88,27 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$COMPOSER_SA@$PROJECT_ID.iam.gserviceaccount.com --role roles/iam.serviceAccountUser
 
+```
+
+#### 3.1.d. ServiceAgentV2Ext role for Composer Service Account
+
+```
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+    --member serviceAccount:$COMPOSER_SA@$PROJECT_ID.iam.gserviceaccount.com --role roles/composer.ServiceAgentV2Ext
+```
+
+#### 3.1.e. ServiceAgentV2Ext role for Composer Default Service Account
+
+```
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+--member serviceAccount:service-$PROJECT_NBR@cloudcomposer-accounts.iam.gserviceaccount.com --role roles/composer.ServiceAgentV2Ext
+```
+
+#### 3.1.f. Editor role for Compute Engine Default Service Account
+
+```
+gcloud projects add-iam-policy-binding $PROJECT_ID \
+--member serviceAccount:$PROJECT_NBR-compute@developer.gserviceaccount.com --role roles/editor --condition=None
 ```            
 
 <br>
@@ -127,7 +148,7 @@ gcloud composer environments create $COMPOSER_ENV \
 --location $REGION \
 --environment-size small \
 --service-account $COMPOSER_SA@$PROJECT_ID.iam.gserviceaccount.com \
---image-version composer-2.0.9-airflow-2.2.3 \
+--image-version composer-2.1.11-airflow-2.4.3 \
 --network $VPC \
 --subnetwork $SUBNET \
 --web-server-allow-all
@@ -140,7 +161,7 @@ gcloud composer environments create $COMPOSER_ENV \
 --location $REGION \
 --environment-size small \
 --service-account $COMPOSER_SA@$PROJECT_ID.iam.gserviceaccount.com \
---image-version composer-2.0.9-airflow-2.2.3 \
+--image-version composer-2.1.11-airflow-2.4.3 \
 --network $VPC \
 --subnetwork $SUBNET \
 --web-server-allow-ip [description=<description>],[ip_range=<ip_address>]
