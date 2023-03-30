@@ -119,7 +119,6 @@ Next, fill in the following values in the session creation window as shown in th
 - **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
 - **History Server Cluster** - projects/<PROJECT_ID>/regions/<REGION_NAME>/clusters/<HISTORY_SERVER_NAME>
-- **Properties** - spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 
 * Click the **SUBMIT** button to create the session.
 
@@ -135,12 +134,6 @@ Next, fill in the following values in the session creation window as shown in th
 <kbd>
 <img src=../images/session2.png />
 </kbd><br>
-
-<br>
-<kbd>
-<img src=../images/session3.png />
-</kbd><br>
-
 
 * Once the Session is created select 'No Kernel' from the kernel dropdown list and then delete the notebook
 
