@@ -10,7 +10,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License. 
+# limitations under the License.
 
 import os
 from airflow.models import Variable
@@ -60,16 +60,13 @@ BATCH_CONFIG1 = {
           code_bucket,
           name,
           database_name
-        ],
-        "jar_file_uris": [
-      "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
-    ]
+        ]
     },
     "environment_config":{
         "execution_config":{
             "service_account": service_account,
             "subnetwork_uri": subnet
-            },         
+            },
         "peripherals_config": {
             "metastore_service": f"projects/{PROJECT_ID}/locations/{REGION}/services/{metastore_name}",
             "spark_history_server_config": {
@@ -93,16 +90,13 @@ BATCH_CONFIG2 = {
           code_bucket,
           name,
           database_name
-        ],
-        "jar_file_uris": [
-      "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
-    ]
+        ]
     },
     "environment_config":{
         "execution_config":{
             "service_account": service_account,
             "subnetwork_uri": subnet
-            },         
+            },
         "peripherals_config": {
             "metastore_service": f"projects/{PROJECT_ID}/locations/{REGION}/services/{metastore_name}",
             "spark_history_server_config": {
@@ -123,16 +117,13 @@ BATCH_CONFIG3 = {
           bq_dataset,
           code_bucket,
           name
-        ],
-        "jar_file_uris": [
-      "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
-    ]
+        ]
     },
     "environment_config":{
         "execution_config":{
             "service_account": service_account,
             "subnetwork_uri": subnet
-            },         
+            },
         "peripherals_config": {
             "metastore_service": f"projects/{PROJECT_ID}/locations/{REGION}/services/{metastore_name}",
             "spark_history_server_config": {
@@ -153,16 +144,13 @@ BATCH_CONFIG4 = {
           bq_dataset,
           code_bucket,
           name
-        ],
-        "jar_file_uris": [
-      "gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar"
-    ]
+        ]
     },
     "environment_config":{
         "execution_config":{
             "service_account": service_account,
             "subnetwork_uri": subnet
-            },         
+            },
         "peripherals_config": {
             "metastore_service": f"projects/{PROJECT_ID}/locations/{REGION}/services/{metastore_name}",
             "spark_history_server_config": {
@@ -182,15 +170,15 @@ with models.DAG(
     catchup=False,
 ) as dag_serverless_batch:
     # [START how_to_cloud_dataproc_create_batch_operator]
-    
+
         create_serverless_batch1 = DataprocCreateBatchOperator(
         task_id="retail_analytics_table_creation",
         project_id=PROJECT_ID,
         region=REGION,
         batch=BATCH_CONFIG1,
         batch_id=BATCH_ID1,
-    )    
-        
+    )
+
         create_serverless_batch2 = DataprocCreateBatchOperator(
         task_id="retail_analytics_sales_per_dow_per_departmentproduct",
         project_id=PROJECT_ID,
@@ -198,8 +186,8 @@ with models.DAG(
         batch=BATCH_CONFIG2,
         batch_id=BATCH_ID2,
     )
-    
-    
+
+
         create_serverless_batch3 = DataprocCreateBatchOperator(
         task_id="retail_analytics_inventory",
         project_id=PROJECT_ID,
@@ -207,7 +195,7 @@ with models.DAG(
         batch=BATCH_CONFIG3,
         batch_id=BATCH_ID3,
     )
-    
+
         create_serverless_batch4 = DataprocCreateBatchOperator(
         task_id="retail_analytics_asile_id",
         project_id=PROJECT_ID,
@@ -215,7 +203,7 @@ with models.DAG(
         batch=BATCH_CONFIG4,
         batch_id=BATCH_ID4,
     )
-    
+
         create_serverless_batch1 >> create_serverless_batch2
         create_serverless_batch2 >> create_serverless_batch3
         create_serverless_batch2 >> create_serverless_batch4

@@ -6,12 +6,12 @@ Following are the lab modules:
 [2. Solution Architecture](07a-retail-store-analytics-gcloud-execution.md#2-solution-architecture)<br>
 [3. Declaring Variables](07a-retail-store-analytics-gcloud-execution.md#3-declaring-variables)<br>
 [4. Running the job as a serverless batch on Dataproc](07a-retail-store-analytics-gcloud-execution.md#4-running-the-job-as-a-serverless-batch-on-dataproc)<br>
-[5. BQ output tables](07a-retail-store-analytics-gcloud-execution.md#5-bq-output-tables)<br> 
+[5. BQ output tables](07a-retail-store-analytics-gcloud-execution.md#5-bq-output-tables)<br>
 [6. Logging](07a-retail-store-analytics-gcloud-execution.md#6-logging)<br>
 
-## 1. Understanding the data 
+## 1. Understanding the data
 
-The datasets used for this project are 
+The datasets used for this project are
 
 
 1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
@@ -114,7 +114,6 @@ gcloud dataproc batches submit \
 --version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_table_creation.py \
---jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
@@ -131,7 +130,6 @@ gcloud dataproc batches submit \
 --version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_sales_per_dow_per_departmentproduct.py \
---jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
@@ -149,12 +147,11 @@ gcloud dataproc batches submit \
 --version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_inventory.py \
---jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
 --metastore-service projects/$PROJECT_ID/locations/$REGION/services/$METASTORE_NAME \
--- $PROJECT_ID $BQ_DATASET_NAME $BUCKET_CODE $NAME 
+-- $PROJECT_ID $BQ_DATASET_NAME $BUCKET_CODE $NAME
 ```
 
 
@@ -167,12 +164,11 @@ gcloud dataproc batches submit \
 --version=1.1 \
 --batch $NAME-retail-analytics-$RANDOM \
 gs://$BUCKET_CODE/retail_store_analytics_metastore/00-scripts/retail_analytics_suggestionofaisle_id.py \
---jars gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --subnet $SUBNET \
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
 --metastore-service projects/$PROJECT_ID/locations/$REGION/services/$METASTORE_NAME \
--- $PROJECT_ID $BQ_DATASET_NAME $BUCKET_CODE $NAME 
+-- $PROJECT_ID $BQ_DATASET_NAME $BUCKET_CODE $NAME
 ```
 
 

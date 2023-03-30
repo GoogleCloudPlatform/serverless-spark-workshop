@@ -10,7 +10,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License. 
+# limitations under the License.
 
 import os
 from pyspark.sql.functions import col
@@ -31,7 +31,7 @@ database_name=sys.argv[5]
 
 
 # Building the Spark Session
-spark = SparkSession.builder.appName('pyspark-retail-inventory').config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar').getOrCreate()
+spark = SparkSession.builder.appName('pyspark-retail-inventory').getOrCreate()
 
 spark.sql(""" USE {}""".format(database_name));
 

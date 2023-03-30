@@ -10,7 +10,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License. 
+# limitations under the License.
 
 import pyspark
 from datetime import datetime
@@ -34,7 +34,7 @@ database_name=sys.argv[5]
 
 
 # Building the Spark Session
-spark = SparkSession.builder.appName('pyspark-retail-inventory').config('spark.jars', 'gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar').getOrCreate()
+spark = SparkSession.builder.appName('pyspark-retail-inventory').getOrCreate()
 
 #Creating the database and using it.
 
@@ -75,7 +75,7 @@ spark.sql(""" CREATE EXTERNAL TABLE orders (
   order_number STRING COMMENT 'order_number',
   order_dow STRING COMMENT 'order_dow',
   order_hour_of_day STRING COMMENT 'order_hour_of_day',
-  days_since_prior_order STRING COMMENT 'days_since_prior_order'  
+  days_since_prior_order STRING COMMENT 'days_since_prior_order'
 ) USING CSV
 OPTIONS (path "gs://{}/retail_store_analytics_metastore/01-datasets/orders",
         delimiter ",",
@@ -113,5 +113,3 @@ OPTIONS (path "gs://{}/retail_store_analytics_metastore/01-datasets/order_produc
 
 
 print('Job Completed Successfully!')
-
-

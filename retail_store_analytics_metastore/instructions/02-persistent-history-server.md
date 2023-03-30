@@ -5,8 +5,8 @@ This module includes all prerequisites for running the Serverless Spark lab-<br>
 [2. Create a Bucket](02-persistent-history-server.md#2-create-a-bucket)<br>
 [3. Create a Spark Persistent History Server](02-persistent-history-server.md#3-create-a-spark-persistent-history-server)<br>
 
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. GCP Project Details
 Note the project number and project ID. <br>
@@ -17,7 +17,7 @@ Grant the following permissions
 - Viewer
 - Dataproc Editor
 - Storage Admin
-                                
+
 
 #### 3. Attach cloud shell to your project.
 Open Cloud shell or navigate to [shell.cloud.google.com](https://shell.cloud.google.com) <br>
@@ -29,7 +29,7 @@ gcloud config set project $PROJECT_ID
 
 <br>
 
-## 1. Declare variables 
+## 1. Declare variables
 
 We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the project you selected-
@@ -39,7 +39,7 @@ PROJECT_ID= #Project ID
 REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
 SUBNET= #subnet
-
+PHS_NAME= #Your PHS cluster name
 ```
 
 <br>
@@ -59,7 +59,7 @@ gsutil mb -p $PROJECT_ID -c STANDARD -l $REGION -b on gs://$BUCKET_PHS
 A single node dataproc cluster will be created with component gateways enabled.
 
 ```
-gcloud dataproc clusters create spark-phs \
+gcloud dataproc clusters create $PHS_NAME \
   --project=${PROJECT_ID} \
   --region=${REGION} \
   --subnet=${SUBNET} \
