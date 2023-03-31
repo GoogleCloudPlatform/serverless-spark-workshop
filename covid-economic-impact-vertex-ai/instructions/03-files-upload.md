@@ -56,6 +56,7 @@ gsutil mb -p $PROJECT_ID -c STANDARD -l $REGION -b on gs://$BUCKET_CODE
 
 To upload the code repository, please follow the below steps:
 * Extract the compressed code repository folder to your local Machine
+* Unzip the file at: 01-datasets/stock.csv.zip to 01-datasets/stock.csv
 * Next, navigate to the bucket created in previous step for storing the code and data files and upload the extracted code repository by using the 'Upload Folder' option in Google Cloud Storage Bucket as shown below:
 
 <br>
