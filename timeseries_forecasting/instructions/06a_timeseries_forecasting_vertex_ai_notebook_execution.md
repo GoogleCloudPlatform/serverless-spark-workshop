@@ -49,7 +49,7 @@ Select Workbench from the left scroll bar of the Vertex AI main page.
 Select the Managed Notebooks tab.
 In the Managed Notebooks tab , click the New Notebook icon.
 
-![This is a alt text.](..images/session6.png "Architectural Diagram.")
+![This is a alt text.](../images/session6.png "Architectural Diagram.")
 
 #### Next, fill in the following values in the Notebook creation window as shown in the images below:
 
