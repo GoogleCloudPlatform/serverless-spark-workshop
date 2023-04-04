@@ -46,11 +46,7 @@ REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
 BUCKET_CODE=
 BQ_DATASET_NAME=
-ENVIRONMENT_NAME #Name of the DAGS Environment
-LOCATION # Location of the DAG
-PD_NAME =  #name of the persistent disk for your environment
-PD_LOCATION = #the location of the persistent disk. For example, the location can be [us-central1-a]
-
+PHS_NAME = Name of your PHS cluster in the dataproc.
 ```
 
 <br>
@@ -73,7 +69,7 @@ gcloud alpha storage rm --recursive gs://$BUCKET_CODE
 Run the below command to delete Spark PHS
 
 ```
-gcloud dataproc clusters delete spark-phs \
+gcloud dataproc clusters delete ${PHS_NAME} \
 	--region=${REGION}
 ```
 
@@ -94,7 +90,7 @@ Select the sessions created as part of this lab and click on **Delete**
 <br>
 
 <kbd>
-<img src=../images/sessions6.png />
+<img src=/images/sessions6.png />
 </kbd>
 
 <br>
@@ -106,7 +102,31 @@ Select the sessions created as part of this lab and click on **Delete**
  <br>
 
 <kbd>
-<img src=../images/sessions7.png />
+<img src=/images/sessions7.png />
 </kbd>
 
-<br>   
+<br> 
+
+## 7. Delete Artifact Registry
+
+    Select your artifact registry and click on delete
+
+ <br>
+
+<kbd>
+<img src=/images/delete_artifact_registry.png />
+</kbd>
+
+<br>
+
+## 8. Delete VM
+
+    Select your VM and click on delete
+
+ <br>
+
+<kbd>
+<img src=/images/delete_vm.png />
+</kbd>
+
+<br>

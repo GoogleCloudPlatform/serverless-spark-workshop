@@ -38,7 +38,7 @@ item - Item ID<br>
 ## 2. Solution Architecture
 
 
-![this is a screenshot of the solution diagram](../images/Flow_of_Resources1.png)
+![this is a screenshot of the solution diagram](/images/Flow_of_Resources1.png)
 
 
 ## 3. Declaring cloud shell variables
@@ -103,6 +103,7 @@ Run the below on cloud shell to create session. -
   gcloud beta dataproc sessions create spark $SESSION_NAME  \
 --project=${PROJECT_ID} \
 --location=${REGION} \
+--version=1.1 \
 --property=spark.jars=gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar \
 --history-server-cluster=projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
 --subnet=$SUBNET \
@@ -116,13 +117,13 @@ Run the below on cloud shell to create session. -
 <br>
 
 <kbd>
-<img src=../images/sessions1.png />
+<img src=/images/sessions1.png />
 </kbd>
 <br>
 <br>
 
 <kbd>
-<img src=../images/sessions2.png />
+<img src=/images/sessions2.png />
 </kbd>
 <br>
 <br>
@@ -131,7 +132,7 @@ Run the below on cloud shell to create session. -
 
 <br>
 <kbd>
-<img src=../images/sessions3.png />
+<img src=/images/sessions3.png />
 </kbd>
 <br>
 <br>
@@ -140,7 +141,7 @@ Run the below on cloud shell to create session. -
 
 <br>
 <kbd>
-<img src=../images/sessions4.png />
+<img src=/images/sessions4.png />
 </kbd>
 <br>
 <br>
@@ -160,7 +161,7 @@ To query the data to find the list of stocks with highest stringency Index, run 
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=../images/bigquery.PNG />
+<img src=/images/bigquery.PNG />
 </kbd>
 
 <br>
@@ -181,15 +182,15 @@ As the session is still in active state , we will be able to find the logs in sh
 <br>
 
 <kbd>
-<img src=../images/phs1.png />
+<img src=/images/phs1.png />
 </kbd>
 
 <kbd>
-<img src=../images/image13_1.PNG />
+<img src=/images/image13_1.PNG />
 </kbd>
 
 <kbd>
-<img src=../images/image13.PNG />
+<img src=/images/image13.PNG />
 </kbd>
 
 <br>

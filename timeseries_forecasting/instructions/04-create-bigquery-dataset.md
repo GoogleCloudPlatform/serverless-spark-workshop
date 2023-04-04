@@ -30,9 +30,9 @@ We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the project you selected-
 
 ```
-PROJECT_ID=$(gcloud config get-value project) = #current GCP project where we are building our use case
-BQ_DATASET_NAME = #BigQuery dataset to be created
-
+PROJECT_ID=$(gcloud config get-value project) #current GCP project where we are building our use case
+BQ_DATASET_NAME= #BigQuery dataset to be created
+REGION=#Your GCP region
 ```
 
 <br>
@@ -44,6 +44,6 @@ In Cloud Shell, use the bq mk command to create a dataset under the current proj
 
 
 ```
-bq mk $BQ_DATASET_NAME
+bq mk --location $REGION $BQ_DATASET_NAME
 ```
 <br>

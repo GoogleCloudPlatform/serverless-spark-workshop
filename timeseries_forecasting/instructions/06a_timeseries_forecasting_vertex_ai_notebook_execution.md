@@ -35,7 +35,7 @@ item - Item ID
 ## 2. Solution Architecture
 
 
-![this is a screenshot of the solution diagram](../images/Flow_of_Resources.png)
+![this is a screenshot of the solution diagram](/images/Flow_of_Resources.png)
 
 
 <br>
@@ -49,9 +49,13 @@ Select Workbench from the left scroll bar of the Vertex AI main page.
 Select the Managed Notebooks tab.
 In the Managed Notebooks tab , click the New Notebook icon.
 
-![This is a alt text.](../images/session6.png "Architectural Diagram.")
+![This is a alt text.](images/session6.png "Architectural Diagram.")
 
 #### Next, fill in the following values in the Notebook creation window as shown in the images below:
+
+- Note: Currently managed notebooks are only supported in: us-central1, us-west1, us-west4, northamerica-northeast1, southamerica-east1, europe-west1, europe-west4, asia-northeast1, asia-southeast1, asia-south1, asia-east2, australia-southeast1, asia-northeast3.
+ 
+<br>
 
 - **Notebook Name**   - A unique identifier for your Notebook
 - **Region**     - The region name provided by the Admin team
@@ -59,12 +63,12 @@ In the Managed Notebooks tab , click the New Notebook icon.
 
  * Provide a name and region to the notebook and select 'Single User Only' and click 'Create'. We will let the 'Advanced Settings' remain as the default values.
 
-![This is a alt text.](../images/session7.png "Architectural Diagram.")
+![This is a alt text.](images/session7.png "Architectural Diagram.")
 
 
  * Once the notebook is running, click the 'OPEN JUPYTERLAB' option next to the Notebook name as shown below
 
- ![This is a alt text.](../images/session8.png)
+ ![This is a alt text.](images/session8.png)
 
 * Follow the on screen instructions to launch the JupyterLab session
 
@@ -74,13 +78,13 @@ In the Managed Notebooks tab , click the New Notebook icon.
 
 <br>
 <kbd>
-<img src=../images/session4.png />
+<img src=/images/session4.png />
 </kbd>
 <br>
 
 <br>
 <kbd>
-<img src=../images/session5.png />
+<img src=/images/session5.png />
 </kbd>
 <br>
 
@@ -93,35 +97,36 @@ Next, fill in the following values in the session creation window as shown in th
 
 - **Session Name**   - A unique identifier for your session
 - **Region**     - The region name provided by the Admin team
+- **Version**    - 1.1
 - **Language**    - Pyspark
 - **Autoshutdown** - 24 hours
 - **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
 - **History Server Cluster** - projects/<PROJECT_ID>/regions/<REGION_NAME>/clusters/<HISTORY_SERVER_NAME>
-- **Container** - gcr.io/<PROJECT_ID>/<CONTAINER_IMAGE>:1.0.1
+- **Container**  - #GCP-REGION-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:1.0.1
 
 * Click the **SUBMIT** button to create the session.
 
 <br>
 <kbd>
-<img src=../images/session1.png />
+<img src=/images/session1.png />
 </kbd><br>
 
 <br>
 <kbd>
-<img src=../images/session2.png />
+<img src=/images/session2.png />
 </kbd><br>
 
 <br>
 <kbd>
-<img src=../images/session3.png />
+<img src=/images/session3.png />
 </kbd><br>
 
 
 * Once the Session is created select 'No Kernel' from the kernel dropdown list and then delete the notebook
 
 <kbd>
-<img src=../images/selectkernel.png />
+<img src=/images/selectkernel.png />
 </kbd>
 
 <br>
@@ -135,7 +140,7 @@ Next, fill in the following values in the session creation window as shown in th
 <br>
 
 <kbd>
-<img src=../images/session10.png />
+<img src=/images/session10.png />
 </kbd>
 
 ### 3.3. Check the output table in BigQuery
@@ -153,7 +158,7 @@ To query the data to find the list of stocks with highest stringency Index, run 
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=../images/bigquery.PNG />
+<img src=/images/bigquery.PNG />
 </kbd>
 
 <br>
@@ -174,15 +179,9 @@ As the session is still in active state , we will be able to find the logs in sh
 <br>
 
 <kbd>
-<img src=../images/phs1.png />
+<img src=/images/phs1.png />
 </kbd>
 
 <kbd>
-<img src=../images/image13_1.PNG />
+<img src=/images/image13_1.PNG />
 </kbd>
-
-<kbd>
-<img src=../images/image13.PNG />
-</kbd>
-
-<br>
