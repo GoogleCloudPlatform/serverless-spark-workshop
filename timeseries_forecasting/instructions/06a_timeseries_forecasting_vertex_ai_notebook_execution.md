@@ -53,6 +53,10 @@ In the Managed Notebooks tab , click the New Notebook icon.
 
 #### Next, fill in the following values in the Notebook creation window as shown in the images below:
 
+- Note: Currently managed notebooks are only supported in: us-central1, us-west1, us-west4, northamerica-northeast1, southamerica-east1, europe-west1, europe-west4, asia-northeast1, asia-southeast1, asia-south1, asia-east2, australia-southeast1, asia-northeast3.
+ 
+<br>
+
 - **Notebook Name**   - A unique identifier for your Notebook
 - **Region**     - The region name provided by the Admin team
 - **Permission Type**    - Single User Only (Single user only mode restricts access to the specified user)
@@ -93,12 +97,13 @@ Next, fill in the following values in the session creation window as shown in th
 
 - **Session Name**   - A unique identifier for your session
 - **Region**     - The region name provided by the Admin team
+- **Version**    - 1.1
 - **Language**    - Pyspark
 - **Autoshutdown** - 24 hours
 - **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
 - **History Server Cluster** - projects/<PROJECT_ID>/regions/<REGION_NAME>/clusters/<HISTORY_SERVER_NAME>
-- **Container** - gcr.io/<PROJECT_ID>/<CONTAINER_IMAGE>:1.0.1
+- **Container**  - #GCP-REGION-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:1.0.1
 
 * Click the **SUBMIT** button to create the session.
 
@@ -180,9 +185,3 @@ As the session is still in active state , we will be able to find the logs in sh
 <kbd>
 <img src=../images/image13_1.PNG />
 </kbd>
-
-<kbd>
-<img src=../images/image13.PNG />
-</kbd>
-
-<br>

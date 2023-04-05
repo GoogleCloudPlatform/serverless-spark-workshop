@@ -38,8 +38,8 @@ Run the below in cloud shells coped to the project you selected-
 PROJECT_ID= #Project ID
 REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
-PHS_NAME = # Name for Persistent History Server
-SUBNET= #Subnet
+PHS_NAME= #Name for Persistent History Server
+SUBNET= #subnet name that you made in the previous module. 
 ```
 
 <br>
@@ -62,8 +62,8 @@ A single node dataproc cluster will be created with component gateways enabled.
 gcloud dataproc clusters create $PHS_NAME \
   --project=${PROJECT_ID} \
   --region=${REGION} \
-  --subnet=${SUBNET} \
   --single-node \
+  --subnet=${SUBNET} \
   --image-version=2.0 \
   --enable-component-gateway \
   --properties=spark:spark.history.fs.logDirectory=gs://${BUCKET_PHS}/phs/*/spark-job-history

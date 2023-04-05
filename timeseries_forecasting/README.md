@@ -1,6 +1,4 @@
-# Timeseries Forecasting Analysis using Vertex AI and Serverless Spark
-
-Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
+# Timeseries forecasting Analysis using Vertex AI and Serverless Spark
 
 ## Overview
 
@@ -14,8 +12,8 @@ This repository collects information to assess the Timeseries Forecasting
 ## Services Used
 * Google Cloud Storage
 * Google Cloud Dataproc
-* Google Cloud BigQuery
-* Google Cloud Vertex AI
+* Google Cloud Bigquery
+* Google Cloud VertexAI
 
 ## 3. Permissions / IAM Roles required to run the lab
 
