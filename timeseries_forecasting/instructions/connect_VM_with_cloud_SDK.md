@@ -1,8 +1,24 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # About
 
 This module will focus on installing Cloud SDK to your local machine and connect to VM
 <br><br>
-                                   
+
 
 #### 1. Download Cloud SDK
 Download GCloud SDK Package https://cloud.google.com/sdk/docs/downloads-versioned-archives#installation_instructions
@@ -33,13 +49,13 @@ cd google-cloud-sdk
 ./install.sh
 ```
 <br>
-You should see a warning pop up relate to modify profile to update your $PATH and enable shell command. 
+You should see a warning pop up relate to modify profile to update your $PATH and enable shell command.
 <br>
 <kbd>
 <img src=/images/update_path.png />
 </kbd>
 <br>
-Type <b>Y</b> and hit <b>return/enter</b>. 
+Type <b>Y</b> and hit <b>return/enter</b>.
 <br>
 This will make it easier to run gcloud anywhere in terminal. It is recommend to leave it blank by default.<br>
 Hit <b>return</b> to accept the default.

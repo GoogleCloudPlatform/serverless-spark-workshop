@@ -1,11 +1,27 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # About
 
-This module will focus on setting up VM and install docker to be ready for making an image. 
+This module will focus on setting up VM and install docker to be ready for making an image.
 <br><br>
-                                   
+
 
 #### 1. Setting up VM
-Navigate to compute engine > VM instances. 
+Navigate to compute engine > VM instances.
 Select **CREATE INSTANCE**.
 <kbd>
 <img src=/images/compute_engine.png />
@@ -26,7 +42,7 @@ We do want to increase the VM boot size. Select **CHANGE**
 </kbd>
 <br><br>
 
-Next, we want to increase the size into 20 GB since making an image require huge memory space. Feel free to increase the size if you ran into the memory space issue. 
+Next, we want to increase the size into 20 GB since making an image require huge memory space. Feel free to increase the size if you ran into the memory space issue.
 <br>
 <kbd>
 <img src=/images/increase_size_boot_disk.png />
@@ -77,7 +93,7 @@ sudo apt-get update -yq && sudo apt-get install -yq \
 ```
 
 ## 2. Get authority to use docker
-Type this code to get authority to use docker. 
+Type this code to get authority to use docker.
 <br>
 
 ```
@@ -98,7 +114,7 @@ Add your user to the docker group
 sudo usermod -aG docker ${USER}
 ```
 <br>
-You will need to log out and log back in so that the group member will be re-evaluted or type this command. 
+You will need to log out and log back in so that the group member will be re-evaluted or type this command.
 <br>
 
 ```

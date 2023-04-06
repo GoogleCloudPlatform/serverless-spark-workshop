@@ -1,3 +1,19 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # Wikipedia Page Views Analysis from the BigQuery UI powered by Dataproc Serverless Spark
 
 Lab contributed by [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and Google.
@@ -71,14 +87,14 @@ pageViewsSubsetEnglishByTitleDF = pageViewsSubsetEnglishDF \
 .agg(F.sum('views').alias('total_views'))
 
 # Order by and print
-pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20) 
+pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 ```
 
 ## 6. Lets get started
 
 ### 6.1. Navigate to the BQ UI from Cloud Console
 
-![bq-1](images/00-bq-01.png) 
+![bq-1](images/00-bq-01.png)
 <br>
 
 ### 6.2. Click on create
@@ -88,12 +104,12 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ### 6.3. Click on "Compose new PySpark"
 
-![bq-3](images/00-bq-03.png) 
+![bq-3](images/00-bq-03.png)
 <br>
 
 ### 6.4. Click on "More -> PySpark Options"
 
-![bq-4](images/00-bq-04.png) 
+![bq-4](images/00-bq-04.png)
 <br>
 
 ### 6.5. Click on "Browse and select staging folder"
@@ -126,7 +142,7 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 You should see a new batch job-
 
-![bq-11](images/00-bq-11.png) 
+![bq-11](images/00-bq-11.png)
 <br>
 
 ### 6.11. Switch back to the BQ UI to view the results
@@ -144,7 +160,6 @@ You should see the autoscale kick in after 2 minutes
 
 
 ##### =====================================================================================================
-##### THIS CONCLUDES THIS LAB 
+##### THIS CONCLUDES THIS LAB
 ##### PROGRESS TO NEXT LAB, OR SHUT DOWN RESOURCES
 ##### =====================================================================================================
-

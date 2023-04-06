@@ -1,3 +1,19 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # About
 
 This module includes all prerequisites for running the Serverless Spark lab-<br>
@@ -5,8 +21,8 @@ This module includes all prerequisites for running the Serverless Spark lab-<br>
 [2. Create dataset in your project](01-gcp-prerequisites.md#2-create-a-new-dataset-in-your-project)<br>
 [3. Create Spark Connection](01-gcp-prerequisites.md#3-create-spark-connection)<br>
 [4. Grant the Service Account the following roles](01-gcp-prerequisites.md#4-grant-the-service-account-the-following-roles)<br>
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. Create a project new project or select an existing project.
 Note the project number and project ID. <br>

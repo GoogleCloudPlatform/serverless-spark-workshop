@@ -1,4 +1,4 @@
--- Copyright 2022 Google LLC.
+-- Copyright 2023 Google LLC.
 -- SPDX-License-Identifier: Apache-2.0
 
 USE `retail_store_analytics_${username}_db`;
@@ -18,6 +18,3 @@ CREATE TEMPORARY VIEW average_sales AS select ss.*,AVG(sales_per_dow_per_departm
 CREATE TEMPORARY VIEW inventory AS select ASE.*,round(avg_sales-sales_per_dow_per_departmentproduct) AS inventory from average_sales ASE;
 
 select * from inventory where product_id=27845;
-
-
-

@@ -1,12 +1,12 @@
 <!---->
-  Copyright 2022 Google LLC
- 
+  Copyright 2023 Google LLC
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
- 
+
        http://www.apache.org/licenses/LICENSE-2.0
- 
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -51,8 +51,8 @@ We will analyze Chicago Crimes in BigQuery from a Jupyer Notebook on Vertex AI W
 **Goals:**
 1. Understand how to create and attach a Dataproc Serverless Spark interactive session to your Jupyter notebook  
 2. Learn how to switch the Dataproc Serverless Spark interactive session created, between notebooks
-3. Learn to navigate Dataproc UI for the Serverless Spark interactive session 
-4. Browse the Spark UI of the persistent Spark History Server, for the Serverless Spark interactive session 
+3. Learn to navigate Dataproc UI for the Serverless Spark interactive session
+4. Browse the Spark UI of the persistent Spark History Server, for the Serverless Spark interactive session
 5. Learn how to anayze data in BigQuery using the BigQuery Spark connector.
 
 **Pre-requisite:**
@@ -111,14 +111,14 @@ Open JupyterLab as shown below
 <hr>
 
 
-## 5. Open the Chicago Crimes notebook 
+## 5. Open the Chicago Crimes notebook
 
 ![UMNBS](../06-images/module-2-01.png)   
 <br><br>
 
 <hr>
 
-## 6. Click on "Launcher" to create an interactive Spark session 
+## 6. Click on "Launcher" to create an interactive Spark session
 
 ![UMNBS](../06-images/module-2-02.png)   
 <br><br>
@@ -218,7 +218,4 @@ Save or discard changes as needed. Be sure to "keep session" though when prompte
 
 <hr>
 
-This concludes the module. In the [next module](../05-lab-guide/Module-03-Author-ML-Experiments-With-Spark-Notebooks.md), you will run a complete model trainng exercise with notebooks - pre-processing, model training, hyperparameter tuning, batch scoring. 
-
-
-
+This concludes the module. In the [next module](../05-lab-guide/Module-03-Author-ML-Experiments-With-Spark-Notebooks.md), you will run a complete model trainng exercise with notebooks - pre-processing, model training, hyperparameter tuning, batch scoring.

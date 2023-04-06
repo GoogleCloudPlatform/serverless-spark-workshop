@@ -1,5 +1,21 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # COVID-19 Economic Impact Assessment on Serverless Spark (Batches)
- 
+
  Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
@@ -11,7 +27,7 @@ In this example, you will look at executing a simple PySpark code which runs on 
 This repository collects information to assess the _economic impact_ of Covid-19 in the stock market in more than 1850 companies in 50 different countries around the world.
 This repository includes a dataset of more than 2.5 million rows with the stock market data of each company that dates back 400 days, which will shows the stock values before the outbreak and the impact during the pandemic.
 This repository also includes a file produced by the **Oxford Coronavirus Government Response Tracker (OxCGRT project)** which contains information of each country with a _Government Response Stringency Index_ which indicates the stringency regarding each government's response to reduce the impacts of covid-19 (https://ourworldindata.org/policy-responses-covid#government-stringency-index).
- 
+
 ## Services Used
 * Google Cloud Storage
 * Google Cloud Dataproc
@@ -68,7 +84,7 @@ There are 2 ways of perforing the lab.
 - Using [Google Cloud Shell](instructions/05a_covid_economic_impact_gcloud_execution.md)
 - Using [GCP console](instructions/05b_covid_economic_impact_console_execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 

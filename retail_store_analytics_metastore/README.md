@@ -1,3 +1,19 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # Retail store analytics using Serverless Spark
 Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
@@ -67,7 +83,7 @@ The lab consists of the following modules.
 1. Understand the Data
 2. Solution Architecture
 3. Data Preparation
-4. Executing the serverless batches. 
+4. Executing the serverless batches.
 5. Examine the logs
 6. Explore the output
 
@@ -76,7 +92,7 @@ There are 3 ways of perforing the lab.
 - Using [GCP console](instructions/07b-retail-store-analytics-console-execution.md )
 - Using [Cloud Composer](instructions/07c-retail-store-analytics-airflow-execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 
@@ -87,5 +103,3 @@ Delete the resources after finishing the lab. <br>
 Refer - [Cleanup](instructions/08-cleanup.md )
 
 <br>
-
-

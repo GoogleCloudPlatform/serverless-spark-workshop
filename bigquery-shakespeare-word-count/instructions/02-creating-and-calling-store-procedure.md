@@ -1,8 +1,24 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 ## 1. Create the Store Procedure
 
 * Go to the [BigQuery console](https://console.cloud.google.com/bigquery)
 
-![bigquery](../images/bigquery.png) 
+![bigquery](../images/bigquery.png)
 
 * Open the external connection that has been created and then click on 'Create Store Procedure'
 * Edit the query that appears in the Editor as follows:
@@ -38,4 +54,4 @@ CALL `<insert_PROJECT_ID>`.<insert_bq_dataset_name>.<insert_user_name>_shakespea
 ### 3. Results
 
 * Results can be viewed by clicking on 'View Results' > 'Execution Details'
-![results](../images/results.png) 
+![results](../images/results.png)

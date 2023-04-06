@@ -1,12 +1,12 @@
 <!---->
-  Copyright 2022 Google LLC
- 
+  Copyright 2023 Google LLC
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
- 
+
        http://www.apache.org/licenses/LICENSE-2.0
- 
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -179,7 +179,7 @@ Batch [customer-churn-preprocessing-10179] submitted.
 ```
 As the job progresses, the output is printed to the terminal.
 
-### 8.2. Validate completion in the Dataproc UI 
+### 8.2. Validate completion in the Dataproc UI
 
 ![M4](../06-images/module-4-14.png)   
 <br><br>
@@ -200,15 +200,15 @@ echo $PIPELINE_ID
 Run the below query in BigQuery. Be sure to add pipeline_id to the where clause.
 ```
 SELECT * FROM `customer_churn_ds.model_feature_importance_scores`
- WHERE operation='training' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+ WHERE operation='training' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 
 ### 8.5. Review the model metrics persisted in BigQuery
 Run the below query in BigQuery. Be sure to add pipeline_id to the where clause.
 
 ```
-SELECT * FROM `customer_churn_ds.model_metrics` 
- WHERE operation='training' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+SELECT * FROM `customer_churn_ds.model_metrics`
+ WHERE operation='training' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 
 ### 8.6. Review the model test results in BigQuery
@@ -217,9 +217,9 @@ Run the below queries in BigQuery. Be sure to add pipeline_id to the where claus
 Query the predictions-
 ```
 SELECT churn, prediction, *
- FROM `customer_churn_ds.test_predictions` 
+ FROM `customer_churn_ds.test_predictions`
  WHERE operation='training'
- AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+ AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 <hr>
 
@@ -244,7 +244,7 @@ gs://$CODE_BUCKET/pyspark/hyperparameter_tuning.py \
 -- --pipelineID=${PIPELINE_ID} --projectNbr=$PROJECT_NBR --projectID=$PROJECT_ID --displayPrintStatements=True
 ```
 
-### 9.2. Validate completion in the Dataproc UI 
+### 9.2. Validate completion in the Dataproc UI
 
 ![M4](../06-images/module-4-16.png)   
 <br><br>
@@ -264,8 +264,8 @@ echo $PIPELINE_ID
 Run the below query in BigQuery. Be sure to add pipeline_id to the where clause.
 
 ```
-SELECT * FROM `customer_churn_ds.model_metrics` 
- WHERE operation='hyperparameter-tuning' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+SELECT * FROM `customer_churn_ds.model_metrics`
+ WHERE operation='hyperparameter-tuning' AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 
 ### 9.5. Review the model test results in BigQuery
@@ -274,9 +274,9 @@ Run the below queries in BigQuery. Be sure to add pipeline_id to the where claus
 Query the predictions-
 ```
 SELECT churn, prediction, *
- FROM `customer_churn_ds.test_predictions` 
+ FROM `customer_churn_ds.test_predictions`
  WHERE operation='hyperparameter-tuning'
- AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+ AND PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 <hr>
 
@@ -305,19 +305,19 @@ Run the below queries in BigQuery. Be sure to add pipeline_id to the where claus
 Query the predictions-
 ```
 SELECT *
- FROM `customer_churn_ds.batch_predictions` 
- WHERE PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID' 
+ FROM `customer_churn_ds.batch_predictions`
+ WHERE PIPELINE_ID='REPLACE_WITH_YOUR_PIPELINE_ID'
 ```
 <hr>
 
 ## 11. Creating a custom container image
 
 ### 11.1. About the Dataproc Serverless Spark image
-Dataproc Serverless Spark has a base container image it uses by default if you dont supply one. Apache Spark applications/jobs accept dependencies that can be supplied at submission time or can be packaged into the artifacts like jars. 
+Dataproc Serverless Spark has a base container image it uses by default if you dont supply one. Apache Spark applications/jobs accept dependencies that can be supplied at submission time or can be packaged into the artifacts like jars.
 
 ### 11.2. When do you need a custom container image?
-When you have a lot of dependencies that cant be supplied at runtime or have a company standard and governance on libraries/dependencies, you can use an image instead. 
- 
+When you have a lot of dependencies that cant be supplied at runtime or have a company standard and governance on libraries/dependencies, you can use an image instead.
+
 ### 11.3. Dos and Donts, what's supported and what's coming
 1. Spark and Java should not be included in the image
 2. Push your custom container image into Google Container Registry
@@ -482,7 +482,7 @@ gsutil cp $BQ_CONNECTOR_JAR_URI .
 wget -P . https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 echo "Completed downloading dependencies"
 
-# Authenticate 
+# Authenticate
 gcloud auth configure-docker ${GCP_REGION}-docker.pkg.dev -q
 
 # Build image
@@ -505,4 +505,3 @@ https://cloud.google.com/dataproc-serverless/docs/guides/custom-containers
 This concludes the module. Proceed to the [next module](../05-lab-guide/Module-05-Author-Vertex-AI-Pipeline.md) where we will operationalize the scripts we just tested into a Vertex AI pipeline.
 
 <hr>
-

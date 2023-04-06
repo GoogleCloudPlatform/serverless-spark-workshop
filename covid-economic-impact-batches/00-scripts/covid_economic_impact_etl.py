@@ -1,16 +1,18 @@
-# Copyright 2022 Google LLC
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#    https://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License. 
+'''
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ '''
 
 from datetime import datetime
 import os
@@ -53,7 +55,7 @@ stock_table = stock_df.selectExpr('Ticker as stock_id','names as company_name','
 
 # write stocks table to parquet files
 stock_table.write.format('bigquery') .mode("overwrite").option('table', project_name+':'+dataset_name+'.'+user_name+'_stocks') .save()
-    
+
 # create time_table
 time_table = stringency_df.select(['Date']).withColumn('day', dayofmonth('Date')).withColumn('month', month('Date')).withColumn('year', year('Date')).withColumn('weekday', date_format('Date', 'E')).dropDuplicates()
 time_table.write.format('bigquery') .mode("overwrite").option('table', project_name+':'+dataset_name+'.'+user_name+'_times') .save()
@@ -64,7 +66,7 @@ Ec_status_table = spark.sql(
 
 '''SELECT DISTINCT monotonically_increasing_id() as ec_status_id, stringency.Date as date, stringency.Code as country_code, stringency.Stringency_Index as stringency_index, stocks.Ticker as stock_id, stocks.Value_Type as value_type, stocks.Value as value
 FROM stocks
-JOIN stringency 
+JOIN stringency
 ON stocks.Date = stringency.Date AND stocks.Country = stringency.Country'''
 
 )

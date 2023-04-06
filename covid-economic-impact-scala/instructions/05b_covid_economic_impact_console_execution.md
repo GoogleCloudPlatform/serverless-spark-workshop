@@ -1,3 +1,19 @@
+<!---->
+  Copyright 2023 Google LLC
+
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+
+       http://www.apache.org/licenses/LICENSE-2.0
+
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License.
+ <!---->
+
 # Covid Economic Impact using Serverless Spark through Google Cloud Console
 
 **Goal** - Data Preparation and Model Training for Detecting Malware in Network.
@@ -87,7 +103,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 - **Runtime Version** - 1.1
 - **Main Class** - org.teksystems.covideconomicimpact
 - **JAR Files** - gs://<your_code_bucket_name>/covid-economic-impact-scala/00-scripts/covid-economic-impact-assessment_2.12-1.0.jar <br>
-                  gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar 
+                  gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 - **Arguments** - <br>
   Four Arguments needs to be provided. <br>
     * <your_project_id>

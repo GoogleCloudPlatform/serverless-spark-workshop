@@ -1,4 +1,4 @@
-# Copyright 2022 Google LLC
+# Copyright 2023 Google LLC
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -10,7 +10,7 @@
 # distributed under the License is distributed on an "AS IS" BASIS,
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
-# limitations under the License. 
+# limitations under the License.
 
 from pyspark.sql import SparkSession
 from pyspark.sql.functions import expr
@@ -40,7 +40,7 @@ raw_df = spark.readStream \
         .option("mode", "DROPMALFORMED") \
         .option("maxFilesPerTrigger", 1) \
         .load()
-        
+
 
 
 # Flattening the JSON data using explode function.
@@ -57,8 +57,8 @@ flattened_df = explode_df \
         .withColumn("ItemQty", expr("LineItem.ItemQty")) \
         .withColumn("TotalValue", expr("LineItem.TotalValue")) \
         .drop("LineItem")
-		
-		
+
+
 
 # Writing the data to big query .
 spark.conf.set("parentProject", project_name)
@@ -75,6 +75,3 @@ invoiceWriterQuery = flattened_df.writeStream \
         .start()
 
 invoiceWriterQuery.awaitTermination()
-
-
-

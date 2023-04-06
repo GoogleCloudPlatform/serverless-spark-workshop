@@ -1,18 +1,18 @@
 '''
-  Copyright 2022 Google LLC
- 
+  Copyright 2023 Google LLC
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
- 
+
        http://www.apache.org/licenses/LICENSE-2.0
- 
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
   See the License for the specific language governing permissions and
   limitations under the License.
-'''
+ '''
 
 import pyspark
 from pyspark.sql import SparkSession
@@ -25,18 +25,18 @@ import sys
 spark = SparkSession.builder \
                     .appName('churn model') \
                     .getOrCreate()
- 
+
 #Reading the arguments and storing them in variables
 project_name=sys.argv[1]
 dataset_name=sys.argv[2]
 bucket_name=sys.argv[3]
 user_name=sys.argv[4]
- 
+
 #Reading Data into Spark Dataframe.
 #sparkDF = spark.read \
   #.format('bigquery') \
   #.load(project_name+'.'+dataset_name+'.'+ user_name+'_churn_data')
-  
+
 churn_dataset_df = spark.read.options(inferSchema = True, header= True).csv('gs://'+bucket_name+'/customer-churn-prediction-vertex-ai/01-datasets/customer_churn_train_data.csv')
 
 
