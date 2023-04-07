@@ -71,14 +71,14 @@ pageViewsSubsetEnglishByTitleDF = pageViewsSubsetEnglishDF \
 .agg(F.sum('views').alias('total_views'))
 
 # Order by and print
-pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20) 
+pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 ```
 
 ## 6. Lets get started
 
 ### 6.1. Navigate to the BQ UI from Cloud Console
 
-![bq-1](images/00-bq-01.png) 
+![bq-1](images/00-bq-01.png)
 <br>
 
 ### 6.2. Click on create
@@ -88,12 +88,12 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 ### 6.3. Click on "Compose new PySpark"
 
-![bq-3](images/00-bq-03.png) 
+![bq-3](images/00-bq-03.png)
 <br>
 
 ### 6.4. Click on "More -> PySpark Options"
 
-![bq-4](images/00-bq-04.png) 
+![bq-4](images/00-bq-04.png)
 <br>
 
 ### 6.5. Click on "Browse and select staging folder"
@@ -126,7 +126,7 @@ pageViewsSubsetEnglishByTitleDF.orderBy('total_views', ascending=False).show(20)
 
 You should see a new batch job-
 
-![bq-11](images/00-bq-11.png) 
+![bq-11](images/00-bq-11.png)
 <br>
 
 ### 6.11. Switch back to the BQ UI to view the results
@@ -144,7 +144,6 @@ You should see the autoscale kick in after 2 minutes
 
 
 ##### =====================================================================================================
-##### THIS CONCLUDES THIS LAB 
+##### THIS CONCLUDES THIS LAB
 ##### PROGRESS TO NEXT LAB, OR SHUT DOWN RESOURCES
 ##### =====================================================================================================
-

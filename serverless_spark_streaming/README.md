@@ -1,5 +1,5 @@
 # Serverless Spark Streaming
- 
+
 Lab contributed by: [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud)
 
 ## Overview
@@ -65,7 +65,7 @@ There are 2 ways of perforing the lab.
 - Using [Google Cloud Shell](instructions/05a_serverless_spark_streaming_gcloud_execution.md)
 - Using [GCP console](instructions/05b_serverless_spark_streaming_console_execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 

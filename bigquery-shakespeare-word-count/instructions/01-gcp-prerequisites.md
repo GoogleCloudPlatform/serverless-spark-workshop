@@ -5,8 +5,8 @@ This module includes all prerequisites for running the Serverless Spark lab-<br>
 [2. Create dataset in your project](01-gcp-prerequisites.md#2-create-a-new-dataset-in-your-project)<br>
 [3. Create Spark Connection](01-gcp-prerequisites.md#3-create-spark-connection)<br>
 [4. Grant the Service Account the following roles](01-gcp-prerequisites.md#4-grant-the-service-account-the-following-roles)<br>
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. Create a project new project or select an existing project.
 Note the project number and project ID. <br>

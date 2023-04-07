@@ -16,7 +16,7 @@ We will need this for the rest of the lab
 
 #### 1.2. IAM Roles needed to create metastore
 Grant the following permissions
-- 
+-
 - Dataproc Editor
 - Service Account User
 
@@ -56,7 +56,7 @@ Metastore_Version=3.1.2          # Change the metastore version as per the Requi
 <br>
 
 
-## 3. Create a metastore 
+## 3. Create a metastore
 
 ## 3.1. Create a metastore through the google cloud shell
 
@@ -71,7 +71,7 @@ gcloud metastore services create $METASTORE_NAME \
 
 ## 3.2. Create a metastore through the GCP console
 
-Navigate to the Dataproc Service in your GCP project and click on Metastore 
+Navigate to the Dataproc Service in your GCP project and click on Metastore
 Click **+CREATE**>**Composer 2**
 
 <kbd>
@@ -101,7 +101,7 @@ Next, fill in the following values in the metastore creation window :
 - **Network Configuration** - select the network and subnetwork with Private Google Access Enabled
 
 - Next under **Endpoint protocol** select one of the below options: <br>
-**Thrift** 
+**Thrift**
 **gRPC**
 
 - Click on **ADD LABELS** to attach the labels.

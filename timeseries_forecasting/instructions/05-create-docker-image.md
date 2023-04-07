@@ -31,7 +31,7 @@ gsutil cp \
 
 ```
 
-## 2. Create Container Image 
+## 2. Create Container Image
 
 #### 1. Create Dockerfile through vi command
 
@@ -101,5 +101,5 @@ docker push "${CONTAINER_IMAGE}"
 The docker container will be built and pushed to Google Artifact Registry.
 
 <kbd>
-<img src=/images/di_2.png />
+<img src=../images/di_2.png />
 </kbd>

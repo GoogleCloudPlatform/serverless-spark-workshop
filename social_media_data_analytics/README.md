@@ -8,9 +8,9 @@ With the advent of cloud environments, the concept of huge capital investments i
 
 In this example, you will look at executing a simple PySpark code which runs on Serverless batch (a fully managed Dataproc cluster). It is similar to executing code on a Dataproc cluster without the need to initialize, deploy or manage the underlying infrastructure.<br>
 
-This repository processes tweets data using spark and finds out most popular trending #tags, 
-plots a bar graph for the types of tweets and 
-their followers count and also plots a map about the origin of the tweets. 
+This repository processes tweets data using spark and finds out most popular trending #tags,
+plots a bar graph for the types of tweets and
+their followers count and also plots a map about the origin of the tweets.
 
 ## Services Used
 * Google Cloud Storage

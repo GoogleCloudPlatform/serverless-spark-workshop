@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2022 Google LLC
- 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
- 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About
 
 This module includes the cleanup of resources created for the lab.
@@ -22,8 +6,8 @@ This module includes the cleanup of resources created for the lab.
 [2. Delete Buckets](06-cleanup.md#2-delete-buckets)<br>
 [3. Delete Spark Persistent History Server](06-cleanup.md#3-delete-spark-persistent-history-server)<br>
 [4. Delete Composer](06-cleanup.md#4-delete-composer)
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. GCP Project Details
 Note the project number and project ID. <br>
@@ -36,7 +20,7 @@ Grant the following permissions
 - Storage Admin
 - Composer Administrator
 - Service Usage Admin
-                                
+
 
 #### 3. Attach cloud shell to your project.
 Open Cloud shell or navigate to [shell.cloud.google.com](https://shell.cloud.google.com) <br>
@@ -48,7 +32,7 @@ gcloud config set project $PROJECT_ID
 
 <br>
 
-## 1. Declare variables 
+## 1. Declare variables
 
 We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the project you selected-
@@ -69,7 +53,7 @@ PD_LOCATION= 										#the location of the persistent disk. For example, the lo
 
 ## 2. Delete buckets
 
-Follow the commands to delete the following buckets 
+Follow the commands to delete the following buckets
 1. Bucket attached to spark history server
 2. Bucket with code files
 
@@ -86,7 +70,7 @@ Run the below command to delete Spark persistent history server
 
 ```
 gcloud dataproc clusters delete $HISTORY_SERVER_NAME \
-	--region=${REGION} 
+	--region=${REGION}
 ```
 
 <br>
@@ -107,7 +91,6 @@ step 2:
 Delete the persistent disk of your environment's Redis queue. Deleting the Cloud Composer environment does not delete its persistent disk.
 To delete your environment's persistent disk:
 ```
-gcloud compute disks delete $PD_NAME \ 
+gcloud compute disks delete $PD_NAME \
 	--region=$PD_LOCATION
-```	
-	
+```

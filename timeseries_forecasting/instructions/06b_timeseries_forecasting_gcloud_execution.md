@@ -1,7 +1,5 @@
 # Timeseries Forecasting using sessions in  Serverless Spark through Google Cloud Shell
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](06b_timeseries_forecasting_gcloud_execution.md#1-understanding-data)<br>
@@ -154,7 +152,7 @@ Once the code has successfully executed, four new tables '<your_name_here>_globa
 
 To query the data to find the list of stocks with highest stringency Index, run the following query -
 ```
-  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_global_predictions` 
+  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_global_predictions`
 
 ```
 

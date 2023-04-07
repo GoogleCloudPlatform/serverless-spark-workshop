@@ -6,8 +6,8 @@ This module includes the cleanup of resources created for the lab.
 [2. Delete Buckets](06-cleanup.md#2-delete-buckets)<br>
 [3. Delete Spark Persistent History Server](06-cleanup.md#3-delete-spark-persistent-history-server)<br>
 [4. Delete Metastore service](06-cleanup.md#4-delete-metastore-service)
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. GCP Project Details
 Note the project number and project ID. <br>
@@ -19,7 +19,7 @@ Grant the following permissions
 - Dataproc Editor
 - Storage Admin
 - Service Usage Admin
-                                
+
 
 #### 3. Attach cloud shell to your project.
 Open Cloud shell or navigate to [shell.cloud.google.com](https://shell.cloud.google.com) <br>
@@ -31,7 +31,7 @@ gcloud config set project $PROJECT_ID
 
 <br>
 
-## 1. Declare variables 
+## 1. Declare variables
 
 We will use these throughout the lab. <br>
 Run the below in cloud shells coped to the project you selected-
@@ -52,7 +52,7 @@ SERVICE=                                            #The name of the metastore s
 
 ## 2. Delete buckets
 
-Follow the commands to delete the following buckets 
+Follow the commands to delete the following buckets
 1. Bucket attached to spark history server
 2. Bucket with code files
 
@@ -69,7 +69,7 @@ Run the below command to delete Spark PHS
 
 ```
 gcloud dataproc clusters delete $HISTORY_SERVER_NAME \
-	--region=${REGION} 
+	--region=${REGION}
 ```
 
 <br>

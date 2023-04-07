@@ -1,7 +1,5 @@
 # Covid Economic Impact using sessions in  Serverless Spark through Google Cloud Shell
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](05b_covid_economic_impact_gcloud_execution.md#1-understanding-data)<br>

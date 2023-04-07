@@ -1,4 +1,4 @@
--- Copyright 2022 Google LLC.
+-- Copyright 2023 Google LLC.
 -- SPDX-License-Identifier: Apache-2.0
 
 CREATE DATABASE IF NOT EXISTS `retail_store_analytics_${username}_db`;
@@ -33,7 +33,7 @@ CREATE EXTERNAL TABLE orders (
   order_number STRING COMMENT 'order_number',
   order_dow STRING COMMENT 'order_dow',
   order_hour_of_day STRING COMMENT 'order_hour_of_day',
-  days_since_prior_order STRING COMMENT 'days_since_prior_order'  
+  days_since_prior_order STRING COMMENT 'days_since_prior_order'
 ) USING CSV
 OPTIONS (path "gs://${bucket-name}/retail_store_analytics_metastore_sparksql/01-datasets/orders",
         delimiter ",",
@@ -62,5 +62,3 @@ CREATE EXTERNAL TABLE order_products (
 OPTIONS (path "gs://${bucket-name}/retail_store_analytics_metastore_sparksql/01-datasets/order_products",
         delimiter ",",
         header "true");
-
-

@@ -65,7 +65,7 @@ There are 2 ways of perforing the lab.
 - Using [Google Cloud Shell](instructions/05a-retail-store-analytics-gcloud-execution.md)
 - Using [GCP console](instructions/05b-retail-store-analytics-console-execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 
@@ -76,7 +76,3 @@ Delete the resources after finishing the lab. <br>
 Refer - [Cleanup](instructions/06-cleanup.md )
 
 <br>
-
-
-
-

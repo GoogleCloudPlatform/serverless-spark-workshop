@@ -1,7 +1,5 @@
 # Serverless Spark Streaming through Google Cloud Shell
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](05b_serverless_spark_streaming_console_execution.md#1-understanding-data)<br>
@@ -38,7 +36,7 @@ The data used for this project are:
 
 
 ## 2. Solution Architecture
- 
+
 ![this is a screenshot of the solution diagram](../images/Flow_of_Resources.png)
 
 <br>
@@ -63,7 +61,7 @@ NAME=                                               #Your unique identifier
 
 <br>
 
-## 4. Execution 
+## 4. Execution
 
 #### 4.1. Create a new batch
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
@@ -104,7 +102,7 @@ Run PySpark Serverless Batch for Data Preparation
 
 <hr>
 
-<br> 
+<br>
 
 <kbd>
 <img src=../images/image25.png />
@@ -164,10 +162,10 @@ To view the data in these tables -
 
 **Note:** If the **Preview** button is not visible, run the below queries to view the data. However, these queries will be charged for the full table scan.
 
-To query the data and view all the data, run the following query - 
+To query the data and view all the data, run the following query -
 
 ```
-  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_invoicedata` 
+  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_invoicedata`
 ```
 
 **Note:** Edit the occurrence of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
@@ -179,7 +177,7 @@ To query the data and view all the data, run the following query -
 <br>
 
 
-To find the count of data, run the following query - 
+To find the count of data, run the following query -
 
 ```
   select count(*) as count from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_invoicedata`
@@ -224,8 +222,8 @@ gcloud dataproc batches cancel $BATCH_ID \
 
 #### 5.1 Serverless Batch logs
 
-Logs associated with the application can be found in the logging console under 
-**Dataproc > Serverless > Batches > <batch_name>**. 
+Logs associated with the application can be found in the logging console under
+**Dataproc > Serverless > Batches > <batch_name>**.
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>

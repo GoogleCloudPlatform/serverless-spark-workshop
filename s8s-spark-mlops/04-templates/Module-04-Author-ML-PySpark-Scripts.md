@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2022 Google LLC
- 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
- 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About Module 4
 
 In Module 3, we authored Spark ML code in interactive Spark notebooks. Vertex AI Workbench with Dataproc Serverless Spark interactive sessions does not support notebook scheduling. We therefore need to create PySpark scripts and test them out, before orchestrating into a Vertex AI pipeline. In this module, we will test pre-created PySpark scripts that are more or less a replica of the notebooks from Module 3.

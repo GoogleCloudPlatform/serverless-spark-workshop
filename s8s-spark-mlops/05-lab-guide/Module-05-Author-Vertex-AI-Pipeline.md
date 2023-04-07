@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2022 Google LLC
- 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
- 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About Module 5
 
 In this module, we will author and test a Vertex AI pipeline to orchestrate the Spark ML model training and prepare for operationalizing the same. The module takes about two and half hours to complete, but you need to actually only spend about 40 minutes, the rest is execution time - waiting for completion.
@@ -52,7 +36,7 @@ Watch this [short video on vertex AI pipelines](https://youtu.be/Jrh-QLrVCvM) an
 
 ### 4.2. What is supported/recommended for Spark ML models in Vertex AI from an MLOps perspective?
 
-| # | Feature/Function | Supported? |  Recommended Product/Service | Workaround | Nuances/Comments | 
+| # | Feature/Function | Supported? |  Recommended Product/Service | Workaround | Nuances/Comments |
 | -- | :--- | :--- |:--- |:--- |:--- |
 | 1 | Development Environment for Model Training<br>and<br>corressponding Spark Infrastructure| Yes | Vertex AI Workbench Managed Notebook<br>with<br>Dataproc Serverless Spark Interactive Sessions | | Preview as of 8/22|
 | 2 | Orchestration solution for Model Training | Yes | Vertex AI Managed Pipelines | | Preview as of 8/22|
@@ -156,7 +140,7 @@ Takes about ~an hour to complete. Toggle between the Vertex AI pipeline UI and D
 
 <hr>
 
-## 10. Model evaluation 
+## 10. Model evaluation
 
 ![M5](../06-images/module-5-17.png)   
 <br><br>
@@ -209,7 +193,7 @@ Observe that the best model is persisted in GCS. We will use this for batch scor
 
 <hr>
 
-## 13. Study the pipeline JSON 
+## 13. Study the pipeline JSON
 
 ![M5](../06-images/module-5-24.png)   
 <br><br>

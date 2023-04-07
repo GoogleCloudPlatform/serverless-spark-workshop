@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2022 Google LLC
- 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
- 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About
 
 The following are the products/services that get provisioned, and the code and configuration that gets uploaded into your environment. The screenshots present a view of the author's environment, yours should be identical.
@@ -188,7 +172,7 @@ Are empty and used for peristing logs and/or MLOps artifacts
 ![PHS](../06-images/module-1-phs-05.png)   
 <br><br>
 
-## 6a. Vertex AI Workbench - Managed Notebook Server 
+## 6a. Vertex AI Workbench - Managed Notebook Server
 
 
 
@@ -207,7 +191,7 @@ Are empty and used for peristing logs and/or MLOps artifacts
 ![UMNBS](../06-images/module-1-vai-wb-mnbs-02.png)   
 <br><br>
 
-## 7a. Vertex AI Workbench - User Managed Notebook Server 
+## 7a. Vertex AI Workbench - User Managed Notebook Server
 
 
 ![UMNBS](../06-images/module-1-vai-wb-umnb-01.png)   
@@ -324,4 +308,3 @@ Are empty and used for peristing logs and/or MLOps artifacts
 This is a summary of services that get provisioned for the lab. [Return to Module 1](../05-lab-guide/Module-01-Environment-Provisioning.md)
 
 <hr>
-

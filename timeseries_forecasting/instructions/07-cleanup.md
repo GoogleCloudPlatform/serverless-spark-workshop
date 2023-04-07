@@ -105,7 +105,7 @@ Select the sessions created as part of this lab and click on **Delete**
 <img src=/images/sessions7.png />
 </kbd>
 
-<br> 
+<br>
 
 ## 7. Delete Artifact Registry
 

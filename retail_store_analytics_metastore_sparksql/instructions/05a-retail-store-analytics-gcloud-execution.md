@@ -8,9 +8,9 @@ Following are the lab modules:
 [4. Running the job as a serverless batch on Dataproc](05a-retail-store-analytics-gcloud-execution.md#4-running-the-job-as-a-serverless-batch-on-dataproc)<br>
 [5. Logging](05a-retail-store-analytics-gcloud-execution.md#5-logging)<br>
 
-## 1. Understanding the data 
+## 1. Understanding the data
 
-The datasets used for this project are 
+The datasets used for this project are
 
 
 1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>
@@ -115,14 +115,14 @@ gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_an
 --service-account $SERVICE_ACCOUNT \
 --history-server-cluster projects/$PROJECT_ID/regions/$REGION/clusters/$HISTORY_SERVER_NAME \
 --vars="bucket-name=$BUCKET_CODE,username=$NAME" \
---metastore-service projects/$PROJECT_ID/locations/$REGION/services/$METASTORE_NAME 
+--metastore-service projects/$PROJECT_ID/locations/$REGION/services/$METASTORE_NAME
 
 ```
 
-#### 4.2  Output 
+#### 4.2  Output
 
  We can check the output of the batch in dataproc console.
- 
+
  <kbd>
 <img src=../images/output1.png />
 </kbd>
@@ -146,10 +146,10 @@ gs://$BUCKET_CODE/retail_store_analytics_metastore_sparksql/00-scripts/retail_an
 
 ```
 
-#### 4.4 Output 
+#### 4.4 Output
 
  We can check the output of the batch in dataproc console.
- 
+
  <kbd>
 <img src=../images/output2.png />
 </kbd>

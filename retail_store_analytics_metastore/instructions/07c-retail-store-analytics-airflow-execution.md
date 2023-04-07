@@ -10,7 +10,7 @@ Following are the lab modules:
 [6. Logging](07c-retail-store-analytics-airflow-execution.md#6-logging)<br>
 
 ## 1. Understanding data
-The datasets used for this project are 
+The datasets used for this project are
 
 
 1. [Aisles data](../01-datasets/aisles/aisles.csv). <br>

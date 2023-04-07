@@ -8,7 +8,7 @@ With the advent of cloud environments, the concept of huge capital investments i
 
 In this example, you will look at executing a simple PySpark code which runs on Serverless batch (a fully managed Dataproc cluster). It is similar to executing code on a Dataproc cluster without the need to initialize, deploy or manage the underlying infrastructure.
 
-This usecase is used to check the performance of the celltower, if the performance is good then it means that the maintainence is not required and it functions properly if its performance is bad then it has to be put under maintainence 
+This usecase is used to check the performance of the celltower, if the performance is good then it means that the maintainence is not required and it functions properly if its performance is bad then it has to be put under maintainence
 
 ## Services Used
 * Google Cloud Storage
@@ -66,7 +66,7 @@ The lab consists of the following modules.
 1. Understand the Data
 2. Solution Architecture
 3. Data Preparation
-4. Model Training and Evaluation 
+4. Model Training and Evaluation
 5. Examine the logs
 6. Explore the output
 
@@ -75,7 +75,7 @@ There are 3 ways of performing the lab.
 - Using [GCP console](./instructions/06b-cell-tower-anomaly-console-execution.md )
 - Using [Cloud Composer](./instructions/06c-cell-tower-anomaly-airflow-execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 
@@ -85,4 +85,3 @@ Delete the resources after finishing the lab. <br>
 Refer - [Cleanup](./instructions/07-cleanup.md )
 
 <br>
-

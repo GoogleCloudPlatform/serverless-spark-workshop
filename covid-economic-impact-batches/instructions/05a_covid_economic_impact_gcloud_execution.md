@@ -1,7 +1,5 @@
 # Covid Economic Impact using Serverless Spark through Google Cloud Shell
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](05a_covid_economic_impact_gcloud_execution.md#1-understanding-data)<br>
@@ -18,23 +16,23 @@ Following are the lab modules:
 The datasets used for this project are:
 - stringency.csv: This file contains the Stringency Index of each country regarding the measures taken to fight covid-19.
 - stock.csv: This file contains the stock market values of various companies from different countries.
- 
- 
- 
+
+
+
 ![this is a screenshot of the source tables](../images/Source_tables.png)
- 
- 
- 
+
+
+
 The ETL flow processes the source data to generate multiple fact and dim tables:
- 
- 
- 
+
+
+
 - Fact table:
 - Economic_status_table [ec_status_id, Date, country_code, stringency_index, stock_id, value_type, value]
 - The fact table is created by joining the source stringency and stock table.
- 
- 
- 
+
+
+
 - Dimension tables:
 - Time_table [Date, day, month, year, week_day]
 - This dim table is created by extracting the time details from the stringency table
@@ -42,22 +40,22 @@ The ETL flow processes the source data to generate multiple fact and dim tables:
 - This table is created by extracting distinct country details from the stock table
 - Company_table [stock_Id, company_name, sector]
 - This table is created by extracting the stock and company details from the stock table
- 
- 
- 
+
+
+
 The data warehouse star schema would look like below:
- 
- 
- 
+
+
+
 ![this is a screenshot of the data model](../images/Data_model.PNG)
 
 <br>
 
 ## 2. Solution Architecture
- 
- 
+
+
 ![this is a screenshot of the solution diagram](../images/Flow_of_Resources.png)
- 
+
 
 ## 3. Declaring cloud shell variables
 
@@ -109,7 +107,7 @@ gcloud components update
 
 ```
 
-## 4. Execution 
+## 4. Execution
 
 ### 4.2. Run PySpark Serverless Batch
 
@@ -134,10 +132,10 @@ gcloud dataproc batches submit \
 Navigate to BigQuery Console, and check the **covid_economic_impact** dataset. <br>
 Once the data preparation batch is completed, four new tables '<your_name_here>_ec_status', '<your_name_here>_countries', '<your_name_here>_stocks' and '<your_name_here>_times' will be created :
 
-To query the data to find the list of stocks with highest stringency Index, run the following query - 
+To query the data to find the list of stocks with highest stringency Index, run the following query -
 ```
   select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_ec_status` EC inner join `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_stocks` S on EC.stock_id=S.stock_id where stringency_index=(select max(stringency_index) from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_ec_status`)
-  
+
 ```
 
 **Note:** Edit all occurrences of <GCP-PROJECT-NAME> and <BQ-DATASET-NAME> to match the values of the variables PROJECT_ID,user_name and BQ_DATASET_NAME respectively
@@ -156,8 +154,8 @@ To query the data to find the list of stocks with highest stringency Index, run 
 
 ### 5.1 Serverless Batch logs
 
-Logs associated with the application can be found in the logging console under 
-**Dataproc > Serverless > Batches > <batch_name>**. 
+Logs associated with the application can be found in the logging console under
+**Dataproc > Serverless > Batches > <batch_name>**.
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>

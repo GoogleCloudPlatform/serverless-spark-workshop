@@ -1,12 +1,12 @@
 '''
-  Copyright 2022 Google LLC
- 
+  Copyright 2023 Google LLC
+
   Licensed under the Apache License, Version 2.0 (the "License");
   you may not use this file except in compliance with the License.
   You may obtain a copy of the License at
- 
+
        http://www.apache.org/licenses/LICENSE-2.0
- 
+
   Unless required by applicable law or agreed to in writing, software
   distributed under the License is distributed on an "AS IS" BASIS,
   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
@@ -58,7 +58,7 @@ TARGETED_COLUMNS_FOR_VALUE_CONSISTENCY = ['OnlineSecurity', 'OnlineBackup', 'Dev
 
 CATEGORICAL_COLUMN_LIST = ['gender', 'senior_citizen', 'partner', 'dependents', 'phone_service', 'multiple_lines',
                         'internet_service', 'online_security', 'online_backup', 'device_protection', 'tech_support',
-                        'streaming_tv', 'streaming_movies', 'contract', 'paperless_billing', 'payment_method']                      
+                        'streaming_tv', 'streaming_movies', 'contract', 'paperless_billing', 'payment_method']
 NUMERIC_COLUMN_LIST = ['monthly_charges', 'total_charges']
 
 # ......................................................................................
@@ -107,7 +107,7 @@ def fnReplaceWithNoForInternetService(inputDF):
     Returns:
         Dataframe with values replaced per transformation
     """
-    
+
     logger.info('....Inside common_utils.fnReplaceWithNoForInternetService')
     for col_name in TARGETED_COLUMNS_FOR_VALUE_CONSISTENCY:
         outputDF = inputDF.withColumn(col_name,
@@ -159,7 +159,7 @@ def fnAddBinForTenure(inputDF, isBatchScoring, spark):
                                         ,PaymentMethod
                                         ,MonthlyCharges
                                         ,TotalCharges
-                                from partially_transformed_customer_churn  
+                                from partially_transformed_customer_churn
                                 """)
 
     else:
@@ -192,7 +192,7 @@ def fnAddBinForTenure(inputDF, isBatchScoring, spark):
                                         ,MonthlyCharges
                                         ,TotalCharges
                                         ,lcase(Churn) as Churn
-                                from partially_transformed_customer_churn  
+                                from partially_transformed_customer_churn
                                 """)
 
     return outputDF
@@ -218,7 +218,7 @@ def fnGetTrueScoreAndPrediction(predictionsDF, labelColumn):
                                      spark_round(fnExtractItemFromVector('probability'), 5).alias('score'),
                                      'prediction')
     rocSparkDF.show(2)
-    
+
     rocPandasDF = rocSparkDF.toPandas()
     rocDictionary = rocPandasDF.to_dict(orient='list')
     return rocDictionary
@@ -234,7 +234,7 @@ def fnCaptureModelMetrics(predictionsDF, labelColumn, operation):
     Returns:
         metrics: metrics
     """
-    
+
     metricLabels = ['area_roc', 'area_prc', 'accuracy', 'f1', 'precision', 'recall']
     metricColumns = ['true', 'score', 'prediction']
     metricKeys = [f'{operation}_{ml}' for ml in metricLabels] + metricColumns
@@ -258,11 +258,11 @@ def fnCaptureModelMetrics(predictionsDF, labelColumn, operation):
     prediction = rocDictionary['prediction']
 
     # Create a metric values array
-    metricValuesArray = [] 
+    metricValuesArray = []
     metricValuesArray.extend((area_roc, area_prc, acc, f1, prec, rec))
     #metricValuesArray.extend((area_roc, area_prc, acc, f1, prec, rec, true, score, prediction))
-    
-    # Zip the keys and values into a dictionary  
+
+    # Zip the keys and values into a dictionary
     metricsDictionary = dict(zip(metricKeys, metricValuesArray))
 
     return metricsDictionary
@@ -270,7 +270,7 @@ def fnCaptureModelMetrics(predictionsDF, labelColumn, operation):
 
 def fnPersistMetrics(destinationGcsBucketUri, metricsDictionary, destinationObjectName, dir='/tmp'):
     """
-    Persists the metrics dictionary to a local file 
+    Persists the metrics dictionary to a local file
     and then to specified GCS location with specified name
     """
     localTempDir = tempfile.TemporaryDirectory(dir=dir)
@@ -290,4 +290,3 @@ def fnPersistToGCS(destinationGcsBucketUri, localFileAbsolutePath, destinationOb
     blob = googleCloudStorageBucket.blob(destinationObjectName)
     blob.upload_from_filename(localFileAbsolutePath)
 # }} End fnPersistToGCS
-

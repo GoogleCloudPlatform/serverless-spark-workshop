@@ -6,8 +6,8 @@ This module includes all prerequisites for running the Serverless Spark lab-<br>
 [3. Network Configuration](01-gcp-prerequisites.md#3-network-configuration)<br>
 [4. Create a User Managed Service Account](01-gcp-prerequisites.md#4-create-a-user-managed-service-account)<br>
 [5. Grant IAM permissions for UMSA](01-gcp-prerequisites.md#5-grant-iam-permissions-for-umsa)<br>
-                                   
-## 0. Prerequisites 
+
+## 0. Prerequisites
 
 #### 1. Create a project new project or select an existing project.
 Note the project number and project ID. <br>
@@ -28,7 +28,7 @@ gcloud config set project $PROJECT_ID
 
 <br>
 
-## 1. Declare variables 
+## 1. Declare variables
 
 We will use these throughout the lab. <br>
 Run the below in cloud shell coped to the project you selected-
@@ -37,8 +37,8 @@ Run the below in cloud shell coped to the project you selected-
 PROJECT_ID= #Project ID
 REGION= #Region to be used
 
-#User Managed Service Account 
-UMSA="serverless-spark" 
+#User Managed Service Account
+UMSA="serverless-spark"
 
 # Note: Lowercase letters, numbers, hyphens allowed. All network names must be unique within the project
 VPC=
@@ -124,7 +124,7 @@ gcloud iam service-accounts create $UMSA \
 ```
 gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$UMSA@$PROJECT_ID.iam.gserviceaccount.com --role roles/viewer
-    
+
 ```
 
 #### 5.1.b. Storage Admin role for UMSA
@@ -150,4 +150,3 @@ gcloud projects add-iam-policy-binding $PROJECT_ID \
     --member serviceAccount:$UMSA@$PROJECT_ID.iam.gserviceaccount.com --role roles/dataproc.worker
 
 ```
-

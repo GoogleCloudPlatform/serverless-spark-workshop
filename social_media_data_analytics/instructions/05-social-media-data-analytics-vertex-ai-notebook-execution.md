@@ -78,11 +78,13 @@ Next, fill in the following values in the session creation window as shown in th
 
 - **Session Name**   - A unique identifier for your session
 - **Region**     - The region name provided by the Admin team
+- **Version** - 1.1
 - **Language**    - Pyspark
 - **Autoshutdown** - 24 hours
+- **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
 - **History Server Cluster** - projects/<PROJECT_ID>/regions/<REGION_NAME>/clusters/<HISTORY_SERVER_NAME>
-- **Custom Container** -gcr.io/<PROJECT_ID>/<CONTAINER_NAME>
+- **Container**  - #GCP-REGION-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:1.0.1
 
 * Click the **SUBMIT** button to create the session.
 
@@ -94,6 +96,11 @@ Next, fill in the following values in the session creation window as shown in th
 <br>
 <kbd>
 <img src=../images/session3.png />
+</kbd><br>
+
+<br>
+<kbd>
+<img src=../images/session1_2.png />
 </kbd><br>
 
 
@@ -123,7 +130,7 @@ Navigate to VertexAI Console and check the output,
 Once the code has successfully executed.
 <br>
 
-**Most popular trending #tags** 
+**Most popular trending #tags**
 <kbd>
 <img src=../images/output_1.png />
 </kbd>

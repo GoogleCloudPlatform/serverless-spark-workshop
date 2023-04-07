@@ -1,7 +1,5 @@
 # Timeseries Forecasting using sessions in Serverless Spark through Vertex AI
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](06a_timeseries_forecasting_vertex_ai_notebook_execution.md#1-understanding-data)<br>
@@ -54,7 +52,7 @@ In the Managed Notebooks tab , click the New Notebook icon.
 #### Next, fill in the following values in the Notebook creation window as shown in the images below:
 
 - Note: Currently managed notebooks are only supported in: us-central1, us-west1, us-west4, northamerica-northeast1, southamerica-east1, europe-west1, europe-west4, asia-northeast1, asia-southeast1, asia-south1, asia-east2, australia-southeast1, asia-northeast3.
- 
+
 <br>
 
 - **Notebook Name**   - A unique identifier for your Notebook
@@ -151,7 +149,7 @@ Once the code has successfully executed,  new table '<your_name_here>_global_pre
 To query the data to find the list of stocks with highest stringency Index, run the following query -
 
 ```
-  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_global_predictions` 
+  select * from `<GCP-PROJECT-NAME>.<BQ-DATASET-NAME>.<user_name>_global_predictions`
 
 ```
 

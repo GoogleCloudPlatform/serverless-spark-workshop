@@ -106,4 +106,3 @@ Run the below command to delete the Docker image
 
 ```
 gcloud container images delete $CONTAINER_IMAGE
-

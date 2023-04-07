@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2022 Google LLC
- 
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
- 
-       http://www.apache.org/licenses/LICENSE-2.0
- 
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About Module 8
 
 This module covers orchestrating Spark ML batch scoring with Apache Airflow on Cloud Composer. Vertex AI pipelines has deliberately not been used as it lacks support for model monitoring and explainability and is not suited for upstream job orchestration typical with batch scoring and that may not be ML related.
@@ -85,7 +69,7 @@ Review the code and understand the flow.
 ```
 # ======================================================================================
 # ABOUT
-# This script orchestrates batch scoring 
+# This script orchestrates batch scoring
 # ======================================================================================
 
 import os
@@ -96,7 +80,7 @@ from airflow.providers.google.cloud.operators.dataproc import (DataprocCreateBat
 from datetime import datetime
 from airflow.utils.dates import days_ago
 import string
-import random 
+import random
 
 # .......................................................
 # Variables
@@ -104,7 +88,7 @@ import random
 
 # {{
 # a) General
-randomizerCharLength = 10 
+randomizerCharLength = 10
 randomVal = ''.join(random.choices(string.digits, k = randomizerCharLength))
 airflowDAGName= "customer-churn-prediction"
 batchIDPrefix = f"{airflowDAGName}-edo-{randomVal}"
@@ -180,9 +164,9 @@ with models.DAG(
         project_id=projectID,
         region=region,
         batch=s8sSparkBatchConfig,
-        batch_id=batchIDPrefix 
+        batch_id=batchIDPrefix
     )
-    customerChurnPredictionStep 
+    customerChurnPredictionStep
 ```
 
 **Note that a runtime Airflow variable expected is "Model Version". **
@@ -251,7 +235,7 @@ Takes about 10 minutes to update.
 ### 7.5. Review the results in BigQuery
 Find your pipeline_id in the Dataproc batches UI and edit the query below to reflect your pipeline_id.
 ```
-SELECT * FROM `customer_churn_ds.batch_predictions` 
+SELECT * FROM `customer_churn_ds.batch_predictions`
 WHERE pipeline_id='YOUR_PIPELINE_ID'
 ```
 
@@ -268,4 +252,3 @@ The following is the author's results-
 This concludes the lab. Be sure to shut down the project to avoid incurring billing charges. Return to [lab home](../../README.md).
 
 <hr>
-

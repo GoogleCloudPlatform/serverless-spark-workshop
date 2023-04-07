@@ -87,7 +87,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 - **Runtime Version** - 1.1
 - **Main Class** - org.teksystems.covideconomicimpact
 - **JAR Files** - gs://<your_code_bucket_name>/covid-economic-impact-scala/00-scripts/covid-economic-impact-assessment_2.12-1.0.jar <br>
-                  gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar 
+                  gs://spark-lib/bigquery/spark-bigquery-with-dependencies_2.12-0.22.2.jar
 - **Arguments** - <br>
   Four Arguments needs to be provided. <br>
     * <your_project_id>

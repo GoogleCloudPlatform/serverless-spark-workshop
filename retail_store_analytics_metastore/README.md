@@ -67,7 +67,7 @@ The lab consists of the following modules.
 1. Understand the Data
 2. Solution Architecture
 3. Data Preparation
-4. Executing the serverless batches. 
+4. Executing the serverless batches.
 5. Examine the logs
 6. Explore the output
 
@@ -76,7 +76,7 @@ There are 3 ways of perforing the lab.
 - Using [GCP console](instructions/07b-retail-store-analytics-console-execution.md )
 - Using [Cloud Composer](instructions/07c-retail-store-analytics-airflow-execution.md )
 
-Please chose one of the methods to execute the lab. 
+Please chose one of the methods to execute the lab.
 
 <br>
 
@@ -87,5 +87,3 @@ Delete the resources after finishing the lab. <br>
 Refer - [Cleanup](instructions/08-cleanup.md )
 
 <br>
-
-

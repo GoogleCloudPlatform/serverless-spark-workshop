@@ -78,5 +78,3 @@ Delete the resources after finishing the lab. <br>
 Refer - [Cleanup](instructions/07-cleanup.md )
 
 <br>
-
-

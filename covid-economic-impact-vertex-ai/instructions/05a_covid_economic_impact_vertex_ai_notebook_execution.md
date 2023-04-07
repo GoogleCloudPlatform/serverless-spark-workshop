@@ -1,7 +1,5 @@
 # Covid Economic Impact using sessions in Serverless Spark through Vertex AI
 
-
-
 Following are the lab modules:
 
 [1. Understanding Data](05a_covid_economic_impact_vertex_ai_notebook_execution.md#1-understanding-data)<br>

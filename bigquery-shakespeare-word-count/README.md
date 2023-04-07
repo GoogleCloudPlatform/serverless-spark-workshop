@@ -7,7 +7,7 @@ With the advent of cloud environments, the concept of huge capital investments i
 In this example, you will look at executing a simple PySpark code which runs on Serverless batch through Bigquery.
 
 The Goal is to run PySpark code in Bigquery console. The code provided in the repo will calculate top words in the Shakespeare public BigQuery dataset and display the top 20 words.
-<br> 
+<br>
 
 ## 2. Services Used
 
