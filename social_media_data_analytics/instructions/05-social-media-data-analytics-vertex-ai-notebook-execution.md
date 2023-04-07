@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2023 Google LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # Social Media Data Analytics using sessions in Serverless Spark through Vertex AI
 
 Following are the lab modules:
@@ -94,11 +78,13 @@ Next, fill in the following values in the session creation window as shown in th
 
 - **Session Name**   - A unique identifier for your session
 - **Region**     - The region name provided by the Admin team
+- **Version** - 1.1
 - **Language**    - Pyspark
 - **Autoshutdown** - 24 hours
+- **Service Account** - <UMSA_NAME>@<PROJECT_ID>.iam.gserviceaccount.com
 - **Network Configuration** - Select the network and subnetwork provided by the Admin team
 - **History Server Cluster** - projects/<PROJECT_ID>/regions/<REGION_NAME>/clusters/<HISTORY_SERVER_NAME>
-- **Custom Container** -gcr.io/<PROJECT_ID>/<CONTAINER_NAME>
+- **Container**  - #GCP-REGION-docker.pkg.dev/<PROJECT_ID>/<REPOSITORY_NAME>/<IMAGE_NAME>:1.0.1
 
 * Click the **SUBMIT** button to create the session.
 
@@ -110,6 +96,11 @@ Next, fill in the following values in the session creation window as shown in th
 <br>
 <kbd>
 <img src=../images/session3.png />
+</kbd><br>
+
+<br>
+<kbd>
+<img src=../images/session1_2.png />
 </kbd><br>
 
 

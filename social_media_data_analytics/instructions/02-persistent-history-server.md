@@ -1,19 +1,3 @@
-<!---->
-  Copyright 2023 Google LLC
-
-  Licensed under the Apache License, Version 2.0 (the "License");
-  you may not use this file except in compliance with the License.
-  You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-  Unless required by applicable law or agreed to in writing, software
-  distributed under the License is distributed on an "AS IS" BASIS,
-  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-  See the License for the specific language governing permissions and
-  limitations under the License.
- <!---->
-
 # About
 
 This module includes all prerequisites for running the Serverless Spark lab-<br>
@@ -54,7 +38,8 @@ Run the below in cloud shells coped to the project you selected-
 PROJECT_ID= #Project ID
 REGION= #Region to be used
 BUCKET_PHS= #Bucket name for Persistent History Server
-PHS_NAME = # Name for Persistent History Server
+PHS_NAME= # Name for Persistent History Server
+SUBNET= #subnet name that you made in the previous module.
 ```
 
 <br>
@@ -78,6 +63,7 @@ gcloud dataproc clusters create $PHS_NAME \
   --project=${PROJECT_ID} \
   --region=${REGION} \
   --single-node \
+  --subnet=${SUBNET} \
   --image-version=2.0 \
   --enable-component-gateway \
   --properties=spark:spark.history.fs.logDirectory=gs://${BUCKET_PHS}/phs/*/spark-job-history
