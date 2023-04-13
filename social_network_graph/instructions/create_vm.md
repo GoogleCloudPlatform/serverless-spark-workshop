@@ -8,35 +8,35 @@ This module will focus on setting up VM and install docker to be ready for makin
 Navigate to compute engine > VM instances. 
 Select **CREATE INSTANCE**.
 <kbd>
-<img src=/images/compute_engine.png />
+<img src=../images/compute_engine.png />
 </kbd>
 
 #### 2. Create VM
 Feel free to give a name and change region/zone if need.
 <br>
 <kbd>
-<img src=/images/vm_name.png />
+<img src=../images/vm_name.png />
 </kbd>
 <br><br>
 
 We do want to increase the VM boot size. Select **CHANGE**
 <br>
 <kbd>
-<img src=/images/boot_disk.png />
+<img src=../images/boot_disk.png />
 </kbd>
 <br><br>
 
 Next, we want to increase the size into 20 GB since making an image require huge memory space. Feel free to increase the size if you ran into the memory space issue. 
 <br>
 <kbd>
-<img src=/images/increase_size_boot_disk.png />
+<img src=../images/increase_size_boot_disk.png />
 </kbd>
 <br><br>
 
 Select the compute engine service account default or use other service account if need. Then, process to create VM
 <br>
 <kbd>
-<img src=/images/vm_service_account.png />
+<img src=../images/vm_service_account.png />
 </kbd>
 
 
@@ -44,7 +44,7 @@ Select the compute engine service account default or use other service account i
 Click SSH on the vm that you just made
 <br>
 <kbd>
-<img src=/images/select_ssh.png />
+<img src=../images/select_ssh.png />
 </kbd>
 
 #### 3. Installing package for docker inside VM

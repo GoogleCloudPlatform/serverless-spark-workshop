@@ -39,7 +39,7 @@ The edge files contains information of
 ## 2. Solution Architecture
 
 <kbd>
-<img src=images/architecture_diagram.png />
+<img src=../images/architecture_diagram.png />
 </kbd>
 
 <br>
@@ -82,7 +82,7 @@ The below script will load the edge and node files and construct graph to find t
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 ### 4.2. Provide the details for the batch
@@ -106,7 +106,7 @@ Run PySpark Serverless Batch for Data Preparation
 
 
 <kbd>
-<img src=/images/a1.png />
+<img src=../images/a1.png />
 </kbd>
 
 <hr>
@@ -114,13 +114,13 @@ Run PySpark Serverless Batch for Data Preparation
 <br>
 
 <kbd>
-<img src=/images/a2.png />
+<img src=../images/a2.png />
 </kbd>
 
 <br>
 
   <kbd>
-  <img src=/images/image26.png />
+  <img src=../images/image26.png />
   </kbd>
 
 <br>
@@ -133,7 +133,7 @@ Once all the details are in, you can submit the batch. As the batch starts, you 
 ### 4.4. Once the dataproc serverless batch job completes, the output containing the top 20 degrees will be displayed on the console as below:
 
 <kbd>
-<img src=/images/degrees.png />
+<img src=../images/degrees.png />
 </kbd>
 
 <br>
@@ -147,7 +147,7 @@ Search all the connections of a character.
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 ### 5.2. Provide the details for the batch
@@ -179,7 +179,7 @@ Run PySpark Serverless Batch for Data Preparation
 
 
 <kbd>
-<img src=/images/image24_2.png />
+<img src=../images/image24_2.png />
 </kbd>
 
 <hr>
@@ -187,13 +187,13 @@ Run PySpark Serverless Batch for Data Preparation
 <br>
 
 <kbd>
-<img src=/images/image25_2.png />
+<img src=../images/image25_2.png />
 </kbd>
 
 <br>
 
   <kbd>
-  <img src=/images/image26.png />
+  <img src=../images/image26.png />
   </kbd>
 
 <br>
@@ -209,7 +209,7 @@ Navigate to BigQuery Console, and check the **social_network** dataset. <br>
 Once the bfs batch is completed, a new table '<your_name_here>_bfs_result' will be created as shown below :
 
 <kbd>
-<img src=/images/bfs_bq_2.png />
+<img src=../images/bfs_bq_2.png />
 </kbd>
 
 <br>
@@ -222,7 +222,7 @@ To view the data in this table -
 <br>
 
 <kbd>
-<img src=images/bq_preview.png />
+<img src=../images/bq_preview.png />
 </kbd>
 
 <br>
@@ -236,7 +236,7 @@ To view the data in this table -
 **Note:** Edit all occurrences of <project_name> and <dataset_name> to match the values of the variables PROJECT_ID, and BQ_DATASET_NAME respectively
 
 <kbd>
-<img src=/images/bfs_bq.png />
+<img src=../images/bfs_bq.png />
 </kbd>
 
 <br>
@@ -250,11 +250,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/log1.png />
+<img src=../images/log1.png />
 </kbd>
 
 <kbd>
-<img src=/images/log2.png />
+<img src=../images/log2.png />
 </kbd>
 
 <br>
@@ -266,11 +266,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/ps1.png />
+<img src=../images/ps1.png />
 </kbd>
 
 <kbd>
-<img src=/images/ps2.png />
+<img src=../images/ps2.png />
 </kbd>
 
 <br>
