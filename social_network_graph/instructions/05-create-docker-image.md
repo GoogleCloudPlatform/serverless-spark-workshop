@@ -38,7 +38,7 @@ Download the graphframes-0.8.1-spark3.0-s_2.12.jar file from the social_network_
 We will use it throughout the lab. <br>
 
 <kbd>
-<img src=/images/di_1.png />
+<img src=../images/di_1.png />
 </kbd>
 
 <br>
@@ -135,7 +135,7 @@ docker push "${CONTAINER_IMAGE}"
 The docker container will be built and pushed to Google Artifact Registry.
 
 <kbd>
-<img src=/images/di_2.png />
+<img src=../images/di_2.png />
 </kbd>
 
 <br>
