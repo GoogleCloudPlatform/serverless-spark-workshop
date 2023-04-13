@@ -30,10 +30,10 @@ Following permissions / roles are required to execute the serverless batch
 
 To perform the lab, below are the list of activities to perform. <br>
 
-[1. GCP Prerequisites](/instructions/01-gcp-prerequisites.md)<br>
-[2. Spark History Server Setup](/instructions/02-persistent-history-server.md)<br>
-[3. Uploading scripts and datasets to GCP](/instructions/03-files-upload.md)<br>
-[4. Creating a BigQuery Dataset](/instructions/04-create-bigquery-dataset.md)<br>
+[1. GCP Prerequisites](instructions/01-gcp-prerequisites.md)<br>
+[2. Spark History Server Setup](instructions/02-persistent-history-server.md)<br>
+[3. Uploading scripts and datasets to GCP](instructions/03-files-upload.md)<br>
+[4. Creating a BigQuery Dataset](instructions/04-create-bigquery-dataset.md)<br>
 
 Note down the values for below variables to get started with the lab:
 
@@ -62,8 +62,8 @@ The lab consists of the following modules.
 
 There are 2 ways of performing the lab.
 
-- Using [Google Cloud Shell with Custom Container](/instructions/06a_social_network_graph_gcloud_container_execution.md)
-- Using [GCP console with Custom Container](/instructions/06b_social_network_graph_console_container_execution.md)
+- Using [Google Cloud Shell with Custom Container](instructions/06a_social_network_graph_gcloud_container_execution.md)
+- Using [GCP console with Custom Container](instructions/06b_social_network_graph_console_container_execution.md)
 
 Please chose one of the methods to execute the lab.
 
@@ -72,6 +72,6 @@ Please chose one of the methods to execute the lab.
 ## 6. CleanUp
 
 Delete the resources after finishing the lab. <br>
-Refer - [Cleanup](/instructions/07-cleanup.md)
+Refer - [Cleanup](instructions/07-cleanup.md)
 
 <br>
