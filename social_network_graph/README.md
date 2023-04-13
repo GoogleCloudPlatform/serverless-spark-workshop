@@ -62,7 +62,7 @@ The lab consists of the following modules.
 
 There are 2 ways of performing the lab.
 
-- Using [Google Cloud Shell with Custom Container](/instructions/06a_social_network_graph_gcloud_container_execution.md)
+- Using [Google Cloud Shell with Custom Container](instructions/06a_social_network_graph_gcloud_container_execution.md)
 - Using [GCP console with Custom Container](/instructions/06b_social_network_graph_console_container_execution.md)
 
 Please chose one of the methods to execute the lab.
