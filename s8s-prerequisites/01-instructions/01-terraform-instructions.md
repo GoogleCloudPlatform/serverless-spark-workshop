@@ -63,7 +63,7 @@ echo "CREATE_METASTORE=$CREATE_METASTORE"
 Needs to run in cloud shell from ~/s8s-prerequisites/00-scripts-and-config
 
 ```
-cd ~/s8s-prerequisites/00-scripts-and-config
+cd ~/s8s-prerequisites/00-scripts-and-config/terraform
 terraform init
 ```
 
@@ -72,7 +72,7 @@ terraform init
 Needs to run in cloud shell from ~/s8s-prerequisites/00-scripts-and-config
 
 ```
-cd ~/s8s-prerequisites/00-scripts-and-config
+cd ~/s8s-prerequisites/00-scripts-and-config/terraform
 
 terraform plan \
   -var="project_id=${PROJECT_ID}" \
@@ -91,7 +91,7 @@ terraform plan \
 Needs to run in cloud shell from ~/s8s-prerequisites/00-scripts-and-config
 
 ```
-cd ~/s8s-prerequisites/00-scripts-and-config
+cd ~/s8s-prerequisites/00-scripts-and-config/terraform
 
 terraform apply \
 -var="project_id=${PROJECT_ID}" \
@@ -111,7 +111,7 @@ terraform apply \
 Once the Terraform script completes execution, run the following commands in Cloud Shell and share the locally created 'resource-list.txt' file with all workshop attendees
 
 ```
-cd ~/s8s-prerequisites/00-scripts-and-config
+cd ~/s8s-prerequisites/00-scripts-and-config/terraform
 terraform output > resource-list.txt
 ```
 

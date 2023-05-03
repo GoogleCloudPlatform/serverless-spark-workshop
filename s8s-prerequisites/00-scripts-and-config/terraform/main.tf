@@ -561,7 +561,28 @@ resource "google_dataproc_cluster" "sphs_creation" {
 }
 
 /********************************************************
-11. Artifact registry for Serverless Spark custom container images
+11. Cloning Repository
+********************************************************/
+
+resource "null_resource" "gitclone" {
+    provisioner "local-exec" {
+        command = "cd ~ && git clone https://github.com/Pradipta-Dhar1/serverless-spark-workshop && gsutil cp -r serverless-spark-workshop gs://s8s-code-and-data-bucket-${local.project_nbr}"
+        interpreter = ["bash", "-c"]
+    }
+}
+
+resource "null_resource" "unzip_file" {
+    provisioner "local-exec" {
+        command = "unzip serverless-spark-workshop/social_network_graph/02-dependencies/graphframes-0.8.1-spark3.0-s_2.12.zip "
+        interpreter = ["bash", "-c"]
+    }
+    depends_on = [
+      null_resource.gitclone
+    ]
+}
+
+/********************************************************
+12. Artifact registry for Serverless Spark custom container images
 ********************************************************/
 
 resource "google_artifact_registry_repository" "artifact_registry_creation" {
@@ -574,12 +595,47 @@ resource "google_artifact_registry_repository" "artifact_registry_creation" {
         module.administrator_role_grants,
         module.vpc_creation,
         time_sleep.sleep_after_bucket_creation,
-        time_sleep.sleep_after_api_enabling
+        time_sleep.sleep_after_api_enabling,
+        null_resource.gitclone,
+        null_resource.unzip_file
+    ]
+}
+
+/*******************************************
+Introducing sleep to minimize errors from
+dependencies having not completed
+********************************************/
+resource "time_sleep" "sleep_after_gar_repository_creation" {
+  create_duration = "120s"
+  depends_on = [
+    google_artifact_registry_repository.artifact_registry_creation
+  ]
+}
+
+/********************************************************
+12. Building custom container image
+********************************************************/
+
+resource "null_resource" "custom_container_image_creation" {
+    count = var.custom_container == "1" ? 1 : 0
+    provisioner "local-exec" {
+
+        command = "bash ../image-creation-sh.sh ${local.SPARK_CONTAINER_IMG_TAG} ${local.bq_connector_jar_gcs_uri} ${local.location} ${local.s8s_artifact_repository_nm}"
+    }
+    depends_on = [
+        module.administrator_role_grants,
+        module.vpc_creation,
+        time_sleep.sleep_after_bucket_creation,
+        google_artifact_registry_repository.artifact_registry_creation,
+        time_sleep.sleep_after_api_enabling,
+        null_resource.gitclone,
+        null_resource.unzip_file,
+        time_sleep.sleep_after_gar_repository_creation
     ]
 }
 
 /********************************************************
-13. Create Composer Environment
+14. Create Composer Environment
 ********************************************************/
 
 module "cc_umsa_creation" {
@@ -676,7 +732,7 @@ resource "time_sleep" "sleep_after_composer_creation" {
 }
 
 /******************************************
-14. Create Dataproc Metastore
+15. Create Dataproc Metastore
 ******************************************/
 resource "google_dataproc_metastore_service" "datalake_metastore_creation" {
   count = var.create_metastore == "1" ? 1 : 0
@@ -704,7 +760,7 @@ resource "google_dataproc_metastore_service" "datalake_metastore_creation" {
 }
 
 /******************************************
-10. BigQuery dataset creation
+16. BigQuery dataset creation
 ******************************************/
 
 resource "google_bigquery_dataset" "bq_dataset_creation" {
@@ -719,7 +775,7 @@ resource "google_bigquery_dataset" "bq_dataset_creation" {
 }
 
 /******************************************
-15. Output important variables needed for the demo
+17. Output important variables needed for the demo
 ******************************************/
 
 output "PROJECT_ID" {
