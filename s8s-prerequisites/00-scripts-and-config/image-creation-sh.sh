@@ -23,9 +23,8 @@ PROJECT_ID=`gcloud config list --format 'value(core.project)'`
 LOCAL_SCRATCH_DIR=~/build
 DOCKER_IMAGE_TAG=$1
 DOCKER_IMAGE_NM="s8s-spark-image"
-BQ_CONNECTOR_JAR_URI=$2
-GCP_REGION=$3
-REPOSITORY_NAME=$4
+GCP_REGION=$2
+REPOSITORY_NAME=$3
 DOCKER_IMAGE_FQN="${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY_NAME}/${DOCKER_IMAGE_NM}:$DOCKER_IMAGE_TAG"
 
 
@@ -166,7 +165,6 @@ echo "Completed Dockerfile creation"
 
 # Download dependencies to be baked into image
 cd $LOCAL_SCRATCH_DIR
-gsutil cp $BQ_CONNECTOR_JAR_URI .
 wget -P . https://repo.anaconda.com/miniconda/Miniconda3-py39_4.10.3-Linux-x86_64.sh
 echo "Completed downloading dependencies"
 

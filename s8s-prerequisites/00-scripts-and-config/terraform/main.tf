@@ -566,14 +566,14 @@ resource "google_dataproc_cluster" "sphs_creation" {
 
 resource "null_resource" "gitclone" {
     provisioner "local-exec" {
-        command = "cd ~ && git clone https://github.com/Pradipta-Dhar1/serverless-spark-workshop && gsutil cp -r serverless-spark-workshop gs://s8s-code-and-data-bucket-${local.project_nbr}"
+        command = "cd ~ && gsutil cp -r serverless-spark-workshop gs://s8s-code-and-data-bucket-${local.project_nbr}"
         interpreter = ["bash", "-c"]
     }
 }
 
 resource "null_resource" "unzip_file" {
     provisioner "local-exec" {
-        command = "unzip serverless-spark-workshop/social_network_graph/02-dependencies/graphframes-0.8.1-spark3.0-s_2.12.zip "
+        command = "unzip ~/serverless-spark-workshop/social_network_graph/02-dependencies/graphframes-0.8.1-spark3.0-s_2.12.zip "
         interpreter = ["bash", "-c"]
     }
     depends_on = [
@@ -620,7 +620,7 @@ resource "null_resource" "custom_container_image_creation" {
     count = var.custom_container == "1" ? 1 : 0
     provisioner "local-exec" {
 
-        command = "bash ../image-creation-sh.sh ${local.SPARK_CONTAINER_IMG_TAG} ${local.bq_connector_jar_gcs_uri} ${local.location} ${local.s8s_artifact_repository_nm}"
+        command = "bash ../image-creation-sh.sh ${local.SPARK_CONTAINER_IMG_TAG} ${local.location} ${local.s8s_artifact_repository_nm}"
     }
     depends_on = [
         module.administrator_role_grants,
