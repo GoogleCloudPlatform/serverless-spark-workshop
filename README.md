@@ -21,7 +21,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 # What's Covered?
 | # | Solution Accelerators | Focus | Feature | Contributed By |
 | -- | :--- | :-- | :-- | :-- |
-| 0 | [Serverless Spark Project Setup Prerequisites](ss8s-prerequisites/README.md) |  | Terraform | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 0 | [Serverless Spark Project Setup Prerequisites](s8s-prerequisites/README.md) |  | Terraform | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 1 | [Telco Anomaly Detection](cell-tower-anomaly-detection-dbt/README.md) | Data Engineering | Rules based processing to detect defective cell towers requiring maintenance via Serverless Spark Batch + BigLake to create GCS external tables in PARQUET and CSV + dbt to implement a data pipeline + Terraform to deploy required cloud infrastructure | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) and [Anagha Khanolkar](https://github.com/anagha-google) then refactored by [Luis Velasco](https://github.com/velascoluis) to include BigLake, dbt, and Terraform |
 | 2 | [Retail Store Analytics](retail_store_analytics_metastore/README.md) | Data Analysis | Analysis of retail data to identify product sales, and recommend product aisles and inventory via Serverless Spark Batch from CLI with Cloud Composer orchestration and Dataproc Metastore | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 3 | [Pandemic Economic Impact](covid-economic-impact-vertex-ai/README.md) | Data Analysis | Vertex AI notebooks with Serverless Spark session | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
