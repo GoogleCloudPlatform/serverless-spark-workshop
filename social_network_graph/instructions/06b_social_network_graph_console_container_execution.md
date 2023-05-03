@@ -76,6 +76,8 @@ LABEL=                                               # Your node to be searched
 
 ## 4. Top 20 Degrees in the Graph
 
+**Note** Please unzip the file located in your GCP bucket at 'gs://s8s-code-and-data-bucket-<your_project_number_here>/serverless-spark-workshop/social-network-graph/02-dependencies/graphframes-0.8.1-spark3.0-s_2.12.zip' before proceeding with the next steps.
+
 The below script will load the edge and node files and construct graph to find the Top 20 Degrees
 
 #### 4.1. Create a new batch

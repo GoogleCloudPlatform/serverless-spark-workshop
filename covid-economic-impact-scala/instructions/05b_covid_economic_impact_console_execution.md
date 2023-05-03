@@ -70,6 +70,8 @@ NAME=                                               #Your unique identifier
 
 ## 4. Execution
 
+**Note** Please unzip the file located in your GCP bucket at 'gs://s8s-code-and-data-bucket-<your_project_number_here>/serverless-spark-workshop/covid-economic-impact-scala/00-scripts/covid-economic-impact-assessment_2.12-1.0.zip' before proceeding with the next steps.
+
 ### 4.1. Create a new batch
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
