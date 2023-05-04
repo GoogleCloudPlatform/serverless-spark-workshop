@@ -14,6 +14,7 @@ This repo is a guide to walk a GCP project Admin step-by-step through the proces
 - Dataproc Metastore Service
 - Composer Environment
 - Google Cloud Storage Buckets
+- Google Artifact Repository and custom container image
 
 ## 3. Permissions / IAM Roles required to setup the prerequisites
 
