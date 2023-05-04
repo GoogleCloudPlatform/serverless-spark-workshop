@@ -115,18 +115,6 @@ cd ~/serverless-spark-workshop/s8s-prerequisites/00-scripts-and-config/terraform
 terraform output > resource-list.txt
 ```
 
-### 2.8. Cloning repository to GCP bucket
-
-Execute the following commands in Cloud Shell to clone the lab artifacts to your GCP bucket
-
-```
-PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
-PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
-cd ~
-git clone https://github.com/GoogleCloudPlatform/serverless-spark-workshop
-gsutil cp -r serverless-spark-workshop gs://s8s-code-and-data-bucket-$PROJECT_NBR
-```
-
 ## 3. Roles required for the Hackfest Attendees
 
 Please grant the following GCP roles to all attendees to execute the hands-on labs:<br>

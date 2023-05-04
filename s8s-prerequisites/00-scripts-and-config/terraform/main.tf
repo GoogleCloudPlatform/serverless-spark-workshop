@@ -569,6 +569,9 @@ resource "null_resource" "gitclone" {
         command = "cd ~ && gsutil cp -r serverless-spark-workshop gs://s8s-code-and-data-bucket-${local.project_nbr}"
         interpreter = ["bash", "-c"]
     }
+    depends_on = [
+    time_sleep.sleep_after_bucket_creation
+    ]
 }
 
 resource "null_resource" "unzip_file" {
@@ -578,6 +581,27 @@ resource "null_resource" "unzip_file" {
     }
     depends_on = [
       null_resource.gitclone
+    ]
+}
+
+resource "null_resource" "make_build_dir" {
+    provisioner "local-exec" {
+        command = "cd ~ && mkdir build "
+        interpreter = ["bash", "-c"]
+    }
+    depends_on = [
+      null_resource.unzip_file
+    ]
+}
+
+resource "null_resource" "copy_zip_file" {
+    provisioner "local-exec" {
+        command = "cp graphframes-0.8.1-spark3.0-s_2.12.jar ~/build "
+        interpreter = ["bash", "-c"]
+    }
+    depends_on = [
+      null_resource.unzip_file,
+      null_resource.make_build_dir
     ]
 }
 
@@ -597,7 +621,9 @@ resource "google_artifact_registry_repository" "artifact_registry_creation" {
         time_sleep.sleep_after_bucket_creation,
         time_sleep.sleep_after_api_enabling,
         null_resource.gitclone,
-        null_resource.unzip_file
+        null_resource.unzip_file,
+        null_resource.copy_zip_file,
+        null_resource.make_build_dir
     ]
 }
 
@@ -620,7 +646,7 @@ resource "null_resource" "custom_container_image_creation" {
     count = var.custom_container == "1" ? 1 : 0
     provisioner "local-exec" {
 
-        command = "bash ../image-creation-sh.sh ${local.SPARK_CONTAINER_IMG_TAG} ${local.location} ${local.s8s_artifact_repository_nm}"
+        command = "bash ../image-creation-sh.sh ${local.spark_container_img_tag} ${local.location} ${local.s8s_artifact_repository_nm}"
     }
     depends_on = [
         module.administrator_role_grants,
@@ -630,7 +656,9 @@ resource "null_resource" "custom_container_image_creation" {
         time_sleep.sleep_after_api_enabling,
         null_resource.gitclone,
         null_resource.unzip_file,
-        time_sleep.sleep_after_gar_repository_creation
+        time_sleep.sleep_after_gar_repository_creation,
+        null_resource.copy_zip_file,
+        null_resource.make_build_dir
     ]
 }
 
@@ -828,6 +856,14 @@ output "GAR_REPOSITORY" {
 
 output "CODE_AND_DATA_BUCKET" {
   value = local.s8s_code_and_data_bucket
+}
+
+output "GAR_REPOSITORY_NM" {
+value = local.s8s_artifact_repository_nm
+}
+
+output "CUSTOM_CONTAINER_IMAGE_PATH" {
+value = "${local.location}-docker.pkg.dev/${local.project_id}/${local.s8s_artifact_repository_nm}/s8s-spark-image:${spark_container_img_tag}"
 }
 
 /******************************************

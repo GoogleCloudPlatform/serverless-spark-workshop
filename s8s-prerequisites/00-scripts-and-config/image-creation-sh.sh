@@ -27,14 +27,6 @@ GCP_REGION=$2
 REPOSITORY_NAME=$3
 DOCKER_IMAGE_FQN="${GCP_REGION}-docker.pkg.dev/${PROJECT_ID}/${REPOSITORY_NAME}/${DOCKER_IMAGE_NM}:$DOCKER_IMAGE_TAG"
 
-
-# Create local directory
-cd ~
-mkdir build
-cd build
-rm -rf *
-echo "Created local directory for the Docker image building"
-
 # Create Dockerfile in local directory
 cd $LOCAL_SCRATCH_DIR
 
@@ -63,7 +55,6 @@ ENV SPARK_EXTRA_JARS_DIR=/opt/spark/jars/
 ENV SPARK_EXTRA_CLASSPATH='/opt/spark/jars/*'
 RUN mkdir -p "${SPARK_EXTRA_JARS_DIR}"
 COPY graphframes-0.8.1-spark3.0-s_2.12.jar "${SPARK_EXTRA_JARS_DIR}"
-COPY spark-bigquery-with-dependencies_2.12-0.22.2.jar "${SPARK_EXTRA_JARS_DIR}"
 
 # (Optional) Install and configure Miniconda3.
 ENV CONDA_HOME=/opt/dataproc/conda
@@ -132,26 +123,6 @@ RUN ${CONDA_HOME}/bin/conda install mamba -n base -c conda-forge \
       wordcloud \
       prophet \
       virtualenv
-
-
-# (Optional) Install R and R libraries.
-RUN apt update \
-  && apt install -y gnupg \
-  && apt-key adv --no-tty \
-      --keyserver "hkp://keyserver.ubuntu.com:80" \
-      --recv-keys 95C0FAF38DB3CCAD0C080A7BDC78B2DDEABC47B7 \
-  && echo "deb http://cloud.r-project.org/bin/linux/debian bullseye-cran40/" \
-      >/etc/apt/sources.list.d/cran-r.list \
-  && apt update \
-  && apt install -y \
-      libopenblas-base \
-      libssl-dev \
-      r-base \
-      r-base-dev \
-      r-recommended \
-      r-cran-blob
-
-ENV R_HOME=/usr/lib/R
 
 # (Required) Create the 'spark' group/user.
 # The GID and UID must be 1099. Home directory is required.
