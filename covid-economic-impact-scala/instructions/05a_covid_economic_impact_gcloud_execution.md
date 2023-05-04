@@ -100,6 +100,8 @@ gcloud components update
 
 ### 4.2. Run Spark Serverless Batch
 
+**Note** Please unzip the file located in your GCP bucket at 'gs://s8s-code-and-data-bucket-<your_project_number_here>/serverless-spark-workshop/covid-economic-impact-scala/00-scripts/covid-economic-impact-assessment_2.12-1.0.zip' before proceeding with the next steps.
+
 Run the below on cloud shell -
 
 ```
