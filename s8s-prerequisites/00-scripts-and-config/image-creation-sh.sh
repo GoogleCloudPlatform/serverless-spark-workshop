@@ -67,6 +67,9 @@ RUN bash Miniconda3-py39_4.10.3-Linux-x86_64.sh -b -p /opt/dataproc/conda \
   && ${CONDA_HOME}/bin/conda config --system --prepend channels conda-forge \
   && ${CONDA_HOME}/bin/conda config --system --set channel_priority strict
 
+# installing graphframes
+RUN ${CONDA_HOME}/bin/conda install -c conda-forge graphframes
+
 # (Optional) Install Conda packages.
 #
 # The following packages are installed in the default image, it is strongly
