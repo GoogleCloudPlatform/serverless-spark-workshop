@@ -111,8 +111,11 @@ terraform apply \
 Once the Terraform script completes execution, run the following commands in Cloud Shell and share the locally created 'resource-list.txt' file with all workshop attendees
 
 ```
+PROJECT_ID=`gcloud config list --format "value(core.project)" 2>/dev/null`
+PROJECT_NBR=`gcloud projects describe $PROJECT_ID | grep projectNumber | cut -d':' -f2 |  tr -d "'" | xargs`
 cd ~/serverless-spark-workshop/s8s-prerequisites/00-scripts-and-config/terraform
 terraform output > resource-list.txt
+gsutil cp resource-list.txt gs://s8s-code-and-data-bucket-$PROJECT_NBR
 ```
 
 ## 3. Roles required for the Hackfest Attendees
