@@ -43,6 +43,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 19 | [BigQuery Shakespeare Word Count](bigquery-shakespeare-word-count/README.md) | Data Engineering | Apache Spark Stored Procedures in BigQuery | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 20 | [Wikipedia Page Views Analysis demonstrating auto-scaling](wikipedia-page-view-analysis/README.md) | Data Analytics | Serverless Spark Dataproc Batches, BigQuery | [Anagha Khanolkar](https://github.com/anagha-google) and [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 21 | [Game of Thrones Graph Dataset Analysis](social_network_graph/README.md) | Data Engineering | Serverless Spark Dataproc Batches, BigQuery | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 22 | [Customer Churn Rate Prediction using BigLake tables](customer_churn_biglake/README.md) | Data Engineering & Data Scientist | Serverless Spark Dataproc Batches, BigQuery, Biglake | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
