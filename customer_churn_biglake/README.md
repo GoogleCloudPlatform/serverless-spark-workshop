@@ -1,4 +1,4 @@
-# Customer Churn Rate Prediction for Retail
+# Customer churn rate prediction using ML in serverless spark
 
 ## Overview
 
@@ -7,7 +7,9 @@ With the advent of cloud environments, the concept of huge capital investments i
 
 In this example, you will look at executing a simple PySpark code which runs on Serverless batch (a fully managed Dataproc cluster). It is similar to executing code on a Dataproc cluster without the need to initialize, deploy or manage the underlying infrastructure.
 
-This usecase is used to check customer churn rate prediction for Retail usecases using ML in Serverless spark.
+This usecase is used to check customer churn rate prediction using ML in Serverless spark.
+
+
 
 ## Services Used
 * Google Cloud Storage
@@ -26,6 +28,8 @@ Following permissions / roles are required to execute the serverless batch
 - Service Account User
 - Storage Admin
 - Environment User and Storage Object Viewer
+- BigQuery Admin
+- Policy Tag Admin
 
 <br>
 

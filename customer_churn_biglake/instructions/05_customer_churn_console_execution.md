@@ -1,4 +1,4 @@
-# Customer Churn Rate Prediction for Retail
+# Customer Churn using Serverless Spark through Google Cloud Console
 
 **Goal** -  Data Preparation and Model Training for Detecting Customer Churn.
 
@@ -11,6 +11,7 @@ Following are the lab modules:
 [5. Model Training and Testing](instructions/05_customer_churn_console_execution.md#5-model-training-and-testing)<br>
 [6. Model Evaluation](instructions/05_customer_churn_console_execution.md#6-model-evaluation)<br>
 [7. Logging](instructions/05_customer_churn_console_execution.md#7-logging)<br>
+[8. Fine Grained Access Control on BigLake Tables](instructions/05_customer_churn_console_execution.md#8-fine-grained-access-control-on-biglake-tables)<br>
 
 <br>
 
@@ -227,7 +228,10 @@ Next, fill in the following values in the batch creation window as shown in the 
 
 <br>
 
-### 5.3. Query the model_test results BQ table
+### 5.3. Submit the Serverless batch
+Once all the details are in, you can submit the batch. As the batch starts, you can see the execution details and logs on the console.
+
+### 5.4. Query the model_test results BQ table
 
 Navigate to BigQuery Console, and check the **customer_churn_lab** dataset. <br>
 Once the modeling  batch is completed, a new table '<your_name_here>_predictions_data' will be created.
@@ -315,7 +319,10 @@ Next, fill in the following values in the batch creation window as shown in the 
 
 <br>
 
-### 6.3. Query the model_test results BQ table
+### 6.3. Submit the Serverless batch
+Once all the details are in, you can submit the batch. As the batch starts, you can see the execution details and logs on the console.
+
+### 6.4. Query the model_test results BQ table
 
 Navigate to BigQuery Console, and check the **customer_churn_lab** dataset. <br>
 Once the model_testing  batch is completed, a new table '<your_name_here>_test_output' will be created.
@@ -384,3 +391,79 @@ To view the Persistent History server logs, click the 'View History Server' butt
 </kbd>
 
 <br>
+
+## 8. Fine Grained Access Control on BigLake Tables
+
+### 8.1 Create Taxonomy and Policy Tag
+
+- Navigate to 'BigQuery'>'Policy tags' and click 'Create Taxonomy'
+- Next, fill in the following details:
+  * Taxonomy name: Business-Critical-Taxonomy
+  * Description: Taxonomy to protect business critical fields
+  * Location: <The region name provided by the Admin team>
+  * Policy tag name: High
+  * Description: High criticality fields
+- Click 'Create'
+
+<kbd>
+<img src=../images/image8_1.png />
+</kbd>
+
+- Next, 'Enforce Access Control' by sliding the switch as shown in the screenshot below:
+
+<kbd>
+<img src=../images/image8_2.png />
+</kbd>
+
+### 8.2 Assigning Policy Tag to BigLake table
+
+- Navigate to 'BigQuery', 'SQL workspace' and open the BigLake table created earlier
+- Click on 'Edit Schema'
+
+<kbd>
+<img src=../images/image8_3.png />
+</kbd>
+
+- From the column list, select the 'Contract', 'PaymentMethod' and 'MonthlyCharges' columns and click on 'Add Policy Tag'
+
+<kbd>
+<img src=../images/image8_4.png />
+</kbd>
+
+<kbd>
+<img src=../images/image8_5.png />
+</kbd>
+
+- From the pop-up, select the tag named 'High' under 'Business-Critical-Taxonomy' and click 'Select'
+
+<kbd>
+<img src=../images/image8_6.png />
+</kbd>
+
+- Click 'Save'
+
+<kbd>
+<img src=../images/image8_7.png />
+</kbd>
+
+- Open a new query editor tab and run the following query.
+
+```
+SELECT * FROM `<your-project-id>.<your-dataset-id>.<your-biglake-table-name>` LIMIT 1000;
+```
+
+- You should see the following 'Access Denied' error on the columns on which the Policy Tag is enforced.
+
+<kbd>
+<img src=../images/image8_8.png />
+</kbd>
+
+- Next, run the following query to view the data in the columns to which you have access.
+
+```
+SELECT * except(Contract, MonthlyCharges, PaymentMethod) FROM `<your-project-id>.<your-dataset-id>.<your-biglake-table-name>` LIMIT 1000;
+```
+
+<kbd>
+<img src=../images/image8_9.png />
+</kbd>
