@@ -1,4 +1,4 @@
-# Customer Churn using Serverless Spark through Google Cloud Console
+# Customer Churn Rate Prediction for Retail
 
 **Goal** -  Data Preparation and Model Training for Detecting Customer Churn.
 

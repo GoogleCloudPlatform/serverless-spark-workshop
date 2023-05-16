@@ -1,4 +1,4 @@
-# Customer churn rate prediction using ML in serverless spark
+# Customer Churn Rate Prediction for Retail
 
 ## Overview
 
