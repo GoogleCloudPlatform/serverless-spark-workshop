@@ -1,6 +1,6 @@
 # About
 
-This module includes all the steps for creating a BigQuery dataset and uploading data to BigQuery tables-
+This module includes all the steps for creating a creating a custom container image and uploading it to Google Artifact Registry-
 <br>
 
 
