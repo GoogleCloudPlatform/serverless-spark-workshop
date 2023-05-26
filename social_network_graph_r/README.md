@@ -25,10 +25,10 @@ Following permissions / roles are required to execute the serverless batch
 
 To perform the lab, below are the list of activities to perform. <br>
 
-[1. GCP Prerequisites](/instructions/01-gcp-prerequisites.md)<br>
-[2. Spark History Server Setup](/instructions/02-persistent-history-server.md)<br>
-[3. Uploading scripts and datasets to GCP](/instructions/03-files-upload.md)<br>
-[4. Creating a custom container image](/instructions/04-create-docker-image.md)<br>
+[1. GCP Prerequisites](instructions/01-gcp-prerequisites.md)<br>
+[2. Spark History Server Setup](instructions/02-persistent-history-server.md)<br>
+[3. Uploading scripts and datasets to GCP](instructions/03-files-upload.md)<br>
+[4. Creating a custom container image](instructions/04-create-docker-image.md)<br>
 
 Note down the values for below variables to get started with the lab:
 
@@ -53,7 +53,7 @@ The lab consists of the following modules.
 4. Explore the output
 
 There are 4 ways of perforing the lab.
-- Using [Google Cloud Shell](/instructions/05a_social_network_graph_gcloud_execution.md)
-- Using [GCP console](/instructions/05b_social_network_graph_console_execution.md)
+- Using [Google Cloud Shell](instructions/05a_social_network_graph_gcloud_execution.md)
+- Using [GCP console](instructions/05b_social_network_graph_console_execution.md)
 
 Please chose one of the methods to execute the lab.
