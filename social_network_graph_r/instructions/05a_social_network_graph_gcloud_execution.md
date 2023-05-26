@@ -40,7 +40,7 @@ The edge files contains information of
 ## 2. Solution Architecture
 
 <kbd>
-<img src=images/architecture_diagram.png />
+<img src=../images/architecture_diagram.png />
 </kbd>
 
 <br>
@@ -127,7 +127,7 @@ gcloud dataproc batches submit \
 Once the dataproc serverless batch job completes, the output containing the degrees from the highest to the lowest will be displayed on the console as below:
 
 <kbd>
-<img src=/images/degreesR.png />
+<img src=../images/degreesR.png />
 </kbd>
 
 <br>
@@ -166,7 +166,7 @@ Navigate to Dataproc batch job on Console.<br>
 Once the bfs batch is completed, you should be able to see the result of BFS:
 
 <kbd>
-<img src=/images/bfsRresult.png />
+<img src=../images/bfsRresult.png />
 </kbd>
 
 <br>
@@ -184,11 +184,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/log1.png />
+<img src=../images/log1.png />
 </kbd>
 
 <kbd>
-<img src=/images/log2.png />
+<img src=../images/log2.png />
 </kbd>
 
 <br>
@@ -200,11 +200,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/ps1.png />
+<img src=../images/ps1.png />
 </kbd>
 
 <kbd>
-<img src=/images/ps2.png />
+<img src=../images/ps2.png />
 </kbd>
 
 <br>
