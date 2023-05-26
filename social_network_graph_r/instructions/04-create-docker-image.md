@@ -9,8 +9,7 @@ Before you start do this, you must create a Virtual Machine first and run those 
 <br>
 
 
-[1. Uploading Dependencies to VM](04-create-docker-image.md#1-uploading-dependencies-to-cloud-shell)<br>
-[2. Create Container Image](04-create-docker-image.md#2-create-container-image)<br>
+[1. Create Container Image](04-create-docker-image.md#1-create-container-image)<br>
 
 ## 0. Set up authentication for Docker (while using Cloud Shell)
 You might encounter permmision issues when using docker push. We will download the standalone Docker credential helper.
