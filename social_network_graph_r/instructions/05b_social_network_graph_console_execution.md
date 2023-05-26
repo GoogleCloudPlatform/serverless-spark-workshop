@@ -39,7 +39,7 @@ The edge files contains information of
 ## 2. Solution Architecture
 
 <kbd>
-<img src=images/architecture_diagram.png />
+<img src=../images/architecture_diagram.png />
 </kbd>
 
 <br>
@@ -82,7 +82,7 @@ The below script will load the edge and node files and construct graph to find t
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 ### 4.2. Provide the details for the batch
@@ -107,7 +107,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 
 
 <kbd>
-<img src=/images/image24R.png />
+<img src=../images/image24R.png />
 </kbd>
 
 <hr>
@@ -115,13 +115,13 @@ Next, fill in the following values in the batch creation window as shown in the 
 <br>
 
 <kbd>
-<img src=/images/image25R.png />
+<img src=../images/image25R.png />
 </kbd>
 
 <br>
 
   <kbd>
-  <img src=/images/image26R.png />
+  <img src=../images/image26R.png />
   </kbd>
 
 <br>
@@ -134,7 +134,7 @@ Once all the details are in, you can submit the batch. As the batch starts, you 
 ### 4.4. Once the dataproc serverless batch job completes, the output containing the degrees will be displayed on the console as below:
 
 <kbd>
-<img src=/images/degreesR.png />
+<img src=../images/degreesR.png />
 </kbd>
 
 <br>
@@ -148,7 +148,7 @@ Search all the connections of a character.
 Navigate to Dataproc > Serverless > Batches and click on **+CREATE**
 
 <kbd>
-<img src=/images/image23.png />
+<img src=../images/image23.png />
 </kbd>
 
 ### 5.2. Provide the details for the batch
@@ -176,7 +176,7 @@ Next, fill in the following values in the batch creation window as shown in the 
 
 
 <kbd>
-<img src=/images/image24_2R.png />
+<img src=../images/image24_2R.png />
 </kbd>
 
 <hr>
@@ -184,13 +184,13 @@ Next, fill in the following values in the batch creation window as shown in the 
 <br>
 
 <kbd>
-<img src=/images/image25_2R.png />
+<img src=../images/image25_2R.png />
 </kbd>
 
 <br>
 
   <kbd>
-  <img src=/images/image26R.png />
+  <img src=../images/image26R.png />
   </kbd>
 
 <br>
@@ -206,7 +206,7 @@ Navigate to Dataproc batch job on Console.<br>
 Once the bfs batch is completed, you should be able to see the result of BFS:
 
 <kbd>
-<img src=/images/bfsRresult.png />
+<img src=../images/bfsRresult.png />
 </kbd>
 
 <br>
@@ -220,11 +220,11 @@ Logs associated with the application can be found in the logging console under
 <br> You can also click on “View Logs” button on the Dataproc batches monitoring page to get to the logging page for the specific Spark job.
 
 <kbd>
-<img src=/images/log1.png />
+<img src=../images/log1.png />
 </kbd>
 
 <kbd>
-<img src=/images/log2.png />
+<img src=../images/log2.png />
 </kbd>
 
 <br>
@@ -236,11 +236,11 @@ To view the Persistent History server logs, click the 'View History Server' butt
 <br>
 
 <kbd>
-<img src=/images/ps1.png />
+<img src=../images/ps1.png />
 </kbd>
 
 <kbd>
-<img src=/images/ps2.png />
+<img src=../images/ps2.png />
 </kbd>
 
 <br>
