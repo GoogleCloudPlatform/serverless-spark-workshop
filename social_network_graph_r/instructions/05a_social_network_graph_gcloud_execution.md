@@ -7,9 +7,9 @@ Following are the lob modules:
 [1. Understanding Data](05a_social_network_graph_gcloud_execution.md#1-understanding-the-data)<br>
 [2. Solution Architecture](05a_social_network_graph_gcloud_execution.md#2-solution-architecture)<br>
 [3. Declaring Variables](05a_social_network_graph_gcloud_execution.md#3-declaring-variables)<br>
-[4. Degrees in the graph](5a_social_network_graph_gcloud_execution.md#4-degrees-in-the-graph)<br>
+[4. Degrees in the graph](05a_social_network_graph_gcloud_execution.md#4-degrees-in-the-graph)<br>
 [5. Breadth First Search](05a_social_network_graph_gcloud_execution.md#5-breadth-first-search)<br>
-[6. Logging](06a_social_network_graph_gcloud_execution.md#6-logging)<br>
+[6. Logging](05a_social_network_graph_gcloud_execution.md#6-logging)<br>
 
 <br>
 
