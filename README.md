@@ -45,6 +45,7 @@ This repository contains Serverless Spark on GCP solution accelerators built aro
 | 21 | [Game of Thrones Graph Dataset Analysis](social_network_graph/README.md) | Data Engineering | Serverless Spark Dataproc Batches, BigQuery | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 22 | [Customer Churn Rate Prediction using BigLake tables](customer_churn_biglake/README.md) | Data Engineering & Data Scientist | Serverless Spark Dataproc Batches, BigQuery, Biglake | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
 | 23 | [Game of Thrones Graph Dataset Analysis using R](social_network_graph_r/README.md) | Data Engineering | Serverless Spark Dataproc Batches, BigQuery | [TEKsystems](https://www.teksystems.com/en/about-us/partnerships/google-cloud) |
+| 24 | [Spark dataframe analysis on Vertex Generative AI](https://github.com/velascoluis/genai_experiments/tree/main/spark_analysis) | GenAI | Analyze Pandas DataFrame output from Dataproc Serverless into the PaLM 2 Generative AI, powered by Vertex AI on Google Cloud | [Luis Velasco](https://github.com/velascoluis) |
 
 # Contributing
 See the [contributing instructions](CONTRIBUTING.md) to start contributing.
