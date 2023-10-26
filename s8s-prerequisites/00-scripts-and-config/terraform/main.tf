@@ -863,7 +863,7 @@ value = local.s8s_artifact_repository_nm
 }
 
 output "CUSTOM_CONTAINER_IMAGE_PATH" {
-value = "${local.location}-docker.pkg.dev/${local.project_id}/${local.s8s_artifact_repository_nm}/s8s-spark-image:${spark_container_img_tag}"
+value = "${local.location}-docker.pkg.dev/${local.project_id}/${local.s8s_artifact_repository_nm}/s8s-spark-image:${local.spark_container_img_tag}"
 }
 
 /******************************************
